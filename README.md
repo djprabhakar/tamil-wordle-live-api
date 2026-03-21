@@ -14,6 +14,9 @@ npm start
 
 Default URL: `http://localhost:4000`
 
+Swagger UI: `http://localhost:4000/docs`
+OpenAPI JSON: `http://localhost:4000/openapi.json`
+
 ## Words Data File
 
 Place your production word list here:
@@ -60,6 +63,7 @@ Startup validation will fail fast if:
 
 ```bash
 curl http://localhost:4000/health
+curl http://localhost:4000/openapi.json
 curl http://localhost:4000/api/words/categories
 curl "http://localhost:4000/api/words/random?category=thing"
 curl "http://localhost:4000/api/words/random-set?count=10&category=thing"

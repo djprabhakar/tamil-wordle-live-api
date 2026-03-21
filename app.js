@@ -29,7 +29,10 @@ Or mount only the words module:
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
+const swaggerJsdoc = require('swagger-jsdoc')
+const swaggerUi = require('swagger-ui-express')
 
+const { openapi } = require('./docs/openapi')
 const { createWordsRouter } = require('./routes/words.routes')
 const { HttpError, WordsService } = require('./services/words.service')
 
@@ -299,6 +302,18 @@ function addErrorHandling(app) {
   })
 }
 
+function addDocs(app) {
+  const spec = swaggerJsdoc({
+    definition: openapi,
+    apis: [],
+  })
+
+  app.get('/openapi.json', (_req, res) => {
+    res.json(spec)
+  })
+  app.use('/docs', swaggerUi.serve, swaggerUi.setup(spec, { explorer: true }))
+}
+
 function createApp(options = {}) {
   const app = express()
   const wordsService = options.wordsService || new WordsService()
@@ -313,6 +328,7 @@ function createApp(options = {}) {
     res.json({ status: 'ok' })
   })
 
+  addDocs(app)
   app.use('/api/words', createWordsRouter(wordsService))
   addLiveGameRoutes(app, liveGamesStore)
   addErrorHandling(app)
