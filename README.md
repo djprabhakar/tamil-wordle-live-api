@@ -1,70 +1,174 @@
 # Tamil Wordle Live API
 
-Express API for multiplayer live games.
+Express API with two parts:
 
-## Run
+- existing live-games endpoints
+- a reusable `/api/words` module backed by a local JSON file
 
-1. Install dependencies:
-   npm install
-2. Start server:
-   npm run dev
+## Install and Run
 
-Default URL: http://localhost:4000
+```bash
+npm install
+npm start
+```
 
-## Data Persistence
+Default URL: `http://localhost:4000`
 
-Games are persisted to JSON file storage.
+## Words Data File
 
-- Default store file: `data/live-games-store.json`
-- Override path with env var: `STORE_FILE=/absolute/path/store.json`
+Place your production word list here:
 
-## Endpoints
+`data/common_500_words_with_5_clues.json`
 
-- GET /health
-- GET /live-games
-- GET /live-games/:id
-- POST /live-games
-- POST /live-games/:id/participation
+Expected structure:
 
-### Create Live Game
+```json
+[
+  {
+    "word": "car",
+    "category": "thing",
+    "clues": ["vehicle", "engine", "road", "electric", "autonomous"]
+  }
+]
+```
 
-POST `/live-games` body example:
+Startup validation will fail fast if:
+
+- the file is missing
+- the JSON is malformed
+- an entry has missing fields
+- `clues` does not contain exactly 5 non-empty strings
+- duplicate normalized words exist
+
+## Words Endpoints
+
+- `GET /health`
+- `GET /api/words/categories`
+- `GET /api/words/random`
+- `GET /api/words/random?category=animal`
+- `GET /api/words/random-set?count=10&category=thing`
+- `GET /api/words/all`
+- `GET /api/words/all?category=thing`
+- `GET /api/words/all?limit=20&page=2`
+- `GET /api/words/all?shuffle=true`
+- `GET /api/words/car`
+- `POST /api/words/check`
+- `POST /api/words/SaveA5HintWord`
+- `GET /api/words/Get20RandomWordsWith5Clues?category=Common`
+
+### curl examples
+
+```bash
+curl http://localhost:4000/health
+curl http://localhost:4000/api/words/categories
+curl "http://localhost:4000/api/words/random?category=thing"
+curl "http://localhost:4000/api/words/random-set?count=10&category=thing"
+curl "http://localhost:4000/api/words/all?limit=10&page=1"
+curl http://localhost:4000/api/words/car
+curl -X POST http://localhost:4000/api/words/check ^
+  -H "Content-Type: application/json" ^
+  -d "{\"guess\":\"car\"}"
+curl -X POST http://localhost:4000/api/words/SaveA5HintWord ^
+  -H "Content-Type: application/json" ^
+  -d "{\"category\":\"Common\",\"wordEntry\":{\"word\":\"plane\",\"category\":\"thing\",\"clues\":[\"wings\",\"travel\",\"airport\",\"pilot\",\"sky\"]}}"
+curl "http://localhost:4000/api/words/Get20RandomWordsWith5Clues?category=Common"
+```
+
+Response from `POST /api/words/check`:
 
 ```json
 {
-  "id": "GABC1234",
-  "word": "?????",
-  "wordLength": 5,
-  "hostPlayerId": "player-id",
-  "hostNickname": "Player",
-  "createdAt": 1741390000000
+  "exists": true,
+  "word": "car",
+  "category": "thing"
 }
 ```
 
-Response includes participation stats:
-
-- `totalParticipants`
-- `successfulParticipants`
-- `unsuccessfulParticipants`
-
-### Record Participation Result
-
-POST `/live-games/:id/participation` body example:
+If not found:
 
 ```json
 {
-  "playerId": "player-123",
-  "outcome": "success"
+  "exists": false
 }
 ```
 
-`outcome` can be `success` or `failure`.
-Each player is counted once in total participants. If a player's outcome changes, counts are updated accordingly.
+Response from `POST /api/words/SaveA5HintWord`:
+
+```json
+{
+  "category": "Common",
+  "fileName": "common_500_words_with_5_clues.json",
+  "saved": {
+    "word": "plane",
+    "category": "thing",
+    "clues": ["wings", "travel", "airport", "pilot", "sky"]
+  },
+  "totalEntries": 501
+}
+```
+
+Behavior:
+
+- category-to-file mapping is stored in `data/category-file-map.json`
+- if a category does not exist, the API creates a new mapping entry
+- the new filename is derived from the category name, for example `Movie Titles` -> `Movie_Titles.json`
+- `WordEntry` must be a JSON object with either `clues` or `hints`, and it must contain exactly 5 non-empty strings
+
+Response from `GET /api/words/Get20RandomWordsWith5Clues?category=Common`:
+
+```json
+{
+  "category": "Common",
+  "fileName": "common_500_words_with_5_clues.json",
+  "count": 20,
+  "data": [
+    {
+      "word": "car",
+      "category": "thing",
+      "clues": ["vehicle", "engine", "road", "electric", "autonomous"]
+    }
+  ]
+}
+```
+
+## Mount Into An Existing Express App
+
+Use the full app:
+
+```js
+const { createApp } = require('./app')
+
+const { app } = createApp()
+app.listen(process.env.PORT || 4000)
+```
+
+Or mount only the words router:
+
+```js
+const express = require('express')
+const { WordsService } = require('./services/words.service')
+const { createWordsRouter } = require('./routes/words.routes')
+
+const app = express()
+const wordsService = new WordsService()
+
+wordsService.loadFromDisk()
+
+app.use(express.json())
+app.use('/api/words', createWordsRouter(wordsService))
+```
+
+## Live Games Endpoints
+
+- `GET /live-games`
+- `GET /live-games/:id`
+- `POST /live-games`
+- `POST /live-games/:id/participation`
 
 ## Environment Variables
 
-- PORT (default: 4000)
-- HOST (default: 0.0.0.0)
-- MAX_LIVE_GAMES (default: 200)
-- ALLOWED_ORIGINS (comma-separated)
-- STORE_FILE (optional absolute path to JSON store)
+- `PORT` default `4000`
+- `HOST` default `0.0.0.0`
+- `MAX_LIVE_GAMES` default `200`
+- `ALLOWED_ORIGINS` comma-separated allow list
+- `STORE_FILE` optional path for the live-games JSON store

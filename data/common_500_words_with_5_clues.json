@@ -1,0 +1,5502 @@
+[
+  {
+    "word": "car",
+    "category": "thing",
+    "clues": [
+      "vehicle",
+      "engine",
+      "road",
+      "electric",
+      "autonomous"
+    ]
+  },
+  {
+    "word": "bus",
+    "category": "thing",
+    "clues": [
+      "transport",
+      "passengers",
+      "route",
+      "stop",
+      "public"
+    ]
+  },
+  {
+    "word": "train",
+    "category": "thing",
+    "clues": [
+      "rail",
+      "engine",
+      "track",
+      "station",
+      "commute"
+    ]
+  },
+  {
+    "word": "bike",
+    "category": "thing",
+    "clues": [
+      "pedal",
+      "wheel",
+      "helmet",
+      "ride",
+      "cycle"
+    ]
+  },
+  {
+    "word": "truck",
+    "category": "thing",
+    "clues": [
+      "cargo",
+      "engine",
+      "road",
+      "delivery",
+      "heavy"
+    ]
+  },
+  {
+    "word": "boat",
+    "category": "thing",
+    "clues": [
+      "water",
+      "sail",
+      "river",
+      "harbor",
+      "float"
+    ]
+  },
+  {
+    "word": "ship",
+    "category": "thing",
+    "clues": [
+      "ocean",
+      "cargo",
+      "deck",
+      "captain",
+      "voyage"
+    ]
+  },
+  {
+    "word": "plane",
+    "category": "thing",
+    "clues": [
+      "flight",
+      "wing",
+      "airport",
+      "pilot",
+      "travel"
+    ]
+  },
+  {
+    "word": "helicopter",
+    "category": "thing",
+    "clues": [
+      "rotor",
+      "hover",
+      "pilot",
+      "rescue",
+      "air"
+    ]
+  },
+  {
+    "word": "scooter",
+    "category": "thing",
+    "clues": [
+      "ride",
+      "small",
+      "electric",
+      "street",
+      "wheel"
+    ]
+  },
+  {
+    "word": "motorcycle",
+    "category": "thing",
+    "clues": [
+      "helmet",
+      "engine",
+      "ride",
+      "speed",
+      "road"
+    ]
+  },
+  {
+    "word": "subway",
+    "category": "thing",
+    "clues": [
+      "underground",
+      "train",
+      "city",
+      "station",
+      "metro"
+    ]
+  },
+  {
+    "word": "tram",
+    "category": "thing",
+    "clues": [
+      "track",
+      "city",
+      "street",
+      "public",
+      "ride"
+    ]
+  },
+  {
+    "word": "van",
+    "category": "thing",
+    "clues": [
+      "cargo",
+      "family",
+      "road",
+      "delivery",
+      "vehicle"
+    ]
+  },
+  {
+    "word": "taxi",
+    "category": "thing",
+    "clues": [
+      "fare",
+      "city",
+      "ride",
+      "driver",
+      "meter"
+    ]
+  },
+  {
+    "word": "ambulance",
+    "category": "thing",
+    "clues": [
+      "emergency",
+      "siren",
+      "hospital",
+      "paramedic",
+      "rescue"
+    ]
+  },
+  {
+    "word": "firetruck",
+    "category": "thing",
+    "clues": [
+      "siren",
+      "fire",
+      "ladder",
+      "rescue",
+      "engine"
+    ]
+  },
+  {
+    "word": "tractor",
+    "category": "thing",
+    "clues": [
+      "farm",
+      "field",
+      "engine",
+      "pull",
+      "agriculture"
+    ]
+  },
+  {
+    "word": "rocket",
+    "category": "thing",
+    "clues": [
+      "space",
+      "launch",
+      "fuel",
+      "orbit",
+      "astronaut"
+    ]
+  },
+  {
+    "word": "satellite",
+    "category": "thing",
+    "clues": [
+      "orbit",
+      "signal",
+      "space",
+      "communication",
+      "gps"
+    ]
+  },
+  {
+    "word": "drone",
+    "category": "thing",
+    "clues": [
+      "camera",
+      "flying",
+      "remote",
+      "aerial",
+      "autonomous"
+    ]
+  },
+  {
+    "word": "robot",
+    "category": "thing",
+    "clues": [
+      "machine",
+      "sensor",
+      "automation",
+      "ai",
+      "factory"
+    ]
+  },
+  {
+    "word": "computer",
+    "category": "thing",
+    "clues": [
+      "screen",
+      "keyboard",
+      "software",
+      "digital",
+      "device"
+    ]
+  },
+  {
+    "word": "laptop",
+    "category": "thing",
+    "clues": [
+      "portable",
+      "screen",
+      "keyboard",
+      "battery",
+      "work"
+    ]
+  },
+  {
+    "word": "tablet",
+    "category": "thing",
+    "clues": [
+      "touchscreen",
+      "portable",
+      "app",
+      "digital",
+      "screen"
+    ]
+  },
+  {
+    "word": "phone",
+    "category": "thing",
+    "clues": [
+      "call",
+      "screen",
+      "message",
+      "mobile",
+      "smart"
+    ]
+  },
+  {
+    "word": "camera",
+    "category": "thing",
+    "clues": [
+      "photo",
+      "lens",
+      "flash",
+      "image",
+      "video"
+    ]
+  },
+  {
+    "word": "television",
+    "category": "thing",
+    "clues": [
+      "screen",
+      "channel",
+      "remote",
+      "show",
+      "broadcast"
+    ]
+  },
+  {
+    "word": "radio",
+    "category": "thing",
+    "clues": [
+      "music",
+      "signal",
+      "broadcast",
+      "station",
+      "audio"
+    ]
+  },
+  {
+    "word": "speaker",
+    "category": "thing",
+    "clues": [
+      "sound",
+      "music",
+      "audio",
+      "volume",
+      "wireless"
+    ]
+  },
+  {
+    "word": "headphones",
+    "category": "thing",
+    "clues": [
+      "audio",
+      "ears",
+      "music",
+      "wireless",
+      "listen"
+    ]
+  },
+  {
+    "word": "keyboard",
+    "category": "thing",
+    "clues": [
+      "type",
+      "keys",
+      "computer",
+      "input",
+      "letters"
+    ]
+  },
+  {
+    "word": "mouse",
+    "category": "thing",
+    "clues": [
+      "cursor",
+      "click",
+      "computer",
+      "scroll",
+      "input"
+    ]
+  },
+  {
+    "word": "printer",
+    "category": "thing",
+    "clues": [
+      "paper",
+      "ink",
+      "print",
+      "document",
+      "office"
+    ]
+  },
+  {
+    "word": "charger",
+    "category": "thing",
+    "clues": [
+      "battery",
+      "power",
+      "cable",
+      "electric",
+      "device"
+    ]
+  },
+  {
+    "word": "battery",
+    "category": "thing",
+    "clues": [
+      "power",
+      "energy",
+      "charge",
+      "electric",
+      "portable"
+    ]
+  },
+  {
+    "word": "watch",
+    "category": "thing",
+    "clues": [
+      "time",
+      "wrist",
+      "clock",
+      "smart",
+      "wearable"
+    ]
+  },
+  {
+    "word": "clock",
+    "category": "thing",
+    "clues": [
+      "time",
+      "wall",
+      "alarm",
+      "hour",
+      "minute"
+    ]
+  },
+  {
+    "word": "lamp",
+    "category": "thing",
+    "clues": [
+      "light",
+      "bulb",
+      "desk",
+      "shade",
+      "glow"
+    ]
+  },
+  {
+    "word": "fan",
+    "category": "thing",
+    "clues": [
+      "air",
+      "cool",
+      "blade",
+      "spin",
+      "breeze"
+    ]
+  },
+  {
+    "word": "heater",
+    "category": "thing",
+    "clues": [
+      "warmth",
+      "winter",
+      "heat",
+      "room",
+      "electric"
+    ]
+  },
+  {
+    "word": "airconditioner",
+    "category": "thing",
+    "clues": [
+      "cooling",
+      "room",
+      "summer",
+      "compressor",
+      "climate"
+    ]
+  },
+  {
+    "word": "refrigerator",
+    "category": "thing",
+    "clues": [
+      "cold",
+      "kitchen",
+      "food",
+      "freezer",
+      "cool"
+    ]
+  },
+  {
+    "word": "microwave",
+    "category": "thing",
+    "clues": [
+      "heat",
+      "food",
+      "kitchen",
+      "quick",
+      "oven"
+    ]
+  },
+  {
+    "word": "oven",
+    "category": "thing",
+    "clues": [
+      "bake",
+      "kitchen",
+      "heat",
+      "food",
+      "temperature"
+    ]
+  },
+  {
+    "word": "stove",
+    "category": "thing",
+    "clues": [
+      "cook",
+      "flame",
+      "kitchen",
+      "pan",
+      "burner"
+    ]
+  },
+  {
+    "word": "toaster",
+    "category": "thing",
+    "clues": [
+      "bread",
+      "breakfast",
+      "heat",
+      "kitchen",
+      "slice"
+    ]
+  },
+  {
+    "word": "blender",
+    "category": "thing",
+    "clues": [
+      "smoothie",
+      "kitchen",
+      "mix",
+      "blade",
+      "drink"
+    ]
+  },
+  {
+    "word": "kettle",
+    "category": "thing",
+    "clues": [
+      "water",
+      "boil",
+      "tea",
+      "steam",
+      "kitchen"
+    ]
+  },
+  {
+    "word": "vacuum",
+    "category": "thing",
+    "clues": [
+      "clean",
+      "floor",
+      "dust",
+      "suction",
+      "home"
+    ]
+  },
+  {
+    "word": "washer",
+    "category": "thing",
+    "clues": [
+      "laundry",
+      "clothes",
+      "soap",
+      "spin",
+      "clean"
+    ]
+  },
+  {
+    "word": "dryer",
+    "category": "thing",
+    "clues": [
+      "laundry",
+      "heat",
+      "clothes",
+      "spin",
+      "dry"
+    ]
+  },
+  {
+    "word": "iron",
+    "category": "thing",
+    "clues": [
+      "clothes",
+      "steam",
+      "press",
+      "wrinkle",
+      "heat"
+    ]
+  },
+  {
+    "word": "broom",
+    "category": "thing",
+    "clues": [
+      "sweep",
+      "floor",
+      "dust",
+      "clean",
+      "handle"
+    ]
+  },
+  {
+    "word": "mop",
+    "category": "thing",
+    "clues": [
+      "floor",
+      "water",
+      "clean",
+      "bucket",
+      "swab"
+    ]
+  },
+  {
+    "word": "bucket",
+    "category": "thing",
+    "clues": [
+      "carry",
+      "water",
+      "handle",
+      "container",
+      "cleaning"
+    ]
+  },
+  {
+    "word": "chair",
+    "category": "thing",
+    "clues": [
+      "sit",
+      "seat",
+      "legs",
+      "furniture",
+      "table"
+    ]
+  },
+  {
+    "word": "table",
+    "category": "thing",
+    "clues": [
+      "surface",
+      "meal",
+      "legs",
+      "furniture",
+      "desk"
+    ]
+  },
+  {
+    "word": "desk",
+    "category": "thing",
+    "clues": [
+      "work",
+      "office",
+      "drawer",
+      "study",
+      "table"
+    ]
+  },
+  {
+    "word": "bed",
+    "category": "thing",
+    "clues": [
+      "sleep",
+      "mattress",
+      "pillow",
+      "rest",
+      "bedroom"
+    ]
+  },
+  {
+    "word": "sofa",
+    "category": "thing",
+    "clues": [
+      "cushion",
+      "livingroom",
+      "sit",
+      "comfort",
+      "couch"
+    ]
+  },
+  {
+    "word": "couch",
+    "category": "thing",
+    "clues": [
+      "sofa",
+      "livingroom",
+      "cushion",
+      "sit",
+      "relax"
+    ]
+  },
+  {
+    "word": "wardrobe",
+    "category": "thing",
+    "clues": [
+      "clothes",
+      "closet",
+      "hanger",
+      "bedroom",
+      "storage"
+    ]
+  },
+  {
+    "word": "bookshelf",
+    "category": "thing",
+    "clues": [
+      "books",
+      "shelf",
+      "library",
+      "storage",
+      "wood"
+    ]
+  },
+  {
+    "word": "door",
+    "category": "thing",
+    "clues": [
+      "entry",
+      "open",
+      "handle",
+      "room",
+      "lock"
+    ]
+  },
+  {
+    "word": "window",
+    "category": "thing",
+    "clues": [
+      "glass",
+      "view",
+      "open",
+      "light",
+      "frame"
+    ]
+  },
+  {
+    "word": "mirror",
+    "category": "thing",
+    "clues": [
+      "reflection",
+      "glass",
+      "face",
+      "bathroom",
+      "look"
+    ]
+  },
+  {
+    "word": "curtain",
+    "category": "thing",
+    "clues": [
+      "window",
+      "fabric",
+      "privacy",
+      "shade",
+      "room"
+    ]
+  },
+  {
+    "word": "carpet",
+    "category": "thing",
+    "clues": [
+      "floor",
+      "soft",
+      "rug",
+      "room",
+      "fabric"
+    ]
+  },
+  {
+    "word": "pillow",
+    "category": "thing",
+    "clues": [
+      "sleep",
+      "soft",
+      "bed",
+      "head",
+      "cushion"
+    ]
+  },
+  {
+    "word": "blanket",
+    "category": "thing",
+    "clues": [
+      "warmth",
+      "bed",
+      "sleep",
+      "fabric",
+      "cover"
+    ]
+  },
+  {
+    "word": "towel",
+    "category": "thing",
+    "clues": [
+      "bath",
+      "dry",
+      "fabric",
+      "water",
+      "bathroom"
+    ]
+  },
+  {
+    "word": "umbrella",
+    "category": "thing",
+    "clues": [
+      "rain",
+      "cover",
+      "wet",
+      "weather",
+      "fold"
+    ]
+  },
+  {
+    "word": "backpack",
+    "category": "thing",
+    "clues": [
+      "school",
+      "carry",
+      "zipper",
+      "travel",
+      "bag"
+    ]
+  },
+  {
+    "word": "suitcase",
+    "category": "thing",
+    "clues": [
+      "travel",
+      "airport",
+      "luggage",
+      "trip",
+      "pack"
+    ]
+  },
+  {
+    "word": "wallet",
+    "category": "thing",
+    "clues": [
+      "money",
+      "cards",
+      "pocket",
+      "leather",
+      "cash"
+    ]
+  },
+  {
+    "word": "purse",
+    "category": "thing",
+    "clues": [
+      "bag",
+      "carry",
+      "money",
+      "fashion",
+      "hand"
+    ]
+  },
+  {
+    "word": "key",
+    "category": "thing",
+    "clues": [
+      "lock",
+      "door",
+      "metal",
+      "open",
+      "access"
+    ]
+  },
+  {
+    "word": "lock",
+    "category": "thing",
+    "clues": [
+      "key",
+      "secure",
+      "door",
+      "metal",
+      "safety"
+    ]
+  },
+  {
+    "word": "bottle",
+    "category": "thing",
+    "clues": [
+      "water",
+      "drink",
+      "cap",
+      "container",
+      "plastic"
+    ]
+  },
+  {
+    "word": "cup",
+    "category": "thing",
+    "clues": [
+      "drink",
+      "handle",
+      "tea",
+      "mug",
+      "sip"
+    ]
+  },
+  {
+    "word": "mug",
+    "category": "thing",
+    "clues": [
+      "coffee",
+      "cup",
+      "handle",
+      "ceramic",
+      "drink"
+    ]
+  },
+  {
+    "word": "plate",
+    "category": "thing",
+    "clues": [
+      "meal",
+      "food",
+      "dish",
+      "table",
+      "ceramic"
+    ]
+  },
+  {
+    "word": "bowl",
+    "category": "thing",
+    "clues": [
+      "soup",
+      "round",
+      "dish",
+      "food",
+      "kitchen"
+    ]
+  },
+  {
+    "word": "spoon",
+    "category": "thing",
+    "clues": [
+      "eat",
+      "soup",
+      "silverware",
+      "kitchen",
+      "stir"
+    ]
+  },
+  {
+    "word": "fork",
+    "category": "thing",
+    "clues": [
+      "eat",
+      "prongs",
+      "silverware",
+      "kitchen",
+      "plate"
+    ]
+  },
+  {
+    "word": "knife",
+    "category": "thing",
+    "clues": [
+      "cut",
+      "blade",
+      "kitchen",
+      "sharp",
+      "slice"
+    ]
+  },
+  {
+    "word": "pan",
+    "category": "thing",
+    "clues": [
+      "cook",
+      "stove",
+      "fry",
+      "kitchen",
+      "metal"
+    ]
+  },
+  {
+    "word": "pot",
+    "category": "thing",
+    "clues": [
+      "cook",
+      "boil",
+      "kitchen",
+      "lid",
+      "metal"
+    ]
+  },
+  {
+    "word": "scissors",
+    "category": "thing",
+    "clues": [
+      "cut",
+      "paper",
+      "blade",
+      "school",
+      "craft"
+    ]
+  },
+  {
+    "word": "hammer",
+    "category": "thing",
+    "clues": [
+      "nail",
+      "tool",
+      "hit",
+      "metal",
+      "build"
+    ]
+  },
+  {
+    "word": "screwdriver",
+    "category": "thing",
+    "clues": [
+      "tool",
+      "screw",
+      "repair",
+      "turn",
+      "handle"
+    ]
+  },
+  {
+    "word": "wrench",
+    "category": "thing",
+    "clues": [
+      "tool",
+      "bolt",
+      "repair",
+      "turn",
+      "metal"
+    ]
+  },
+  {
+    "word": "drill",
+    "category": "thing",
+    "clues": [
+      "tool",
+      "hole",
+      "power",
+      "repair",
+      "spin"
+    ]
+  },
+  {
+    "word": "saw",
+    "category": "thing",
+    "clues": [
+      "cut",
+      "wood",
+      "tool",
+      "teeth",
+      "carpenter"
+    ]
+  },
+  {
+    "word": "ladder",
+    "category": "thing",
+    "clues": [
+      "climb",
+      "steps",
+      "height",
+      "repair",
+      "rungs"
+    ]
+  },
+  {
+    "word": "rope",
+    "category": "thing",
+    "clues": [
+      "tie",
+      "pull",
+      "knot",
+      "climb",
+      "fiber"
+    ]
+  },
+  {
+    "word": "box",
+    "category": "thing",
+    "clues": [
+      "container",
+      "cardboard",
+      "pack",
+      "storage",
+      "square"
+    ]
+  },
+  {
+    "word": "bag",
+    "category": "thing",
+    "clues": [
+      "carry",
+      "container",
+      "shopping",
+      "pack",
+      "handle"
+    ]
+  },
+  {
+    "word": "basket",
+    "category": "thing",
+    "clues": [
+      "carry",
+      "woven",
+      "handle",
+      "fruit",
+      "storage"
+    ]
+  },
+  {
+    "word": "book",
+    "category": "thing",
+    "clues": [
+      "pages",
+      "read",
+      "story",
+      "library",
+      "author"
+    ]
+  },
+  {
+    "word": "notebook",
+    "category": "thing",
+    "clues": [
+      "write",
+      "pages",
+      "school",
+      "notes",
+      "paper"
+    ]
+  },
+  {
+    "word": "paper",
+    "category": "thing",
+    "clues": [
+      "write",
+      "sheet",
+      "print",
+      "notebook",
+      "page"
+    ]
+  },
+  {
+    "word": "pen",
+    "category": "thing",
+    "clues": [
+      "write",
+      "ink",
+      "paper",
+      "school",
+      "sign"
+    ]
+  },
+  {
+    "word": "pencil",
+    "category": "thing",
+    "clues": [
+      "write",
+      "graphite",
+      "erase",
+      "school",
+      "draw"
+    ]
+  },
+  {
+    "word": "eraser",
+    "category": "thing",
+    "clues": [
+      "pencil",
+      "remove",
+      "mistake",
+      "rubber",
+      "school"
+    ]
+  },
+  {
+    "word": "ruler",
+    "category": "thing",
+    "clues": [
+      "measure",
+      "line",
+      "school",
+      "straight",
+      "scale"
+    ]
+  },
+  {
+    "word": "crayon",
+    "category": "thing",
+    "clues": [
+      "color",
+      "wax",
+      "draw",
+      "child",
+      "art"
+    ]
+  },
+  {
+    "word": "paintbrush",
+    "category": "thing",
+    "clues": [
+      "paint",
+      "art",
+      "bristles",
+      "canvas",
+      "color"
+    ]
+  },
+  {
+    "word": "glue",
+    "category": "thing",
+    "clues": [
+      "stick",
+      "craft",
+      "school",
+      "paste",
+      "bond"
+    ]
+  },
+  {
+    "word": "ball",
+    "category": "thing",
+    "clues": [
+      "round",
+      "throw",
+      "catch",
+      "game",
+      "sport"
+    ]
+  },
+  {
+    "word": "bat",
+    "category": "thing",
+    "clues": [
+      "baseball",
+      "hit",
+      "wood",
+      "sport",
+      "swing"
+    ]
+  },
+  {
+    "word": "helmet",
+    "category": "thing",
+    "clues": [
+      "safety",
+      "head",
+      "ride",
+      "sport",
+      "protection"
+    ]
+  },
+  {
+    "word": "shoe",
+    "category": "thing",
+    "clues": [
+      "foot",
+      "walk",
+      "lace",
+      "wear",
+      "sole"
+    ]
+  },
+  {
+    "word": "sock",
+    "category": "thing",
+    "clues": [
+      "foot",
+      "wear",
+      "shoe",
+      "fabric",
+      "pair"
+    ]
+  },
+  {
+    "word": "shirt",
+    "category": "thing",
+    "clues": [
+      "clothes",
+      "wear",
+      "fabric",
+      "button",
+      "top"
+    ]
+  },
+  {
+    "word": "pants",
+    "category": "thing",
+    "clues": [
+      "clothes",
+      "wear",
+      "legs",
+      "fabric",
+      "pocket"
+    ]
+  },
+  {
+    "word": "jacket",
+    "category": "thing",
+    "clues": [
+      "wear",
+      "warmth",
+      "zipper",
+      "coat",
+      "outerwear"
+    ]
+  },
+  {
+    "word": "hat",
+    "category": "thing",
+    "clues": [
+      "head",
+      "wear",
+      "cap",
+      "sun",
+      "fashion"
+    ]
+  },
+  {
+    "word": "gloves",
+    "category": "thing",
+    "clues": [
+      "hands",
+      "winter",
+      "wear",
+      "warmth",
+      "pair"
+    ]
+  },
+  {
+    "word": "glasses",
+    "category": "thing",
+    "clues": [
+      "vision",
+      "eyes",
+      "frames",
+      "lenses",
+      "wear"
+    ]
+  },
+  {
+    "word": "ring",
+    "category": "thing",
+    "clues": [
+      "finger",
+      "jewelry",
+      "gold",
+      "circle",
+      "wedding"
+    ]
+  },
+  {
+    "word": "necklace",
+    "category": "thing",
+    "clues": [
+      "jewelry",
+      "neck",
+      "chain",
+      "gold",
+      "fashion"
+    ]
+  },
+  {
+    "word": "soap",
+    "category": "thing",
+    "clues": [
+      "clean",
+      "bath",
+      "wash",
+      "foam",
+      "hygiene"
+    ]
+  },
+  {
+    "word": "toothbrush",
+    "category": "thing",
+    "clues": [
+      "teeth",
+      "brush",
+      "bathroom",
+      "paste",
+      "hygiene"
+    ]
+  },
+  {
+    "word": "toothpaste",
+    "category": "thing",
+    "clues": [
+      "teeth",
+      "mint",
+      "brush",
+      "bathroom",
+      "hygiene"
+    ]
+  },
+  {
+    "word": "shampoo",
+    "category": "thing",
+    "clues": [
+      "hair",
+      "wash",
+      "bath",
+      "bottle",
+      "clean"
+    ]
+  },
+  {
+    "word": "medicine",
+    "category": "thing",
+    "clues": [
+      "health",
+      "doctor",
+      "pill",
+      "treatment",
+      "pharmacy"
+    ]
+  },
+  {
+    "word": "bandage",
+    "category": "thing",
+    "clues": [
+      "wound",
+      "cover",
+      "firstaid",
+      "heal",
+      "strip"
+    ]
+  },
+  {
+    "word": "mask",
+    "category": "thing",
+    "clues": [
+      "face",
+      "cover",
+      "health",
+      "filter",
+      "protection"
+    ]
+  },
+  {
+    "word": "ticket",
+    "category": "thing",
+    "clues": [
+      "entry",
+      "travel",
+      "seat",
+      "event",
+      "pass"
+    ]
+  },
+  {
+    "word": "map",
+    "category": "thing",
+    "clues": [
+      "route",
+      "location",
+      "travel",
+      "direction",
+      "navigation"
+    ]
+  },
+  {
+    "word": "compass",
+    "category": "thing",
+    "clues": [
+      "direction",
+      "north",
+      "travel",
+      "needle",
+      "navigate"
+    ]
+  },
+  {
+    "word": "passport",
+    "category": "thing",
+    "clues": [
+      "travel",
+      "border",
+      "identity",
+      "visa",
+      "document"
+    ]
+  },
+  {
+    "word": "money",
+    "category": "thing",
+    "clues": [
+      "cash",
+      "buy",
+      "value",
+      "currency",
+      "payment"
+    ]
+  },
+  {
+    "word": "coin",
+    "category": "thing",
+    "clues": [
+      "money",
+      "metal",
+      "currency",
+      "small",
+      "change"
+    ]
+  },
+  {
+    "word": "creditcard",
+    "category": "thing",
+    "clues": [
+      "payment",
+      "bank",
+      "swipe",
+      "wallet",
+      "digital"
+    ]
+  },
+  {
+    "word": "receipt",
+    "category": "thing",
+    "clues": [
+      "purchase",
+      "store",
+      "paper",
+      "proof",
+      "payment"
+    ]
+  },
+  {
+    "word": "gift",
+    "category": "thing",
+    "clues": [
+      "present",
+      "wrap",
+      "birthday",
+      "surprise",
+      "give"
+    ]
+  },
+  {
+    "word": "toy",
+    "category": "thing",
+    "clues": [
+      "play",
+      "child",
+      "fun",
+      "game",
+      "plastic"
+    ]
+  },
+  {
+    "word": "doll",
+    "category": "thing",
+    "clues": [
+      "toy",
+      "child",
+      "dress",
+      "play",
+      "figure"
+    ]
+  },
+  {
+    "word": "puzzle",
+    "category": "thing",
+    "clues": [
+      "pieces",
+      "solve",
+      "game",
+      "picture",
+      "brain"
+    ]
+  },
+  {
+    "word": "chessboard",
+    "category": "thing",
+    "clues": [
+      "game",
+      "squares",
+      "strategy",
+      "pieces",
+      "board"
+    ]
+  },
+  {
+    "word": "guitar",
+    "category": "thing",
+    "clues": [
+      "music",
+      "strings",
+      "instrument",
+      "play",
+      "acoustic"
+    ]
+  },
+  {
+    "word": "piano",
+    "category": "thing",
+    "clues": [
+      "keys",
+      "music",
+      "instrument",
+      "play",
+      "melody"
+    ]
+  },
+  {
+    "word": "drum",
+    "category": "thing",
+    "clues": [
+      "beat",
+      "music",
+      "stick",
+      "rhythm",
+      "instrument"
+    ]
+  },
+  {
+    "word": "violin",
+    "category": "thing",
+    "clues": [
+      "strings",
+      "bow",
+      "music",
+      "instrument",
+      "classical"
+    ]
+  },
+  {
+    "word": "dog",
+    "category": "animal",
+    "clues": [
+      "pet",
+      "bark",
+      "tail",
+      "loyal",
+      "puppy"
+    ]
+  },
+  {
+    "word": "cat",
+    "category": "animal",
+    "clues": [
+      "pet",
+      "meow",
+      "whiskers",
+      "feline",
+      "kitten"
+    ]
+  },
+  {
+    "word": "cow",
+    "category": "animal",
+    "clues": [
+      "farm",
+      "milk",
+      "grass",
+      "horns",
+      "cattle"
+    ]
+  },
+  {
+    "word": "horse",
+    "category": "animal",
+    "clues": [
+      "ride",
+      "mane",
+      "stable",
+      "gallop",
+      "hoof"
+    ]
+  },
+  {
+    "word": "lion",
+    "category": "animal",
+    "clues": [
+      "mane",
+      "roar",
+      "savanna",
+      "predator",
+      "king"
+    ]
+  },
+  {
+    "word": "tiger",
+    "category": "animal",
+    "clues": [
+      "stripes",
+      "jungle",
+      "predator",
+      "feline",
+      "roar"
+    ]
+  },
+  {
+    "word": "elephant",
+    "category": "animal",
+    "clues": [
+      "trunk",
+      "tusks",
+      "giant",
+      "savanna",
+      "memory"
+    ]
+  },
+  {
+    "word": "monkey",
+    "category": "animal",
+    "clues": [
+      "tree",
+      "banana",
+      "tail",
+      "primate",
+      "jungle"
+    ]
+  },
+  {
+    "word": "bear",
+    "category": "animal",
+    "clues": [
+      "fur",
+      "forest",
+      "hibernate",
+      "claws",
+      "wild"
+    ]
+  },
+  {
+    "word": "wolf",
+    "category": "animal",
+    "clues": [
+      "pack",
+      "howl",
+      "forest",
+      "predator",
+      "wild"
+    ]
+  },
+  {
+    "word": "goat",
+    "category": "animal",
+    "clues": [
+      "horns",
+      "farm",
+      "climb",
+      "beard",
+      "graze"
+    ]
+  },
+  {
+    "word": "sheep",
+    "category": "animal",
+    "clues": [
+      "wool",
+      "farm",
+      "flock",
+      "graze",
+      "lamb"
+    ]
+  },
+  {
+    "word": "deer",
+    "category": "animal",
+    "clues": [
+      "antlers",
+      "forest",
+      "hoof",
+      "graze",
+      "swift"
+    ]
+  },
+  {
+    "word": "fox",
+    "category": "animal",
+    "clues": [
+      "tail",
+      "forest",
+      "sly",
+      "red",
+      "wild"
+    ]
+  },
+  {
+    "word": "rabbit",
+    "category": "animal",
+    "clues": [
+      "ears",
+      "hop",
+      "carrot",
+      "burrow",
+      "fur"
+    ]
+  },
+  {
+    "word": "zebra",
+    "category": "animal",
+    "clues": [
+      "stripes",
+      "savanna",
+      "hoof",
+      "wild",
+      "herd"
+    ]
+  },
+  {
+    "word": "giraffe",
+    "category": "animal",
+    "clues": [
+      "neck",
+      "tall",
+      "spots",
+      "savanna",
+      "leaf"
+    ]
+  },
+  {
+    "word": "kangaroo",
+    "category": "animal",
+    "clues": [
+      "pouch",
+      "jump",
+      "australia",
+      "marsupial",
+      "tail"
+    ]
+  },
+  {
+    "word": "panda",
+    "category": "animal",
+    "clues": [
+      "bamboo",
+      "bear",
+      "blackwhite",
+      "china",
+      "gentle"
+    ]
+  },
+  {
+    "word": "leopard",
+    "category": "animal",
+    "clues": [
+      "spots",
+      "predator",
+      "climb",
+      "feline",
+      "swift"
+    ]
+  },
+  {
+    "word": "cheetah",
+    "category": "animal",
+    "clues": [
+      "fast",
+      "spots",
+      "savanna",
+      "predator",
+      "sprint"
+    ]
+  },
+  {
+    "word": "camel",
+    "category": "animal",
+    "clues": [
+      "desert",
+      "hump",
+      "sand",
+      "caravan",
+      "dry"
+    ]
+  },
+  {
+    "word": "donkey",
+    "category": "animal",
+    "clues": [
+      "farm",
+      "bray",
+      "load",
+      "ears",
+      "stubborn"
+    ]
+  },
+  {
+    "word": "pig",
+    "category": "animal",
+    "clues": [
+      "farm",
+      "snout",
+      "mud",
+      "pink",
+      "oink"
+    ]
+  },
+  {
+    "word": "chicken",
+    "category": "animal",
+    "clues": [
+      "farm",
+      "egg",
+      "feathers",
+      "cluck",
+      "coop"
+    ]
+  },
+  {
+    "word": "duck",
+    "category": "animal",
+    "clues": [
+      "pond",
+      "quack",
+      "feathers",
+      "bill",
+      "swim"
+    ]
+  },
+  {
+    "word": "goose",
+    "category": "animal",
+    "clues": [
+      "pond",
+      "honk",
+      "feathers",
+      "migrate",
+      "bird"
+    ]
+  },
+  {
+    "word": "turkey",
+    "category": "animal",
+    "clues": [
+      "feathers",
+      "bird",
+      "farm",
+      "gobble",
+      "holiday"
+    ]
+  },
+  {
+    "word": "owl",
+    "category": "animal",
+    "clues": [
+      "night",
+      "wings",
+      "hoot",
+      "forest",
+      "wise"
+    ]
+  },
+  {
+    "word": "eagle",
+    "category": "animal",
+    "clues": [
+      "wings",
+      "sky",
+      "predator",
+      "beak",
+      "soar"
+    ]
+  },
+  {
+    "word": "parrot",
+    "category": "animal",
+    "clues": [
+      "bird",
+      "colorful",
+      "talk",
+      "beak",
+      "tropical"
+    ]
+  },
+  {
+    "word": "sparrow",
+    "category": "animal",
+    "clues": [
+      "small",
+      "bird",
+      "chirp",
+      "nest",
+      "feathers"
+    ]
+  },
+  {
+    "word": "pigeon",
+    "category": "animal",
+    "clues": [
+      "city",
+      "bird",
+      "coo",
+      "square",
+      "feathers"
+    ]
+  },
+  {
+    "word": "peacock",
+    "category": "animal",
+    "clues": [
+      "feathers",
+      "tail",
+      "colorful",
+      "display",
+      "bird"
+    ]
+  },
+  {
+    "word": "penguin",
+    "category": "animal",
+    "clues": [
+      "ice",
+      "bird",
+      "waddle",
+      "antarctica",
+      "swim"
+    ]
+  },
+  {
+    "word": "flamingo",
+    "category": "animal",
+    "clues": [
+      "pink",
+      "bird",
+      "lake",
+      "legs",
+      "flock"
+    ]
+  },
+  {
+    "word": "shark",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "fins",
+      "predator",
+      "teeth",
+      "swim"
+    ]
+  },
+  {
+    "word": "whale",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "giant",
+      "blowhole",
+      "mammal",
+      "swim"
+    ]
+  },
+  {
+    "word": "dolphin",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "smart",
+      "jump",
+      "mammal",
+      "sonar"
+    ]
+  },
+  {
+    "word": "octopus",
+    "category": "animal",
+    "clues": [
+      "tentacles",
+      "ocean",
+      "ink",
+      "smart",
+      "camouflage"
+    ]
+  },
+  {
+    "word": "crab",
+    "category": "animal",
+    "clues": [
+      "claws",
+      "beach",
+      "shell",
+      "sideways",
+      "ocean"
+    ]
+  },
+  {
+    "word": "lobster",
+    "category": "animal",
+    "clues": [
+      "claws",
+      "ocean",
+      "shell",
+      "red",
+      "seafood"
+    ]
+  },
+  {
+    "word": "seal",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "flippers",
+      "ice",
+      "mammal",
+      "bark"
+    ]
+  },
+  {
+    "word": "turtle",
+    "category": "animal",
+    "clues": [
+      "shell",
+      "slow",
+      "pond",
+      "reptile",
+      "swim"
+    ]
+  },
+  {
+    "word": "snake",
+    "category": "animal",
+    "clues": [
+      "slither",
+      "scales",
+      "reptile",
+      "venom",
+      "coil"
+    ]
+  },
+  {
+    "word": "crocodile",
+    "category": "animal",
+    "clues": [
+      "river",
+      "scales",
+      "teeth",
+      "reptile",
+      "predator"
+    ]
+  },
+  {
+    "word": "lizard",
+    "category": "animal",
+    "clues": [
+      "scales",
+      "tail",
+      "reptile",
+      "crawl",
+      "sun"
+    ]
+  },
+  {
+    "word": "frog",
+    "category": "animal",
+    "clues": [
+      "pond",
+      "jump",
+      "green",
+      "amphibian",
+      "croak"
+    ]
+  },
+  {
+    "word": "toad",
+    "category": "animal",
+    "clues": [
+      "amphibian",
+      "warty",
+      "jump",
+      "pond",
+      "croak"
+    ]
+  },
+  {
+    "word": "butterfly",
+    "category": "animal",
+    "clues": [
+      "wings",
+      "colorful",
+      "garden",
+      "insect",
+      "flutter"
+    ]
+  },
+  {
+    "word": "bee",
+    "category": "animal",
+    "clues": [
+      "honey",
+      "buzz",
+      "flower",
+      "insect",
+      "hive"
+    ]
+  },
+  {
+    "word": "ant",
+    "category": "animal",
+    "clues": [
+      "tiny",
+      "colony",
+      "insect",
+      "carry",
+      "trail"
+    ]
+  },
+  {
+    "word": "spider",
+    "category": "animal",
+    "clues": [
+      "web",
+      "legs",
+      "insectlike",
+      "crawl",
+      "silk"
+    ]
+  },
+  {
+    "word": "mosquito",
+    "category": "animal",
+    "clues": [
+      "buzz",
+      "bite",
+      "insect",
+      "wings",
+      "itch"
+    ]
+  },
+  {
+    "word": "ladybug",
+    "category": "animal",
+    "clues": [
+      "spots",
+      "red",
+      "insect",
+      "garden",
+      "tiny"
+    ]
+  },
+  {
+    "word": "firefly",
+    "category": "animal",
+    "clues": [
+      "glow",
+      "night",
+      "insect",
+      "summer",
+      "light"
+    ]
+  },
+  {
+    "word": "batanimal",
+    "category": "animal",
+    "clues": [
+      "wings",
+      "night",
+      "cave",
+      "mammal",
+      "echo"
+    ]
+  },
+  {
+    "word": "hedgehog",
+    "category": "animal",
+    "clues": [
+      "spines",
+      "small",
+      "curl",
+      "mammal",
+      "garden"
+    ]
+  },
+  {
+    "word": "squirrel",
+    "category": "animal",
+    "clues": [
+      "tree",
+      "nuts",
+      "tail",
+      "park",
+      "climb"
+    ]
+  },
+  {
+    "word": "hamster",
+    "category": "animal",
+    "clues": [
+      "pet",
+      "wheel",
+      "small",
+      "fur",
+      "cage"
+    ]
+  },
+  {
+    "word": "guineapig",
+    "category": "animal",
+    "clues": [
+      "pet",
+      "small",
+      "cage",
+      "squeak",
+      "fur"
+    ]
+  },
+  {
+    "word": "otter",
+    "category": "animal",
+    "clues": [
+      "river",
+      "playful",
+      "swim",
+      "fur",
+      "mammal"
+    ]
+  },
+  {
+    "word": "beaver",
+    "category": "animal",
+    "clues": [
+      "dam",
+      "river",
+      "teeth",
+      "wood",
+      "mammal"
+    ]
+  },
+  {
+    "word": "moose",
+    "category": "animal",
+    "clues": [
+      "antlers",
+      "forest",
+      "large",
+      "hoof",
+      "wild"
+    ]
+  },
+  {
+    "word": "buffalo",
+    "category": "animal",
+    "clues": [
+      "herd",
+      "horns",
+      "plains",
+      "hoof",
+      "large"
+    ]
+  },
+  {
+    "word": "rhino",
+    "category": "animal",
+    "clues": [
+      "horn",
+      "thickskin",
+      "savanna",
+      "heavy",
+      "wild"
+    ]
+  },
+  {
+    "word": "hippo",
+    "category": "animal",
+    "clues": [
+      "river",
+      "huge",
+      "mouth",
+      "africa",
+      "water"
+    ]
+  },
+  {
+    "word": "koala",
+    "category": "animal",
+    "clues": [
+      "tree",
+      "australia",
+      "eucalyptus",
+      "marsupial",
+      "sleep"
+    ]
+  },
+  {
+    "word": "sloth",
+    "category": "animal",
+    "clues": [
+      "slow",
+      "tree",
+      "jungle",
+      "mammal",
+      "hang"
+    ]
+  },
+  {
+    "word": "gorilla",
+    "category": "animal",
+    "clues": [
+      "primate",
+      "jungle",
+      "strong",
+      "forest",
+      "silverback"
+    ]
+  },
+  {
+    "word": "chimpanzee",
+    "category": "animal",
+    "clues": [
+      "primate",
+      "smart",
+      "forest",
+      "tool",
+      "ape"
+    ]
+  },
+  {
+    "word": "polarbear",
+    "category": "animal",
+    "clues": [
+      "ice",
+      "arctic",
+      "fur",
+      "predator",
+      "white"
+    ]
+  },
+  {
+    "word": "reindeer",
+    "category": "animal",
+    "clues": [
+      "antlers",
+      "snow",
+      "arctic",
+      "hoof",
+      "sled"
+    ]
+  },
+  {
+    "word": "yak",
+    "category": "animal",
+    "clues": [
+      "mountain",
+      "fur",
+      "horns",
+      "cold",
+      "herd"
+    ]
+  },
+  {
+    "word": "alpaca",
+    "category": "animal",
+    "clues": [
+      "wool",
+      "andes",
+      "soft",
+      "herd",
+      "camelid"
+    ]
+  },
+  {
+    "word": "llama",
+    "category": "animal",
+    "clues": [
+      "andes",
+      "wool",
+      "pack",
+      "spit",
+      "camelid"
+    ]
+  },
+  {
+    "word": "jellyfish",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "tentacles",
+      "stinging",
+      "float",
+      "transparent"
+    ]
+  },
+  {
+    "word": "starfish",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "arms",
+      "seafloor",
+      "marine",
+      "star"
+    ]
+  },
+  {
+    "word": "seahorse",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "tiny",
+      "tail",
+      "marine",
+      "upright"
+    ]
+  },
+  {
+    "word": "goldfish",
+    "category": "animal",
+    "clues": [
+      "bowl",
+      "pet",
+      "orange",
+      "swim",
+      "scales"
+    ]
+  },
+  {
+    "word": "salmon",
+    "category": "animal",
+    "clues": [
+      "river",
+      "fish",
+      "pink",
+      "swim",
+      "migrate"
+    ]
+  },
+  {
+    "word": "trout",
+    "category": "animal",
+    "clues": [
+      "river",
+      "fish",
+      "swim",
+      "freshwater",
+      "angler"
+    ]
+  },
+  {
+    "word": "swan",
+    "category": "animal",
+    "clues": [
+      "lake",
+      "bird",
+      "white",
+      "graceful",
+      "neck"
+    ]
+  },
+  {
+    "word": "crow",
+    "category": "animal",
+    "clues": [
+      "black",
+      "bird",
+      "smart",
+      "caw",
+      "city"
+    ]
+  },
+  {
+    "word": "raven",
+    "category": "animal",
+    "clues": [
+      "black",
+      "bird",
+      "smart",
+      "forest",
+      "caw"
+    ]
+  },
+  {
+    "word": "woodpecker",
+    "category": "animal",
+    "clues": [
+      "tree",
+      "bird",
+      "peck",
+      "forest",
+      "beak"
+    ]
+  },
+  {
+    "word": "falcon",
+    "category": "animal",
+    "clues": [
+      "bird",
+      "fast",
+      "predator",
+      "sky",
+      "wings"
+    ]
+  },
+  {
+    "word": "pelican",
+    "category": "animal",
+    "clues": [
+      "bird",
+      "beak",
+      "ocean",
+      "fish",
+      "coast"
+    ]
+  },
+  {
+    "word": "heron",
+    "category": "animal",
+    "clues": [
+      "bird",
+      "wetland",
+      "longlegs",
+      "fish",
+      "shore"
+    ]
+  },
+  {
+    "word": "meerkat",
+    "category": "animal",
+    "clues": [
+      "desert",
+      "small",
+      "upright",
+      "group",
+      "watchful"
+    ]
+  },
+  {
+    "word": "porcupine",
+    "category": "animal",
+    "clues": [
+      "quills",
+      "spines",
+      "forest",
+      "defense",
+      "mammal"
+    ]
+  },
+  {
+    "word": "armadillo",
+    "category": "animal",
+    "clues": [
+      "shell",
+      "armor",
+      "dig",
+      "mammal",
+      "desert"
+    ]
+  },
+  {
+    "word": "lemur",
+    "category": "animal",
+    "clues": [
+      "tail",
+      "madagascar",
+      "primate",
+      "tree",
+      "jump"
+    ]
+  },
+  {
+    "word": "hyena",
+    "category": "animal",
+    "clues": [
+      "savanna",
+      "laugh",
+      "predator",
+      "pack",
+      "scavenge"
+    ]
+  },
+  {
+    "word": "jackal",
+    "category": "animal",
+    "clues": [
+      "desert",
+      "canine",
+      "predator",
+      "wild",
+      "howl"
+    ]
+  },
+  {
+    "word": "panther",
+    "category": "animal",
+    "clues": [
+      "feline",
+      "black",
+      "predator",
+      "jungle",
+      "stealth"
+    ]
+  },
+  {
+    "word": "lynx",
+    "category": "animal",
+    "clues": [
+      "feline",
+      "tuftedears",
+      "forest",
+      "predator",
+      "wild"
+    ]
+  },
+  {
+    "word": "badger",
+    "category": "animal",
+    "clues": [
+      "burrow",
+      "forest",
+      "claws",
+      "striped",
+      "mammal"
+    ]
+  },
+  {
+    "word": "mole",
+    "category": "animal",
+    "clues": [
+      "underground",
+      "dig",
+      "small",
+      "fur",
+      "tunnel"
+    ]
+  },
+  {
+    "word": "worm",
+    "category": "animal",
+    "clues": [
+      "soil",
+      "tiny",
+      "earth",
+      "crawl",
+      "garden"
+    ]
+  },
+  {
+    "word": "snail",
+    "category": "animal",
+    "clues": [
+      "shell",
+      "slow",
+      "garden",
+      "slime",
+      "crawl"
+    ]
+  },
+  {
+    "word": "slug",
+    "category": "animal",
+    "clues": [
+      "slow",
+      "garden",
+      "slime",
+      "shellless",
+      "crawl"
+    ]
+  },
+  {
+    "word": "rooster",
+    "category": "animal",
+    "clues": [
+      "farm",
+      "crow",
+      "feathers",
+      "sunrise",
+      "bird"
+    ]
+  },
+  {
+    "word": "canary",
+    "category": "animal",
+    "clues": [
+      "yellow",
+      "bird",
+      "sing",
+      "cage",
+      "small"
+    ]
+  },
+  {
+    "word": "finch",
+    "category": "animal",
+    "clues": [
+      "small",
+      "bird",
+      "seed",
+      "chirp",
+      "feathers"
+    ]
+  },
+  {
+    "word": "gecko",
+    "category": "animal",
+    "clues": [
+      "lizard",
+      "wall",
+      "sticky",
+      "tail",
+      "reptile"
+    ]
+  },
+  {
+    "word": "iguana",
+    "category": "animal",
+    "clues": [
+      "lizard",
+      "green",
+      "tail",
+      "reptile",
+      "tropical"
+    ]
+  },
+  {
+    "word": "vulture",
+    "category": "animal",
+    "clues": [
+      "bird",
+      "scavenge",
+      "sky",
+      "wings",
+      "desert"
+    ]
+  },
+  {
+    "word": "orca",
+    "category": "animal",
+    "clues": [
+      "ocean",
+      "blackwhite",
+      "predator",
+      "pod",
+      "whale"
+    ]
+  },
+  {
+    "word": "house",
+    "category": "place",
+    "clues": [
+      "home",
+      "rooms",
+      "roof",
+      "family",
+      "living"
+    ]
+  },
+  {
+    "word": "apartment",
+    "category": "place",
+    "clues": [
+      "building",
+      "rent",
+      "city",
+      "rooms",
+      "living"
+    ]
+  },
+  {
+    "word": "school",
+    "category": "place",
+    "clues": [
+      "students",
+      "teacher",
+      "classroom",
+      "learn",
+      "education"
+    ]
+  },
+  {
+    "word": "college",
+    "category": "place",
+    "clues": [
+      "campus",
+      "study",
+      "degree",
+      "students",
+      "university"
+    ]
+  },
+  {
+    "word": "university",
+    "category": "place",
+    "clues": [
+      "campus",
+      "research",
+      "degree",
+      "college",
+      "students"
+    ]
+  },
+  {
+    "word": "hospital",
+    "category": "place",
+    "clues": [
+      "doctor",
+      "nurse",
+      "patient",
+      "emergency",
+      "health"
+    ]
+  },
+  {
+    "word": "clinic",
+    "category": "place",
+    "clues": [
+      "doctor",
+      "patient",
+      "health",
+      "appointment",
+      "care"
+    ]
+  },
+  {
+    "word": "pharmacy",
+    "category": "place",
+    "clues": [
+      "medicine",
+      "prescription",
+      "health",
+      "store",
+      "drugs"
+    ]
+  },
+  {
+    "word": "library",
+    "category": "place",
+    "clues": [
+      "books",
+      "read",
+      "quiet",
+      "study",
+      "shelves"
+    ]
+  },
+  {
+    "word": "museum",
+    "category": "place",
+    "clues": [
+      "history",
+      "art",
+      "exhibit",
+      "gallery",
+      "culture"
+    ]
+  },
+  {
+    "word": "theater",
+    "category": "place",
+    "clues": [
+      "movie",
+      "screen",
+      "seats",
+      "show",
+      "ticket"
+    ]
+  },
+  {
+    "word": "cinema",
+    "category": "place",
+    "clues": [
+      "movie",
+      "screen",
+      "ticket",
+      "popcorn",
+      "seats"
+    ]
+  },
+  {
+    "word": "stadium",
+    "category": "place",
+    "clues": [
+      "sports",
+      "crowd",
+      "seats",
+      "field",
+      "event"
+    ]
+  },
+  {
+    "word": "park",
+    "category": "place",
+    "clues": [
+      "trees",
+      "playground",
+      "bench",
+      "grass",
+      "walk"
+    ]
+  },
+  {
+    "word": "playground",
+    "category": "place",
+    "clues": [
+      "slide",
+      "swing",
+      "children",
+      "park",
+      "play"
+    ]
+  },
+  {
+    "word": "zoo",
+    "category": "place",
+    "clues": [
+      "animals",
+      "cages",
+      "tickets",
+      "wildlife",
+      "visit"
+    ]
+  },
+  {
+    "word": "farm",
+    "category": "place",
+    "clues": [
+      "barn",
+      "tractor",
+      "field",
+      "animals",
+      "crops"
+    ]
+  },
+  {
+    "word": "factory",
+    "category": "place",
+    "clues": [
+      "machines",
+      "production",
+      "workers",
+      "industry",
+      "assembly"
+    ]
+  },
+  {
+    "word": "office",
+    "category": "place",
+    "clues": [
+      "work",
+      "desk",
+      "meeting",
+      "computer",
+      "business"
+    ]
+  },
+  {
+    "word": "bank",
+    "category": "place",
+    "clues": [
+      "money",
+      "account",
+      "loan",
+      "cash",
+      "finance"
+    ]
+  },
+  {
+    "word": "restaurant",
+    "category": "place",
+    "clues": [
+      "food",
+      "menu",
+      "chef",
+      "table",
+      "dining"
+    ]
+  },
+  {
+    "word": "cafe",
+    "category": "place",
+    "clues": [
+      "coffee",
+      "pastry",
+      "table",
+      "wifi",
+      "relax"
+    ]
+  },
+  {
+    "word": "bakery",
+    "category": "place",
+    "clues": [
+      "bread",
+      "cake",
+      "oven",
+      "pastry",
+      "shop"
+    ]
+  },
+  {
+    "word": "market",
+    "category": "place",
+    "clues": [
+      "vendors",
+      "buy",
+      "fresh",
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "word": "store",
+    "category": "place",
+    "clues": [
+      "shop",
+      "buy",
+      "cashier",
+      "shelves",
+      "goods"
+    ]
+  },
+  {
+    "word": "mall",
+    "category": "place",
+    "clues": [
+      "shopping",
+      "stores",
+      "foodcourt",
+      "parking",
+      "indoor"
+    ]
+  },
+  {
+    "word": "hotel",
+    "category": "place",
+    "clues": [
+      "travel",
+      "room",
+      "stay",
+      "lobby",
+      "guest"
+    ]
+  },
+  {
+    "word": "motel",
+    "category": "place",
+    "clues": [
+      "roadside",
+      "room",
+      "travel",
+      "parking",
+      "stay"
+    ]
+  },
+  {
+    "word": "airport",
+    "category": "place",
+    "clues": [
+      "flight",
+      "terminal",
+      "runway",
+      "luggage",
+      "travel"
+    ]
+  },
+  {
+    "word": "station",
+    "category": "place",
+    "clues": [
+      "train",
+      "platform",
+      "ticket",
+      "travel",
+      "commute"
+    ]
+  },
+  {
+    "word": "busstop",
+    "category": "place",
+    "clues": [
+      "route",
+      "wait",
+      "public",
+      "transport",
+      "shelter"
+    ]
+  },
+  {
+    "word": "harbor",
+    "category": "place",
+    "clues": [
+      "ships",
+      "water",
+      "dock",
+      "port",
+      "coast"
+    ]
+  },
+  {
+    "word": "port",
+    "category": "place",
+    "clues": [
+      "cargo",
+      "ships",
+      "harbor",
+      "trade",
+      "dock"
+    ]
+  },
+  {
+    "word": "bridge",
+    "category": "place",
+    "clues": [
+      "river",
+      "cross",
+      "road",
+      "span",
+      "traffic"
+    ]
+  },
+  {
+    "word": "tunnel",
+    "category": "place",
+    "clues": [
+      "underground",
+      "road",
+      "dark",
+      "passage",
+      "mountain"
+    ]
+  },
+  {
+    "word": "road",
+    "category": "place",
+    "clues": [
+      "cars",
+      "travel",
+      "street",
+      "pavement",
+      "route"
+    ]
+  },
+  {
+    "word": "street",
+    "category": "place",
+    "clues": [
+      "city",
+      "road",
+      "buildings",
+      "traffic",
+      "address"
+    ]
+  },
+  {
+    "word": "highway",
+    "category": "place",
+    "clues": [
+      "cars",
+      "fast",
+      "lanes",
+      "road",
+      "travel"
+    ]
+  },
+  {
+    "word": "sidewalk",
+    "category": "place",
+    "clues": [
+      "walk",
+      "street",
+      "pavement",
+      "city",
+      "pedestrian"
+    ]
+  },
+  {
+    "word": "parkinglot",
+    "category": "place",
+    "clues": [
+      "cars",
+      "spaces",
+      "store",
+      "asphalt",
+      "park"
+    ]
+  },
+  {
+    "word": "gasstation",
+    "category": "place",
+    "clues": [
+      "fuel",
+      "car",
+      "pump",
+      "road",
+      "service"
+    ]
+  },
+  {
+    "word": "garage",
+    "category": "place",
+    "clues": [
+      "car",
+      "tools",
+      "house",
+      "parking",
+      "storage"
+    ]
+  },
+  {
+    "word": "warehouse",
+    "category": "place",
+    "clues": [
+      "storage",
+      "boxes",
+      "shipping",
+      "inventory",
+      "large"
+    ]
+  },
+  {
+    "word": "barn",
+    "category": "place",
+    "clues": [
+      "farm",
+      "hay",
+      "animals",
+      "wooden",
+      "rural"
+    ]
+  },
+  {
+    "word": "church",
+    "category": "place",
+    "clues": [
+      "prayer",
+      "bells",
+      "worship",
+      "faith",
+      "community"
+    ]
+  },
+  {
+    "word": "temple",
+    "category": "place",
+    "clues": [
+      "prayer",
+      "worship",
+      "sacred",
+      "ritual",
+      "shrine"
+    ]
+  },
+  {
+    "word": "mosque",
+    "category": "place",
+    "clues": [
+      "prayer",
+      "worship",
+      "minaret",
+      "faith",
+      "community"
+    ]
+  },
+  {
+    "word": "synagogue",
+    "category": "place",
+    "clues": [
+      "prayer",
+      "worship",
+      "faith",
+      "community",
+      "torah"
+    ]
+  },
+  {
+    "word": "castle",
+    "category": "place",
+    "clues": [
+      "stone",
+      "king",
+      "tower",
+      "fortress",
+      "medieval"
+    ]
+  },
+  {
+    "word": "palace",
+    "category": "place",
+    "clues": [
+      "royal",
+      "king",
+      "luxury",
+      "rooms",
+      "historic"
+    ]
+  },
+  {
+    "word": "fort",
+    "category": "place",
+    "clues": [
+      "walls",
+      "soldiers",
+      "defense",
+      "historic",
+      "stone"
+    ]
+  },
+  {
+    "word": "tower",
+    "category": "place",
+    "clues": [
+      "tall",
+      "view",
+      "building",
+      "height",
+      "city"
+    ]
+  },
+  {
+    "word": "skyscraper",
+    "category": "place",
+    "clues": [
+      "tall",
+      "glass",
+      "city",
+      "office",
+      "tower"
+    ]
+  },
+  {
+    "word": "village",
+    "category": "place",
+    "clues": [
+      "small",
+      "rural",
+      "homes",
+      "community",
+      "town"
+    ]
+  },
+  {
+    "word": "town",
+    "category": "place",
+    "clues": [
+      "small",
+      "streets",
+      "shops",
+      "community",
+      "local"
+    ]
+  },
+  {
+    "word": "city",
+    "category": "place",
+    "clues": [
+      "buildings",
+      "traffic",
+      "crowd",
+      "urban",
+      "downtown"
+    ]
+  },
+  {
+    "word": "country",
+    "category": "place",
+    "clues": [
+      "nation",
+      "border",
+      "flag",
+      "people",
+      "government"
+    ]
+  },
+  {
+    "word": "capital",
+    "category": "place",
+    "clues": [
+      "government",
+      "city",
+      "nation",
+      "leader",
+      "center"
+    ]
+  },
+  {
+    "word": "downtown",
+    "category": "place",
+    "clues": [
+      "city",
+      "busy",
+      "shops",
+      "offices",
+      "central"
+    ]
+  },
+  {
+    "word": "suburb",
+    "category": "place",
+    "clues": [
+      "homes",
+      "city",
+      "quiet",
+      "residential",
+      "commute"
+    ]
+  },
+  {
+    "word": "neighborhood",
+    "category": "place",
+    "clues": [
+      "homes",
+      "local",
+      "community",
+      "street",
+      "nearby"
+    ]
+  },
+  {
+    "word": "forest",
+    "category": "place",
+    "clues": [
+      "trees",
+      "wild",
+      "birds",
+      "shade",
+      "nature"
+    ]
+  },
+  {
+    "word": "jungle",
+    "category": "place",
+    "clues": [
+      "dense",
+      "trees",
+      "tropical",
+      "wild",
+      "rain"
+    ]
+  },
+  {
+    "word": "desert",
+    "category": "place",
+    "clues": [
+      "sand",
+      "dry",
+      "hot",
+      "camel",
+      "dunes"
+    ]
+  },
+  {
+    "word": "beach",
+    "category": "place",
+    "clues": [
+      "sand",
+      "waves",
+      "sea",
+      "shore",
+      "sun"
+    ]
+  },
+  {
+    "word": "coast",
+    "category": "place",
+    "clues": [
+      "sea",
+      "shore",
+      "waves",
+      "cliffs",
+      "ocean"
+    ]
+  },
+  {
+    "word": "island",
+    "category": "place",
+    "clues": [
+      "water",
+      "shore",
+      "palm",
+      "sea",
+      "land"
+    ]
+  },
+  {
+    "word": "mountain",
+    "category": "place",
+    "clues": [
+      "peak",
+      "snow",
+      "climb",
+      "high",
+      "rock"
+    ]
+  },
+  {
+    "word": "hill",
+    "category": "place",
+    "clues": [
+      "slope",
+      "grass",
+      "small",
+      "climb",
+      "land"
+    ]
+  },
+  {
+    "word": "valley",
+    "category": "place",
+    "clues": [
+      "between",
+      "mountains",
+      "river",
+      "lowland",
+      "green"
+    ]
+  },
+  {
+    "word": "canyon",
+    "category": "place",
+    "clues": [
+      "rock",
+      "deep",
+      "river",
+      "cliffs",
+      "erosion"
+    ]
+  },
+  {
+    "word": "cliff",
+    "category": "place",
+    "clues": [
+      "edge",
+      "rock",
+      "height",
+      "coast",
+      "drop"
+    ]
+  },
+  {
+    "word": "cave",
+    "category": "place",
+    "clues": [
+      "dark",
+      "rock",
+      "underground",
+      "bats",
+      "echo"
+    ]
+  },
+  {
+    "word": "river",
+    "category": "place",
+    "clues": [
+      "water",
+      "flow",
+      "bridge",
+      "stream",
+      "bank"
+    ]
+  },
+  {
+    "word": "lake",
+    "category": "place",
+    "clues": [
+      "water",
+      "shore",
+      "boat",
+      "calm",
+      "freshwater"
+    ]
+  },
+  {
+    "word": "pond",
+    "category": "place",
+    "clues": [
+      "water",
+      "small",
+      "ducks",
+      "lily",
+      "calm"
+    ]
+  },
+  {
+    "word": "waterfall",
+    "category": "place",
+    "clues": [
+      "water",
+      "cliff",
+      "cascade",
+      "mist",
+      "river"
+    ]
+  },
+  {
+    "word": "stream",
+    "category": "place",
+    "clues": [
+      "water",
+      "small",
+      "flow",
+      "brook",
+      "nature"
+    ]
+  },
+  {
+    "word": "ocean",
+    "category": "place",
+    "clues": [
+      "waves",
+      "salt",
+      "deep",
+      "sea",
+      "coast"
+    ]
+  },
+  {
+    "word": "sea",
+    "category": "place",
+    "clues": [
+      "salt",
+      "waves",
+      "shore",
+      "ocean",
+      "sail"
+    ]
+  },
+  {
+    "word": "bay",
+    "category": "place",
+    "clues": [
+      "water",
+      "coast",
+      "harbor",
+      "shore",
+      "curve"
+    ]
+  },
+  {
+    "word": "lagoon",
+    "category": "place",
+    "clues": [
+      "water",
+      "coast",
+      "shallow",
+      "tropical",
+      "blue"
+    ]
+  },
+  {
+    "word": "reef",
+    "category": "place",
+    "clues": [
+      "coral",
+      "ocean",
+      "fish",
+      "marine",
+      "colorful"
+    ]
+  },
+  {
+    "word": "glacier",
+    "category": "place",
+    "clues": [
+      "ice",
+      "mountain",
+      "cold",
+      "slow",
+      "frozen"
+    ]
+  },
+  {
+    "word": "volcano",
+    "category": "place",
+    "clues": [
+      "lava",
+      "mountain",
+      "eruption",
+      "smoke",
+      "fire"
+    ]
+  },
+  {
+    "word": "meadow",
+    "category": "place",
+    "clues": [
+      "grass",
+      "flowers",
+      "open",
+      "field",
+      "nature"
+    ]
+  },
+  {
+    "word": "field",
+    "category": "place",
+    "clues": [
+      "grass",
+      "farm",
+      "open",
+      "crops",
+      "land"
+    ]
+  },
+  {
+    "word": "garden",
+    "category": "place",
+    "clues": [
+      "flowers",
+      "plants",
+      "yard",
+      "green",
+      "grow"
+    ]
+  },
+  {
+    "word": "orchard",
+    "category": "place",
+    "clues": [
+      "trees",
+      "fruit",
+      "farm",
+      "apples",
+      "rows"
+    ]
+  },
+  {
+    "word": "vineyard",
+    "category": "place",
+    "clues": [
+      "grapes",
+      "rows",
+      "farm",
+      "wine",
+      "field"
+    ]
+  },
+  {
+    "word": "campground",
+    "category": "place",
+    "clues": [
+      "tent",
+      "forest",
+      "fire",
+      "outdoors",
+      "travel"
+    ]
+  },
+  {
+    "word": "campsite",
+    "category": "place",
+    "clues": [
+      "tent",
+      "fire",
+      "forest",
+      "night",
+      "outdoors"
+    ]
+  },
+  {
+    "word": "trail",
+    "category": "place",
+    "clues": [
+      "walk",
+      "forest",
+      "hike",
+      "path",
+      "nature"
+    ]
+  },
+  {
+    "word": "path",
+    "category": "place",
+    "clues": [
+      "walk",
+      "trail",
+      "route",
+      "ground",
+      "follow"
+    ]
+  },
+  {
+    "word": "gardenpath",
+    "category": "place",
+    "clues": [
+      "walk",
+      "stones",
+      "flowers",
+      "yard",
+      "path"
+    ]
+  },
+  {
+    "word": "courtyard",
+    "category": "place",
+    "clues": [
+      "building",
+      "open",
+      "center",
+      "garden",
+      "stone"
+    ]
+  },
+  {
+    "word": "playfield",
+    "category": "place",
+    "clues": [
+      "sports",
+      "grass",
+      "school",
+      "goal",
+      "running"
+    ]
+  },
+  {
+    "word": "gym",
+    "category": "place",
+    "clues": [
+      "exercise",
+      "weights",
+      "fitness",
+      "workout",
+      "trainer"
+    ]
+  },
+  {
+    "word": "swimmingpool",
+    "category": "place",
+    "clues": [
+      "water",
+      "swim",
+      "lane",
+      "summer",
+      "chlorine"
+    ]
+  },
+  {
+    "word": "arena",
+    "category": "place",
+    "clues": [
+      "event",
+      "crowd",
+      "sports",
+      "music",
+      "seats"
+    ]
+  },
+  {
+    "word": "court",
+    "category": "place",
+    "clues": [
+      "tennis",
+      "basketball",
+      "lines",
+      "sport",
+      "play"
+    ]
+  },
+  {
+    "word": "kitchen",
+    "category": "place",
+    "clues": [
+      "cook",
+      "food",
+      "stove",
+      "sink",
+      "home"
+    ]
+  },
+  {
+    "word": "bedroom",
+    "category": "place",
+    "clues": [
+      "sleep",
+      "bed",
+      "pillow",
+      "rest",
+      "home"
+    ]
+  },
+  {
+    "word": "bathroom",
+    "category": "place",
+    "clues": [
+      "sink",
+      "shower",
+      "toilet",
+      "mirror",
+      "home"
+    ]
+  },
+  {
+    "word": "livingroom",
+    "category": "place",
+    "clues": [
+      "sofa",
+      "television",
+      "family",
+      "home",
+      "relax"
+    ]
+  },
+  {
+    "word": "balcony",
+    "category": "place",
+    "clues": [
+      "apartment",
+      "outside",
+      "view",
+      "rail",
+      "air"
+    ]
+  },
+  {
+    "word": "basement",
+    "category": "place",
+    "clues": [
+      "house",
+      "below",
+      "storage",
+      "stairs",
+      "underground"
+    ]
+  },
+  {
+    "word": "attic",
+    "category": "place",
+    "clues": [
+      "roof",
+      "storage",
+      "house",
+      "dusty",
+      "upstairs"
+    ]
+  },
+  {
+    "word": "classroom",
+    "category": "place",
+    "clues": [
+      "students",
+      "teacher",
+      "desk",
+      "lesson",
+      "school"
+    ]
+  },
+  {
+    "word": "laboratory",
+    "category": "place",
+    "clues": [
+      "science",
+      "experiment",
+      "research",
+      "equipment",
+      "study"
+    ]
+  },
+  {
+    "word": "workshop",
+    "category": "place",
+    "clues": [
+      "tools",
+      "repair",
+      "craft",
+      "workbench",
+      "build"
+    ]
+  },
+  {
+    "word": "studio",
+    "category": "place",
+    "clues": [
+      "art",
+      "music",
+      "record",
+      "creative",
+      "space"
+    ]
+  },
+  {
+    "word": "salon",
+    "category": "place",
+    "clues": [
+      "hair",
+      "beauty",
+      "cut",
+      "stylist",
+      "mirror"
+    ]
+  },
+  {
+    "word": "barbershop",
+    "category": "place",
+    "clues": [
+      "haircut",
+      "razor",
+      "chair",
+      "stylist",
+      "men"
+    ]
+  },
+  {
+    "word": "bar",
+    "category": "place",
+    "clues": [
+      "drinks",
+      "counter",
+      "stools",
+      "nightlife",
+      "music"
+    ]
+  },
+  {
+    "word": "lounge",
+    "category": "place",
+    "clues": [
+      "chairs",
+      "relax",
+      "airport",
+      "quiet",
+      "wait"
+    ]
+  },
+  {
+    "word": "resort",
+    "category": "place",
+    "clues": [
+      "vacation",
+      "pool",
+      "hotel",
+      "beach",
+      "relax"
+    ]
+  },
+  {
+    "word": "spa",
+    "category": "place",
+    "clues": [
+      "relax",
+      "massage",
+      "wellness",
+      "steam",
+      "luxury"
+    ]
+  },
+  {
+    "word": "embassy",
+    "category": "place",
+    "clues": [
+      "country",
+      "diplomat",
+      "visa",
+      "foreign",
+      "government"
+    ]
+  },
+  {
+    "word": "courthouse",
+    "category": "place",
+    "clues": [
+      "judge",
+      "law",
+      "trial",
+      "justice",
+      "legal"
+    ]
+  },
+  {
+    "word": "prison",
+    "category": "place",
+    "clues": [
+      "cells",
+      "guards",
+      "law",
+      "secure",
+      "punishment"
+    ]
+  },
+  {
+    "word": "policestation",
+    "category": "place",
+    "clues": [
+      "law",
+      "officers",
+      "crime",
+      "report",
+      "city"
+    ]
+  },
+  {
+    "word": "firestation",
+    "category": "place",
+    "clues": [
+      "firetruck",
+      "firefighters",
+      "rescue",
+      "siren",
+      "city"
+    ]
+  },
+  {
+    "word": "postoffice",
+    "category": "place",
+    "clues": [
+      "mail",
+      "letters",
+      "stamps",
+      "parcel",
+      "service"
+    ]
+  },
+  {
+    "word": "trainyard",
+    "category": "place",
+    "clues": [
+      "tracks",
+      "cars",
+      "rail",
+      "repair",
+      "storage"
+    ]
+  },
+  {
+    "word": "dock",
+    "category": "place",
+    "clues": [
+      "boat",
+      "water",
+      "harbor",
+      "wood",
+      "shore"
+    ]
+  },
+  {
+    "word": "pier",
+    "category": "place",
+    "clues": [
+      "water",
+      "wood",
+      "ocean",
+      "walk",
+      "fishing"
+    ]
+  },
+  {
+    "word": "lighthouse",
+    "category": "place",
+    "clues": [
+      "coast",
+      "light",
+      "ships",
+      "tower",
+      "beacon"
+    ]
+  },
+  {
+    "word": "observatory",
+    "category": "place",
+    "clues": [
+      "stars",
+      "telescope",
+      "science",
+      "sky",
+      "research"
+    ]
+  },
+  {
+    "word": "planetarium",
+    "category": "place",
+    "clues": [
+      "stars",
+      "dome",
+      "space",
+      "show",
+      "science"
+    ]
+  },
+  {
+    "word": "cemetery",
+    "category": "place",
+    "clues": [
+      "graves",
+      "quiet",
+      "stones",
+      "memory",
+      "rest"
+    ]
+  },
+  {
+    "word": "monument",
+    "category": "place",
+    "clues": [
+      "history",
+      "statue",
+      "memory",
+      "landmark",
+      "stone"
+    ]
+  },
+  {
+    "word": "statue",
+    "category": "place",
+    "clues": [
+      "stone",
+      "figure",
+      "monument",
+      "public",
+      "art"
+    ]
+  },
+  {
+    "word": "fountain",
+    "category": "place",
+    "clues": [
+      "water",
+      "square",
+      "spray",
+      "park",
+      "stone"
+    ]
+  },
+  {
+    "word": "square",
+    "category": "place",
+    "clues": [
+      "city",
+      "open",
+      "crowd",
+      "center",
+      "public"
+    ]
+  },
+  {
+    "word": "plaza",
+    "category": "place",
+    "clues": [
+      "open",
+      "city",
+      "shops",
+      "square",
+      "public"
+    ]
+  },
+  {
+    "word": "marketplace",
+    "category": "place",
+    "clues": [
+      "vendors",
+      "buy",
+      "crowd",
+      "goods",
+      "square"
+    ]
+  },
+  {
+    "word": "crossroad",
+    "category": "place",
+    "clues": [
+      "intersection",
+      "road",
+      "travel",
+      "sign",
+      "traffic"
+    ]
+  },
+  {
+    "word": "roundabout",
+    "category": "place",
+    "clues": [
+      "circle",
+      "traffic",
+      "road",
+      "cars",
+      "intersection"
+    ]
+  },
+  {
+    "word": "border",
+    "category": "place",
+    "clues": [
+      "country",
+      "line",
+      "crossing",
+      "passport",
+      "boundary"
+    ]
+  },
+  {
+    "word": "checkpoint",
+    "category": "place",
+    "clues": [
+      "security",
+      "border",
+      "stop",
+      "travel",
+      "inspection"
+    ]
+  },
+  {
+    "word": "runway",
+    "category": "place",
+    "clues": [
+      "plane",
+      "airport",
+      "takeoff",
+      "landing",
+      "strip"
+    ]
+  },
+  {
+    "word": "terminal",
+    "category": "place",
+    "clues": [
+      "airport",
+      "gate",
+      "travel",
+      "luggage",
+      "passengers"
+    ]
+  },
+  {
+    "word": "subwaystation",
+    "category": "place",
+    "clues": [
+      "metro",
+      "underground",
+      "platform",
+      "city",
+      "train"
+    ]
+  },
+  {
+    "word": "platform",
+    "category": "place",
+    "clues": [
+      "station",
+      "train",
+      "wait",
+      "edge",
+      "travel"
+    ]
+  },
+  {
+    "word": "dockyard",
+    "category": "place",
+    "clues": [
+      "ships",
+      "repair",
+      "harbor",
+      "industry",
+      "port"
+    ]
+  },
+  {
+    "word": "aquarium",
+    "category": "place",
+    "clues": [
+      "fish",
+      "tank",
+      "marine",
+      "glass",
+      "visit"
+    ]
+  },
+  {
+    "word": "greenhouse",
+    "category": "place",
+    "clues": [
+      "plants",
+      "glass",
+      "warm",
+      "garden",
+      "grow"
+    ]
+  },
+  {
+    "word": "nationalpark",
+    "category": "place",
+    "clues": [
+      "nature",
+      "trails",
+      "wildlife",
+      "protected",
+      "scenic"
+    ]
+  },
+  {
+    "word": "apple",
+    "category": "thing",
+    "clues": [
+      "fruit",
+      "red",
+      "tree",
+      "sweet",
+      "orchard"
+    ]
+  },
+  {
+    "word": "banana",
+    "category": "thing",
+    "clues": [
+      "fruit",
+      "yellow",
+      "peel",
+      "tropical",
+      "sweet"
+    ]
+  },
+  {
+    "word": "orange",
+    "category": "thing",
+    "clues": [
+      "fruit",
+      "citrus",
+      "juice",
+      "peel",
+      "round"
+    ]
+  },
+  {
+    "word": "grape",
+    "category": "thing",
+    "clues": [
+      "fruit",
+      "vine",
+      "cluster",
+      "purple",
+      "juice"
+    ]
+  },
+  {
+    "word": "mango",
+    "category": "thing",
+    "clues": [
+      "fruit",
+      "tropical",
+      "sweet",
+      "seed",
+      "summer"
+    ]
+  },
+  {
+    "word": "watermelon",
+    "category": "thing",
+    "clues": [
+      "fruit",
+      "summer",
+      "green",
+      "slice",
+      "juicy"
+    ]
+  },
+  {
+    "word": "bread",
+    "category": "thing",
+    "clues": [
+      "bake",
+      "loaf",
+      "food",
+      "slice",
+      "bakery"
+    ]
+  },
+  {
+    "word": "rice",
+    "category": "thing",
+    "clues": [
+      "grain",
+      "cook",
+      "bowl",
+      "meal",
+      "staple"
+    ]
+  },
+  {
+    "word": "pizza",
+    "category": "thing",
+    "clues": [
+      "cheese",
+      "slice",
+      "oven",
+      "italian",
+      "delivery"
+    ]
+  },
+  {
+    "word": "burger",
+    "category": "thing",
+    "clues": [
+      "bun",
+      "patty",
+      "fastfood",
+      "cheese",
+      "grill"
+    ]
+  },
+  {
+    "word": "sandwich",
+    "category": "thing",
+    "clues": [
+      "bread",
+      "lunch",
+      "fillings",
+      "slice",
+      "snack"
+    ]
+  },
+  {
+    "word": "salad",
+    "category": "thing",
+    "clues": [
+      "vegetables",
+      "bowl",
+      "fresh",
+      "healthy",
+      "greens"
+    ]
+  },
+  {
+    "word": "soup",
+    "category": "thing",
+    "clues": [
+      "bowl",
+      "hot",
+      "spoon",
+      "broth",
+      "meal"
+    ]
+  },
+  {
+    "word": "coffee",
+    "category": "thing",
+    "clues": [
+      "drink",
+      "beans",
+      "cafe",
+      "morning",
+      "caffeine"
+    ]
+  },
+  {
+    "word": "tea",
+    "category": "thing",
+    "clues": [
+      "drink",
+      "leaves",
+      "hot",
+      "cup",
+      "brew"
+    ]
+  },
+  {
+    "word": "juice",
+    "category": "thing",
+    "clues": [
+      "drink",
+      "fruit",
+      "glass",
+      "fresh",
+      "sweet"
+    ]
+  },
+  {
+    "word": "water",
+    "category": "thing",
+    "clues": [
+      "drink",
+      "clear",
+      "river",
+      "life",
+      "liquid"
+    ]
+  },
+  {
+    "word": "icecream",
+    "category": "thing",
+    "clues": [
+      "cold",
+      "dessert",
+      "sweet",
+      "cone",
+      "flavor"
+    ]
+  },
+  {
+    "word": "cake",
+    "category": "thing",
+    "clues": [
+      "dessert",
+      "birthday",
+      "sweet",
+      "bake",
+      "slice"
+    ]
+  },
+  {
+    "word": "cookie",
+    "category": "thing",
+    "clues": [
+      "sweet",
+      "bake",
+      "snack",
+      "chocolate",
+      "crunch"
+    ]
+  },
+  {
+    "word": "tree",
+    "category": "thing",
+    "clues": [
+      "leaves",
+      "trunk",
+      "forest",
+      "shade",
+      "roots"
+    ]
+  },
+  {
+    "word": "flower",
+    "category": "thing",
+    "clues": [
+      "petals",
+      "garden",
+      "colorful",
+      "bloom",
+      "fragrance"
+    ]
+  },
+  {
+    "word": "grass",
+    "category": "thing",
+    "clues": [
+      "green",
+      "lawn",
+      "field",
+      "grow",
+      "blade"
+    ]
+  },
+  {
+    "word": "leaf",
+    "category": "thing",
+    "clues": [
+      "tree",
+      "green",
+      "fall",
+      "plant",
+      "branch"
+    ]
+  },
+  {
+    "word": "stone",
+    "category": "thing",
+    "clues": [
+      "rock",
+      "hard",
+      "ground",
+      "gray",
+      "solid"
+    ]
+  },
+  {
+    "word": "cloud",
+    "category": "thing",
+    "clues": [
+      "sky",
+      "white",
+      "rain",
+      "float",
+      "weather"
+    ]
+  },
+  {
+    "word": "rain",
+    "category": "thing",
+    "clues": [
+      "water",
+      "cloud",
+      "storm",
+      "umbrella",
+      "wet"
+    ]
+  },
+  {
+    "word": "snow",
+    "category": "thing",
+    "clues": [
+      "winter",
+      "cold",
+      "white",
+      "flakes",
+      "ice"
+    ]
+  },
+  {
+    "word": "sun",
+    "category": "thing",
+    "clues": [
+      "sky",
+      "light",
+      "heat",
+      "day",
+      "solar"
+    ]
+  },
+  {
+    "word": "moon",
+    "category": "thing",
+    "clues": [
+      "night",
+      "sky",
+      "orbit",
+      "craters",
+      "glow"
+    ]
+  },
+  {
+    "word": "star",
+    "category": "thing",
+    "clues": [
+      "sky",
+      "night",
+      "shine",
+      "space",
+      "constellation"
+    ]
+  },
+  {
+    "word": "planet",
+    "category": "thing",
+    "clues": [
+      "space",
+      "orbit",
+      "world",
+      "solar",
+      "globe"
+    ]
+  },
+  {
+    "word": "beard",
+    "category": "thing",
+    "clues": [
+      "face",
+      "hair",
+      "chin",
+      "grow",
+      "trim"
+    ]
+  },
+  {
+    "word": "gardenbench",
+    "category": "thing",
+    "clues": [
+      "park",
+      "sit",
+      "wood",
+      "outdoor",
+      "rest"
+    ]
+  },
+  {
+    "word": "airplane",
+    "category": "thing",
+    "clues": [
+      "flight",
+      "wings",
+      "airport",
+      "travel",
+      "jet"
+    ]
+  },
+  {
+    "word": "shipyard",
+    "category": "place",
+    "clues": [
+      "ships",
+      "repair",
+      "harbor",
+      "dock",
+      "industry"
+    ]
+  },
+  {
+    "word": "notepad",
+    "category": "thing",
+    "clues": [
+      "write",
+      "paper",
+      "notes",
+      "desk",
+      "pages"
+    ]
+  },
+  {
+    "word": "envelope",
+    "category": "thing",
+    "clues": [
+      "mail",
+      "letter",
+      "paper",
+      "seal",
+      "address"
+    ]
+  },
+  {
+    "word": "stamp",
+    "category": "thing",
+    "clues": [
+      "mail",
+      "post",
+      "letter",
+      "adhesive",
+      "corner"
+    ]
+  },
+  {
+    "word": "mailbox",
+    "category": "thing",
+    "clues": [
+      "letters",
+      "post",
+      "delivery",
+      "mail",
+      "box"
+    ]
+  },
+  {
+    "word": "newspaper",
+    "category": "thing",
+    "clues": [
+      "news",
+      "paper",
+      "print",
+      "headlines",
+      "daily"
+    ]
+  },
+  {
+    "word": "magazine",
+    "category": "thing",
+    "clues": [
+      "pages",
+      "photos",
+      "articles",
+      "glossy",
+      "read"
+    ]
+  },
+  {
+    "word": "calendar",
+    "category": "thing",
+    "clues": [
+      "date",
+      "month",
+      "year",
+      "schedule",
+      "days"
+    ]
+  },
+  {
+    "word": "alarm",
+    "category": "thing",
+    "clues": [
+      "wake",
+      "clock",
+      "sound",
+      "morning",
+      "ring"
+    ]
+  },
+  {
+    "word": "flashlight",
+    "category": "thing",
+    "clues": [
+      "light",
+      "battery",
+      "dark",
+      "torch",
+      "beam"
+    ]
+  },
+  {
+    "word": "candle",
+    "category": "thing",
+    "clues": [
+      "wax",
+      "flame",
+      "light",
+      "melt",
+      "wick"
+    ]
+  },
+  {
+    "word": "matchbox",
+    "category": "thing",
+    "clues": [
+      "fire",
+      "sticks",
+      "small",
+      "spark",
+      "box"
+    ]
+  },
+  {
+    "word": "torch",
+    "category": "thing",
+    "clues": [
+      "light",
+      "carry",
+      "dark",
+      "beam",
+      "battery"
+    ]
+  },
+  {
+    "word": "binoculars",
+    "category": "thing",
+    "clues": [
+      "view",
+      "distance",
+      "lenses",
+      "zoom",
+      "birdwatch"
+    ]
+  },
+  {
+    "word": "microscope",
+    "category": "thing",
+    "clues": [
+      "science",
+      "lens",
+      "tiny",
+      "lab",
+      "magnify"
+    ]
+  },
+  {
+    "word": "telescope",
+    "category": "thing",
+    "clues": [
+      "stars",
+      "lens",
+      "space",
+      "observe",
+      "sky"
+    ]
+  },
+  {
+    "word": "calculator",
+    "category": "thing",
+    "clues": [
+      "math",
+      "numbers",
+      "buttons",
+      "school",
+      "compute"
+    ]
+  },
+  {
+    "word": "backyard",
+    "category": "place",
+    "clues": [
+      "house",
+      "grass",
+      "fence",
+      "garden",
+      "outside"
+    ]
+  },
+  {
+    "word": "frontyard",
+    "category": "place",
+    "clues": [
+      "house",
+      "grass",
+      "gate",
+      "flowers",
+      "outside"
+    ]
+  },
+  {
+    "word": "fence",
+    "category": "thing",
+    "clues": [
+      "yard",
+      "wood",
+      "boundary",
+      "gate",
+      "property"
+    ]
+  },
+  {
+    "word": "gate",
+    "category": "thing",
+    "clues": [
+      "entry",
+      "fence",
+      "open",
+      "close",
+      "yard"
+    ]
+  },
+  {
+    "word": "stairs",
+    "category": "thing",
+    "clues": [
+      "steps",
+      "climb",
+      "house",
+      "upstairs",
+      "levels"
+    ]
+  },
+  {
+    "word": "elevator",
+    "category": "thing",
+    "clues": [
+      "lift",
+      "building",
+      "floors",
+      "buttons",
+      "updown"
+    ]
+  },
+  {
+    "word": "escalator",
+    "category": "thing",
+    "clues": [
+      "stairs",
+      "moving",
+      "mall",
+      "steps",
+      "transport"
+    ]
+  },
+  {
+    "word": "corridor",
+    "category": "place",
+    "clues": [
+      "hallway",
+      "doors",
+      "building",
+      "walk",
+      "inside"
+    ]
+  },
+  {
+    "word": "hallway",
+    "category": "place",
+    "clues": [
+      "corridor",
+      "doors",
+      "house",
+      "walk",
+      "inside"
+    ]
+  },
+  {
+    "word": "kiosk",
+    "category": "place",
+    "clues": [
+      "small",
+      "shop",
+      "mall",
+      "stand",
+      "counter"
+    ]
+  },
+  {
+    "word": "bookstore",
+    "category": "place",
+    "clues": [
+      "books",
+      "shop",
+      "read",
+      "shelves",
+      "author"
+    ]
+  },
+  {
+    "word": "toyshop",
+    "category": "place",
+    "clues": [
+      "toys",
+      "children",
+      "buy",
+      "store",
+      "games"
+    ]
+  },
+  {
+    "word": "petshop",
+    "category": "place",
+    "clues": [
+      "animals",
+      "cages",
+      "food",
+      "store",
+      "pets"
+    ]
+  },
+  {
+    "word": "supermarket",
+    "category": "place",
+    "clues": [
+      "groceries",
+      "carts",
+      "food",
+      "aisles",
+      "checkout"
+    ]
+  },
+  {
+    "word": "butcher",
+    "category": "place",
+    "clues": [
+      "meat",
+      "shop",
+      "cuts",
+      "fresh",
+      "market"
+    ]
+  },
+  {
+    "word": "fruitshop",
+    "category": "place",
+    "clues": [
+      "apples",
+      "bananas",
+      "fresh",
+      "market",
+      "produce"
+    ]
+  },
+  {
+    "word": "classmate",
+    "category": "thing",
+    "clues": [
+      "school",
+      "student",
+      "friend",
+      "class",
+      "learn"
+    ]
+  },
+  {
+    "word": "backboard",
+    "category": "thing",
+    "clues": [
+      "basketball",
+      "hoop",
+      "court",
+      "glass",
+      "score"
+    ]
+  },
+  {
+    "word": "goalpost",
+    "category": "thing",
+    "clues": [
+      "soccer",
+      "field",
+      "score",
+      "net",
+      "sports"
+    ]
+  },
+  {
+    "word": "net",
+    "category": "thing",
+    "clues": [
+      "goal",
+      "mesh",
+      "catch",
+      "sport",
+      "web"
+    ]
+  },
+  {
+    "word": "whistle",
+    "category": "thing",
+    "clues": [
+      "referee",
+      "sound",
+      "blow",
+      "sport",
+      "signal"
+    ]
+  },
+  {
+    "word": "medal",
+    "category": "thing",
+    "clues": [
+      "award",
+      "gold",
+      "win",
+      "ribbon",
+      "honor"
+    ]
+  },
+  {
+    "word": "trophy",
+    "category": "thing",
+    "clues": [
+      "award",
+      "win",
+      "cup",
+      "prize",
+      "champion"
+    ]
+  },
+  {
+    "word": "backseat",
+    "category": "thing",
+    "clues": [
+      "car",
+      "passenger",
+      "rear",
+      "ride",
+      "seat"
+    ]
+  },
+  {
+    "word": "seatbelt",
+    "category": "thing",
+    "clues": [
+      "car",
+      "safety",
+      "strap",
+      "buckle",
+      "travel"
+    ]
+  },
+  {
+    "word": "steeringwheel",
+    "category": "thing",
+    "clues": [
+      "car",
+      "turn",
+      "driver",
+      "road",
+      "control"
+    ]
+  },
+  {
+    "word": "dashboard",
+    "category": "thing",
+    "clues": [
+      "car",
+      "speed",
+      "screen",
+      "driver",
+      "panel"
+    ]
+  },
+  {
+    "word": "headlight",
+    "category": "thing",
+    "clues": [
+      "car",
+      "light",
+      "night",
+      "road",
+      "beam"
+    ]
+  },
+  {
+    "word": "taillight",
+    "category": "thing",
+    "clues": [
+      "car",
+      "rear",
+      "light",
+      "brake",
+      "road"
+    ]
+  },
+  {
+    "word": "windshield",
+    "category": "thing",
+    "clues": [
+      "car",
+      "glass",
+      "front",
+      "wipers",
+      "view"
+    ]
+  },
+  {
+    "word": "wiper",
+    "category": "thing",
+    "clues": [
+      "car",
+      "rain",
+      "glass",
+      "clean",
+      "windshield"
+    ]
+  },
+  {
+    "word": "garagekey",
+    "category": "thing",
+    "clues": [
+      "remote",
+      "garage",
+      "door",
+      "open",
+      "car"
+    ]
+  },
+  {
+    "word": "skateboard",
+    "category": "thing",
+    "clues": [
+      "wheels",
+      "ride",
+      "tricks",
+      "board",
+      "street"
+    ]
+  },
+  {
+    "word": "rollerblades",
+    "category": "thing",
+    "clues": [
+      "wheels",
+      "feet",
+      "glide",
+      "sport",
+      "helmet"
+    ]
+  },
+  {
+    "word": "snowman",
+    "category": "thing",
+    "clues": [
+      "snow",
+      "winter",
+      "carrot",
+      "cold",
+      "round"
+    ]
+  },
+  {
+    "word": "birdhouse",
+    "category": "thing",
+    "clues": [
+      "birds",
+      "nest",
+      "wood",
+      "garden",
+      "hang"
+    ]
+  },
+  {
+    "word": "birdnest",
+    "category": "thing",
+    "clues": [
+      "twigs",
+      "eggs",
+      "tree",
+      "birds",
+      "home"
+    ]
+  },
+  {
+    "word": "teapot",
+    "category": "thing",
+    "clues": [
+      "tea",
+      "pour",
+      "kitchen",
+      "handle",
+      "ceramic"
+    ]
+  },
+  {
+    "word": "coffeepot",
+    "category": "thing",
+    "clues": [
+      "coffee",
+      "brew",
+      "kitchen",
+      "pour",
+      "hot"
+    ]
+  },
+  {
+    "word": "soapdish",
+    "category": "thing",
+    "clues": [
+      "bathroom",
+      "soap",
+      "sink",
+      "tray",
+      "clean"
+    ]
+  },
+  {
+    "word": "dishwasher",
+    "category": "thing",
+    "clues": [
+      "kitchen",
+      "plates",
+      "clean",
+      "machine",
+      "soap"
+    ]
+  },
+  {
+    "word": "freezer",
+    "category": "thing",
+    "clues": [
+      "cold",
+      "ice",
+      "kitchen",
+      "food",
+      "frozen"
+    ]
+  },
+  {
+    "word": "ward",
+    "category": "place",
+    "clues": [
+      "hospital",
+      "patients",
+      "beds",
+      "nurses",
+      "care"
+    ]
+  }
+]

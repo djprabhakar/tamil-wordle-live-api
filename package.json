@@ -2,10 +2,10 @@
   "name": "tamil-wordle-live-api",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "description": "Express API with live-games support and a reusable words module backed by JSON storage.",
   "scripts": {
-    "dev": "node index.js",
-    "start": "node index.js"
+    "dev": "node server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^5.2.1"

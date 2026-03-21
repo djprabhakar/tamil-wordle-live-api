@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "song": "Back In Black - AC/DC",
+    "hints": [
+      "Australian band",
+      "Tribute to Bon Scott",
+      "Dark but celebratory tone",
+      "Distinct riff opening",
+      "Massive global anthem"
+    ]
+  },
+  {
+    "id": 2,
+    "song": "Sweet Child O' Mine - Guns N' Roses",
+    "hints": [
+      "Los Angeles origins",
+      "Inspired by real romance",
+      "Band tension over ballad",
+      "Iconic guitar intro",
+      "Breakthrough MTV hit"
+    ]
+  },
+  {
+    "id": 3,
+    "song": "Livin' On A Prayer - Bon Jovi",
+    "hints": [
+      "New Jersey roots",
+      "Working-class story",
+      "Bubble perm era",
+      "Talk-box solo",
+      "'Tommy and Gina' narrative"
+    ]
+  },
+  {
+    "id": 4,
+    "song": "Crazy Train - Ozzy Osbourne",
+    "hints": [
+      "UK artist",
+      "Nuclear war message",
+      "Bat incident notoriety",
+      "Randy Rhoads guitar",
+      "Signature Ozzy scream"
+    ]
+  },
+  {
+    "id": 5,
+    "song": "Pour Some Sugar On Me - Def Leppard",
+    "hints": [
+      "Sheffield, England",
+      "Sensual metaphor",
+      "MTV overexposure",
+      "Arena chant chorus",
+      "Pyromania tour vibe"
+    ]
+  },
+  {
+    "id": 6,
+    "song": "Jump - Van Halen",
+    "hints": [
+      "California band",
+      "Optimistic leap metaphor",
+      "Synth controversy",
+      "First keyboard lead",
+      "1984 chart-topper"
+    ]
+  },
+  {
+    "id": 7,
+    "song": "You Shook Me All Night Long - AC/DC",
+    "hints": [
+      "Australian band",
+      "Romantic escapade theme",
+      "Double entendres",
+      "Catchy rhythm guitar",
+      "Live show staple"
+    ]
+  },
+  {
+    "id": 8,
+    "song": "Welcome To The Jungle - Guns N' Roses",
+    "hints": [
+      "Los Angeles band",
+      "Urban chaos inspiration",
+      "Explicit lyrics issue",
+      "Aggressive opening riff",
+      "LA rock identity"
+    ]
+  },
+  {
+    "id": 9,
+    "song": "Master Of Puppets - Metallica",
+    "hints": [
+      "California band",
+      "Addiction metaphor",
+      "Censorship debates",
+      "Epic structure",
+      "Thrash metal masterpiece"
+    ]
+  },
+  {
+    "id": 10,
+    "song": "One - Metallica",
+    "hints": [
+      "Bay Area band",
+      "War amputee story",
+      "Graphic video banned",
+      "Haunting machine-gun drums",
+      "Grammy winner"
+    ]
+  },
+  {
+    "id": 11,
+    "song": "Wanted Dead or Alive - Bon Jovi",
+    "hints": [
+      "New Jersey",
+      "Cowboy lifestyle imagery",
+      "Critics doubted sincerity",
+      "12-string acoustics",
+      "Touring anthem vibe"
+    ]
+  },
+  {
+    "id": 12,
+    "song": "Paradise City - Guns N' Roses",
+    "hints": [
+      "Los Angeles",
+      "Idealized dream city",
+      "Drug references",
+      "Call-and-response chorus",
+      "Concert closer"
+    ]
+  },
+  {
+    "id": 13,
+    "song": "Rock You Like a Hurricane - Scorpions",
+    "hints": [
+      "German band",
+      "Love and power",
+      "Cold War climate",
+      "Catchy riff intro",
+      "Heavy MTV presence"
+    ]
+  },
+  {
+    "id": 14,
+    "song": "The Number Of The Beast - Iron Maiden",
+    "hints": [
+      "British band",
+      "Inspired by Revelation",
+      "Satanic panic",
+      "Galloping bassline",
+      "NWOBHM milestone"
+    ]
+  },
+  {
+    "id": 15,
+    "song": "Run To The Hills - Iron Maiden",
+    "hints": [
+      "UK origins",
+      "Colonialism theme",
+      "Misinterpreted message",
+      "Dual-guitar harmony",
+      "First major hit"
+    ]
+  },
+  {
+    "id": 16,
+    "song": "Here I Go Again - Whitesnake",
+    "hints": [
+      "UK band",
+      "Moving on theme",
+      "Overproduced version debate",
+      "Sultry video",
+      "Power ballad classic"
+    ]
+  },
+  {
+    "id": 17,
+    "song": "Photograph - Def Leppard",
+    "hints": [
+      "Sheffield band",
+      "Marilyn Monroe tribute",
+      "Molds controversy",
+      "Layered harmonies",
+      "MTV breakthrough"
+    ]
+  },
+  {
+    "id": 18,
+    "song": "Ace of Spades - Motorhead",
+    "hints": [
+      "London band",
+      "Gambling metaphors",
+      "Accused of promoting vice",
+      "Fast punk pace",
+      "Lemmy trademark tune"
+    ]
+  },
+  {
+    "id": 19,
+    "song": "Every Rose Has Its Thorn - Poison",
+    "hints": [
+      "Pennsylvania band",
+      "Breakup ballad",
+      "Cliche accusations",
+      "Acoustic tenderness",
+      "Lighters-up favorite"
+    ]
+  },
+  {
+    "id": 20,
+    "song": "Round and Round - Ratt",
+    "hints": [
+      "Los Angeles",
+      "Fame cycle lyrics",
+      "Glam excess criticism",
+      "Crunchy riff",
+      "MTV metal debut"
+    ]
+  },
+  {
+    "id": 21,
+    "song": "Cum On Feel The Noize - Quiet Riot",
+    "hints": [
+      "California band",
+      "Slade cover",
+      "Critics mocked title",
+      "Catchy shout chorus",
+      "First metal billboard hit"
+    ]
+  },
+  {
+    "id": 22,
+    "song": "Dr. Feelgood - Motley Crue",
+    "hints": [
+      "Los Angeles",
+      "Drug dealing theme",
+      "Rehab timing irony",
+      "Polished production",
+      "Grammy nod"
+    ]
+  },
+  {
+    "id": 23,
+    "song": "Kickstart My Heart - Motley Crue",
+    "hints": [
+      "LA rooted",
+      "Adrenaline after overdose",
+      "Drug reference",
+      "Fast tempo",
+      "Live crowd energizer"
+    ]
+  },
+  {
+    "id": 24,
+    "song": "18 and Life - Skid Row",
+    "hints": [
+      "New Jersey",
+      "Youth crime cautionary",
+      "Violence concern",
+      "Sebastian Bach vocals",
+      "Ballad-meets-metal power"
+    ]
+  },
+  {
+    "id": 25,
+    "song": "Rebel Yell - Billy Idol",
+    "hints": [
+      "British-born",
+      "Inspired by bourbon",
+      "Sexual edge",
+      "Bleach-blonde attitude",
+      "Dance-rock blend"
+    ]
+  },
+  {
+    "id": 26,
+    "song": "Don't Stop Believin' - Journey",
+    "hints": [
+      "San Francisco",
+      "Hopeful perseverance",
+      "Overused in media",
+      "Iconic piano intro",
+      "Stadium singalong"
+    ]
+  },
+  {
+    "id": 27,
+    "song": "Money For Nothing - Dire Straits",
+    "hints": [
+      "UK band",
+      "Working-class envy",
+      "Banned for slur",
+      "Innovative video",
+      "Knopfler fingerstyle"
+    ]
+  },
+  {
+    "id": 28,
+    "song": "Under Pressure - Queen & David Bowie",
+    "hints": [
+      "UK collaboration",
+      "Social stress theme",
+      "Songwriting disputes",
+      "Unforgettable bassline",
+      "Future sampled in hip-hop"
+    ]
+  },
+  {
+    "id": 29,
+    "song": "Purple Rain - Prince",
+    "hints": [
+      "Minneapolis",
+      "Forgiveness theme",
+      "Religious interpretation",
+      "Epic guitar solo",
+      "Cinematic classic"
+    ]
+  },
+  {
+    "id": 30,
+    "song": "Born In The U.S.A. - Bruce Springsteen",
+    "hints": [
+      "New Jersey",
+      "Vietnam vet story",
+      "Misused patriotically",
+      "Anthemic chorus",
+      "Social commentary"
+    ]
+  },
+  {
+    "id": 31,
+    "song": "For Those About To Rock - AC/DC",
+    "hints": [
+      "Australia",
+      "Salute to fans",
+      "Live cannon gimmick",
+      "Simple riff power",
+      "Concert closer"
+    ]
+  },
+  {
+    "id": 32,
+    "song": "Legs - ZZ Top",
+    "hints": [
+      "Texas trio",
+      "Empowerment metaphor",
+      "Video objectification debates",
+      "Synth-hook blend",
+      "Hot Rod imagery"
+    ]
+  },
+  {
+    "id": 33,
+    "song": "Crazy Crazy Nights - KISS",
+    "hints": [
+      "New York City",
+      "Optimism anthem",
+      "Critics mocked lyrics",
+      "Crowd chant",
+      "Melodic glam turn"
+    ]
+  },
+  {
+    "id": 34,
+    "song": "The Final Countdown - Europe",
+    "hints": [
+      "Swedish band",
+      "Space travel inspiration",
+      "Corny lyrics teased",
+      "Synth-metal fusion",
+      "Worldwide stadium hit"
+    ]
+  },
+  {
+    "id": 35,
+    "song": "Breaking the Law - Judas Priest",
+    "hints": [
+      "UK band",
+      "Rebellion satire",
+      "Censorship threats",
+      "Twin-guitar attack",
+      "Classic metal riff"
+    ]
+  },
+  {
+    "id": 36,
+    "song": "Eyes Without a Face - Billy Idol",
+    "hints": [
+      "UK",
+      "French cinema influence",
+      "Genre shift criticism",
+      "Dreamy synth mix",
+      "Dark romantic tone"
+    ]
+  },
+  {
+    "id": 37,
+    "song": "The Boys of Summer - Don Henley",
+    "hints": [
+      "Texas",
+      "Lost youth nostalgia",
+      "Video award issues",
+      "Atmospheric production",
+      "Enduring radio appeal"
+    ]
+  },
+  {
+    "id": 38,
+    "song": "Sister Christian - Night Ranger",
+    "hints": [
+      "San Francisco",
+      "Maturity transition",
+      "Misheard lyrics",
+      "Tempo slowdown",
+      "Power ballad signature"
+    ]
+  },
+  {
+    "id": 39,
+    "song": "Heaven - Warrant",
+    "hints": [
+      "Los Angeles",
+      "Love devotion theme",
+      "Released twice",
+      "Soaring vocals",
+      "Late-era hair hit"
+    ]
+  },
+  {
+    "id": 40,
+    "song": "Still of the Night - Whitesnake",
+    "hints": [
+      "UK",
+      "Zeppelin influence",
+      "Plagiarism comparisons",
+      "Wailing vocals",
+      "Heavy blues tension"
+    ]
+  },
+  {
+    "id": 41,
+    "song": "Rock of Ages - Def Leppard",
+    "hints": [
+      "England",
+      "Party faith message",
+      "Backmask rumor",
+      "'Gunter glieben' intro",
+      "Mass crowd anthem"
+    ]
+  },
+  {
+    "id": 42,
+    "song": "Pride (In the Name of Love) - U2",
+    "hints": [
+      "Ireland",
+      "MLK tribute",
+      "Lyric accuracy dispute",
+      "Echo guitar",
+      "Anthem of justice"
+    ]
+  },
+  {
+    "id": 43,
+    "song": "Owner of a Lonely Heart - Yes",
+    "hints": [
+      "UK",
+      "Isolation metaphor",
+      "Pop sellout claims",
+      "Sample innovation",
+      "Chart comeback"
+    ]
+  },
+  {
+    "id": 44,
+    "song": "Runaway - Bon Jovi",
+    "hints": [
+      "New Jersey",
+      "Teen rebellion theme",
+      "Demo breakthrough",
+      "Synth intro",
+      "FM radio start"
+    ]
+  },
+  {
+    "id": 45,
+    "song": "Shout at the Devil - Motley Crue",
+    "hints": [
+      "Los Angeles",
+      "Ambiguously Satanic",
+      "Moral panic",
+      "Chanting power",
+      "Metal landmark"
+    ]
+  },
+  {
+    "id": 46,
+    "song": "Love Is a Battlefield - Pat Benatar",
+    "hints": [
+      "New York",
+      "Defiant independence",
+      "Feminist backlash",
+      "Dance-rock beat",
+      "MTV choreography"
+    ]
+  },
+  {
+    "id": 47,
+    "song": "Eye of the Tiger - Survivor",
+    "hints": [
+      "Chicago",
+      "Boxing motivation",
+      "Film tie-in",
+      "Distinct intro riff",
+      "Cultural phenomenon"
+    ]
+  },
+  {
+    "id": 48,
+    "song": "Jumpin' Jack Flash (Live) - Rolling Stones",
+    "hints": [
+      "UK",
+      "Stage revival",
+      "Critics split",
+      "Keith riffs shine",
+      "80s comeback energy"
+    ]
+  },
+  {
+    "id": 49,
+    "song": "Hot for Teacher - Van Halen",
+    "hints": [
+      "California",
+      "Schoolboy infatuation",
+      "Provocative video",
+      "Double bass drums",
+      "Comic edge"
+    ]
+  },
+  {
+    "id": 50,
+    "song": "Nothin' But a Good Time - Poison",
+    "hints": [
+      "Pennsylvania",
+      "Escapism theme",
+      "Criticized for superficiality",
+      "Party-glam tone",
+      "MTV favorite"
+    ]
+  }
+]
