@@ -126,6 +126,14 @@ function createWordsController(wordsService) {
       }
     },
 
+    get5HintWordCategories(_req, res, next) {
+      try {
+        res.json(wordsService.get5HintWordCategories())
+      } catch (error) {
+        next(error)
+      }
+    },
+
     get20RandomWordsWith5Clues(req, res, next) {
       try {
         const result = wordsService.get20RandomWordsWith5Clues(req.query.category)

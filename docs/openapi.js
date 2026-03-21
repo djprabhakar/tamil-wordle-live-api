@@ -107,6 +107,17 @@ const openapi = {
         },
         required: ['category', 'fileName', 'saved', 'totalEntries'],
       },
+      HintWordCategoriesResponse: {
+        type: 'object',
+        properties: {
+          categories: {
+            type: 'array',
+            items: { type: 'string' },
+            example: ['80\'s Rock Hits', 'Common'],
+          },
+        },
+        required: ['categories'],
+      },
       TwentyWordsResponse: {
         type: 'object',
         properties: {
@@ -324,6 +335,22 @@ const openapi = {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/SaveA5HintWordResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/Get5HintWordCategories': {
+      get: {
+        tags: ['Words'],
+        summary: 'Get available 5-hint word categories from the category-file-map',
+        responses: {
+          200: {
+            description: 'Available mapped categories',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/HintWordCategoriesResponse' },
               },
             },
           },

@@ -57,6 +57,7 @@ Startup validation will fail fast if:
 - `GET /api/words/car`
 - `POST /api/words/check`
 - `POST /api/words/SaveA5HintWord`
+- `GET /api/words/Get5HintWordCategories`
 - `GET /api/words/Get20RandomWordsWith5Clues?category=Common`
 
 ### curl examples
@@ -65,6 +66,7 @@ Startup validation will fail fast if:
 curl http://localhost:4000/health
 curl http://localhost:4000/openapi.json
 curl http://localhost:4000/api/words/categories
+curl http://localhost:4000/api/words/Get5HintWordCategories
 curl "http://localhost:4000/api/words/random?category=thing"
 curl "http://localhost:4000/api/words/random-set?count=10&category=thing"
 curl "http://localhost:4000/api/words/all?limit=10&page=1"

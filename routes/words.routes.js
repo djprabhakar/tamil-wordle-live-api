@@ -10,6 +10,7 @@ function createWordsRouter(wordsService) {
   router.get('/random-set', controller.getRandomSet)
   router.get('/random', controller.getRandom)
   router.get('/all', controller.getAll)
+  router.get('/Get5HintWordCategories', controller.get5HintWordCategories)
   router.get('/Get20RandomWordsWith5Clues', controller.get20RandomWordsWith5Clues)
   router.get('/:word', controller.getByWord)
   router.post('/check', controller.checkWord)

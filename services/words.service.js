@@ -463,6 +463,14 @@ class WordsService {
     }
   }
 
+  get5HintWordCategories() {
+    const fileMap = this.readCategoryFileMap()
+
+    return {
+      categories: Object.keys(fileMap).sort((left, right) => left.localeCompare(right)),
+    }
+  }
+
   get20RandomWordsWith5Clues(category) {
     const { category: resolvedCategory, fileName, entries } = this.readCategoryEntries(category)
 
