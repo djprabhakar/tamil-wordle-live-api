@@ -130,6 +130,21 @@ const openapi = {
         },
         required: ['categories'],
       },
+      HintWordBeginningWithResponse: {
+        type: 'object',
+        properties: {
+          category: { type: 'string', example: "80's Rock Hits" },
+          fileName: { type: 'string', example: '80s_Rock_Hits.json' },
+          startsWith: { type: 'string', example: 'Ba' },
+          count: { type: 'integer', example: 2 },
+          words: {
+            type: 'array',
+            items: { type: 'string' },
+            example: ['Back In Black - AC/DC', 'Bad Medicine - Bon Jovi'],
+          },
+        },
+        required: ['category', 'fileName', 'startsWith', 'count', 'words'],
+      },
       TwentyWordsResponse: {
         type: 'object',
         properties: {
@@ -363,6 +378,26 @@ const openapi = {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/HintWordCategoriesResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/Get5HintWordBeginningWith': {
+      get: {
+        tags: ['Words'],
+        summary: 'Get all words in a category file that begin with the provided string',
+        parameters: [
+          { in: 'query', name: 'category', required: true, schema: { type: 'string' } },
+          { in: 'query', name: 'startsWith', required: true, schema: { type: 'string' } },
+        ],
+        responses: {
+          200: {
+            description: 'Matching words',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/HintWordBeginningWithResponse' },
               },
             },
           },

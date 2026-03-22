@@ -134,6 +134,15 @@ function createWordsController(wordsService) {
       }
     },
 
+    get5HintWordBeginningWith(req, res, next) {
+      try {
+        const result = wordsService.get5HintWordBeginningWith(req.query.category, req.query.startsWith)
+        res.json(result)
+      } catch (error) {
+        next(error)
+      }
+    },
+
     get20RandomWordsWith5Clues(req, res, next) {
       try {
         const result = wordsService.get20RandomWordsWith5Clues(req.query.category)

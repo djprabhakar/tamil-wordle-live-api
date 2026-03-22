@@ -488,6 +488,31 @@ class WordsService {
     }
   }
 
+  get5HintWordBeginningWith(category, startsWith) {
+    const safePrefix = String(startsWith || '').trim()
+    if (!safePrefix) {
+      throw new HttpError(400, 'startsWith is required.')
+    }
+
+    const normalizedPrefix = normalizeWord(safePrefix)
+    const { category: resolvedCategory, fileName, entries } = this.readCategoryEntries(category)
+
+    const words = entries
+      .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .map((entry) => this.sanitizeCategoryWordEntry(entry, resolvedCategory))
+      .map((entry) => entry.word)
+      .filter((word) => normalizeWord(word).startsWith(normalizedPrefix))
+      .sort((left, right) => left.localeCompare(right))
+
+    return {
+      category: resolvedCategory,
+      fileName,
+      startsWith: safePrefix,
+      count: words.length,
+      words,
+    }
+  }
+
   get20RandomWordsWith5Clues(category) {
     const { category: resolvedCategory, fileName, entries } = this.readCategoryEntries(category)
 
