@@ -415,29 +415,46 @@ class WordsService {
     fs.writeFileSync(filePath, `${JSON.stringify(entries, null, 2)}\n`, 'utf8')
   }
 
-  validateFiveHintEntry(entry) {
+  sanitizeCategoryWordEntry(entry, fallbackCategory) {
     if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
       throw new HttpError(400, 'WordEntry must be a JSON object.')
     }
 
-    const hintsFieldName = Array.isArray(entry.clues) ? 'clues' : Array.isArray(entry.hints) ? 'hints' : ''
-    if (!hintsFieldName) {
-      throw new HttpError(400, 'WordEntry must contain either a "clues" array or a "hints" array.')
+    const word = typeof entry.word === 'string' ? entry.word.trim() : ''
+    if (!word) {
+      throw new HttpError(400, 'WordEntry must contain a non-empty "word" string.')
     }
 
-    if (entry[hintsFieldName].length !== 5) {
-      throw new HttpError(400, `WordEntry "${hintsFieldName}" must contain exactly 5 items.`)
+    if (!Array.isArray(entry.clues)) {
+      throw new HttpError(400, 'WordEntry must contain a "clues" array.')
     }
 
-    entry[hintsFieldName].forEach((hint, index) => {
-      if (typeof hint !== 'string' || !hint.trim()) {
-        throw new HttpError(400, `WordEntry ${hintsFieldName}[${index}] must be a non-empty string.`)
+    if (entry.clues.length !== 5) {
+      throw new HttpError(400, 'WordEntry "clues" must contain exactly 5 items.')
+    }
+
+    const clues = entry.clues.map((clue, index) => {
+      if (typeof clue !== 'string' || !clue.trim()) {
+        throw new HttpError(400, `WordEntry clues[${index}] must be a non-empty string.`)
       }
+
+      return clue.trim()
     })
 
-    return {
+    const normalizedEntry = {
       ...entry,
-      [hintsFieldName]: entry[hintsFieldName].map((hint) => hint.trim()),
+      word,
+      clues,
+    }
+
+    if (typeof normalizedEntry.category === 'string' && normalizedEntry.category.trim()) {
+      normalizedEntry.category = normalizedEntry.category.trim()
+      return normalizedEntry
+    }
+
+    return {
+      ...normalizedEntry,
+      category: String(fallbackCategory || '').trim(),
     }
   }
 
@@ -447,7 +464,7 @@ class WordsService {
       throw new HttpError(400, 'Category is required.')
     }
 
-    const sanitizedEntry = this.validateFiveHintEntry(wordEntry)
+    const sanitizedEntry = this.sanitizeCategoryWordEntry(wordEntry, safeCategory)
     const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(safeCategory, {
       createIfMissing: true,
     })
@@ -474,13 +491,14 @@ class WordsService {
   get20RandomWordsWith5Clues(category) {
     const { category: resolvedCategory, fileName, entries } = this.readCategoryEntries(category)
 
-    const eligibleEntries = entries.filter((entry) => {
-      const hints = Array.isArray(entry && entry.clues) ? entry.clues : Array.isArray(entry && entry.hints) ? entry.hints : null
-      return Array.isArray(hints) && hints.length === 5
-    })
+    const eligibleEntries = entries
+      .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .filter((entry) => typeof entry.word === 'string' && entry.word.trim())
+      .filter((entry) => Array.isArray(entry.clues) && entry.clues.length === 5)
+      .map((entry) => this.sanitizeCategoryWordEntry(entry, resolvedCategory))
 
     if (eligibleEntries.length === 0) {
-      throw new HttpError(404, `No 5-hint entries found for category "${String(category || '').trim()}".`)
+      throw new HttpError(404, `No 5-clue entries found for category "${String(category || '').trim()}".`)
     }
 
     const count = Math.min(20, eligibleEntries.length)

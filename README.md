@@ -118,7 +118,7 @@ Behavior:
 - category-to-file mapping is stored in `data/category-file-map.json`
 - if a category does not exist, the API creates a new mapping entry
 - the new filename is derived from the category name, for example `Movie Titles` -> `Movie_Titles.json`
-- `WordEntry` must be a JSON object with either `clues` or `hints`, and it must contain exactly 5 non-empty strings
+- `WordEntry` must be a JSON object with a non-empty `word` and exactly 5 non-empty `clues`
 
 Response from `GET /api/words/Get20RandomWordsWith5Clues?category=Common`:
 

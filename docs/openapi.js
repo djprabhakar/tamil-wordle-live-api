@@ -92,6 +92,18 @@ const openapi = {
           category: { type: 'string', example: 'Common' },
           wordEntry: {
             type: 'object',
+            properties: {
+              word: { type: 'string', example: 'Back In Black - AC/DC' },
+              category: { type: 'string', example: "80's Rock Hits" },
+              clues: {
+                type: 'array',
+                items: { type: 'string' },
+                minItems: 5,
+                maxItems: 5,
+              },
+              id: { type: 'integer', example: 1 },
+            },
+            required: ['word', 'clues'],
             additionalProperties: true,
           },
         },
@@ -320,7 +332,7 @@ const openapi = {
     '/api/words/SaveA5HintWord': {
       post: {
         tags: ['Words'],
-        summary: 'Save a 5-hint word entry into a category-backed JSON file',
+        summary: 'Save a word entry with 5 clues into a category-backed JSON file',
         requestBody: {
           required: true,
           content: {
@@ -344,7 +356,7 @@ const openapi = {
     '/api/words/Get5HintWordCategories': {
       get: {
         tags: ['Words'],
-        summary: 'Get available 5-hint word categories from the category-file-map',
+        summary: 'Get available 5-clue word categories from the category-file-map',
         responses: {
           200: {
             description: 'Available mapped categories',
@@ -360,7 +372,7 @@ const openapi = {
     '/api/words/Get20RandomWordsWith5Clues': {
       get: {
         tags: ['Words'],
-        summary: 'Get up to 20 random entries with 5 clues or hints from a category file',
+        summary: 'Get up to 20 random word entries with 5 clues from a category file',
         parameters: [
           { in: 'query', name: 'category', required: true, schema: { type: 'string' } },
         ],

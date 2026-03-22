@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "song": "Back In Black - AC/DC",
-    "hints": [
+    "word": "Back In Black - AC/DC",
+    "clues": [
       "Australian band",
       "Tribute to Bon Scott",
       "Dark but celebratory tone",
@@ -12,8 +12,8 @@
   },
   {
     "id": 2,
-    "song": "Sweet Child O' Mine - Guns N' Roses",
-    "hints": [
+    "word": "Sweet Child O' Mine - Guns N' Roses",
+    "clues": [
       "Los Angeles origins",
       "Inspired by real romance",
       "Band tension over ballad",
@@ -23,8 +23,8 @@
   },
   {
     "id": 3,
-    "song": "Livin' On A Prayer - Bon Jovi",
-    "hints": [
+    "word": "Livin' On A Prayer - Bon Jovi",
+    "clues": [
       "New Jersey roots",
       "Working-class story",
       "Bubble perm era",
@@ -34,8 +34,8 @@
   },
   {
     "id": 4,
-    "song": "Crazy Train - Ozzy Osbourne",
-    "hints": [
+    "word": "Crazy Train - Ozzy Osbourne",
+    "clues": [
       "UK artist",
       "Nuclear war message",
       "Bat incident notoriety",
@@ -45,8 +45,8 @@
   },
   {
     "id": 5,
-    "song": "Pour Some Sugar On Me - Def Leppard",
-    "hints": [
+    "word": "Pour Some Sugar On Me - Def Leppard",
+    "clues": [
       "Sheffield, England",
       "Sensual metaphor",
       "MTV overexposure",
@@ -56,8 +56,8 @@
   },
   {
     "id": 6,
-    "song": "Jump - Van Halen",
-    "hints": [
+    "word": "Jump - Van Halen",
+    "clues": [
       "California band",
       "Optimistic leap metaphor",
       "Synth controversy",
@@ -67,8 +67,8 @@
   },
   {
     "id": 7,
-    "song": "You Shook Me All Night Long - AC/DC",
-    "hints": [
+    "word": "You Shook Me All Night Long - AC/DC",
+    "clues": [
       "Australian band",
       "Romantic escapade theme",
       "Double entendres",
@@ -78,8 +78,8 @@
   },
   {
     "id": 8,
-    "song": "Welcome To The Jungle - Guns N' Roses",
-    "hints": [
+    "word": "Welcome To The Jungle - Guns N' Roses",
+    "clues": [
       "Los Angeles band",
       "Urban chaos inspiration",
       "Explicit lyrics issue",
@@ -89,8 +89,8 @@
   },
   {
     "id": 9,
-    "song": "Master Of Puppets - Metallica",
-    "hints": [
+    "word": "Master Of Puppets - Metallica",
+    "clues": [
       "California band",
       "Addiction metaphor",
       "Censorship debates",
@@ -100,8 +100,8 @@
   },
   {
     "id": 10,
-    "song": "One - Metallica",
-    "hints": [
+    "word": "One - Metallica",
+    "clues": [
       "Bay Area band",
       "War amputee story",
       "Graphic video banned",
@@ -111,8 +111,8 @@
   },
   {
     "id": 11,
-    "song": "Wanted Dead or Alive - Bon Jovi",
-    "hints": [
+    "word": "Wanted Dead or Alive - Bon Jovi",
+    "clues": [
       "New Jersey",
       "Cowboy lifestyle imagery",
       "Critics doubted sincerity",
@@ -122,8 +122,8 @@
   },
   {
     "id": 12,
-    "song": "Paradise City - Guns N' Roses",
-    "hints": [
+    "word": "Paradise City - Guns N' Roses",
+    "clues": [
       "Los Angeles",
       "Idealized dream city",
       "Drug references",
@@ -133,8 +133,8 @@
   },
   {
     "id": 13,
-    "song": "Rock You Like a Hurricane - Scorpions",
-    "hints": [
+    "word": "Rock You Like a Hurricane - Scorpions",
+    "clues": [
       "German band",
       "Love and power",
       "Cold War climate",
@@ -144,8 +144,8 @@
   },
   {
     "id": 14,
-    "song": "The Number Of The Beast - Iron Maiden",
-    "hints": [
+    "word": "The Number Of The Beast - Iron Maiden",
+    "clues": [
       "British band",
       "Inspired by Revelation",
       "Satanic panic",
@@ -155,8 +155,8 @@
   },
   {
     "id": 15,
-    "song": "Run To The Hills - Iron Maiden",
-    "hints": [
+    "word": "Run To The Hills - Iron Maiden",
+    "clues": [
       "UK origins",
       "Colonialism theme",
       "Misinterpreted message",
@@ -166,8 +166,8 @@
   },
   {
     "id": 16,
-    "song": "Here I Go Again - Whitesnake",
-    "hints": [
+    "word": "Here I Go Again - Whitesnake",
+    "clues": [
       "UK band",
       "Moving on theme",
       "Overproduced version debate",
@@ -177,8 +177,8 @@
   },
   {
     "id": 17,
-    "song": "Photograph - Def Leppard",
-    "hints": [
+    "word": "Photograph - Def Leppard",
+    "clues": [
       "Sheffield band",
       "Marilyn Monroe tribute",
       "Molds controversy",
@@ -188,8 +188,8 @@
   },
   {
     "id": 18,
-    "song": "Ace of Spades - Motorhead",
-    "hints": [
+    "word": "Ace of Spades - Motorhead",
+    "clues": [
       "London band",
       "Gambling metaphors",
       "Accused of promoting vice",
@@ -199,8 +199,8 @@
   },
   {
     "id": 19,
-    "song": "Every Rose Has Its Thorn - Poison",
-    "hints": [
+    "word": "Every Rose Has Its Thorn - Poison",
+    "clues": [
       "Pennsylvania band",
       "Breakup ballad",
       "Cliche accusations",
@@ -210,8 +210,8 @@
   },
   {
     "id": 20,
-    "song": "Round and Round - Ratt",
-    "hints": [
+    "word": "Round and Round - Ratt",
+    "clues": [
       "Los Angeles",
       "Fame cycle lyrics",
       "Glam excess criticism",
@@ -221,8 +221,8 @@
   },
   {
     "id": 21,
-    "song": "Cum On Feel The Noize - Quiet Riot",
-    "hints": [
+    "word": "Cum On Feel The Noize - Quiet Riot",
+    "clues": [
       "California band",
       "Slade cover",
       "Critics mocked title",
@@ -232,8 +232,8 @@
   },
   {
     "id": 22,
-    "song": "Dr. Feelgood - Motley Crue",
-    "hints": [
+    "word": "Dr. Feelgood - Motley Crue",
+    "clues": [
       "Los Angeles",
       "Drug dealing theme",
       "Rehab timing irony",
@@ -243,8 +243,8 @@
   },
   {
     "id": 23,
-    "song": "Kickstart My Heart - Motley Crue",
-    "hints": [
+    "word": "Kickstart My Heart - Motley Crue",
+    "clues": [
       "LA rooted",
       "Adrenaline after overdose",
       "Drug reference",
@@ -254,8 +254,8 @@
   },
   {
     "id": 24,
-    "song": "18 and Life - Skid Row",
-    "hints": [
+    "word": "18 and Life - Skid Row",
+    "clues": [
       "New Jersey",
       "Youth crime cautionary",
       "Violence concern",
@@ -265,8 +265,8 @@
   },
   {
     "id": 25,
-    "song": "Rebel Yell - Billy Idol",
-    "hints": [
+    "word": "Rebel Yell - Billy Idol",
+    "clues": [
       "British-born",
       "Inspired by bourbon",
       "Sexual edge",
@@ -276,8 +276,8 @@
   },
   {
     "id": 26,
-    "song": "Don't Stop Believin' - Journey",
-    "hints": [
+    "word": "Don't Stop Believin' - Journey",
+    "clues": [
       "San Francisco",
       "Hopeful perseverance",
       "Overused in media",
@@ -287,8 +287,8 @@
   },
   {
     "id": 27,
-    "song": "Money For Nothing - Dire Straits",
-    "hints": [
+    "word": "Money For Nothing - Dire Straits",
+    "clues": [
       "UK band",
       "Working-class envy",
       "Banned for slur",
@@ -298,19 +298,19 @@
   },
   {
     "id": 28,
-    "song": "Under Pressure - Queen & David Bowie",
-    "hints": [
+    "word": "Under Pressure - Queen & David Bowie",
+    "clues": [
       "UK collaboration",
       "Social stress theme",
-      "Songwriting disputes",
+      "wordwriting disputes",
       "Unforgettable bassline",
       "Future sampled in hip-hop"
     ]
   },
   {
     "id": 29,
-    "song": "Purple Rain - Prince",
-    "hints": [
+    "word": "Purple Rain - Prince",
+    "clues": [
       "Minneapolis",
       "Forgiveness theme",
       "Religious interpretation",
@@ -320,8 +320,8 @@
   },
   {
     "id": 30,
-    "song": "Born In The U.S.A. - Bruce Springsteen",
-    "hints": [
+    "word": "Born In The U.S.A. - Bruce Springsteen",
+    "clues": [
       "New Jersey",
       "Vietnam vet story",
       "Misused patriotically",
@@ -331,8 +331,8 @@
   },
   {
     "id": 31,
-    "song": "For Those About To Rock - AC/DC",
-    "hints": [
+    "word": "For Those About To Rock - AC/DC",
+    "clues": [
       "Australia",
       "Salute to fans",
       "Live cannon gimmick",
@@ -342,8 +342,8 @@
   },
   {
     "id": 32,
-    "song": "Legs - ZZ Top",
-    "hints": [
+    "word": "Legs - ZZ Top",
+    "clues": [
       "Texas trio",
       "Empowerment metaphor",
       "Video objectification debates",
@@ -353,8 +353,8 @@
   },
   {
     "id": 33,
-    "song": "Crazy Crazy Nights - KISS",
-    "hints": [
+    "word": "Crazy Crazy Nights - KISS",
+    "clues": [
       "New York City",
       "Optimism anthem",
       "Critics mocked lyrics",
@@ -364,8 +364,8 @@
   },
   {
     "id": 34,
-    "song": "The Final Countdown - Europe",
-    "hints": [
+    "word": "The Final Countdown - Europe",
+    "clues": [
       "Swedish band",
       "Space travel inspiration",
       "Corny lyrics teased",
@@ -375,8 +375,8 @@
   },
   {
     "id": 35,
-    "song": "Breaking the Law - Judas Priest",
-    "hints": [
+    "word": "Breaking the Law - Judas Priest",
+    "clues": [
       "UK band",
       "Rebellion satire",
       "Censorship threats",
@@ -386,8 +386,8 @@
   },
   {
     "id": 36,
-    "song": "Eyes Without a Face - Billy Idol",
-    "hints": [
+    "word": "Eyes Without a Face - Billy Idol",
+    "clues": [
       "UK",
       "French cinema influence",
       "Genre shift criticism",
@@ -397,8 +397,8 @@
   },
   {
     "id": 37,
-    "song": "The Boys of Summer - Don Henley",
-    "hints": [
+    "word": "The Boys of Summer - Don Henley",
+    "clues": [
       "Texas",
       "Lost youth nostalgia",
       "Video award issues",
@@ -408,8 +408,8 @@
   },
   {
     "id": 38,
-    "song": "Sister Christian - Night Ranger",
-    "hints": [
+    "word": "Sister Christian - Night Ranger",
+    "clues": [
       "San Francisco",
       "Maturity transition",
       "Misheard lyrics",
@@ -419,8 +419,8 @@
   },
   {
     "id": 39,
-    "song": "Heaven - Warrant",
-    "hints": [
+    "word": "Heaven - Warrant",
+    "clues": [
       "Los Angeles",
       "Love devotion theme",
       "Released twice",
@@ -430,8 +430,8 @@
   },
   {
     "id": 40,
-    "song": "Still of the Night - Whitesnake",
-    "hints": [
+    "word": "Still of the Night - Whitesnake",
+    "clues": [
       "UK",
       "Zeppelin influence",
       "Plagiarism comparisons",
@@ -441,8 +441,8 @@
   },
   {
     "id": 41,
-    "song": "Rock of Ages - Def Leppard",
-    "hints": [
+    "word": "Rock of Ages - Def Leppard",
+    "clues": [
       "England",
       "Party faith message",
       "Backmask rumor",
@@ -452,8 +452,8 @@
   },
   {
     "id": 42,
-    "song": "Pride (In the Name of Love) - U2",
-    "hints": [
+    "word": "Pride (In the Name of Love) - U2",
+    "clues": [
       "Ireland",
       "MLK tribute",
       "Lyric accuracy dispute",
@@ -463,8 +463,8 @@
   },
   {
     "id": 43,
-    "song": "Owner of a Lonely Heart - Yes",
-    "hints": [
+    "word": "Owner of a Lonely Heart - Yes",
+    "clues": [
       "UK",
       "Isolation metaphor",
       "Pop sellout claims",
@@ -474,8 +474,8 @@
   },
   {
     "id": 44,
-    "song": "Runaway - Bon Jovi",
-    "hints": [
+    "word": "Runaway - Bon Jovi",
+    "clues": [
       "New Jersey",
       "Teen rebellion theme",
       "Demo breakthrough",
@@ -485,8 +485,8 @@
   },
   {
     "id": 45,
-    "song": "Shout at the Devil - Motley Crue",
-    "hints": [
+    "word": "Shout at the Devil - Motley Crue",
+    "clues": [
       "Los Angeles",
       "Ambiguously Satanic",
       "Moral panic",
@@ -496,8 +496,8 @@
   },
   {
     "id": 46,
-    "song": "Love Is a Battlefield - Pat Benatar",
-    "hints": [
+    "word": "Love Is a Battlefield - Pat Benatar",
+    "clues": [
       "New York",
       "Defiant independence",
       "Feminist backlash",
@@ -507,8 +507,8 @@
   },
   {
     "id": 47,
-    "song": "Eye of the Tiger - Survivor",
-    "hints": [
+    "word": "Eye of the Tiger - Survivor",
+    "clues": [
       "Chicago",
       "Boxing motivation",
       "Film tie-in",
@@ -518,8 +518,8 @@
   },
   {
     "id": 48,
-    "song": "Jumpin' Jack Flash (Live) - Rolling Stones",
-    "hints": [
+    "word": "Jumpin' Jack Flash (Live) - Rolling Stones",
+    "clues": [
       "UK",
       "Stage revival",
       "Critics split",
@@ -529,8 +529,8 @@
   },
   {
     "id": 49,
-    "song": "Hot for Teacher - Van Halen",
-    "hints": [
+    "word": "Hot for Teacher - Van Halen",
+    "clues": [
       "California",
       "Schoolboy infatuation",
       "Provocative video",
@@ -540,8 +540,8 @@
   },
   {
     "id": 50,
-    "song": "Nothin' But a Good Time - Poison",
-    "hints": [
+    "word": "Nothin' But a Good Time - Poison",
+    "clues": [
       "Pennsylvania",
       "Escapism theme",
       "Criticized for superficiality",
