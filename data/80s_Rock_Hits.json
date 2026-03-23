@@ -2,551 +2,701 @@
   {
     "id": 1,
     "word": "Back In Black - AC/DC",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Australian band",
-      "Tribute to Bon Scott",
-      "Dark but celebratory tone",
-      "Distinct riff opening",
-      "Massive global anthem"
-    ]
+      "Written as a tribute after Bon Scott’s death",
+      "Brian Johnson’s first AC/DC album included this song",
+      "Recorded at Compass Point Studios in Nassau",
+      "Produced by Robert John 'Mutt' Lange",
+      "Built around Angus Young’s opening guitar riff"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 2,
     "word": "Sweet Child O' Mine - Guns N' Roses",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Los Angeles origins",
-      "Inspired by real romance",
-      "Band tension over ballad",
-      "Iconic guitar intro",
-      "Breakthrough MTV hit"
-    ]
+      "Slash began the intro as a joking warm-up exercise",
+      "Axl Rose based the lyrics on Erin Everly",
+      "The band first thought the song sounded too light",
+      "The ending grew from the repeated line 'Where do we go now?'",
+      "MTV rotation helped push the song into the mainstream"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 3,
     "word": "Livin' On A Prayer - Bon Jovi",
+    "difficulty": "easy",
+    "category": "Arena Rock",
     "clues": [
-      "New Jersey roots",
-      "Working-class story",
-      "Bubble perm era",
-      "Talk-box solo",
-      "'Tommy and Gina' narrative"
-    ]
+      "Tells the story of Tommy and Gina",
+      "Richie Sambora used a talk box for the main hook",
+      "Tommy’s dockworker storyline drew on 1970s labor struggles",
+      "The song was heavily reworked before making the album",
+      "It modulates upward for the final chorus"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 4,
     "word": "Crazy Train - Ozzy Osbourne",
+    "difficulty": "easy",
+    "category": "Heavy Metal",
     "clues": [
-      "UK artist",
-      "Nuclear war message",
-      "Bat incident notoriety",
-      "Randy Rhoads guitar",
-      "Signature Ozzy scream"
-    ]
+      "Released on Ozzy’s solo debut after Black Sabbath",
+      "Randy Rhoads co-wrote and played the signature riff",
+      "Lyrics reflect Cold War fear of annihilation",
+      "Bob Daisley also shares the writing credit",
+      "Its opening laugh became one of Ozzy’s signature moments"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 5,
     "word": "Pour Some Sugar On Me - Def Leppard",
+    "difficulty": "medium",
+    "category": "Hard Rock",
     "clues": [
-      "Sheffield, England",
-      "Sensual metaphor",
-      "MTV overexposure",
-      "Arena chant chorus",
-      "Pyromania tour vibe"
-    ]
+      "Added near the end of the Hysteria sessions",
+      "Joe Elliott has linked its groove to hip-hop influence",
+      "The band built it around stacked vocal chants",
+      "Its title came from a line heard while writing in the studio",
+      "Producer Mutt Lange helped shape its layered sound"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 6,
     "word": "Jump - Van Halen",
+    "difficulty": "easy",
+    "category": "Rock",
     "clues": [
-      "California band",
-      "Optimistic leap metaphor",
-      "Synth controversy",
-      "First keyboard lead",
-      "1984 chart-topper"
-    ]
+      "Built around an Oberheim synthesizer riff",
+      "Eddie Van Halen had wanted to use the keyboard part for years",
+      "David Lee Roth said a TV report about a jumper helped inspire the lyric",
+      "The song marked a major synth-led shift for the band",
+      "Its video mostly shows the band performing onstage"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 7,
     "word": "You Shook Me All Night Long - AC/DC",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Australian band",
-      "Romantic escapade theme",
-      "Double entendres",
-      "Catchy rhythm guitar",
-      "Live show staple"
-    ]
+      "One of AC/DC’s first major songs with Brian Johnson",
+      "Its lyrics are filled with playful double entendres",
+      "Angus and Malcolm Young wrote it with Johnson",
+      "It came from the same comeback album as 'Back In Black'",
+      "The groove leans heavily on Malcolm Young’s rhythm guitar"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 8,
     "word": "Welcome To The Jungle - Guns N' Roses",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Los Angeles band",
-      "Urban chaos inspiration",
-      "Explicit lyrics issue",
-      "Aggressive opening riff",
-      "LA rock identity"
-    ]
+      "Axl Rose said New York City helped inspire the lyric",
+      "MTV was initially reluctant to air the video",
+      "David Geffen reportedly pushed to get it shown late at night",
+      "The opening scream became one of the band’s calling cards",
+      "Its lyrics portray the city as seductive and dangerous"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 9,
     "word": "Master Of Puppets - Metallica",
+    "difficulty": "medium",
+    "category": "Thrash Metal",
     "clues": [
-      "California band",
-      "Addiction metaphor",
-      "Censorship debates",
-      "Epic structure",
-      "Thrash metal masterpiece"
-    ]
+      "Its central metaphor is drug addiction as a controlling master",
+      "It was the last Metallica studio album with Cliff Burton",
+      "The arrangement moves through multiple long-form sections",
+      "A melodic middle passage interrupts the heavier riffing",
+      "The title track became one of the band’s defining live pieces"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 10,
     "word": "One - Metallica",
+    "difficulty": "medium",
+    "category": "Thrash Metal",
     "clues": [
-      "Bay Area band",
-      "War amputee story",
-      "Graphic video banned",
-      "Haunting machine-gun drums",
-      "Grammy winner"
-    ]
+      "Inspired by Dalton Trumbo’s novel 'Johnny Got His Gun'",
+      "It was Metallica’s first official music video",
+      "The lyrics describe a soldier trapped in his own body",
+      "Its ending mimics machine-gun fire through drums and guitars",
+      "The song shifts from clean arpeggios into thrash intensity"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 11,
     "word": "Wanted Dead or Alive - Bon Jovi",
+    "difficulty": "easy",
+    "category": "Arena Rock",
     "clues": [
-      "New Jersey",
-      "Cowboy lifestyle imagery",
-      "Critics doubted sincerity",
-      "12-string acoustics",
-      "Touring anthem vibe"
-    ]
+      "Jon Bon Jovi wrote it about life on tour",
+      "The opening uses a 12-string acoustic guitar",
+      "Its imagery borrows from cowboy mythology",
+      "The lyric compares musicians to modern drifters",
+      "It became one of the band’s road-song signatures"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 12,
     "word": "Paradise City - Guns N' Roses",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Los Angeles",
-      "Idealized dream city",
-      "Drug references",
-      "Call-and-response chorus",
-      "Concert closer"
-    ]
+      "Its chorus began from a line tossed around in a van",
+      "Band members have told slightly different stories about who completed the phrase",
+      "The song builds from a loose groove into a much faster ending",
+      "Slash’s lead playing becomes more frantic in the final section",
+      "It often arrived near the climax of Guns N' Roses concerts"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 13,
     "word": "Rock You Like a Hurricane - Scorpions",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "German band",
-      "Love and power",
-      "Cold War climate",
-      "Catchy riff intro",
-      "Heavy MTV presence"
-    ]
+      "Written by the classic Schenker-Meine-Jabs lineup",
+      "Klaus Meine opens it with the line 'It’s early morning'",
+      "The song helped define the band’s Blackout era follow-up",
+      "Its stop-start riff made it an arena staple",
+      "The video boosted the Scorpions’ MTV-era visibility"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 14,
     "word": "The Number Of The Beast - Iron Maiden",
+    "difficulty": "medium",
+    "category": "Heavy Metal",
     "clues": [
-      "British band",
-      "Inspired by Revelation",
-      "Satanic panic",
-      "Galloping bassline",
-      "NWOBHM milestone"
-    ]
+      "Inspired by a nightmare and imagery from the Book of Revelation",
+      "It was among the earliest Iron Maiden songs with Bruce Dickinson on record",
+      "Actor Barry Clayton delivered the spoken intro",
+      "Religious groups protested the song on release",
+      "The galloping rhythm became central to the band’s style"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 15,
     "word": "Run To The Hills - Iron Maiden",
+    "difficulty": "easy",
+    "category": "Heavy Metal",
     "clues": [
-      "UK origins",
-      "Colonialism theme",
-      "Misinterpreted message",
-      "Dual-guitar harmony",
-      "First major hit"
-    ]
+      "Its lyrics depict conflict between Native Americans and European settlers",
+      "It became Iron Maiden’s first Top 10 single in the UK",
+      "Clive Burr played the rapid drumming on the original recording",
+      "The song alternates perspectives within the lyric",
+      "Its chorus became a major audience singalong"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 16,
     "word": "Here I Go Again - Whitesnake",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "UK band",
-      "Moving on theme",
-      "Overproduced version debate",
-      "Sultry video",
-      "Power ballad classic"
-    ]
+      "David Coverdale first recorded it with an earlier Whitesnake lineup in 1982",
+      "A later remake turned it into the band’s biggest US hit",
+      "The lyric famously exists in both 'hobo' and 'drifter' versions",
+      "The video featured Tawny Kitaen on Jaguar hoods",
+      "Its chorus centers on starting over alone"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 17,
     "word": "Photograph - Def Leppard",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Sheffield band",
-      "Marilyn Monroe tribute",
-      "Molds controversy",
-      "Layered harmonies",
-      "MTV breakthrough"
-    ]
+      "Joe Elliott has said Marilyn Monroe helped inspire the lyric",
+      "It appeared on the Pyromania album",
+      "Producer Mutt Lange emphasized stacked harmonies and overdubs",
+      "The song helped introduce Def Leppard to MTV audiences",
+      "Its hook fixates on a picture rather than the real person"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 18,
     "word": "Ace of Spades - Motorhead",
+    "difficulty": "easy",
+    "category": "Heavy Metal",
     "clues": [
-      "London band",
-      "Gambling metaphors",
-      "Accused of promoting vice",
-      "Fast punk pace",
-      "Lemmy trademark tune"
-    ]
+      "Lemmy wrote it using gambling imagery throughout",
+      "The title refers to the highest card in many card games",
+      "Its speed helped blur the line between metal and punk",
+      "Fast bass and guitar drive the song almost nonstop",
+      "It became the signature anthem of Motörhead"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 19,
     "word": "Every Rose Has Its Thorn - Poison",
+    "difficulty": "easy",
+    "category": "Power Ballad",
     "clues": [
-      "Pennsylvania band",
-      "Breakup ballad",
-      "Cliche accusations",
-      "Acoustic tenderness",
-      "Lighters-up favorite"
-    ]
+      "Bret Michaels wrote it after hearing something upsetting on a phone call",
+      "The acoustic ballad contrasted with Poison’s glam image",
+      "A quiet opening leads into a full-band chorus",
+      "Its title rests on a proverb-like image of beauty and pain",
+      "The song became closely tied to breakup nostalgia"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 20,
     "word": "Round and Round - Ratt",
+    "difficulty": "medium",
+    "category": "Glam Metal",
     "clues": [
-      "Los Angeles",
-      "Fame cycle lyrics",
-      "Glam excess criticism",
-      "Crunchy riff",
-      "MTV metal debut"
-    ]
+      "Warren DeMartini and Robbin Crosby shaped its guitar attack",
+      "Milton Berle appeared in the video in drag and in a suit",
+      "The song helped take Sunset Strip metal onto MTV",
+      "Its opening riff is tighter and darker than many glam peers",
+      "The chorus circles around the same repeated phrase"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 21,
     "word": "Cum On Feel The Noize - Quiet Riot",
+    "difficulty": "easy",
+    "category": "Glam Metal",
     "clues": [
-      "California band",
-      "Slade cover",
-      "Critics mocked title",
-      "Catchy shout chorus",
-      "First metal billboard hit"
-    ]
+      "It is a cover of a song by Slade",
+      "The band initially did not want to record it",
+      "Producer Spencer Proffer pushed for the cover",
+      "Its shouted chorus made it perfect for arenas",
+      "The track helped break heavy metal into US pop radio"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 22,
     "word": "Dr. Feelgood - Motley Crue",
+    "difficulty": "medium",
+    "category": "Glam Metal",
     "clues": [
-      "Los Angeles",
-      "Drug dealing theme",
-      "Rehab timing irony",
-      "Polished production",
-      "Grammy nod"
-    ]
+      "The title character is a drug dealer",
+      "It was recorded after the band members became sober",
+      "Bob Rock produced the album version",
+      "A stomping riff anchors the song from the start",
+      "Its release marked a polished new phase for Mötley Crüe"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 23,
     "word": "Kickstart My Heart - Motley Crue",
+    "difficulty": "easy",
+    "category": "Glam Metal",
     "clues": [
-      "LA rooted",
-      "Adrenaline after overdose",
-      "Drug reference",
-      "Fast tempo",
-      "Live crowd energizer"
-    ]
+      "Nikki Sixx tied it to his near-fatal overdose story",
+      "The lyric celebrates reckless speed and adrenaline",
+      "Bob Rock produced the track",
+      "Its rhythm feels like an engine revving up",
+      "The song became a staple for sports and racing use"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 24,
     "word": "18 and Life - Skid Row",
+    "difficulty": "medium",
+    "category": "Heavy Metal",
     "clues": [
-      "New Jersey",
-      "Youth crime cautionary",
-      "Violence concern",
-      "Sebastian Bach vocals",
-      "Ballad-meets-metal power"
-    ]
+      "It tells the fictional story of Ricky Kasso-like youth violence",
+      "Sebastian Bach delivers the dramatic vocal",
+      "The song blends power-ballad pacing with a heavy chorus",
+      "Its lyric centers on a life sentence at age eighteen",
+      "The dark storytelling set it apart from party-metal peers"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 25,
     "word": "Rebel Yell - Billy Idol",
+    "difficulty": "easy",
+    "category": "Rock",
     "clues": [
-      "British-born",
-      "Inspired by bourbon",
-      "Sexual edge",
-      "Bleach-blonde attitude",
-      "Dance-rock blend"
-    ]
+      "Billy Idol said the title came from Rebel Yell bourbon",
+      "Steve Stevens supplied the song’s flashy guitar work",
+      "Its rhythm blends rock with dance-floor energy",
+      "The song grew from Idol’s post-Generation X solo career",
+      "Its chant-like title hook drives the chorus"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 26,
     "word": "Don't Stop Believin' - Journey",
+    "difficulty": "easy",
+    "category": "Arena Rock",
     "clues": [
-      "San Francisco",
-      "Hopeful perseverance",
-      "Overused in media",
-      "Iconic piano intro",
-      "Stadium singalong"
-    ]
+      "Jonathan Cain drew the title from advice from his father",
+      "Steve Perry sings about a city boy and a small-town girl",
+      "The verse arrives before the chorus appears very late",
+      "Its opening piano figure is instantly recognizable",
+      "The final section repeats the title as a sustained release"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 27,
     "word": "Money For Nothing - Dire Straits",
+    "difficulty": "medium",
+    "category": "Rock",
     "clues": [
-      "UK band",
-      "Working-class envy",
-      "Banned for slur",
-      "Innovative video",
-      "Knopfler fingerstyle"
-    ]
+      "Mark Knopfler wrote it after overhearing appliance-store workers",
+      "Sting sings the line adapted from 'Don’t Stand So Close to Me'",
+      "Its computer-animated video became an MTV landmark",
+      "The guitar intro was recorded with a distinctive mic setup",
+      "The lyric satirizes envy toward rock-star lifestyles"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 28,
     "word": "Under Pressure - Queen & David Bowie",
+    "difficulty": "easy",
+    "category": "Rock",
     "clues": [
-      "UK collaboration",
-      "Social stress theme",
-      "wordwriting disputes",
-      "Unforgettable bassline",
-      "Future sampled in hip-hop"
-    ]
+      "It grew from an impromptu studio session with David Bowie",
+      "John Deacon’s bass line became the song’s most famous musical feature",
+      "Queen and Bowie later differed in how the writing unfolded",
+      "Its lyric turns from anxiety toward human connection",
+      "The collaboration paired two of Britain’s biggest acts"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 29,
     "word": "Purple Rain - Prince",
+    "difficulty": "easy",
+    "category": "Rock",
     "clues": [
-      "Minneapolis",
-      "Forgiveness theme",
-      "Religious interpretation",
-      "Epic guitar solo",
-      "Cinematic classic"
-    ]
+      "Prince developed it for the film and album of the same name",
+      "Early versions were much longer and more improvisational",
+      "The recording blends power-ballad pacing with a soaring solo",
+      "Its title came to symbolize apocalypse, sorrow, and redemption",
+      "Live performances often stretched the ending guitar section"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 30,
     "word": "Born In The U.S.A. - Bruce Springsteen",
+    "difficulty": "easy",
+    "category": "Heartland Rock",
     "clues": [
-      "New Jersey",
-      "Vietnam vet story",
-      "Misused patriotically",
-      "Anthemic chorus",
-      "Social commentary"
-    ]
+      "The lyric tells the story of a Vietnam veteran",
+      "Its triumphant chorus led many listeners to misread the song",
+      "Springsteen first drafted it as a much darker acoustic piece",
+      "The final version added pounding drums and synthesizer",
+      "It became central to debates about patriotism in pop music"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 31,
     "word": "For Those About To Rock - AC/DC",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Australia",
-      "Salute to fans",
-      "Live cannon gimmick",
-      "Simple riff power",
-      "Concert closer"
-    ]
+      "The title was inspired by a book about Roman gladiators",
+      "Its chorus salutes the audience directly",
+      "Cannons fire during the stage performance of the song",
+      "Brian Johnson sings it on the album after joining from Geordie",
+      "It became a natural concert closer for AC/DC"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 32,
     "word": "Legs - ZZ Top",
+    "difficulty": "medium",
+    "category": "Rock",
     "clues": [
-      "Texas trio",
-      "Empowerment metaphor",
-      "Video objectification debates",
-      "Synth-hook blend",
-      "Hot Rod imagery"
-    ]
+      "It came from the synth-heavy Eliminator era",
+      "The video featured the band’s red Ford coupe and spinning keychain",
+      "Billy Gibbons wrote it with a danceable electronic pulse",
+      "It helped transform ZZ Top in the MTV period",
+      "The lyric focuses on a woman whose confidence turns heads"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 33,
     "word": "Crazy Crazy Nights - KISS",
+    "difficulty": "medium",
+    "category": "Hard Rock",
     "clues": [
-      "New York City",
-      "Optimism anthem",
-      "Critics mocked lyrics",
-      "Crowd chant",
-      "Melodic glam turn"
-    ]
+      "Paul Stanley co-wrote it with Adam Mitchell",
+      "The song came from KISS’s glossy late-80s non-makeup era",
+      "Its chorus is built for crowd chanting",
+      "It performed especially well in the UK charts",
+      "The lyric frames rock fandom as a shared celebration"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 34,
     "word": "The Final Countdown - Europe",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "Swedish band",
-      "Space travel inspiration",
-      "Corny lyrics teased",
-      "Synth-metal fusion",
-      "Worldwide stadium hit"
-    ]
+      "Joey Tempest wrote the main keyboard line years before recording it",
+      "The lyric imagines leaving Earth for Venus",
+      "Tempest has said David Bowie’s 'Space Oddity' influenced the theme",
+      "Its synth fanfare announces the song before any verse begins",
+      "The track became closely associated with sports-event introductions"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 35,
     "word": "Breaking the Law - Judas Priest",
+    "difficulty": "easy",
+    "category": "Heavy Metal",
     "clues": [
-      "UK band",
-      "Rebellion satire",
-      "Censorship threats",
-      "Twin-guitar attack",
-      "Classic metal riff"
-    ]
+      "The lyric reflects frustration with unemployment and social decline",
+      "It was released during Britain’s recession era",
+      "The chorus repeats the title like a shouted slogan",
+      "Its video famously includes a bank robbery with guitars",
+      "The song distills Judas Priest into a lean, direct hook"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 36,
     "word": "Eyes Without a Face - Billy Idol",
+    "difficulty": "medium",
+    "category": "New Wave Rock",
     "clues": [
-      "UK",
-      "French cinema influence",
-      "Genre shift criticism",
-      "Dreamy synth mix",
-      "Dark romantic tone"
-    ]
+      "The title came from Georges Franju’s French film 'Les Yeux sans visage'",
+      "Perri Lister sings the French response in the chorus",
+      "The song pairs moody synth textures with a harder final section",
+      "Its restrained vocal is unusual compared with Idol’s tougher singles",
+      "The lyric explores beauty, emptiness, and disguise"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 37,
     "word": "The Boys of Summer - Don Henley",
+    "difficulty": "medium",
+    "category": "Rock",
     "clues": [
-      "Texas",
-      "Lost youth nostalgia",
-      "Video award issues",
-      "Atmospheric production",
-      "Enduring radio appeal"
-    ]
+      "Mike Campbell first wrote the track before Henley added lyrics",
+      "Its famous line references a Deadhead sticker on a Cadillac",
+      "The black-and-white video was directed by Jean-Baptiste Mondino",
+      "The production leans on drum machines and shimmering guitars",
+      "The lyric turns summer imagery into adult nostalgia"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 38,
     "word": "Sister Christian - Night Ranger",
+    "difficulty": "medium",
+    "category": "Power Ballad",
     "clues": [
-      "San Francisco",
-      "Maturity transition",
-      "Misheard lyrics",
-      "Tempo slowdown",
-      "Power ballad signature"
-    ]
+      "Drummer Kelly Keagy wrote it for his younger sister Christy",
+      "A childhood mispronunciation helped shape the title",
+      "Keagy, not Jack Blades, sings the lead vocal",
+      "The song begins as a piano ballad before getting heavier",
+      "Its lyric is about growing up and letting go"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 39,
     "word": "Heaven - Warrant",
+    "difficulty": "medium",
+    "category": "Power Ballad",
     "clues": [
-      "Los Angeles",
-      "Love devotion theme",
-      "Released twice",
-      "Soaring vocals",
-      "Late-era hair hit"
-    ]
+      "Jani Lane wrote it before Warrant became famous",
+      "The band first released it before reissuing it more successfully",
+      "Its arrangement follows the classic quiet-verse, big-chorus power-ballad model",
+      "The lyric frames romantic love in spiritual language",
+      "It helped prove Warrant could do more than party anthems"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 40,
     "word": "Still of the Night - Whitesnake",
+    "difficulty": "medium",
+    "category": "Hard Rock",
     "clues": [
-      "UK",
-      "Zeppelin influence",
-      "Plagiarism comparisons",
-      "Wailing vocals",
-      "Heavy blues tension"
-    ]
+      "David Coverdale co-wrote it with guitarist John Sykes",
+      "The song’s dynamics invited comparisons to Led Zeppelin",
+      "It shifts from slow blues tension into a hard-rock attack",
+      "Coverdale delivers one of his most dramatic vocal performances",
+      "The track became a centerpiece of the self-titled 1987 album"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 41,
     "word": "Rock of Ages - Def Leppard",
+    "difficulty": "easy",
+    "category": "Hard Rock",
     "clues": [
-      "England",
-      "Party faith message",
-      "Backmask rumor",
-      "'Gunter glieben' intro",
-      "Mass crowd anthem"
-    ]
+      "Its opening 'Gunter glieben glauten globen' line was studio gibberish",
+      "The song appears on the Pyromania album",
+      "Mutt Lange helped layer the gang-style chorus vocals",
+      "The hook was built for arena crowd response",
+      "It became one of Def Leppard’s live staples"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 42,
     "word": "Pride (In the Name of Love) - U2",
+    "difficulty": "easy",
+    "category": "Rock",
     "clues": [
-      "Ireland",
-      "MLK tribute",
-      "Lyric accuracy dispute",
-      "Echo guitar",
-      "Anthem of justice"
-    ]
+      "The song honors Martin Luther King Jr.",
+      "Bono later said some historical details in the lyric were inaccurate",
+      "The Edge’s echoing guitar defines the track’s sound",
+      "It became a breakthrough single from 'The Unforgettable Fire'",
+      "The chorus turns civil-rights sacrifice into a chant of tribute"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 43,
     "word": "Owner of a Lonely Heart - Yes",
+    "difficulty": "medium",
+    "category": "Progressive Pop Rock",
     "clues": [
-      "UK",
-      "Isolation metaphor",
-      "Pop sellout claims",
-      "Sample innovation",
-      "Chart comeback"
-    ]
+      "Trevor Rabin first developed it before joining Yes",
+      "Trevor Horn produced the final recording",
+      "The track uses sharp edits, samples, and stabs uncommon in earlier Yes",
+      "Its success came from the more pop-oriented 90125 era",
+      "The title contrasts risky love with emotional safety"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 44,
     "word": "Runaway - Bon Jovi",
+    "difficulty": "medium",
+    "category": "Rock",
     "clues": [
-      "New Jersey",
-      "Teen rebellion theme",
-      "Demo breakthrough",
-      "Synth intro",
-      "FM radio start"
-    ]
+      "It began as a demo recorded before Bon Jovi was a full band",
+      "Keyboard player Roy Bittan from the E Street Band played on it",
+      "The recording used session musicians later called the All Star Review",
+      "Its lyric centers on a girl leaving home",
+      "The song opened the door for Jon Bon Jovi’s recording career"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 45,
     "word": "Shout at the Devil - Motley Crue",
+    "difficulty": "medium",
+    "category": "Heavy Metal",
     "clues": [
-      "Los Angeles",
-      "Ambiguously Satanic",
-      "Moral panic",
-      "Chanting power",
-      "Metal landmark"
-    ]
+      "Nikki Sixx said the title was meant as defiance, not worship",
+      "The album arrived during a period of moral panic around metal",
+      "Its chant-like title line gives it a ritual feel",
+      "The song helped cement the band’s darker early image",
+      "Listeners often argued over whether the message was anti-evil or provocative theater"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 46,
     "word": "Love Is a Battlefield - Pat Benatar",
+    "difficulty": "easy",
+    "category": "Rock",
     "clues": [
-      "New York",
-      "Defiant independence",
-      "Feminist backlash",
-      "Dance-rock beat",
-      "MTV choreography"
-    ]
+      "Songwriters Holly Knight and Mike Chapman wrote it for Pat Benatar",
+      "The video tells a short narrative about a young woman leaving home",
+      "Choreography and street-dance imagery made the clip memorable on MTV",
+      "Its production blends rock vocals with a synthetic dance beat",
+      "The lyric frames romance as open conflict"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 47,
     "word": "Eye of the Tiger - Survivor",
+    "difficulty": "easy",
+    "category": "Rock",
     "clues": [
-      "Chicago",
-      "Boxing motivation",
-      "Film tie-in",
-      "Distinct intro riff",
-      "Cultural phenomenon"
-    ]
+      "Sylvester Stallone asked Survivor for a Rocky III theme",
+      "Its lyric centers on hunger, focus, and survival",
+      "The opening guitar figure enters before the vocal",
+      "The song plays during the film’s training and rivalry sequences",
+      "It became permanently linked with comeback motivation"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 48,
     "word": "Jumpin' Jack Flash (Live) - Rolling Stones",
+    "difficulty": "hard",
+    "category": "Rock",
     "clues": [
-      "UK",
-      "Stage revival",
-      "Critics split",
-      "Keith riffs shine",
-      "80s comeback energy"
-    ]
+      "This version reintroduced a 1968 Stones classic to the 80s live era",
+      "Mick Jagger’s stage delivery became central to the performance",
+      "Keith Richards and Ronnie Wood traded guitar parts onstage",
+      "The live cut captured the band’s stadium-scale sound",
+      "Its title phrase comes from one of the Stones’ most famous opening lines"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 49,
     "word": "Hot for Teacher - Van Halen",
+    "difficulty": "medium",
+    "category": "Hard Rock",
     "clues": [
-      "California",
-      "Schoolboy infatuation",
-      "Provocative video",
-      "Double bass drums",
-      "Comic edge"
-    ]
+      "Alex Van Halen opens it with a double-bass drum barrage",
+      "The video turns a school fantasy into broad comedy",
+      "Young actors portray the band members as students",
+      "Eddie Van Halen’s guitar work is especially flashy in the intro",
+      "The lyric exaggerates a schoolboy crush for comic effect"
+    ],
+    "createdBy": "system"
   },
   {
     "id": 50,
     "word": "Nothin' But a Good Time - Poison",
+    "difficulty": "easy",
+    "category": "Glam Metal",
     "clues": [
-      "Pennsylvania",
-      "Escapism theme",
-      "Criticized for superficiality",
-      "Party-glam tone",
-      "MTV favorite"
-    ]
+      "Bret Michaels wrote it as an anthem of escapism",
+      "The video shows a worker daydreaming his way into a concert",
+      "Its chorus rejects responsibility in favor of partying",
+      "The song captures the late-80s glam-metal attitude perfectly",
+      "A simple chant-like hook makes it easy for crowds to join"
+    ],
+    "createdBy": "system"
   }
 ]
