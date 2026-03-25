@@ -420,9 +420,13 @@ class WordsService {
       throw new HttpError(400, 'WordEntry must be a JSON object.')
     }
 
-    const word = typeof entry.word === 'string' ? entry.word.trim() : ''
-    if (!word) {
-      throw new HttpError(400, 'WordEntry must contain a non-empty "word" string.')
+    const answer = typeof entry.answer === 'string'
+      ? entry.answer.trim()
+      : typeof entry.word === 'string'
+        ? entry.word.trim()
+        : ''
+    if (!answer) {
+      throw new HttpError(400, 'WordEntry must contain a non-empty "answer" or "word" string.')
     }
 
     if (!Array.isArray(entry.clues)) {
@@ -443,8 +447,14 @@ class WordsService {
 
     const normalizedEntry = {
       ...entry,
-      word,
+      answer,
       clues,
+    }
+
+    delete normalizedEntry.word
+
+    if (typeof normalizedEntry.title === 'string') {
+      normalizedEntry.title = normalizedEntry.title.trim()
     }
 
     if (normalizedEntry.audio && typeof normalizedEntry.audio === 'object' && !Array.isArray(normalizedEntry.audio)) {
@@ -522,8 +532,8 @@ class WordsService {
     const words = entries
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
       .map((entry) => this.sanitizeCategoryWordEntry(entry, resolvedCategory))
-      .map((entry) => entry.word)
-      .filter((word) => normalizeWord(word).startsWith(normalizedPrefix))
+      .map((entry) => entry.answer)
+      .filter((answer) => normalizeWord(answer).startsWith(normalizedPrefix))
       .sort((left, right) => left.localeCompare(right))
 
     return {
@@ -540,7 +550,10 @@ class WordsService {
 
     const eligibleEntries = entries
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
-      .filter((entry) => typeof entry.word === 'string' && entry.word.trim())
+      .filter((entry) => (
+        (typeof entry.answer === 'string' && entry.answer.trim())
+        || (typeof entry.word === 'string' && entry.word.trim())
+      ))
       .filter((entry) => Array.isArray(entry.clues) && entry.clues.length === 5)
       .map((entry) => this.sanitizeCategoryWordEntry(entry, resolvedCategory))
 

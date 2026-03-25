@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "song": "Back In Black",
+    "answer": "Back In Black",
     "band": "AC/DC",
-    "titleHint": "A legendary comeback hard-rock anthem by AC/DC released in 1980",
+    "title": "A legendary comeback hard-rock anthem by AC/DC released in 1980",
     "clues": [
       "Written after the death of Bon Scott as part of the band’s comeback",
       "The album cover was kept black as a mark of mourning and respect",
@@ -20,9 +20,9 @@
   },
   {
     "id": 2,
-    "song": "Sweet Child O' Mine",
+    "answer": "Sweet Child O' Mine",
     "band": "Guns N' Roses",
-    "titleHint": "A love-inspired breakthrough hit by Guns N' Roses released in 1987",
+    "title": "A love-inspired breakthrough hit by Guns N' Roses released in 1987",
     "clues": [
       "The opening riff began as a warm-up figure played by Slash",
       "Axl Rose wrote the lyric around memories of his girlfriend Erin Everly",
@@ -39,12 +39,12 @@
   },
   {
     "id": 3,
-    "song": "Livin' On A Prayer",
+    "answer": "Livin' On A Prayer",
     "band": "Bon Jovi",
-    "titleHint": "A working-class arena anthem by Bon Jovi released in 1986",
+    "title": "A working-class arena anthem by Bon Jovi released in 1986",
     "clues": [
       "It centers on Tommy and Gina, one of the best-known fictional couples in rock",
-      "The talk-box effect gives the song its instantly identifiable vocal-guitar sound",
+      "The talk-box effect gives the answer its instantly identifiable vocal-guitar sound",
       "Jon Bon Jovi was unsure about it before producer Bruce Fairbairn pushed for it",
       "The chorus lifts dramatically into a huge communal singalong",
       "It became the band’s defining stadium anthem"
@@ -58,9 +58,9 @@
   },
   {
     "id": 4,
-    "song": "Crazy Train",
+    "answer": "Crazy Train",
     "band": "Ozzy Osbourne",
-    "titleHint": "A solo-era metal classic by Ozzy Osbourne released in 1980",
+    "title": "A solo-era metal classic by Ozzy Osbourne released in 1980",
     "clues": [
       "Features Randy Rhoads on one of heavy metal’s most celebrated guitar performances",
       "The lyric reflects Cold War anxiety and a sense of collective madness",
@@ -77,15 +77,15 @@
   },
   {
     "id": 5,
-    "song": "Pour Some Sugar On Me",
+    "answer": "Pour Some Sugar On Me",
     "band": "Def Leppard",
-    "titleHint": "A chant-heavy glam-metal smash by Def Leppard released in 1987",
+    "title": "A chant-heavy glam-metal smash by Def Leppard released in 1987",
     "clues": [
       "It was written late in the recording process when the album was nearly done",
       "The vocal hook was designed to explode in arenas and crowd singalongs",
       "The lyric leans hard into playful innuendo and double meaning",
       "MTV exposure helped turn it into the band’s biggest crossover hit",
-      "It became one of the era’s most reliable sports-arena pump-up songs"
+      "It became one of the era’s most reliable sports-arena pump-up answers"
     ],
     "audio": {
       "type": "youtube",
@@ -96,9 +96,9 @@
   },
   {
     "id": 6,
-    "song": "Jump",
+    "answer": "Jump",
     "band": "Van Halen",
-    "titleHint": "A synth-driven chart-topper by Van Halen released in 1984",
+    "title": "A synth-driven chart-topper by Van Halen released in 1984",
     "clues": [
       "It opens with keyboards instead of Eddie Van Halen’s guitar taking center stage",
       "The lyric idea reportedly came after seeing a television story about a jumper",
@@ -115,15 +115,15 @@
   },
   {
     "id": 7,
-    "song": "You Shook Me All Night Long",
+    "answer": "You Shook Me All Night Long",
     "band": "AC/DC",
-    "titleHint": "A swaggering rock staple by AC/DC released in 1980",
+    "title": "A swaggering rock staple by AC/DC released in 1980",
     "clues": [
       "It was among the earliest major hits with Brian Johnson on lead vocals",
       "The lyric is packed with cheeky double entendres from start to finish",
       "It rides a tight groove rather than the band’s heaviest attack",
       "The chorus made it a natural crowd-pleaser in live shows",
-      "It became one of AC/DC’s most licensed songs for movies and events"
+      "It became one of AC/DC’s most licensed answers for movies and events"
     ],
     "audio": {
       "type": "youtube",
@@ -134,9 +134,9 @@
   },
   {
     "id": 8,
-    "song": "Welcome To The Jungle",
+    "answer": "Welcome To The Jungle",
     "band": "Guns N' Roses",
-    "titleHint": "A dangerous-sounding breakthrough rocker by Guns N' Roses released in 1987",
+    "title": "A dangerous-sounding breakthrough rocker by Guns N' Roses released in 1987",
     "clues": [
       "Axl Rose drew on the intimidating feel of big-city street life when writing it",
       "It opens with a sinister whispered line before the full band erupts",
@@ -153,11 +153,11 @@
   },
   {
     "id": 9,
-    "song": "Master Of Puppets",
+    "answer": "Master Of Puppets",
     "band": "Metallica",
-    "titleHint": "A landmark thrash-metal epic by Metallica released in 1986",
+    "title": "A landmark thrash-metal epic by Metallica released in 1986",
     "clues": [
-      "The song uses addiction as the controlling force behind its title image",
+      "The answer uses addiction as the controlling force behind its title image",
       "It runs like a mini-suite rather than a simple verse-chorus single",
       "A clean melodic middle passage sharply contrasts the crushing riffs around it",
       "It later became one of the first metal recordings added to the U.S. National Recording Registry",
@@ -172,9 +172,9 @@
   },
   {
     "id": 10,
-    "song": "One",
+    "answer": "One",
     "band": "Metallica",
-    "titleHint": "A war-haunted metal epic by Metallica released in 1988",
+    "title": "A war-haunted metal epic by Metallica released in 1988",
     "clues": [
       "It was inspired by the anti-war novel and film 'Johnny Got His Gun'",
       "The arrangement begins in near-ballad form before turning brutally heavy",
@@ -191,14 +191,14 @@
   },
   {
     "id": 11,
-    "song": "Wanted Dead or Alive",
+    "answer": "Wanted Dead or Alive",
     "band": "Bon Jovi",
-    "titleHint": "A road-worn rock ballad by Bon Jovi released in 1986",
+    "title": "A road-worn rock ballad by Bon Jovi released in 1986",
     "clues": [
       "The lyric frames touring musicians as modern drifters and cowboys",
       "Richie Sambora’s acoustic textures are central to its desert-road atmosphere",
       "It gave the band a rugged outlaw image beyond pure glam metal",
-      "The song became a staple whenever bands wanted to mythologize life on tour",
+      "The answer became a staple whenever bands wanted to mythologize life on tour",
       "It remains one of Bon Jovi’s most enduring singalong ballads"
     ],
     "audio": {
@@ -210,13 +210,13 @@
   },
   {
     "id": 12,
-    "song": "Paradise City",
+    "answer": "Paradise City",
     "band": "Guns N' Roses",
-    "titleHint": "A fast-building hard-rock anthem by Guns N' Roses released in 1987",
+    "title": "A fast-building hard-rock anthem by Guns N' Roses released in 1987",
     "clues": [
       "The famous refrain dreams of a place where the grass is green and life is ideal",
       "It begins at a measured pace before racing into a much faster final section",
-      "The song’s outro is one of the band’s most explosive recorded climaxes",
+      "The answer’s outro is one of the band’s most explosive recorded climaxes",
       "It became a natural concert closer because of its escalating energy",
       "The chorus is among the most instantly recognizable in late-80s rock"
     ],
@@ -229,9 +229,9 @@
   },
   {
     "id": 13,
-    "song": "Rock You Like a Hurricane",
+    "answer": "Rock You Like a Hurricane",
     "band": "Scorpions",
-    "titleHint": "A riff-heavy arena-rock staple by Scorpions released in 1984",
+    "title": "A riff-heavy arena-rock staple by Scorpions released in 1984",
     "clues": [
       "It opens with a guitar attack built for immediate crowd reaction",
       "The lyric turns storm imagery into a blunt expression of desire and force",
@@ -248,13 +248,13 @@
   },
   {
     "id": 14,
-    "song": "The Number Of The Beast",
+    "answer": "The Number Of The Beast",
     "band": "Iron Maiden",
-    "titleHint": "A galloping metal classic by Iron Maiden released in 1982",
+    "title": "A galloping metal classic by Iron Maiden released in 1982",
     "clues": [
       "The lyric was inspired by a nightmare and imagery from the Book of Revelation",
       "It opens with a spoken biblical-style introduction before the band charges in",
-      "The song became central to the moral panic that surrounded heavy metal in the 1980s",
+      "The answer became central to the moral panic that surrounded heavy metal in the 1980s",
       "It was one of the early showcase tracks for vocalist Bruce Dickinson",
       "It remains one of Iron Maiden’s defining live set pieces"
     ],
@@ -267,14 +267,14 @@
   },
   {
     "id": 15,
-    "song": "Run To The Hills",
+    "answer": "Run To The Hills",
     "band": "Iron Maiden",
-    "titleHint": "A historical heavy-metal anthem by Iron Maiden released in 1982",
+    "title": "A historical heavy-metal anthem by Iron Maiden released in 1982",
     "clues": [
       "It tells its story from opposing viewpoints during the colonization of Indigenous lands",
       "The opening bass-and-drum drive launches into one of Maiden’s best-known riffs",
       "It was the band’s first Top 10 hit in the UK",
-      "The rapid vocal delivery helps give the song its sense of pursuit and panic",
+      "The rapid vocal delivery helps give the answer its sense of pursuit and panic",
       "It is one of the clearest examples of Iron Maiden pairing history with aggression"
     ],
     "audio": {
@@ -286,14 +286,14 @@
   },
   {
     "id": 16,
-    "song": "Here I Go Again",
+    "answer": "Here I Go Again",
     "band": "Whitesnake",
-    "titleHint": "A polished power-ballad hit by Whitesnake released in its big 1987 version",
+    "title": "A polished power-ballad hit by Whitesnake released in its big 1987 version",
     "clues": [
-      "The best-known recording is a reworked version of a song first issued years earlier",
+      "The best-known recording is a reworked version of a answer first issued years earlier",
       "The lyric turns loneliness and self-reliance into an anthem-sized chorus",
       "Two different Tawny Kitaen videos helped lock it into MTV history",
-      "The 1987 production gave the song a much bigger radio-ready sound",
+      "The 1987 production gave the answer a much bigger radio-ready sound",
       "It became Whitesnake’s only U.S. No. 1 single"
     ],
     "audio": {
@@ -305,14 +305,14 @@
   },
   {
     "id": 17,
-    "song": "Photograph",
+    "answer": "Photograph",
     "band": "Def Leppard",
-    "titleHint": "A hook-filled hard-rock hit by Def Leppard released in 1983",
+    "title": "A hook-filled hard-rock hit by Def Leppard released in 1983",
     "clues": [
       "The lyric obsessively fixates on an unattainable image rather than a real relationship",
       "The band paired crunching guitars with highly layered vocal harmonies",
       "The video’s visual nods to glamour iconography amplified the fantasy angle",
-      "It was one of the songs that helped break the band wide open on MTV",
+      "It was one of the answers that helped break the band wide open on MTV",
       "It became an early blueprint for Def Leppard’s polished arena-rock sound"
     ],
     "audio": {
@@ -324,14 +324,14 @@
   },
   {
     "id": 18,
-    "song": "Ace of Spades",
+    "answer": "Ace of Spades",
     "band": "Motorhead",
-    "titleHint": "A speed-fueled hard-rock classic by Motorhead released in 1980",
+    "title": "A speed-fueled hard-rock classic by Motorhead released in 1980",
     "clues": [
       "The lyric uses card-game and gambling language as a life philosophy",
-      "Lemmy said the song was more about attitude than literal card playing",
+      "Lemmy said the answer was more about attitude than literal card playing",
       "The title riff hits with almost punk-level velocity",
-      "It became the band’s undisputed signature song",
+      "It became the band’s undisputed signature answer",
       "It is one of the most frequently cited bridges between punk energy and metal heaviness"
     ],
     "audio": {
@@ -343,15 +343,15 @@
   },
   {
     "id": 19,
-    "song": "Every Rose Has Its Thorn",
+    "answer": "Every Rose Has Its Thorn",
     "band": "Poison",
-    "titleHint": "A vulnerable power ballad by Poison released in 1988",
+    "title": "A vulnerable power ballad by Poison released in 1988",
     "clues": [
       "Bret Michaels wrote it after a painful phone call with his girlfriend",
       "The stripped-back acoustic feel set it apart from the band’s party anthems",
       "The cowboy-ish arrangement helped broaden the band’s image",
       "It gave Poison its only U.S. No. 1 single",
-      "It became one of hair metal’s most recognizable breakup songs"
+      "It became one of hair metal’s most recognizable breakup answers"
     ],
     "audio": {
       "type": "youtube",
@@ -362,15 +362,15 @@
   },
   {
     "id": 20,
-    "song": "Round and Round",
+    "answer": "Round and Round",
     "band": "Ratt",
-    "titleHint": "A swaggering glam-metal hit by Ratt released in 1984",
+    "title": "A swaggering glam-metal hit by Ratt released in 1984",
     "clues": [
       "The riff is one of the clearest signatures of mid-80s Sunset Strip metal",
       "The lyric circles around temptation, repetition, and unstable relationships",
-      "The elaborate video helped make the song a major MTV staple",
+      "The elaborate video helped make the answer a major MTV staple",
       "It became the band’s highest-charting single in the U.S.",
-      "It is often treated as the definitive Ratt song"
+      "It is often treated as the definitive Ratt answer"
     ],
     "audio": {
       "type": "youtube",
@@ -381,15 +381,15 @@
   },
   {
     "id": 21,
-    "song": "Cum On Feel The Noize",
+    "answer": "Cum On Feel The Noize",
     "band": "Quiet Riot",
-    "titleHint": "A breakthrough cover hit by Quiet Riot released in 1983",
+    "title": "A breakthrough cover hit by Quiet Riot released in 1983",
     "clues": [
-      "It is a cover of a song first made famous by Slade",
+      "It is a cover of a answer first made famous by Slade",
       "The shouted title hook was built for maximum audience participation",
       "It helped 'Metal Health' become the first metal album to top the Billboard 200",
       "The band turned a glam-rock chant into a heavier American radio smash",
-      "It remains one of the key songs in metal’s early MTV breakthrough"
+      "It remains one of the key answers in metal’s early MTV breakthrough"
     ],
     "audio": {
       "type": "youtube",
@@ -400,9 +400,9 @@
   },
   {
     "id": 22,
-    "song": "Dr. Feelgood",
+    "answer": "Dr. Feelgood",
     "band": "Motley Crue",
-    "titleHint": "A polished hard-rock hit by Motley Crue released in 1989",
+    "title": "A polished hard-rock hit by Motley Crue released in 1989",
     "clues": [
       "The title character is a drug dealer at the center of the lyric narrative",
       "It arrived after the band members had begun confronting their addictions",
@@ -419,14 +419,14 @@
   },
   {
     "id": 23,
-    "song": "Kickstart My Heart",
+    "answer": "Kickstart My Heart",
     "band": "Motley Crue",
-    "titleHint": "An adrenaline-shot hard-rocker by Motley Crue released in 1989",
+    "title": "An adrenaline-shot hard-rocker by Motley Crue released in 1989",
     "clues": [
       "It was inspired by Nikki Sixx’s widely retold overdose-and-revival story",
       "The tempo and drum drive make it feel like a mechanical engine roaring to life",
-      "The title phrase perfectly matches the song’s defibrillator-like energy",
-      "It became one of the band’s ultimate concert ignition songs",
+      "The title phrase perfectly matches the answer’s defibrillator-like energy",
+      "It became one of the band’s ultimate concert ignition answers",
       "It is still one of the most used rock tracks for speed, sports, and racing montages"
     ],
     "audio": {
@@ -438,15 +438,15 @@
   },
   {
     "id": 24,
-    "song": "18 and Life",
+    "answer": "18 and Life",
     "band": "Skid Row",
-    "titleHint": "A dramatic hard-rock ballad by Skid Row released in 1989",
+    "title": "A dramatic hard-rock ballad by Skid Row released in 1989",
     "clues": [
       "It tells the story of Ricky, whose life is destroyed by a shooting",
       "The verses build like a crime narrative before the huge chorus lands",
       "Sebastian Bach’s vocal performance shifts between tenderness and accusation",
       "It helped establish the band as more than just another party-metal act",
-      "It remains their best-known song in many markets"
+      "It remains their best-known answer in many markets"
     ],
     "audio": {
       "type": "youtube",
@@ -457,12 +457,12 @@
   },
   {
     "id": 25,
-    "song": "Rebel Yell",
+    "answer": "Rebel Yell",
     "band": "Billy Idol",
-    "titleHint": "A pumping dance-rock classic by Billy Idol released in 1983",
+    "title": "A pumping dance-rock classic by Billy Idol released in 1983",
     "clues": [
       "The title was inspired by the Rebel Yell bourbon brand",
-      "Steve Stevens’ guitar work is crucial to the song’s whip-crack energy",
+      "Steve Stevens’ guitar work is crucial to the answer’s whip-crack energy",
       "The lyric plays desire and obsession with a deliberately theatrical edge",
       "It became one of Idol’s defining solo-era hits",
       "The blend of rock guitar and club-ready pulse made it stand out on radio"
@@ -476,15 +476,15 @@
   },
   {
     "id": 26,
-    "song": "Don't Stop Believin'",
+    "answer": "Don't Stop Believin'",
     "band": "Journey",
-    "titleHint": "A piano-led arena anthem by Journey released in 1981",
+    "title": "A piano-led arena anthem by Journey released in 1981",
     "clues": [
       "It opens with one of the most famous piano intros in popular music",
       "The lyric follows small-town and city characters chasing possibility",
-      "The giant chorus is famously delayed until very late in the song",
+      "The giant chorus is famously delayed until very late in the answer",
       "It found a major second life decades later through TV and film use",
-      "It has become one of the most enduring communal singalong songs ever recorded"
+      "It has become one of the most enduring communal singalong answers ever recorded"
     ],
     "audio": {
       "type": "youtube",
@@ -495,15 +495,15 @@
   },
   {
     "id": 27,
-    "song": "Money For Nothing",
+    "answer": "Money For Nothing",
     "band": "Dire Straits",
-    "titleHint": "A satirical rock hit by Dire Straits released in 1985",
+    "title": "A satirical rock hit by Dire Straits released in 1985",
     "clues": [
       "The lyric adopts the voice of a resentful appliance-store observer watching MTV stars",
       "The opening guitar sound became one of the era’s most famous produced tones",
       "Sting contributed the melodic phrase that echoes 'Don't Stand So Close to Me'",
       "Its early computer-animation video became a landmark of the MTV age",
-      "The song’s language later made it controversial on some radio outlets"
+      "The answer’s language later made it controversial on some radio outlets"
     ],
     "audio": {
       "type": "youtube",
@@ -514,13 +514,13 @@
   },
   {
     "id": 28,
-    "song": "Under Pressure",
+    "answer": "Under Pressure",
     "band": "Queen & David Bowie",
-    "titleHint": "A high-stakes collaboration by Queen and David Bowie released in 1981",
+    "title": "A high-stakes collaboration by Queen and David Bowie released in 1981",
     "clues": [
       "It grew out of an improvised studio session rather than a long-planned duet",
       "The bass line became one of the most recognizable in pop and rock history",
-      "The vocal trade-offs make the song feel like an escalating conversation",
+      "The vocal trade-offs make the answer feel like an escalating conversation",
       "Its theme is human strain, compassion, and connection under stress",
       "It later gained another life through a hugely famous hip-hop sample"
     ],
@@ -533,12 +533,12 @@
   },
   {
     "id": 29,
-    "song": "Purple Rain",
+    "answer": "Purple Rain",
     "band": "Prince",
-    "titleHint": "An epic rock-soul masterpiece by Prince released in 1984",
+    "title": "An epic rock-soul masterpiece by Prince released in 1984",
     "clues": [
       "It closes with one of Prince’s most celebrated extended guitar solos",
-      "The song functioned as the emotional centerpiece of the film and album of the same name",
+      "The answer functioned as the emotional centerpiece of the film and album of the same name",
       "Its gospel-like lift gives the performance the feel of confession and release",
       "Prince often used it as a climactic moment in concert",
       "It became one of the defining anthems of his career"
@@ -552,9 +552,9 @@
   },
   {
     "id": 30,
-    "song": "Born In The U.S.A.",
+    "answer": "Born In The U.S.A.",
     "band": "Bruce Springsteen",
-    "titleHint": "A misunderstood American anthem by Bruce Springsteen released in 1984",
+    "title": "A misunderstood American anthem by Bruce Springsteen released in 1984",
     "clues": [
       "Despite its huge chorus, the lyric is about a working-class Vietnam veteran’s disillusionment",
       "Many listeners mistook it for a simple patriotic celebration",
@@ -571,15 +571,15 @@
   },
   {
     "id": 31,
-    "song": "For Those About To Rock",
+    "answer": "For Those About To Rock",
     "band": "AC/DC",
-    "titleHint": "A cannon-blast arena anthem by AC/DC released in 1981",
+    "title": "A cannon-blast arena anthem by AC/DC released in 1981",
     "clues": [
       "The title salutes the audience directly rather than telling a story",
       "Real cannon effects became essential to its live-performance identity",
       "The chorus is built like a communal rallying cry",
       "It often served as a climactic closer in concert",
-      "The song turned stage theatrics into part of the composition’s legend"
+      "The answer turned stage theatrics into part of the composition’s legend"
     ],
     "audio": {
       "type": "youtube",
@@ -590,12 +590,12 @@
   },
   {
     "id": 32,
-    "song": "Legs",
+    "answer": "Legs",
     "band": "ZZ Top",
-    "titleHint": "A synth-groove crossover hit by ZZ Top released in 1983",
+    "title": "A synth-groove crossover hit by ZZ Top released in 1983",
     "clues": [
       "It fused the band’s blues-rock identity with drum machines and synthesizers",
-      "The video became inseparable from the song’s popularity on MTV",
+      "The video became inseparable from the answer’s popularity on MTV",
       "The lyric turns physical allure into a sleek pop hook",
       "It helped transform ZZ Top into unlikely pop-culture icons of the 1980s",
       "It remains one of the band’s most recognizable crossover tracks"
@@ -609,15 +609,15 @@
   },
   {
     "id": 33,
-    "song": "Crazy Crazy Nights",
+    "answer": "Crazy Crazy Nights",
     "band": "KISS",
-    "titleHint": "A chant-along glam-rock anthem by KISS released in 1987",
+    "title": "A chant-along glam-rock anthem by KISS released in 1987",
     "clues": [
       "It celebrates audience devotion more than romance or rebellion",
       "The chorus was built to feel like a giant crowd shout from the first listen",
       "It reflected the band’s more melodic late-80s direction",
-      "The song became especially huge in international markets such as the UK",
-      "It stands as one of the clearest KISS songs about the bond with fans"
+      "The answer became especially huge in international markets such as the UK",
+      "It stands as one of the clearest KISS answers about the bond with fans"
     ],
     "audio": {
       "type": "youtube",
@@ -628,12 +628,12 @@
   },
   {
     "id": 34,
-    "song": "The Final Countdown",
+    "answer": "The Final Countdown",
     "band": "Europe",
-    "titleHint": "A keyboard-led arena anthem by Europe released in 1986",
+    "title": "A keyboard-led arena anthem by Europe released in 1986",
     "clues": [
       "The opening synthesizer fanfare is one of the most instantly recognizable intros of the decade",
-      "Joey Tempest originally wrote the main keyboard motif years before the song was finished",
+      "Joey Tempest originally wrote the main keyboard motif years before the answer was finished",
       "The lyric imagines departure on a cosmic journey rather than a romance or street story",
       "It became far bigger worldwide than the band expected",
       "It is permanently associated with countdowns, entrances, and sporting events"
@@ -647,15 +647,15 @@
   },
   {
     "id": 35,
-    "song": "Breaking the Law",
+    "answer": "Breaking the Law",
     "band": "Judas Priest",
-    "titleHint": "A concise heavy-metal anthem by Judas Priest released in 1980",
+    "title": "A concise heavy-metal anthem by Judas Priest released in 1980",
     "clues": [
-      "The song channels unemployment frustration into a blunt rebellious hook",
+      "The answer channels unemployment frustration into a blunt rebellious hook",
       "Its title line is repeated with almost slogan-like force",
       "The stripped-down structure makes it one of the band’s most immediate singles",
       "The video famously features a mock bank raid staged with absurd bravado",
-      "It became one of Judas Priest’s defining crossover songs"
+      "It became one of Judas Priest’s defining crossover answers"
     ],
     "audio": {
       "type": "youtube",
@@ -666,14 +666,14 @@
   },
   {
     "id": 36,
-    "song": "Eyes Without a Face",
+    "answer": "Eyes Without a Face",
     "band": "Billy Idol",
-    "titleHint": "A darkly elegant synth-rock hit by Billy Idol released in 1984",
+    "title": "A darkly elegant synth-rock hit by Billy Idol released in 1984",
     "clues": [
       "The title was inspired by the French film 'Les Yeux sans visage'",
       "The refrain includes the French phrase rather than just the English translation",
       "It showed a softer, moodier side of Idol than his more aggressive singles",
-      "The song leans on atmosphere and restraint more than attack",
+      "The answer leans on atmosphere and restraint more than attack",
       "It became one of his biggest U.S. hits"
     ],
     "audio": {
@@ -685,15 +685,15 @@
   },
   {
     "id": 37,
-    "song": "The Boys of Summer",
+    "answer": "The Boys of Summer",
     "band": "Don Henley",
-    "titleHint": "A nostalgic rock classic by Don Henley released in 1984",
+    "title": "A nostalgic rock classic by Don Henley released in 1984",
     "clues": [
       "The lyric dwells on memory, loss, and the ache of time passing",
       "Mike Campbell brought in the music track before Henley wrote the words",
       "The black-and-white video became one of the era’s most acclaimed visuals",
       "The phrase about a Deadhead sticker on a Cadillac became especially iconic",
-      "It remains one of the most enduring songs ever written about fading youth"
+      "It remains one of the most enduring answers ever written about fading youth"
     ],
     "audio": {
       "type": "youtube",
@@ -704,14 +704,14 @@
   },
   {
     "id": 38,
-    "song": "Sister Christian",
+    "answer": "Sister Christian",
     "band": "Night Ranger",
-    "titleHint": "A slow-building power ballad by Night Ranger released in 1983",
+    "title": "A slow-building power ballad by Night Ranger released in 1983",
     "clues": [
       "Drummer Kelly Keagy wrote it for his younger sister Christy",
-      "The famously stretched pronunciation of her name became the song’s signature quirk",
+      "The famously stretched pronunciation of her name became the answer’s signature quirk",
       "It moves from reflective verses into a huge dramatic finish",
-      "The song gained renewed cultural visibility through a memorable use in 'Boogie Nights'",
+      "The answer gained renewed cultural visibility through a memorable use in 'Boogie Nights'",
       "It remains Night Ranger’s biggest crossover hit"
     ],
     "audio": {
@@ -723,14 +723,14 @@
   },
   {
     "id": 39,
-    "song": "Heaven",
+    "answer": "Heaven",
     "band": "Warrant",
-    "titleHint": "A late-80s power ballad hit by Warrant released in 1989",
+    "title": "A late-80s power ballad hit by Warrant released in 1989",
     "clues": [
       "It paired the band’s glam image with a much softer romantic tone",
       "The soaring chorus was aimed directly at pop-radio crossover",
       "It became the band’s highest-charting single in the U.S.",
-      "The song helped prove Warrant could sell sentiment as well as attitude",
+      "The answer helped prove Warrant could sell sentiment as well as attitude",
       "It remains their best-known ballad"
     ],
     "audio": {
@@ -742,9 +742,9 @@
   },
   {
     "id": 40,
-    "song": "Still of the Night",
+    "answer": "Still of the Night",
     "band": "Whitesnake",
-    "titleHint": "A thunderous hard-rock showcase by Whitesnake released in 1987",
+    "title": "A thunderous hard-rock showcase by Whitesnake released in 1987",
     "clues": [
       "The arrangement openly nods to the dramatic weight of classic Led Zeppelin",
       "It shifts from slow tension into explosive riff-driven release",
@@ -761,14 +761,14 @@
   },
   {
     "id": 41,
-    "song": "Rock of Ages",
+    "answer": "Rock of Ages",
     "band": "Def Leppard",
-    "titleHint": "A party-starting hard-rock anthem by Def Leppard released in 1983",
+    "title": "A party-starting hard-rock anthem by Def Leppard released in 1983",
     "clues": [
       "It opens with the famous nonsense phrase 'Gunter glieben glauten globen'",
       "The stop-start riffing gives the verses a punchy stomp",
       "The chorus was tailor-made for mass crowd participation",
-      "It became one of the central songs in the band’s live set for decades",
+      "It became one of the central answers in the band’s live set for decades",
       "It stands among Def Leppard’s purest examples of arena-rock design"
     ],
     "audio": {
@@ -780,15 +780,15 @@
   },
   {
     "id": 42,
-    "song": "Pride (In the Name of Love)",
+    "answer": "Pride (In the Name of Love)",
     "band": "U2",
-    "titleHint": "A conscience-driven anthem by U2 released in 1984",
+    "title": "A conscience-driven anthem by U2 released in 1984",
     "clues": [
       "It was written as a tribute to Martin Luther King Jr.",
       "The ringing guitar pattern became one of the best-known sounds in U2’s catalog",
       "Some details in the lyric take poetic license rather than strict historical accuracy",
       "It helped move the band toward overt political and moral themes",
-      "It became one of the songs most associated with U2’s live grandeur"
+      "It became one of the answers most associated with U2’s live grandeur"
     ],
     "audio": {
       "type": "youtube",
@@ -799,14 +799,14 @@
   },
   {
     "id": 43,
-    "song": "Owner of a Lonely Heart",
+    "answer": "Owner of a Lonely Heart",
     "band": "Yes",
-    "titleHint": "A sharp-edged pop-rock hit by Yes released in 1983",
+    "title": "A sharp-edged pop-rock hit by Yes released in 1983",
     "clues": [
       "It marked a major stylistic shift from the band’s long-form progressive work",
       "The production relies on dramatic samples and gated percussion accents",
       "Its compact structure helped deliver the band’s biggest mainstream single",
-      "The tension between risk and safety drives the song’s central idea",
+      "The tension between risk and safety drives the answer’s central idea",
       "It gave Yes their only U.S. No. 1 hit"
     ],
     "audio": {
@@ -818,14 +818,14 @@
   },
   {
     "id": 44,
-    "song": "Runaway",
+    "answer": "Runaway",
     "band": "Bon Jovi",
-    "titleHint": "An early breakout hit by Bon Jovi released in 1984",
+    "title": "An early breakout hit by Bon Jovi released in 1984",
     "clues": [
       "It began as a recording Jon Bon Jovi made before the classic band lineup was fully in place",
-      "The female runaway character at the center gives the song a cinematic edge",
+      "The female runaway character at the center gives the answer a cinematic edge",
       "The keyboard line is central to its instantly 1980s feel",
-      "It was the song that first put Bon Jovi on national rock radio",
+      "It was the answer that first put Bon Jovi on national rock radio",
       "It remains a key link between the band’s club days and later superstardom"
     ],
     "audio": {
@@ -837,14 +837,14 @@
   },
   {
     "id": 45,
-    "song": "Shout at the Devil",
+    "answer": "Shout at the Devil",
     "band": "Motley Crue",
-    "titleHint": "A dark glam-metal statement by Motley Crue released in 1983",
+    "title": "A dark glam-metal statement by Motley Crue released in 1983",
     "clues": [
       "The title helped fuel controversy about whether the band was courting satanic imagery",
       "The chant-like delivery made it feel like a ritualized rallying cry",
       "It represented a harder and more menacing turn from the band’s debut",
-      "The song became central to the moral panic conversations around 1980s metal",
+      "The answer became central to the moral panic conversations around 1980s metal",
       "It remains one of Motley Crue’s defining early anthems"
     ],
     "audio": {
@@ -856,15 +856,15 @@
   },
   {
     "id": 46,
-    "song": "Love Is a Battlefield",
+    "answer": "Love Is a Battlefield",
     "band": "Pat Benatar",
-    "titleHint": "A defiant pop-rock anthem by Pat Benatar released in 1983",
+    "title": "A defiant pop-rock anthem by Pat Benatar released in 1983",
     "clues": [
-      "It was first written by songwriters before Benatar turned it into a hit",
+      "It was first written by answerwriters before Benatar turned it into a hit",
       "The lyric reframes romance as a struggle for dignity and independence",
       "The extended video became one of MTV’s signature mini-movies",
       "New-wave production touches helped move it beyond straight arena rock",
-      "It became one of Benatar’s most recognizable career songs"
+      "It became one of Benatar’s most recognizable career answers"
     ],
     "audio": {
       "type": "youtube",
@@ -875,9 +875,9 @@
   },
   {
     "id": 47,
-    "song": "Eye of the Tiger",
+    "answer": "Eye of the Tiger",
     "band": "Survivor",
-    "titleHint": "A motivational rock anthem by Survivor released in 1982",
+    "title": "A motivational rock anthem by Survivor released in 1982",
     "clues": [
       "It was written at Sylvester Stallone’s request for 'Rocky III'",
       "The opening riff is one of the most famous pump-up intros in pop culture",
@@ -894,15 +894,15 @@
   },
   {
     "id": 48,
-    "song": "Jumpin' Jack Flash (Live)",
+    "answer": "Jumpin' Jack Flash (Live)",
     "band": "Rolling Stones",
-    "titleHint": "A live-era Stones staple revived in the 1980s by the Rolling Stones",
+    "title": "A live-era Stones staple revived in the 1980s by the Rolling Stones",
     "clues": [
-      "The song itself dates from the late 1960s, but this entry captures its later live power",
+      "The answer itself dates from the late 1960s, but this entry captures its later live power",
       "Keith Richards’ riff remains the engine of the performance every time it appears",
       "The live version leans more on momentum and crowd energy than studio precision",
       "It functioned as a reminder that the band could still dominate large stages in the MTV era",
-      "It kept one of the Stones’ signature songs visible to a new generation"
+      "It kept one of the Stones’ signature answers visible to a new generation"
     ],
     "audio": {
       "type": "youtube",
@@ -913,14 +913,14 @@
   },
   {
     "id": 49,
-    "song": "Hot for Teacher",
+    "answer": "Hot for Teacher",
     "band": "Van Halen",
-    "titleHint": "A comic hard-rock burner by Van Halen released in 1984",
+    "title": "A comic hard-rock burner by Van Halen released in 1984",
     "clues": [
       "It opens with a drum pattern designed to resemble a hot-rodded engine",
       "The lyric turns schoolboy fantasy into outrageous cartoon energy",
       "The video became infamous for its classroom satire and visual gags",
-      "Eddie Van Halen’s soloing is among the song’s main attractions",
+      "Eddie Van Halen’s soloing is among the answer’s main attractions",
       "It remains one of the band’s wildest combinations of virtuosity and humor"
     ],
     "audio": {
@@ -932,9 +932,9 @@
   },
   {
     "id": 50,
-    "song": "Nothin' But a Good Time",
+    "answer": "Nothin' But a Good Time",
     "band": "Poison",
-    "titleHint": "A carefree glam-metal party anthem by Poison released in 1988",
+    "title": "A carefree glam-metal party anthem by Poison released in 1988",
     "clues": [
       "The lyric is a direct rejection of workday misery in favor of weekend escape",
       "The hook is built for immediate fist-pumping singalong response",

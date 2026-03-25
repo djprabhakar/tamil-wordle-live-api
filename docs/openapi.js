@@ -93,8 +93,13 @@ const openapi = {
           wordEntry: {
             type: 'object',
             properties: {
-              word: { type: 'string', example: 'Back In Black - AC/DC' },
+              answer: { type: 'string', example: 'Back In Black' },
+              word: { type: 'string', example: 'Back In Black' },
               category: { type: 'string', example: "80's Rock Hits" },
+              title: {
+                type: 'string',
+                example: 'A legendary comeback hard-rock anthem by AC/DC released in 1980',
+              },
               clues: {
                 type: 'array',
                 items: { type: 'string' },
@@ -103,7 +108,7 @@ const openapi = {
               },
               id: { type: 'integer', example: 1 },
             },
-            required: ['word', 'clues'],
+            required: ['clues'],
             additionalProperties: true,
           },
         },
@@ -157,8 +162,13 @@ const openapi = {
               type: 'object',
               properties: {
                 id: { type: 'integer', example: 1 },
-                word: { type: 'string', example: 'Back In Black - AC/DC' },
+                answer: { type: 'string', example: 'Back In Black' },
                 category: { type: 'string', example: "80's Rock Hits" },
+                title: {
+                  type: 'string',
+                  example: 'A legendary comeback hard-rock anthem by AC/DC released in 1980',
+                },
+                band: { type: 'string', example: 'AC/DC' },
                 clues: {
                   type: 'array',
                   items: { type: 'string' },
@@ -175,7 +185,7 @@ const openapi = {
                   },
                 },
               },
-              required: ['word', 'category', 'clues'],
+              required: ['answer', 'category', 'clues'],
             },
           },
         },
