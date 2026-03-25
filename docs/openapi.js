@@ -153,7 +153,29 @@ const openapi = {
           count: { type: 'integer' },
           data: {
             type: 'array',
-            items: { type: 'object' },
+            items: {
+              type: 'object',
+              properties: {
+                id: { type: 'integer', example: 1 },
+                word: { type: 'string', example: 'Back In Black - AC/DC' },
+                category: { type: 'string', example: "80's Rock Hits" },
+                clues: {
+                  type: 'array',
+                  items: { type: 'string' },
+                  minItems: 5,
+                  maxItems: 5,
+                },
+                audioPreviewUrl: {
+                  type: 'string',
+                  example: 'https://music.apple.com/us/search?term=Back%20In%20Black%20-%20AC%2FDC',
+                },
+                audioPreviewProvider: {
+                  type: 'string',
+                  example: 'Apple Music search page',
+                },
+              },
+              required: ['word', 'category', 'clues'],
+            },
           },
         },
         required: ['category', 'fileName', 'count', 'data'],

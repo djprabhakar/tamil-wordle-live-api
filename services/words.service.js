@@ -447,6 +447,14 @@ class WordsService {
       clues,
     }
 
+    if (typeof normalizedEntry.audioPreviewUrl === 'string') {
+      normalizedEntry.audioPreviewUrl = normalizedEntry.audioPreviewUrl.trim()
+    }
+
+    if (typeof normalizedEntry.audioPreviewProvider === 'string') {
+      normalizedEntry.audioPreviewProvider = normalizedEntry.audioPreviewProvider.trim()
+    }
+
     if (typeof normalizedEntry.category === 'string' && normalizedEntry.category.trim()) {
       normalizedEntry.category = normalizedEntry.category.trim()
       return normalizedEntry
