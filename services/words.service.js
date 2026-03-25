@@ -447,12 +447,26 @@ class WordsService {
       clues,
     }
 
-    if (typeof normalizedEntry.audioPreviewUrl === 'string') {
-      normalizedEntry.audioPreviewUrl = normalizedEntry.audioPreviewUrl.trim()
-    }
+    if (normalizedEntry.audio && typeof normalizedEntry.audio === 'object' && !Array.isArray(normalizedEntry.audio)) {
+      const audio = { ...normalizedEntry.audio }
 
-    if (typeof normalizedEntry.audioPreviewProvider === 'string') {
-      normalizedEntry.audioPreviewProvider = normalizedEntry.audioPreviewProvider.trim()
+      if (typeof audio.type === 'string') {
+        audio.type = audio.type.trim()
+      }
+
+      if (typeof audio.videoId === 'string') {
+        audio.videoId = audio.videoId.trim()
+      }
+
+      if (audio.start !== undefined) {
+        audio.start = Number(audio.start)
+      }
+
+      if (audio.duration !== undefined) {
+        audio.duration = Number(audio.duration)
+      }
+
+      normalizedEntry.audio = audio
     }
 
     if (typeof normalizedEntry.category === 'string' && normalizedEntry.category.trim()) {

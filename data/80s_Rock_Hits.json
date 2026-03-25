@@ -9,8 +9,12 @@
       "Distinct riff opening",
       "Massive global anthem"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Back%20In%20Black%20-%20AC%2FDC",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 2,
@@ -22,8 +26,12 @@
       "Iconic guitar intro",
       "Breakthrough MTV hit"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Sweet%20Child%20O%27%20Mine%20-%20Guns%20N%27%20Roses",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 3,
@@ -35,8 +43,12 @@
       "Talk-box solo",
       "'Tommy and Gina' narrative"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Livin%27%20On%20A%20Prayer%20-%20Bon%20Jovi",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 4,
@@ -48,8 +60,12 @@
       "Randy Rhoads guitar",
       "Signature Ozzy scream"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Crazy%20Train%20-%20Ozzy%20Osbourne",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 5,
@@ -61,8 +77,12 @@
       "Arena chant chorus",
       "Pyromania tour vibe"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Pour%20Some%20Sugar%20On%20Me%20-%20Def%20Leppard",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 6,
@@ -74,8 +94,12 @@
       "First keyboard lead",
       "1984 chart-topper"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Jump%20-%20Van%20Halen",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 7,
@@ -87,8 +111,12 @@
       "Catchy rhythm guitar",
       "Live show staple"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=You%20Shook%20Me%20All%20Night%20Long%20-%20AC%2FDC",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 8,
@@ -100,8 +128,12 @@
       "Aggressive opening riff",
       "LA rock identity"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Welcome%20To%20The%20Jungle%20-%20Guns%20N%27%20Roses",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 9,
@@ -113,8 +145,12 @@
       "Epic structure",
       "Thrash metal masterpiece"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Master%20Of%20Puppets%20-%20Metallica",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 10,
@@ -126,8 +162,12 @@
       "Haunting machine-gun drums",
       "Grammy winner"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=One%20-%20Metallica",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 11,
@@ -139,8 +179,12 @@
       "12-string acoustics",
       "Touring anthem vibe"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Wanted%20Dead%20or%20Alive%20-%20Bon%20Jovi",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 12,
@@ -152,8 +196,12 @@
       "Call-and-response chorus",
       "Concert closer"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Paradise%20City%20-%20Guns%20N%27%20Roses",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 13,
@@ -165,8 +213,12 @@
       "Catchy riff intro",
       "Heavy MTV presence"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Rock%20You%20Like%20a%20Hurricane%20-%20Scorpions",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 14,
@@ -178,8 +230,12 @@
       "Galloping bassline",
       "NWOBHM milestone"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=The%20Number%20Of%20The%20Beast%20-%20Iron%20Maiden",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 15,
@@ -191,8 +247,12 @@
       "Dual-guitar harmony",
       "First major hit"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Run%20To%20The%20Hills%20-%20Iron%20Maiden",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 16,
@@ -204,8 +264,12 @@
       "Sultry video",
       "Power ballad classic"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Here%20I%20Go%20Again%20-%20Whitesnake",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 17,
@@ -217,8 +281,12 @@
       "Layered harmonies",
       "MTV breakthrough"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Photograph%20-%20Def%20Leppard",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 18,
@@ -230,8 +298,12 @@
       "Fast punk pace",
       "Lemmy trademark tune"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Ace%20of%20Spades%20-%20Motorhead",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 19,
@@ -243,8 +315,12 @@
       "Acoustic tenderness",
       "Lighters-up favorite"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Every%20Rose%20Has%20Its%20Thorn%20-%20Poison",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 20,
@@ -256,8 +332,12 @@
       "Crunchy riff",
       "MTV metal debut"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Round%20and%20Round%20-%20Ratt",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 21,
@@ -269,8 +349,12 @@
       "Catchy shout chorus",
       "First metal billboard hit"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Cum%20On%20Feel%20The%20Noize%20-%20Quiet%20Riot",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 22,
@@ -282,8 +366,12 @@
       "Polished production",
       "Grammy nod"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Dr.%20Feelgood%20-%20Motley%20Crue",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 23,
@@ -295,8 +383,12 @@
       "Fast tempo",
       "Live crowd energizer"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Kickstart%20My%20Heart%20-%20Motley%20Crue",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 24,
@@ -308,8 +400,12 @@
       "Sebastian Bach vocals",
       "Ballad-meets-metal power"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=18%20and%20Life%20-%20Skid%20Row",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 25,
@@ -321,8 +417,12 @@
       "Bleach-blonde attitude",
       "Dance-rock blend"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Rebel%20Yell%20-%20Billy%20Idol",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 26,
@@ -334,8 +434,12 @@
       "Iconic piano intro",
       "Stadium singalong"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Don%27t%20Stop%20Believin%27%20-%20Journey",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 27,
@@ -347,8 +451,12 @@
       "Innovative video",
       "Knopfler fingerstyle"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Money%20For%20Nothing%20-%20Dire%20Straits",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 28,
@@ -360,8 +468,12 @@
       "Unforgettable bassline",
       "Future sampled in hip-hop"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Under%20Pressure%20-%20Queen%20%26%20David%20Bowie",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 29,
@@ -373,8 +485,12 @@
       "Epic guitar solo",
       "Cinematic classic"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Purple%20Rain%20-%20Prince",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 30,
@@ -386,8 +502,12 @@
       "Anthemic chorus",
       "Social commentary"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Born%20In%20The%20U.S.A.%20-%20Bruce%20Springsteen",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 31,
@@ -399,8 +519,12 @@
       "Simple riff power",
       "Concert closer"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=For%20Those%20About%20To%20Rock%20-%20AC%2FDC",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 32,
@@ -412,8 +536,12 @@
       "Synth-hook blend",
       "Hot Rod imagery"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Legs%20-%20ZZ%20Top",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 33,
@@ -425,8 +553,12 @@
       "Crowd chant",
       "Melodic glam turn"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Crazy%20Crazy%20Nights%20-%20KISS",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 34,
@@ -438,8 +570,12 @@
       "Synth-metal fusion",
       "Worldwide stadium hit"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=The%20Final%20Countdown%20-%20Europe",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 35,
@@ -451,8 +587,12 @@
       "Twin-guitar attack",
       "Classic metal riff"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Breaking%20the%20Law%20-%20Judas%20Priest",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 36,
@@ -464,8 +604,12 @@
       "Dreamy synth mix",
       "Dark romantic tone"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Eyes%20Without%20a%20Face%20-%20Billy%20Idol",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 37,
@@ -477,8 +621,12 @@
       "Atmospheric production",
       "Enduring radio appeal"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=The%20Boys%20of%20Summer%20-%20Don%20Henley",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 38,
@@ -490,8 +638,12 @@
       "Tempo slowdown",
       "Power ballad signature"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Sister%20Christian%20-%20Night%20Ranger",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 39,
@@ -503,8 +655,12 @@
       "Soaring vocals",
       "Late-era hair hit"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Heaven%20-%20Warrant",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 40,
@@ -516,8 +672,12 @@
       "Wailing vocals",
       "Heavy blues tension"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Still%20of%20the%20Night%20-%20Whitesnake",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 41,
@@ -529,8 +689,12 @@
       "'Gunter glieben' intro",
       "Mass crowd anthem"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Rock%20of%20Ages%20-%20Def%20Leppard",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 42,
@@ -542,8 +706,12 @@
       "Echo guitar",
       "Anthem of justice"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Pride%20%28In%20the%20Name%20of%20Love%29%20-%20U2",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 43,
@@ -555,8 +723,12 @@
       "Sample innovation",
       "Chart comeback"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Owner%20of%20a%20Lonely%20Heart%20-%20Yes",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 44,
@@ -568,8 +740,12 @@
       "Synth intro",
       "FM radio start"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Runaway%20-%20Bon%20Jovi",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 45,
@@ -581,8 +757,12 @@
       "Chanting power",
       "Metal landmark"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Shout%20at%20the%20Devil%20-%20Motley%20Crue",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 46,
@@ -594,8 +774,12 @@
       "Dance-rock beat",
       "MTV choreography"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Love%20Is%20a%20Battlefield%20-%20Pat%20Benatar",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 47,
@@ -607,8 +791,12 @@
       "Distinct intro riff",
       "Cultural phenomenon"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Eye%20of%20the%20Tiger%20-%20Survivor",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 48,
@@ -620,8 +808,12 @@
       "Keith riffs shine",
       "80s comeback energy"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Jumpin%27%20Jack%20Flash%20%28Live%29%20-%20Rolling%20Stones",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 49,
@@ -633,8 +825,12 @@
       "Double bass drums",
       "Comic edge"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Hot%20for%20Teacher%20-%20Van%20Halen",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   },
   {
     "id": 50,
@@ -646,7 +842,11 @@
       "Party-glam tone",
       "MTV favorite"
     ],
-    "audioPreviewUrl": "https://music.apple.com/us/search?term=Nothin%27%20But%20a%20Good%20Time%20-%20Poison",
-    "audioPreviewProvider": "Apple Music search page"
+    "audio": {
+      "type": "youtube",
+      "videoId": "PULC--cvxxI",
+      "start": 15,
+      "duration": 10
+    }
   }
 ]

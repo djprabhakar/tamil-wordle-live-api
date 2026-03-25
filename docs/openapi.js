@@ -165,13 +165,14 @@ const openapi = {
                   minItems: 5,
                   maxItems: 5,
                 },
-                audioPreviewUrl: {
-                  type: 'string',
-                  example: 'https://music.apple.com/us/search?term=Back%20In%20Black%20-%20AC%2FDC',
-                },
-                audioPreviewProvider: {
-                  type: 'string',
-                  example: 'Apple Music search page',
+                audio: {
+                  type: 'object',
+                  properties: {
+                    type: { type: 'string', example: 'youtube' },
+                    videoId: { type: 'string', example: 'PULC--cvxxI' },
+                    start: { type: 'integer', example: 15 },
+                    duration: { type: 'integer', example: 10 },
+                  },
                 },
               },
               required: ['word', 'category', 'clues'],
