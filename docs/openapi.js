@@ -124,6 +124,74 @@ const openapi = {
         },
         required: ['category', 'fileName', 'saved', 'totalEntries'],
       },
+      Create5HintGameRequest: {
+        type: 'object',
+        properties: {
+          category: { type: 'string', example: "80's Rock Hits" },
+          notes: { type: 'string', example: 'Make it an iconic arena-rock song.' },
+          nick_name: { type: 'string', example: 'prabhakar' },
+          audio_enabled: { type: 'boolean', example: true },
+          audio_clue: {
+            oneOf: [
+              { type: 'string', example: 'Use a famous chorus section.' },
+              {
+                type: 'object',
+                additionalProperties: true,
+                properties: {
+                  type: { type: 'string', example: 'youtube' },
+                  videoId: { type: 'string', example: 'ZRzKfpPXXXc' },
+                  start: { type: 'integer', example: 0 },
+                  duration: { type: 'integer', example: 30 },
+                },
+              },
+            ],
+          },
+        },
+        required: ['category', 'nick_name'],
+      },
+      Create5HintGameResponse: {
+        type: 'object',
+        properties: {
+          category: { type: 'string', example: "80's Rock Hits" },
+          fileName: { type: 'string', example: '80s_Rock_Hits.json' },
+          promptFile: { type: 'string', example: '80s_Rock_Hits.prompt.json' },
+          created: {
+            type: 'object',
+            properties: {
+              id: { type: 'integer', example: 51 },
+              category: { type: 'string', example: 'song' },
+              answer: { type: 'string', example: 'Another Brick in the Wall (Part 2)' },
+              titleHint: {
+                type: 'string',
+                example: "A protest-themed rock track by Pink Floyd featuring a children's chorus",
+              },
+              clues: {
+                type: 'array',
+                items: { type: 'string' },
+                minItems: 5,
+                maxItems: 5,
+              },
+              meta: {
+                type: 'object',
+                additionalProperties: true,
+              },
+              media: {
+                type: 'object',
+                properties: {
+                  type: { type: 'string', example: 'youtube' },
+                  videoId: { type: 'string', example: 'ZRzKfpPXXXc' },
+                  start: { type: 'integer', example: 0 },
+                  duration: { type: 'integer', example: 30 },
+                },
+              },
+              created_by: { type: 'string', example: 'prabhakar' },
+            },
+            required: ['id', 'category', 'answer', 'titleHint', 'clues', 'created_by'],
+          },
+          totalEntries: { type: 'integer', example: 51 },
+        },
+        required: ['category', 'fileName', 'promptFile', 'created', 'totalEntries'],
+      },
       HintWordCategoriesResponse: {
         type: 'object',
         properties: {
@@ -395,6 +463,30 @@ const openapi = {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/SaveA5HintWordResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/Create5HintGame': {
+      post: {
+        tags: ['Words'],
+        summary: 'Generate and save a new 5-hint game entry using the OpenAI API',
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/Create5HintGameRequest' },
+            },
+          },
+        },
+        responses: {
+          201: {
+            description: 'Entry generated and saved',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/Create5HintGameResponse' },
               },
             },
           },

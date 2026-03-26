@@ -5,6 +5,7 @@ const { normalizeString, normalizeWord } = require('../utils/normalize')
 
 const DEFAULT_DATA_FILE = path.join(__dirname, '..', 'data', 'common_500_words_with_5_clues.json')
 const DEFAULT_CATEGORY_FILE_MAP = path.join(__dirname, '..', 'data', 'category-file-map.json')
+const DEFAULT_CATEGORY_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'category-prompts')
 const DEFAULT_CATEGORY_FILE_SEED = {
   Common: 'common_500_words_with_5_clues.json',
   "80's Rock Hits": '80s_Rock_Hits.json',
@@ -23,6 +24,7 @@ class WordsService {
   constructor(options = {}) {
     this.dataFilePath = options.dataFilePath || DEFAULT_DATA_FILE
     this.categoryFileMapPath = options.categoryFileMapPath || DEFAULT_CATEGORY_FILE_MAP
+    this.categoryPromptsDir = options.categoryPromptsDir || DEFAULT_CATEGORY_PROMPTS_DIR
     this.words = []
     this.wordMap = new Map()
     this.categoryMap = new Map()
@@ -415,6 +417,77 @@ class WordsService {
     fs.writeFileSync(filePath, `${JSON.stringify(entries, null, 2)}\n`, 'utf8')
   }
 
+  ensureCategoryPromptsDir() {
+    fs.mkdirSync(this.categoryPromptsDir, { recursive: true })
+  }
+
+  getPromptFilePath(fileName) {
+    return path.join(this.categoryPromptsDir, fileName.replace(/\.json$/i, '.prompt.json'))
+  }
+
+  createDefaultPromptConfig(category) {
+    return {
+      category,
+      version: 1,
+      instructions: [
+        `Generate one 5-hint game entry for the category "${category}".`,
+        'Return a single JSON object only.',
+        'Always include answer, category, titleHint, and clues.',
+        'The clues array must contain exactly 5 non-empty strings.',
+        'The titleHint must be a concise clue sentence and must not reveal the answer directly.',
+        'If audio is enabled, include a media object with type, videoId, start, and duration.',
+        'If useful for the category, you may include a meta object.',
+      ],
+    }
+  }
+
+  ensureCategoryPromptFile(category, fileName) {
+    this.ensureCategoryPromptsDir()
+    const promptFilePath = this.getPromptFilePath(fileName)
+
+    if (!fs.existsSync(promptFilePath)) {
+      fs.writeFileSync(
+        promptFilePath,
+        `${JSON.stringify(this.createDefaultPromptConfig(category), null, 2)}\n`,
+        'utf8'
+      )
+    }
+
+    return promptFilePath
+  }
+
+  readCategoryPromptConfig(category, fileName) {
+    const promptFilePath = this.ensureCategoryPromptFile(category, fileName)
+
+    let parsed
+
+    try {
+      parsed = JSON.parse(fs.readFileSync(promptFilePath, 'utf8'))
+    } catch (error) {
+      throw new Error(`Malformed JSON in category prompt file "${path.basename(promptFilePath)}": ${error.message}`)
+    }
+
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      throw new Error(`Category prompt file "${path.basename(promptFilePath)}" must contain a top-level object.`)
+    }
+
+    return {
+      promptFilePath,
+      promptConfig: parsed,
+    }
+  }
+
+  getNextEntryId(entries) {
+    return entries.reduce((maxId, entry) => {
+      const id = Number(entry && entry.id)
+      if (!Number.isInteger(id) || id < 1) {
+        return maxId
+      }
+
+      return Math.max(maxId, id)
+    }, 0) + 1
+  }
+
   sanitizeCategoryWordEntry(entry, fallbackCategory) {
     if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
       throw new HttpError(400, 'WordEntry must be a JSON object.')
@@ -453,31 +526,57 @@ class WordsService {
 
     delete normalizedEntry.word
 
-    if (typeof normalizedEntry.title === 'string') {
-      normalizedEntry.title = normalizedEntry.title.trim()
+    if (typeof normalizedEntry.titleHint === 'string') {
+      normalizedEntry.titleHint = normalizedEntry.titleHint.trim()
+    } else if (typeof normalizedEntry.title === 'string' && normalizedEntry.title.trim()) {
+      normalizedEntry.titleHint = normalizedEntry.title.trim()
     }
 
-    if (normalizedEntry.audio && typeof normalizedEntry.audio === 'object' && !Array.isArray(normalizedEntry.audio)) {
-      const audio = { ...normalizedEntry.audio }
+    delete normalizedEntry.title
 
-      if (typeof audio.type === 'string') {
-        audio.type = audio.type.trim()
+    if (normalizedEntry.meta && typeof normalizedEntry.meta === 'object' && !Array.isArray(normalizedEntry.meta)) {
+      const meta = { ...normalizedEntry.meta }
+
+      if (typeof meta.artist === 'string') {
+        meta.artist = meta.artist.trim()
       }
 
-      if (typeof audio.videoId === 'string') {
-        audio.videoId = audio.videoId.trim()
+      if (meta.year !== undefined) {
+        meta.year = Number(meta.year)
       }
 
-      if (audio.start !== undefined) {
-        audio.start = Number(audio.start)
-      }
-
-      if (audio.duration !== undefined) {
-        audio.duration = Number(audio.duration)
-      }
-
-      normalizedEntry.audio = audio
+      normalizedEntry.meta = meta
     }
+
+    const sourceMedia = normalizedEntry.media && typeof normalizedEntry.media === 'object' && !Array.isArray(normalizedEntry.media)
+      ? normalizedEntry.media
+      : normalizedEntry.audio && typeof normalizedEntry.audio === 'object' && !Array.isArray(normalizedEntry.audio)
+        ? normalizedEntry.audio
+        : null
+
+    if (sourceMedia) {
+      const media = { ...sourceMedia }
+
+      if (typeof media.type === 'string') {
+        media.type = media.type.trim()
+      }
+
+      if (typeof media.videoId === 'string') {
+        media.videoId = media.videoId.trim()
+      }
+
+      if (media.start !== undefined) {
+        media.start = Number(media.start)
+      }
+
+      if (media.duration !== undefined) {
+        media.duration = Number(media.duration)
+      }
+
+      normalizedEntry.media = media
+    }
+
+    delete normalizedEntry.audio
 
     if (typeof normalizedEntry.category === 'string' && normalizedEntry.category.trim()) {
       normalizedEntry.category = normalizedEntry.category.trim()
@@ -508,6 +607,130 @@ class WordsService {
       category: resolvedCategory,
       fileName,
       saved: sanitizedEntry,
+      totalEntries: entries.length,
+    }
+  }
+
+  async create5HintGame(options = {}) {
+    const safeCategory = String(options.category || '').trim()
+    const nickName = String(options.nickName || options.nick_name || '').trim()
+    const notes = String(options.notes || '').trim()
+    const audioEnabled = options.audioEnabled === true || options.audio_enabled === true
+    const audioClue = options.audioClue || options.audio_clue
+
+    if (!safeCategory) {
+      throw new HttpError(400, 'category is required.')
+    }
+
+    if (!nickName) {
+      throw new HttpError(400, 'nick_name is required.')
+    }
+
+    if (!process.env.OPENAI_API_KEY) {
+      throw new HttpError(500, 'OPENAI_API_KEY is not configured.')
+    }
+
+    const OpenAI = require('openai')
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+
+    const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(safeCategory, {
+      createIfMissing: true,
+    })
+    const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedCategory, fileName)
+    const nextId = this.getNextEntryId(entries)
+
+    const schema = {
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        answer: { type: 'string' },
+        category: { type: 'string' },
+        titleHint: { type: 'string' },
+        clues: {
+          type: 'array',
+          items: { type: 'string' },
+          minItems: 5,
+          maxItems: 5,
+        },
+        meta: {
+          type: 'object',
+          additionalProperties: true,
+          properties: {
+            artist: { type: 'string' },
+            year: { type: 'integer' },
+          },
+          required: [],
+        },
+        media: {
+          type: 'object',
+          additionalProperties: false,
+          properties: {
+            type: { type: 'string' },
+            videoId: { type: 'string' },
+            start: { type: 'integer' },
+            duration: { type: 'integer' },
+          },
+          required: ['type', 'videoId', 'start', 'duration'],
+        },
+      },
+      required: audioEnabled
+        ? ['answer', 'category', 'titleHint', 'clues', 'media']
+        : ['answer', 'category', 'titleHint', 'clues'],
+    }
+
+    const promptSections = [
+      ...(Array.isArray(promptConfig.instructions) ? promptConfig.instructions : []),
+      `Requested file category: ${resolvedCategory}`,
+      `Generated entry id must be omitted. The server will assign id ${nextId}.`,
+      `Set created_by to "${nickName}" will be handled by the server.`,
+      `Use "${audioEnabled ? 'audio-enabled' : 'non-audio'}" output.`,
+    ]
+
+    if (notes) {
+      promptSections.push(`User notes: ${notes}`)
+    }
+
+    if (audioEnabled && audioClue) {
+      promptSections.push(`Audio clue context: ${JSON.stringify(audioClue)}`)
+    }
+
+    const response = await client.responses.create({
+      model: process.env.OPENAI_MODEL || 'gpt-5',
+      instructions: promptSections.join('\n'),
+      input: `Generate one new 5-hint game entry for the category "${resolvedCategory}".`,
+      text: {
+        format: {
+          type: 'json_schema',
+          name: 'five_hint_game_entry',
+          strict: true,
+          schema,
+        },
+      },
+    })
+
+    let generatedEntry
+
+    try {
+      generatedEntry = JSON.parse(response.output_text)
+    } catch (error) {
+      throw new Error(`OpenAI returned invalid JSON: ${error.message}`)
+    }
+
+    const sanitizedEntry = this.sanitizeCategoryWordEntry(generatedEntry, resolvedCategory)
+    const finalEntry = {
+      id: nextId,
+      ...sanitizedEntry,
+      created_by: nickName,
+    }
+
+    entries.push(finalEntry)
+    this.writeCategoryEntries(filePath, entries)
+
+    return {
+      category: resolvedCategory,
+      fileName,
+      promptFile: path.basename(promptFilePath),
+      created: finalEntry,
       totalEntries: entries.length,
     }
   }

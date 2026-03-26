@@ -15,6 +15,7 @@ function createWordsRouter(wordsService) {
   router.get('/Get20RandomWordsWith5Clues', controller.get20RandomWordsWith5Clues)
   router.get('/:word', controller.getByWord)
   router.post('/check', controller.checkWord)
+  router.post('/Create5HintGame', controller.create5HintGame)
   router.post('/SaveA5HintWord', controller.saveA5HintWord)
 
   return router

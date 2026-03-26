@@ -151,6 +151,16 @@ function createWordsController(wordsService) {
         next(error)
       }
     },
+
+    async create5HintGame(req, res, next) {
+      try {
+        const body = getSafeBody(req.body)
+        const result = await wordsService.create5HintGame(body)
+        res.status(201).json(result)
+      } catch (error) {
+        next(error)
+      }
+    },
   }
 }
 
