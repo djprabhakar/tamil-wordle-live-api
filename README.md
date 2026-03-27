@@ -70,7 +70,7 @@ curl http://localhost:4000/openapi.json
 curl http://localhost:4000/api/words/categories
 curl -X POST http://localhost:4000/api/words/Create5HintGame ^
   -H "Content-Type: application/json" ^
-  -d "{\"category\":\"80's Rock Hits\",\"nick_name\":\"prabhakar\",\"audio_enabled\":true,\"notes\":{\"NoOfWords\":2,\"GamePrompt\":\"Make the overall game feel like a stadium-rock challenge.\",\"TitlePrompt\":\"Make the title punchy.\",\"CluesPrompt\":\"Go from broad to iconic.\"}}"
+  -d "{\"category\":\"80's Rock Hits\",\"nick_name\":\"prabhakar\",\"audio_enabled\":true,\"notes\":{\"NoOfWords\":2,\"GamePrompt\":\"Make the overall game feel like a stadium-rock challenge.\",\"AudioPrompt\":\"After the clues, add a karaoke-focused YouTube media object for the answer.\",\"TitlePrompt\":\"Make the title punchy.\",\"CluesPrompt\":\"Go from broad to iconic.\"}}"
 curl http://localhost:4000/api/words/Get5HintWordCategories
 curl "http://localhost:4000/api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca"
 curl "http://localhost:4000/api/words/random?category=thing"
@@ -128,9 +128,10 @@ Behavior:
 - `WordEntry` must be a JSON object with a non-empty `answer` and exactly 5 non-empty `clues`
 - `POST /api/words/Create5HintGame` creates prompt files in `data/category-prompts/` when they do not already exist
 - `POST /api/words/Create5HintGame` requires `OPENAI_API_KEY`; `OPENAI_MODEL` is optional and defaults to `gpt-5`
-- `POST /api/words/Create5HintGame` expects `notes` as a JSON object with `NoOfWords`, `GamePrompt`, `TitlePrompt`, and `CluesPrompt`
+- `POST /api/words/Create5HintGame` expects `notes` as a JSON object with `NoOfWords`, `GamePrompt`, `AudioPrompt`, `TitlePrompt`, and `CluesPrompt`
 - `notes.NoOfWords` controls how many entries are generated in one request, from 1 to 20
 - `notes.GamePrompt` gives higher-level direction for the overall game entry beyond the title and clue-specific instructions
+- `notes.AudioPrompt` overrides the default audio-generation instruction when `audio_enabled` is `true`
 
 Response from `GET /api/words/Get20RandomWordsWith5Clues?category=Common`:
 

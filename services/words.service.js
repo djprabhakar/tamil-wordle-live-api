@@ -505,6 +505,7 @@ class WordsService {
         gamePrompt: '',
         titlePrompt: '',
         cluesPrompt: '',
+        audioPrompt: '',
       }
     }
 
@@ -521,12 +522,14 @@ class WordsService {
     const gamePrompt = typeof notes.GamePrompt === 'string' ? notes.GamePrompt.trim() : ''
     const titlePrompt = typeof notes.TitlePrompt === 'string' ? notes.TitlePrompt.trim() : ''
     const cluesPrompt = typeof notes.CluesPrompt === 'string' ? notes.CluesPrompt.trim() : ''
+    const audioPrompt = typeof notes.AudioPrompt === 'string' ? notes.AudioPrompt.trim() : ''
 
     return {
       noOfWords,
       gamePrompt,
       titlePrompt,
       cluesPrompt,
+      audioPrompt,
     }
   }
 
@@ -741,7 +744,7 @@ class WordsService {
           ? 'The answer should be the song title only, not the artist name. Prefer globally recognizable songs from the modern streaming era unless the request narrows the scope.'
           : 'Choose a familiar everyday word or phrase that is broadly recognizable. Order the clues from broader and easier to more specific.',
       AudioInstruction: audioEnabled
-        ? `After the clues section, include a media object with type, videoId, start, and duration. Search YouTube for karaoke videos of the answer and retrieve the YouTube videoId from the best fitting karaoke result. ${audioClue ? `Audio clue context: ${JSON.stringify(audioClue)}` : ''}`
+        ? notes.audioPrompt || `After the clues section, include a media object with type, videoId, start, and duration. Search YouTube for karaoke videos of the answer and retrieve the YouTube videoId from the best fitting karaoke result. ${audioClue ? `Audio clue context: ${JSON.stringify(audioClue)}` : ''}`
         : 'Do not include a media object.',
     }
 

@@ -135,6 +135,10 @@ const openapi = {
                 type: 'string',
                 example: 'Make the overall game feel dramatic and accessible to casual music fans.',
               },
+              AudioPrompt: {
+                type: 'string',
+                example: 'After the clues, add a media object using the best karaoke-style YouTube result for the answer.',
+              },
               TitlePrompt: {
                 type: 'string',
                 example: 'Make the title feel like a magazine blurb.',
