@@ -152,6 +152,14 @@ function createWordsController(wordsService) {
       }
     },
 
+    getCreate5HintGameEnvironment(_req, res, next) {
+      try {
+        res.json(wordsService.getCreate5HintGameEnvironment())
+      } catch (error) {
+        next(error)
+      }
+    },
+
     async create5HintGame(req, res, next) {
       try {
         const body = getSafeBody(req.body)

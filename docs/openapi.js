@@ -216,6 +216,25 @@ const openapi = {
         },
         required: ['category', 'fileName', 'promptFile', 'created', 'totalCreated', 'totalEntries'],
       },
+      Create5HintGameEnvironmentResponse: {
+        type: 'object',
+        properties: {
+          ok: { type: 'boolean', example: true },
+          checks: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                name: { type: 'string', example: 'OPENAI_API_KEY' },
+                ok: { type: 'boolean', example: true },
+                message: { type: 'string', example: 'Configured.' },
+              },
+              required: ['name', 'ok', 'message'],
+            },
+          },
+        },
+        required: ['ok', 'checks'],
+      },
       HintWordCategoriesResponse: {
         type: 'object',
         properties: {
@@ -511,6 +530,22 @@ const openapi = {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/Create5HintGameResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/Create5HintGameEnvironment': {
+      get: {
+        tags: ['Words'],
+        summary: 'Check whether the Create5HintGame environment is configured correctly',
+        responses: {
+          200: {
+            description: 'Environment diagnostics',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/Create5HintGameEnvironmentResponse' },
               },
             },
           },

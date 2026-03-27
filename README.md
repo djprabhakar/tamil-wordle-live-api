@@ -57,6 +57,7 @@ Startup validation will fail fast if:
 - `GET /api/words/car`
 - `POST /api/words/check`
 - `POST /api/words/Create5HintGame`
+- `GET /api/words/Create5HintGameEnvironment`
 - `POST /api/words/SaveA5HintWord`
 - `GET /api/words/Get5HintWordCategories`
 - `GET /api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca`
@@ -68,6 +69,7 @@ Startup validation will fail fast if:
 curl http://localhost:4000/health
 curl http://localhost:4000/openapi.json
 curl http://localhost:4000/api/words/categories
+curl http://localhost:4000/api/words/Create5HintGameEnvironment
 curl -X POST http://localhost:4000/api/words/Create5HintGame ^
   -H "Content-Type: application/json" ^
   -d "{\"category\":\"80's Rock Hits\",\"nick_name\":\"prabhakar\",\"audio_enabled\":true,\"notes\":{\"NoOfWords\":2,\"GamePrompt\":\"Make the overall game feel like a stadium-rock challenge.\",\"AudioPrompt\":\"After the clues, add a karaoke-focused YouTube media object for the answer.\",\"TitlePrompt\":\"Make the title punchy.\",\"CluesPrompt\":\"Go from broad to iconic.\"}}"
@@ -132,6 +134,7 @@ Behavior:
 - `notes.NoOfWords` controls how many entries are generated in one request, from 1 to 20
 - `notes.GamePrompt` gives higher-level direction for the overall game entry beyond the title and clue-specific instructions
 - `notes.AudioPrompt` overrides the default audio-generation instruction when `audio_enabled` is `true`
+- `GET /api/words/Create5HintGameEnvironment` reports whether `OPENAI_API_KEY`, the OpenAI SDK, and the required writable directories are available
 
 Response from `GET /api/words/Get20RandomWordsWith5Clues?category=Common`:
 

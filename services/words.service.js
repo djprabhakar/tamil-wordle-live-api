@@ -487,6 +487,84 @@ class WordsService {
     })
   }
 
+  getCreate5HintGameEnvironment() {
+    const checks = []
+    const openAiApiKey = String(process.env.OPENAI_API_KEY || '').trim()
+    const openAiModel = String(process.env.OPENAI_MODEL || '').trim()
+
+    checks.push({
+      name: 'OPENAI_API_KEY',
+      ok: Boolean(openAiApiKey),
+      message: openAiApiKey ? 'Configured.' : 'Missing required environment variable.',
+    })
+
+    checks.push({
+      name: 'OPENAI_MODEL',
+      ok: true,
+      message: openAiModel ? `Configured as "${openAiModel}".` : 'Not set. The default model "gpt-5" will be used.',
+    })
+
+    try {
+      require.resolve('openai')
+      checks.push({
+        name: 'openai package',
+        ok: true,
+        message: 'Installed.',
+      })
+    } catch (error) {
+      checks.push({
+        name: 'openai package',
+        ok: false,
+        message: `Not available: ${error.message}`,
+      })
+    }
+
+    try {
+      this.ensureCategoryPromptsDir()
+      fs.accessSync(this.categoryPromptsDir, fs.constants.R_OK | fs.constants.W_OK)
+      checks.push({
+        name: 'category prompts directory',
+        ok: true,
+        message: `Readable and writable: ${this.categoryPromptsDir}`,
+      })
+    } catch (error) {
+      checks.push({
+        name: 'category prompts directory',
+        ok: false,
+        message: `Not accessible: ${error.message}`,
+      })
+    }
+
+    try {
+      const dataDir = path.dirname(this.categoryFileMapPath)
+      fs.mkdirSync(dataDir, { recursive: true })
+      fs.accessSync(dataDir, fs.constants.R_OK | fs.constants.W_OK)
+      checks.push({
+        name: 'data directory',
+        ok: true,
+        message: `Readable and writable: ${dataDir}`,
+      })
+    } catch (error) {
+      checks.push({
+        name: 'data directory',
+        ok: false,
+        message: `Not accessible: ${error.message}`,
+      })
+    }
+
+    return {
+      ok: checks.every((check) => check.ok),
+      checks,
+    }
+  }
+
+  assertCreate5HintGameEnvironment() {
+    const result = this.getCreate5HintGameEnvironment()
+    if (!result.ok) {
+      throw new HttpError(500, 'Create5HintGame environment is not ready.', { checks: result.checks })
+    }
+  }
+
   getNextEntryId(entries) {
     return entries.reduce((maxId, entry) => {
       const id = Number(entry && entry.id)
@@ -670,11 +748,17 @@ class WordsService {
       throw new HttpError(400, 'nick_name is required.')
     }
 
-    if (!process.env.OPENAI_API_KEY) {
-      throw new HttpError(500, 'OPENAI_API_KEY is not configured.')
+    this.assertCreate5HintGameEnvironment()
+
+    let OpenAI
+    try {
+      OpenAI = require('openai')
+    } catch (error) {
+      throw new HttpError(500, 'OpenAI SDK is not installed.', {
+        reason: error.message,
+      })
     }
 
-    const OpenAI = require('openai')
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
     const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(safeCategory, {
@@ -753,34 +837,64 @@ class WordsService {
     const created = []
 
     for (let index = 0; index < notes.noOfWords; index += 1) {
-      const response = await client.responses.create({
-        model: process.env.OPENAI_MODEL || 'gpt-5',
-        instructions: renderedPrompt,
-        tools: audioEnabled
-          ? [
-            {
-              type: 'web_search',
-              filters: {
-                allowed_domains: [
-                  'youtube.com',
-                  'www.youtube.com',
-                  'm.youtube.com',
-                ],
+      let response
+      try {
+        response = await client.responses.create({
+          model: process.env.OPENAI_MODEL || 'gpt-5',
+          instructions: renderedPrompt,
+          tools: audioEnabled
+            ? [
+              {
+                type: 'web_search',
+                filters: {
+                  allowed_domains: [
+                    'youtube.com',
+                    'www.youtube.com',
+                    'm.youtube.com',
+                  ],
+                },
               },
+            ]
+            : [],
+          tool_choice: audioEnabled ? 'auto' : 'none',
+          input: `Generate new 5-hint game entry ${index + 1} of ${notes.noOfWords} for the category "${resolvedCategory}".`,
+          text: {
+            format: {
+              type: 'json_schema',
+              name: 'five_hint_game_entry',
+              strict: true,
+              schema,
             },
-          ]
-          : [],
-        tool_choice: audioEnabled ? 'auto' : 'none',
-        input: `Generate new 5-hint game entry ${index + 1} of ${notes.noOfWords} for the category "${resolvedCategory}".`,
-        text: {
-          format: {
-            type: 'json_schema',
-            name: 'five_hint_game_entry',
-            strict: true,
-            schema,
           },
-        },
-      })
+        })
+      } catch (error) {
+        const status = Number(error && error.status)
+
+        if (status === 401 || status === 403) {
+          throw new HttpError(502, 'OpenAI rejected the request. Check OPENAI_API_KEY and project permissions.', {
+            status,
+            code: error && error.code ? error.code : undefined,
+            type: error && error.type ? error.type : undefined,
+            reason: error && error.message ? error.message : 'Authorization failed.',
+          })
+        }
+
+        if (status === 429) {
+          throw new HttpError(502, 'OpenAI rate limit or quota error.', {
+            status,
+            code: error && error.code ? error.code : undefined,
+            type: error && error.type ? error.type : undefined,
+            reason: error && error.message ? error.message : 'Rate limited.',
+          })
+        }
+
+        throw new HttpError(502, 'OpenAI request failed.', {
+          status: Number.isInteger(status) ? status : undefined,
+          code: error && error.code ? error.code : undefined,
+          type: error && error.type ? error.type : undefined,
+          reason: error && error.message ? error.message : 'Unknown OpenAI error.',
+        })
+      }
 
       let generatedEntry
 
