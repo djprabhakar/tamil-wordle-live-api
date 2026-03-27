@@ -134,6 +134,7 @@ Behavior:
 - `notes.NoOfWords` controls how many entries are generated in one request, from 1 to 20
 - `notes.GamePrompt` gives higher-level direction for the overall game entry beyond the title and clue-specific instructions
 - `notes.AudioPrompt` overrides the default audio-generation instruction when `audio_enabled` is `true`
+- when `audio_enabled` is `true`, each generated entry must include a `media` object with `type`, `videoId`, `start`, and `duration`
 - `GET /api/words/Create5HintGameEnvironment` reports whether `OPENAI_API_KEY`, the OpenAI SDK, and the required writable directories are available
 
 Response from `GET /api/words/Get20RandomWordsWith5Clues?category=Common`:

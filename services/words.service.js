@@ -738,7 +738,6 @@ class WordsService {
     const nickName = String(options.nickName || options.nick_name || '').trim()
     const notes = this.parseCreate5HintNotes(options.notes)
     const audioEnabled = options.audioEnabled === true || options.audio_enabled === true
-    const audioClue = options.audioClue || options.audio_clue
 
     if (!safeCategory) {
       throw new HttpError(400, 'category is required.')
@@ -828,7 +827,7 @@ class WordsService {
           ? 'The answer should be the song title only, not the artist name. Prefer globally recognizable songs from the modern streaming era unless the request narrows the scope.'
           : 'Choose a familiar everyday word or phrase that is broadly recognizable. Order the clues from broader and easier to more specific.',
       AudioInstruction: audioEnabled
-        ? notes.audioPrompt || `After the clues section, include a media object with type, videoId, start, and duration. Search YouTube for karaoke videos of the answer and retrieve the YouTube videoId from the best fitting karaoke result. ${audioClue ? `Audio clue context: ${JSON.stringify(audioClue)}` : ''}`
+        ? notes.audioPrompt || 'After the clues section, include a media object with type, videoId, start, and duration. Search YouTube for karaoke videos of the answer and retrieve the YouTube videoId from the best fitting karaoke result.'
         : 'Do not include a media object.',
     }
 

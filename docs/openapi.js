@@ -151,21 +151,6 @@ const openapi = {
           },
           nick_name: { type: 'string', example: 'prabhakar' },
           audio_enabled: { type: 'boolean', example: true },
-          audio_clue: {
-            oneOf: [
-              { type: 'string', example: 'Use a famous chorus section.' },
-              {
-                type: 'object',
-                additionalProperties: true,
-                properties: {
-                  type: { type: 'string', example: 'youtube' },
-                  videoId: { type: 'string', example: 'ZRzKfpPXXXc' },
-                  start: { type: 'integer', example: 0 },
-                  duration: { type: 'integer', example: 30 },
-                },
-              },
-            ],
-          },
         },
         required: ['category', 'nick_name'],
       },
