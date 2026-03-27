@@ -28,8 +28,8 @@ Expected structure:
 ```json
 [
   {
-    "word": "car",
-    "category": "thing",
+    "answer": "car",
+    "title": "thing",
     "clues": ["vehicle", "engine", "road", "electric", "autonomous"]
   }
 ]
@@ -70,7 +70,7 @@ curl http://localhost:4000/openapi.json
 curl http://localhost:4000/api/words/categories
 curl -X POST http://localhost:4000/api/words/Create5HintGame ^
   -H "Content-Type: application/json" ^
-  -d "{\"category\":\"80's Rock Hits\",\"nick_name\":\"prabhakar\",\"audio_enabled\":true,\"notes\":{\"NoOfWords\":2,\"TitlePrompt\":\"Make the title hint punchy.\",\"CluesPrompt\":\"Go from broad to iconic.\"}}"
+  -d "{\"category\":\"80's Rock Hits\",\"nick_name\":\"prabhakar\",\"audio_enabled\":true,\"notes\":{\"NoOfWords\":2,\"TitlePrompt\":\"Make the title punchy.\",\"CluesPrompt\":\"Go from broad to iconic.\"}}"
 curl http://localhost:4000/api/words/Get5HintWordCategories
 curl "http://localhost:4000/api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca"
 curl "http://localhost:4000/api/words/random?category=thing"
@@ -82,7 +82,7 @@ curl -X POST http://localhost:4000/api/words/check ^
   -d "{\"guess\":\"car\"}"
 curl -X POST http://localhost:4000/api/words/SaveA5HintWord ^
   -H "Content-Type: application/json" ^
-  -d "{\"category\":\"Common\",\"wordEntry\":{\"word\":\"plane\",\"category\":\"thing\",\"clues\":[\"wings\",\"travel\",\"airport\",\"pilot\",\"sky\"]}}"
+  -d "{\"category\":\"Common\",\"wordEntry\":{\"answer\":\"plane\",\"category\":\"thing\",\"title\":\"thing\",\"clues\":[\"wings\",\"travel\",\"airport\",\"pilot\",\"sky\"]}}"
 curl "http://localhost:4000/api/words/Get20RandomWordsWith5Clues?category=Common"
 ```
 
@@ -91,8 +91,8 @@ Response from `POST /api/words/check`:
 ```json
 {
   "exists": true,
-  "word": "car",
-  "category": "thing"
+  "answer": "car",
+  "title": "thing"
 }
 ```
 
@@ -111,8 +111,9 @@ Response from `POST /api/words/SaveA5HintWord`:
   "category": "Common",
   "fileName": "common_500_words_with_5_clues.json",
   "saved": {
-    "word": "plane",
+    "answer": "plane",
     "category": "thing",
+    "title": "thing",
     "clues": ["wings", "travel", "airport", "pilot", "sky"]
   },
   "totalEntries": 501
@@ -124,7 +125,7 @@ Behavior:
 - category-to-file mapping is stored in `data/category-file-map.json`
 - if a category does not exist, the API creates a new mapping entry
 - the new filename is derived from the category name, for example `Movie Titles` -> `Movie_Titles.json`
-- `WordEntry` must be a JSON object with a non-empty `word` and exactly 5 non-empty `clues`
+- `WordEntry` must be a JSON object with a non-empty `answer` and exactly 5 non-empty `clues`
 - `POST /api/words/Create5HintGame` creates prompt files in `data/category-prompts/` when they do not already exist
 - `POST /api/words/Create5HintGame` requires `OPENAI_API_KEY`; `OPENAI_MODEL` is optional and defaults to `gpt-5`
 - `POST /api/words/Create5HintGame` expects `notes` as a JSON object with `NoOfWords`, `TitlePrompt`, and `CluesPrompt`
@@ -139,8 +140,8 @@ Response from `GET /api/words/Get20RandomWordsWith5Clues?category=Common`:
   "count": 20,
   "data": [
     {
-      "word": "car",
-      "category": "thing",
+      "answer": "car",
+      "title": "thing",
       "clues": ["vehicle", "engine", "road", "electric", "autonomous"]
     }
   ]

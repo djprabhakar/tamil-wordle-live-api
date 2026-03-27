@@ -35,8 +35,8 @@ const openapi = {
       WordRecord: {
         type: 'object',
         properties: {
-          word: { type: 'string', example: 'car' },
-          category: { type: 'string', example: 'thing' },
+          answer: { type: 'string', example: 'car' },
+          title: { type: 'string', example: 'thing' },
           clues: {
             type: 'array',
             items: { type: 'string' },
@@ -44,14 +44,14 @@ const openapi = {
             maxItems: 5,
           },
         },
-        required: ['word', 'category', 'clues'],
+        required: ['answer', 'title', 'clues'],
       },
       WordExistsResponse: {
         type: 'object',
         properties: {
           exists: { type: 'boolean' },
-          word: { type: 'string' },
-          category: { type: 'string' },
+          answer: { type: 'string' },
+          title: { type: 'string' },
         },
         required: ['exists'],
       },
@@ -94,7 +94,6 @@ const openapi = {
             type: 'object',
             properties: {
               answer: { type: 'string', example: 'Back In Black' },
-              word: { type: 'string', example: 'Back In Black' },
               category: { type: 'string', example: "80's Rock Hits" },
               title: {
                 type: 'string',
@@ -176,7 +175,7 @@ const openapi = {
                 id: { type: 'integer', example: 51 },
                 category: { type: 'string', example: 'song' },
                 answer: { type: 'string', example: 'Another Brick in the Wall (Part 2)' },
-                titleHint: {
+                title: {
                   type: 'string',
                   example: "A protest-themed rock track by Pink Floyd featuring a children's chorus",
                 },
@@ -201,7 +200,7 @@ const openapi = {
                 },
                 created_by: { type: 'string', example: 'prabhakar' },
               },
-              required: ['id', 'category', 'answer', 'titleHint', 'clues', 'created_by'],
+              required: ['id', 'category', 'answer', 'title', 'clues', 'created_by'],
             },
           },
           totalCreated: { type: 'integer', example: 3 },
