@@ -1,7 +1,7 @@
 [
   {
-    "word": "car",
-    "category": "thing",
+    "answer": "car",
+    "title": "thing",
     "clues": [
       "vehicle",
       "engine",
@@ -11,8 +11,8 @@
     ]
   },
   {
-    "word": "bus",
-    "category": "thing",
+    "answer": "bus",
+    "title": "thing",
     "clues": [
       "transport",
       "passengers",
@@ -22,8 +22,8 @@
     ]
   },
   {
-    "word": "train",
-    "category": "thing",
+    "answer": "train",
+    "title": "thing",
     "clues": [
       "rail",
       "engine",
@@ -33,8 +33,8 @@
     ]
   },
   {
-    "word": "bike",
-    "category": "thing",
+    "answer": "bike",
+    "title": "thing",
     "clues": [
       "pedal",
       "wheel",
@@ -44,8 +44,8 @@
     ]
   },
   {
-    "word": "truck",
-    "category": "thing",
+    "answer": "truck",
+    "title": "thing",
     "clues": [
       "cargo",
       "engine",
@@ -55,8 +55,8 @@
     ]
   },
   {
-    "word": "boat",
-    "category": "thing",
+    "answer": "boat",
+    "title": "thing",
     "clues": [
       "water",
       "sail",
@@ -66,8 +66,8 @@
     ]
   },
   {
-    "word": "ship",
-    "category": "thing",
+    "answer": "ship",
+    "title": "thing",
     "clues": [
       "ocean",
       "cargo",
@@ -77,8 +77,8 @@
     ]
   },
   {
-    "word": "plane",
-    "category": "thing",
+    "answer": "plane",
+    "title": "thing",
     "clues": [
       "flight",
       "wing",
@@ -88,8 +88,8 @@
     ]
   },
   {
-    "word": "helicopter",
-    "category": "thing",
+    "answer": "helicopter",
+    "title": "thing",
     "clues": [
       "rotor",
       "hover",
@@ -99,8 +99,8 @@
     ]
   },
   {
-    "word": "scooter",
-    "category": "thing",
+    "answer": "scooter",
+    "title": "thing",
     "clues": [
       "ride",
       "small",
@@ -110,8 +110,8 @@
     ]
   },
   {
-    "word": "motorcycle",
-    "category": "thing",
+    "answer": "motorcycle",
+    "title": "thing",
     "clues": [
       "helmet",
       "engine",
@@ -121,8 +121,8 @@
     ]
   },
   {
-    "word": "subway",
-    "category": "thing",
+    "answer": "subway",
+    "title": "thing",
     "clues": [
       "underground",
       "train",
@@ -132,8 +132,8 @@
     ]
   },
   {
-    "word": "tram",
-    "category": "thing",
+    "answer": "tram",
+    "title": "thing",
     "clues": [
       "track",
       "city",
@@ -143,8 +143,8 @@
     ]
   },
   {
-    "word": "van",
-    "category": "thing",
+    "answer": "van",
+    "title": "thing",
     "clues": [
       "cargo",
       "family",
@@ -154,8 +154,8 @@
     ]
   },
   {
-    "word": "taxi",
-    "category": "thing",
+    "answer": "taxi",
+    "title": "thing",
     "clues": [
       "fare",
       "city",
@@ -165,8 +165,8 @@
     ]
   },
   {
-    "word": "ambulance",
-    "category": "thing",
+    "answer": "ambulance",
+    "title": "thing",
     "clues": [
       "emergency",
       "siren",
@@ -176,8 +176,8 @@
     ]
   },
   {
-    "word": "firetruck",
-    "category": "thing",
+    "answer": "firetruck",
+    "title": "thing",
     "clues": [
       "siren",
       "fire",
@@ -187,8 +187,8 @@
     ]
   },
   {
-    "word": "tractor",
-    "category": "thing",
+    "answer": "tractor",
+    "title": "thing",
     "clues": [
       "farm",
       "field",
@@ -198,8 +198,8 @@
     ]
   },
   {
-    "word": "rocket",
-    "category": "thing",
+    "answer": "rocket",
+    "title": "thing",
     "clues": [
       "space",
       "launch",
@@ -209,8 +209,8 @@
     ]
   },
   {
-    "word": "satellite",
-    "category": "thing",
+    "answer": "satellite",
+    "title": "thing",
     "clues": [
       "orbit",
       "signal",
@@ -220,8 +220,8 @@
     ]
   },
   {
-    "word": "drone",
-    "category": "thing",
+    "answer": "drone",
+    "title": "thing",
     "clues": [
       "camera",
       "flying",
@@ -231,8 +231,8 @@
     ]
   },
   {
-    "word": "robot",
-    "category": "thing",
+    "answer": "robot",
+    "title": "thing",
     "clues": [
       "machine",
       "sensor",
@@ -242,8 +242,8 @@
     ]
   },
   {
-    "word": "computer",
-    "category": "thing",
+    "answer": "computer",
+    "title": "thing",
     "clues": [
       "screen",
       "keyboard",
@@ -253,8 +253,8 @@
     ]
   },
   {
-    "word": "laptop",
-    "category": "thing",
+    "answer": "laptop",
+    "title": "thing",
     "clues": [
       "portable",
       "screen",
@@ -264,8 +264,8 @@
     ]
   },
   {
-    "word": "tablet",
-    "category": "thing",
+    "answer": "tablet",
+    "title": "thing",
     "clues": [
       "touchscreen",
       "portable",
@@ -275,8 +275,8 @@
     ]
   },
   {
-    "word": "phone",
-    "category": "thing",
+    "answer": "phone",
+    "title": "thing",
     "clues": [
       "call",
       "screen",
@@ -286,8 +286,8 @@
     ]
   },
   {
-    "word": "camera",
-    "category": "thing",
+    "answer": "camera",
+    "title": "thing",
     "clues": [
       "photo",
       "lens",
@@ -297,8 +297,8 @@
     ]
   },
   {
-    "word": "television",
-    "category": "thing",
+    "answer": "television",
+    "title": "thing",
     "clues": [
       "screen",
       "channel",
@@ -308,8 +308,8 @@
     ]
   },
   {
-    "word": "radio",
-    "category": "thing",
+    "answer": "radio",
+    "title": "thing",
     "clues": [
       "music",
       "signal",
@@ -319,8 +319,8 @@
     ]
   },
   {
-    "word": "speaker",
-    "category": "thing",
+    "answer": "speaker",
+    "title": "thing",
     "clues": [
       "sound",
       "music",
@@ -330,8 +330,8 @@
     ]
   },
   {
-    "word": "headphones",
-    "category": "thing",
+    "answer": "headphones",
+    "title": "thing",
     "clues": [
       "audio",
       "ears",
@@ -341,8 +341,8 @@
     ]
   },
   {
-    "word": "keyboard",
-    "category": "thing",
+    "answer": "keyboard",
+    "title": "thing",
     "clues": [
       "type",
       "keys",
@@ -352,8 +352,8 @@
     ]
   },
   {
-    "word": "mouse",
-    "category": "thing",
+    "answer": "mouse",
+    "title": "thing",
     "clues": [
       "cursor",
       "click",
@@ -363,8 +363,8 @@
     ]
   },
   {
-    "word": "printer",
-    "category": "thing",
+    "answer": "printer",
+    "title": "thing",
     "clues": [
       "paper",
       "ink",
@@ -374,8 +374,8 @@
     ]
   },
   {
-    "word": "charger",
-    "category": "thing",
+    "answer": "charger",
+    "title": "thing",
     "clues": [
       "battery",
       "power",
@@ -385,8 +385,8 @@
     ]
   },
   {
-    "word": "battery",
-    "category": "thing",
+    "answer": "battery",
+    "title": "thing",
     "clues": [
       "power",
       "energy",
@@ -396,8 +396,8 @@
     ]
   },
   {
-    "word": "watch",
-    "category": "thing",
+    "answer": "watch",
+    "title": "thing",
     "clues": [
       "time",
       "wrist",
@@ -407,8 +407,8 @@
     ]
   },
   {
-    "word": "clock",
-    "category": "thing",
+    "answer": "clock",
+    "title": "thing",
     "clues": [
       "time",
       "wall",
@@ -418,8 +418,8 @@
     ]
   },
   {
-    "word": "lamp",
-    "category": "thing",
+    "answer": "lamp",
+    "title": "thing",
     "clues": [
       "light",
       "bulb",
@@ -429,8 +429,8 @@
     ]
   },
   {
-    "word": "fan",
-    "category": "thing",
+    "answer": "fan",
+    "title": "thing",
     "clues": [
       "air",
       "cool",
@@ -440,8 +440,8 @@
     ]
   },
   {
-    "word": "heater",
-    "category": "thing",
+    "answer": "heater",
+    "title": "thing",
     "clues": [
       "warmth",
       "winter",
@@ -451,8 +451,8 @@
     ]
   },
   {
-    "word": "airconditioner",
-    "category": "thing",
+    "answer": "airconditioner",
+    "title": "thing",
     "clues": [
       "cooling",
       "room",
@@ -462,8 +462,8 @@
     ]
   },
   {
-    "word": "refrigerator",
-    "category": "thing",
+    "answer": "refrigerator",
+    "title": "thing",
     "clues": [
       "cold",
       "kitchen",
@@ -473,8 +473,8 @@
     ]
   },
   {
-    "word": "microwave",
-    "category": "thing",
+    "answer": "microwave",
+    "title": "thing",
     "clues": [
       "heat",
       "food",
@@ -484,8 +484,8 @@
     ]
   },
   {
-    "word": "oven",
-    "category": "thing",
+    "answer": "oven",
+    "title": "thing",
     "clues": [
       "bake",
       "kitchen",
@@ -495,8 +495,8 @@
     ]
   },
   {
-    "word": "stove",
-    "category": "thing",
+    "answer": "stove",
+    "title": "thing",
     "clues": [
       "cook",
       "flame",
@@ -506,8 +506,8 @@
     ]
   },
   {
-    "word": "toaster",
-    "category": "thing",
+    "answer": "toaster",
+    "title": "thing",
     "clues": [
       "bread",
       "breakfast",
@@ -517,8 +517,8 @@
     ]
   },
   {
-    "word": "blender",
-    "category": "thing",
+    "answer": "blender",
+    "title": "thing",
     "clues": [
       "smoothie",
       "kitchen",
@@ -528,8 +528,8 @@
     ]
   },
   {
-    "word": "kettle",
-    "category": "thing",
+    "answer": "kettle",
+    "title": "thing",
     "clues": [
       "water",
       "boil",
@@ -539,8 +539,8 @@
     ]
   },
   {
-    "word": "vacuum",
-    "category": "thing",
+    "answer": "vacuum",
+    "title": "thing",
     "clues": [
       "clean",
       "floor",
@@ -550,8 +550,8 @@
     ]
   },
   {
-    "word": "washer",
-    "category": "thing",
+    "answer": "washer",
+    "title": "thing",
     "clues": [
       "laundry",
       "clothes",
@@ -561,8 +561,8 @@
     ]
   },
   {
-    "word": "dryer",
-    "category": "thing",
+    "answer": "dryer",
+    "title": "thing",
     "clues": [
       "laundry",
       "heat",
@@ -572,8 +572,8 @@
     ]
   },
   {
-    "word": "iron",
-    "category": "thing",
+    "answer": "iron",
+    "title": "thing",
     "clues": [
       "clothes",
       "steam",
@@ -583,8 +583,8 @@
     ]
   },
   {
-    "word": "broom",
-    "category": "thing",
+    "answer": "broom",
+    "title": "thing",
     "clues": [
       "sweep",
       "floor",
@@ -594,8 +594,8 @@
     ]
   },
   {
-    "word": "mop",
-    "category": "thing",
+    "answer": "mop",
+    "title": "thing",
     "clues": [
       "floor",
       "water",
@@ -605,8 +605,8 @@
     ]
   },
   {
-    "word": "bucket",
-    "category": "thing",
+    "answer": "bucket",
+    "title": "thing",
     "clues": [
       "carry",
       "water",
@@ -616,8 +616,8 @@
     ]
   },
   {
-    "word": "chair",
-    "category": "thing",
+    "answer": "chair",
+    "title": "thing",
     "clues": [
       "sit",
       "seat",
@@ -627,8 +627,8 @@
     ]
   },
   {
-    "word": "table",
-    "category": "thing",
+    "answer": "table",
+    "title": "thing",
     "clues": [
       "surface",
       "meal",
@@ -638,8 +638,8 @@
     ]
   },
   {
-    "word": "desk",
-    "category": "thing",
+    "answer": "desk",
+    "title": "thing",
     "clues": [
       "work",
       "office",
@@ -649,8 +649,8 @@
     ]
   },
   {
-    "word": "bed",
-    "category": "thing",
+    "answer": "bed",
+    "title": "thing",
     "clues": [
       "sleep",
       "mattress",
@@ -660,8 +660,8 @@
     ]
   },
   {
-    "word": "sofa",
-    "category": "thing",
+    "answer": "sofa",
+    "title": "thing",
     "clues": [
       "cushion",
       "livingroom",
@@ -671,8 +671,8 @@
     ]
   },
   {
-    "word": "couch",
-    "category": "thing",
+    "answer": "couch",
+    "title": "thing",
     "clues": [
       "sofa",
       "livingroom",
@@ -682,8 +682,8 @@
     ]
   },
   {
-    "word": "wardrobe",
-    "category": "thing",
+    "answer": "wardrobe",
+    "title": "thing",
     "clues": [
       "clothes",
       "closet",
@@ -693,8 +693,8 @@
     ]
   },
   {
-    "word": "bookshelf",
-    "category": "thing",
+    "answer": "bookshelf",
+    "title": "thing",
     "clues": [
       "books",
       "shelf",
@@ -704,8 +704,8 @@
     ]
   },
   {
-    "word": "door",
-    "category": "thing",
+    "answer": "door",
+    "title": "thing",
     "clues": [
       "entry",
       "open",
@@ -715,8 +715,8 @@
     ]
   },
   {
-    "word": "window",
-    "category": "thing",
+    "answer": "window",
+    "title": "thing",
     "clues": [
       "glass",
       "view",
@@ -726,8 +726,8 @@
     ]
   },
   {
-    "word": "mirror",
-    "category": "thing",
+    "answer": "mirror",
+    "title": "thing",
     "clues": [
       "reflection",
       "glass",
@@ -737,8 +737,8 @@
     ]
   },
   {
-    "word": "curtain",
-    "category": "thing",
+    "answer": "curtain",
+    "title": "thing",
     "clues": [
       "window",
       "fabric",
@@ -748,8 +748,8 @@
     ]
   },
   {
-    "word": "carpet",
-    "category": "thing",
+    "answer": "carpet",
+    "title": "thing",
     "clues": [
       "floor",
       "soft",
@@ -759,8 +759,8 @@
     ]
   },
   {
-    "word": "pillow",
-    "category": "thing",
+    "answer": "pillow",
+    "title": "thing",
     "clues": [
       "sleep",
       "soft",
@@ -770,8 +770,8 @@
     ]
   },
   {
-    "word": "blanket",
-    "category": "thing",
+    "answer": "blanket",
+    "title": "thing",
     "clues": [
       "warmth",
       "bed",
@@ -781,8 +781,8 @@
     ]
   },
   {
-    "word": "towel",
-    "category": "thing",
+    "answer": "towel",
+    "title": "thing",
     "clues": [
       "bath",
       "dry",
@@ -792,8 +792,8 @@
     ]
   },
   {
-    "word": "umbrella",
-    "category": "thing",
+    "answer": "umbrella",
+    "title": "thing",
     "clues": [
       "rain",
       "cover",
@@ -803,8 +803,8 @@
     ]
   },
   {
-    "word": "backpack",
-    "category": "thing",
+    "answer": "backpack",
+    "title": "thing",
     "clues": [
       "school",
       "carry",
@@ -814,8 +814,8 @@
     ]
   },
   {
-    "word": "suitcase",
-    "category": "thing",
+    "answer": "suitcase",
+    "title": "thing",
     "clues": [
       "travel",
       "airport",
@@ -825,8 +825,8 @@
     ]
   },
   {
-    "word": "wallet",
-    "category": "thing",
+    "answer": "wallet",
+    "title": "thing",
     "clues": [
       "money",
       "cards",
@@ -836,8 +836,8 @@
     ]
   },
   {
-    "word": "purse",
-    "category": "thing",
+    "answer": "purse",
+    "title": "thing",
     "clues": [
       "bag",
       "carry",
@@ -847,8 +847,8 @@
     ]
   },
   {
-    "word": "key",
-    "category": "thing",
+    "answer": "key",
+    "title": "thing",
     "clues": [
       "lock",
       "door",
@@ -858,8 +858,8 @@
     ]
   },
   {
-    "word": "lock",
-    "category": "thing",
+    "answer": "lock",
+    "title": "thing",
     "clues": [
       "key",
       "secure",
@@ -869,8 +869,8 @@
     ]
   },
   {
-    "word": "bottle",
-    "category": "thing",
+    "answer": "bottle",
+    "title": "thing",
     "clues": [
       "water",
       "drink",
@@ -880,8 +880,8 @@
     ]
   },
   {
-    "word": "cup",
-    "category": "thing",
+    "answer": "cup",
+    "title": "thing",
     "clues": [
       "drink",
       "handle",
@@ -891,8 +891,8 @@
     ]
   },
   {
-    "word": "mug",
-    "category": "thing",
+    "answer": "mug",
+    "title": "thing",
     "clues": [
       "coffee",
       "cup",
@@ -902,8 +902,8 @@
     ]
   },
   {
-    "word": "plate",
-    "category": "thing",
+    "answer": "plate",
+    "title": "thing",
     "clues": [
       "meal",
       "food",
@@ -913,8 +913,8 @@
     ]
   },
   {
-    "word": "bowl",
-    "category": "thing",
+    "answer": "bowl",
+    "title": "thing",
     "clues": [
       "soup",
       "round",
@@ -924,8 +924,8 @@
     ]
   },
   {
-    "word": "spoon",
-    "category": "thing",
+    "answer": "spoon",
+    "title": "thing",
     "clues": [
       "eat",
       "soup",
@@ -935,8 +935,8 @@
     ]
   },
   {
-    "word": "fork",
-    "category": "thing",
+    "answer": "fork",
+    "title": "thing",
     "clues": [
       "eat",
       "prongs",
@@ -946,8 +946,8 @@
     ]
   },
   {
-    "word": "knife",
-    "category": "thing",
+    "answer": "knife",
+    "title": "thing",
     "clues": [
       "cut",
       "blade",
@@ -957,8 +957,8 @@
     ]
   },
   {
-    "word": "pan",
-    "category": "thing",
+    "answer": "pan",
+    "title": "thing",
     "clues": [
       "cook",
       "stove",
@@ -968,8 +968,8 @@
     ]
   },
   {
-    "word": "pot",
-    "category": "thing",
+    "answer": "pot",
+    "title": "thing",
     "clues": [
       "cook",
       "boil",
@@ -979,8 +979,8 @@
     ]
   },
   {
-    "word": "scissors",
-    "category": "thing",
+    "answer": "scissors",
+    "title": "thing",
     "clues": [
       "cut",
       "paper",
@@ -990,8 +990,8 @@
     ]
   },
   {
-    "word": "hammer",
-    "category": "thing",
+    "answer": "hammer",
+    "title": "thing",
     "clues": [
       "nail",
       "tool",
@@ -1001,8 +1001,8 @@
     ]
   },
   {
-    "word": "screwdriver",
-    "category": "thing",
+    "answer": "screwdriver",
+    "title": "thing",
     "clues": [
       "tool",
       "screw",
@@ -1012,8 +1012,8 @@
     ]
   },
   {
-    "word": "wrench",
-    "category": "thing",
+    "answer": "wrench",
+    "title": "thing",
     "clues": [
       "tool",
       "bolt",
@@ -1023,8 +1023,8 @@
     ]
   },
   {
-    "word": "drill",
-    "category": "thing",
+    "answer": "drill",
+    "title": "thing",
     "clues": [
       "tool",
       "hole",
@@ -1034,8 +1034,8 @@
     ]
   },
   {
-    "word": "saw",
-    "category": "thing",
+    "answer": "saw",
+    "title": "thing",
     "clues": [
       "cut",
       "wood",
@@ -1045,8 +1045,8 @@
     ]
   },
   {
-    "word": "ladder",
-    "category": "thing",
+    "answer": "ladder",
+    "title": "thing",
     "clues": [
       "climb",
       "steps",
@@ -1056,8 +1056,8 @@
     ]
   },
   {
-    "word": "rope",
-    "category": "thing",
+    "answer": "rope",
+    "title": "thing",
     "clues": [
       "tie",
       "pull",
@@ -1067,8 +1067,8 @@
     ]
   },
   {
-    "word": "box",
-    "category": "thing",
+    "answer": "box",
+    "title": "thing",
     "clues": [
       "container",
       "cardboard",
@@ -1078,8 +1078,8 @@
     ]
   },
   {
-    "word": "bag",
-    "category": "thing",
+    "answer": "bag",
+    "title": "thing",
     "clues": [
       "carry",
       "container",
@@ -1089,8 +1089,8 @@
     ]
   },
   {
-    "word": "basket",
-    "category": "thing",
+    "answer": "basket",
+    "title": "thing",
     "clues": [
       "carry",
       "woven",
@@ -1100,8 +1100,8 @@
     ]
   },
   {
-    "word": "book",
-    "category": "thing",
+    "answer": "book",
+    "title": "thing",
     "clues": [
       "pages",
       "read",
@@ -1111,8 +1111,8 @@
     ]
   },
   {
-    "word": "notebook",
-    "category": "thing",
+    "answer": "notebook",
+    "title": "thing",
     "clues": [
       "write",
       "pages",
@@ -1122,8 +1122,8 @@
     ]
   },
   {
-    "word": "paper",
-    "category": "thing",
+    "answer": "paper",
+    "title": "thing",
     "clues": [
       "write",
       "sheet",
@@ -1133,8 +1133,8 @@
     ]
   },
   {
-    "word": "pen",
-    "category": "thing",
+    "answer": "pen",
+    "title": "thing",
     "clues": [
       "write",
       "ink",
@@ -1144,8 +1144,8 @@
     ]
   },
   {
-    "word": "pencil",
-    "category": "thing",
+    "answer": "pencil",
+    "title": "thing",
     "clues": [
       "write",
       "graphite",
@@ -1155,8 +1155,8 @@
     ]
   },
   {
-    "word": "eraser",
-    "category": "thing",
+    "answer": "eraser",
+    "title": "thing",
     "clues": [
       "pencil",
       "remove",
@@ -1166,8 +1166,8 @@
     ]
   },
   {
-    "word": "ruler",
-    "category": "thing",
+    "answer": "ruler",
+    "title": "thing",
     "clues": [
       "measure",
       "line",
@@ -1177,8 +1177,8 @@
     ]
   },
   {
-    "word": "crayon",
-    "category": "thing",
+    "answer": "crayon",
+    "title": "thing",
     "clues": [
       "color",
       "wax",
@@ -1188,8 +1188,8 @@
     ]
   },
   {
-    "word": "paintbrush",
-    "category": "thing",
+    "answer": "paintbrush",
+    "title": "thing",
     "clues": [
       "paint",
       "art",
@@ -1199,8 +1199,8 @@
     ]
   },
   {
-    "word": "glue",
-    "category": "thing",
+    "answer": "glue",
+    "title": "thing",
     "clues": [
       "stick",
       "craft",
@@ -1210,8 +1210,8 @@
     ]
   },
   {
-    "word": "ball",
-    "category": "thing",
+    "answer": "ball",
+    "title": "thing",
     "clues": [
       "round",
       "throw",
@@ -1221,8 +1221,8 @@
     ]
   },
   {
-    "word": "bat",
-    "category": "thing",
+    "answer": "bat",
+    "title": "thing",
     "clues": [
       "baseball",
       "hit",
@@ -1232,8 +1232,8 @@
     ]
   },
   {
-    "word": "helmet",
-    "category": "thing",
+    "answer": "helmet",
+    "title": "thing",
     "clues": [
       "safety",
       "head",
@@ -1243,8 +1243,8 @@
     ]
   },
   {
-    "word": "shoe",
-    "category": "thing",
+    "answer": "shoe",
+    "title": "thing",
     "clues": [
       "foot",
       "walk",
@@ -1254,8 +1254,8 @@
     ]
   },
   {
-    "word": "sock",
-    "category": "thing",
+    "answer": "sock",
+    "title": "thing",
     "clues": [
       "foot",
       "wear",
@@ -1265,8 +1265,8 @@
     ]
   },
   {
-    "word": "shirt",
-    "category": "thing",
+    "answer": "shirt",
+    "title": "thing",
     "clues": [
       "clothes",
       "wear",
@@ -1276,8 +1276,8 @@
     ]
   },
   {
-    "word": "pants",
-    "category": "thing",
+    "answer": "pants",
+    "title": "thing",
     "clues": [
       "clothes",
       "wear",
@@ -1287,8 +1287,8 @@
     ]
   },
   {
-    "word": "jacket",
-    "category": "thing",
+    "answer": "jacket",
+    "title": "thing",
     "clues": [
       "wear",
       "warmth",
@@ -1298,8 +1298,8 @@
     ]
   },
   {
-    "word": "hat",
-    "category": "thing",
+    "answer": "hat",
+    "title": "thing",
     "clues": [
       "head",
       "wear",
@@ -1309,8 +1309,8 @@
     ]
   },
   {
-    "word": "gloves",
-    "category": "thing",
+    "answer": "gloves",
+    "title": "thing",
     "clues": [
       "hands",
       "winter",
@@ -1320,8 +1320,8 @@
     ]
   },
   {
-    "word": "glasses",
-    "category": "thing",
+    "answer": "glasses",
+    "title": "thing",
     "clues": [
       "vision",
       "eyes",
@@ -1331,8 +1331,8 @@
     ]
   },
   {
-    "word": "ring",
-    "category": "thing",
+    "answer": "ring",
+    "title": "thing",
     "clues": [
       "finger",
       "jewelry",
@@ -1342,8 +1342,8 @@
     ]
   },
   {
-    "word": "necklace",
-    "category": "thing",
+    "answer": "necklace",
+    "title": "thing",
     "clues": [
       "jewelry",
       "neck",
@@ -1353,8 +1353,8 @@
     ]
   },
   {
-    "word": "soap",
-    "category": "thing",
+    "answer": "soap",
+    "title": "thing",
     "clues": [
       "clean",
       "bath",
@@ -1364,8 +1364,8 @@
     ]
   },
   {
-    "word": "toothbrush",
-    "category": "thing",
+    "answer": "toothbrush",
+    "title": "thing",
     "clues": [
       "teeth",
       "brush",
@@ -1375,8 +1375,8 @@
     ]
   },
   {
-    "word": "toothpaste",
-    "category": "thing",
+    "answer": "toothpaste",
+    "title": "thing",
     "clues": [
       "teeth",
       "mint",
@@ -1386,8 +1386,8 @@
     ]
   },
   {
-    "word": "shampoo",
-    "category": "thing",
+    "answer": "shampoo",
+    "title": "thing",
     "clues": [
       "hair",
       "wash",
@@ -1397,8 +1397,8 @@
     ]
   },
   {
-    "word": "medicine",
-    "category": "thing",
+    "answer": "medicine",
+    "title": "thing",
     "clues": [
       "health",
       "doctor",
@@ -1408,8 +1408,8 @@
     ]
   },
   {
-    "word": "bandage",
-    "category": "thing",
+    "answer": "bandage",
+    "title": "thing",
     "clues": [
       "wound",
       "cover",
@@ -1419,8 +1419,8 @@
     ]
   },
   {
-    "word": "mask",
-    "category": "thing",
+    "answer": "mask",
+    "title": "thing",
     "clues": [
       "face",
       "cover",
@@ -1430,8 +1430,8 @@
     ]
   },
   {
-    "word": "ticket",
-    "category": "thing",
+    "answer": "ticket",
+    "title": "thing",
     "clues": [
       "entry",
       "travel",
@@ -1441,8 +1441,8 @@
     ]
   },
   {
-    "word": "map",
-    "category": "thing",
+    "answer": "map",
+    "title": "thing",
     "clues": [
       "route",
       "location",
@@ -1452,8 +1452,8 @@
     ]
   },
   {
-    "word": "compass",
-    "category": "thing",
+    "answer": "compass",
+    "title": "thing",
     "clues": [
       "direction",
       "north",
@@ -1463,8 +1463,8 @@
     ]
   },
   {
-    "word": "passport",
-    "category": "thing",
+    "answer": "passport",
+    "title": "thing",
     "clues": [
       "travel",
       "border",
@@ -1474,8 +1474,8 @@
     ]
   },
   {
-    "word": "money",
-    "category": "thing",
+    "answer": "money",
+    "title": "thing",
     "clues": [
       "cash",
       "buy",
@@ -1485,8 +1485,8 @@
     ]
   },
   {
-    "word": "coin",
-    "category": "thing",
+    "answer": "coin",
+    "title": "thing",
     "clues": [
       "money",
       "metal",
@@ -1496,8 +1496,8 @@
     ]
   },
   {
-    "word": "creditcard",
-    "category": "thing",
+    "answer": "creditcard",
+    "title": "thing",
     "clues": [
       "payment",
       "bank",
@@ -1507,8 +1507,8 @@
     ]
   },
   {
-    "word": "receipt",
-    "category": "thing",
+    "answer": "receipt",
+    "title": "thing",
     "clues": [
       "purchase",
       "store",
@@ -1518,8 +1518,8 @@
     ]
   },
   {
-    "word": "gift",
-    "category": "thing",
+    "answer": "gift",
+    "title": "thing",
     "clues": [
       "present",
       "wrap",
@@ -1529,8 +1529,8 @@
     ]
   },
   {
-    "word": "toy",
-    "category": "thing",
+    "answer": "toy",
+    "title": "thing",
     "clues": [
       "play",
       "child",
@@ -1540,8 +1540,8 @@
     ]
   },
   {
-    "word": "doll",
-    "category": "thing",
+    "answer": "doll",
+    "title": "thing",
     "clues": [
       "toy",
       "child",
@@ -1551,8 +1551,8 @@
     ]
   },
   {
-    "word": "puzzle",
-    "category": "thing",
+    "answer": "puzzle",
+    "title": "thing",
     "clues": [
       "pieces",
       "solve",
@@ -1562,8 +1562,8 @@
     ]
   },
   {
-    "word": "chessboard",
-    "category": "thing",
+    "answer": "chessboard",
+    "title": "thing",
     "clues": [
       "game",
       "squares",
@@ -1573,8 +1573,8 @@
     ]
   },
   {
-    "word": "guitar",
-    "category": "thing",
+    "answer": "guitar",
+    "title": "thing",
     "clues": [
       "music",
       "strings",
@@ -1584,8 +1584,8 @@
     ]
   },
   {
-    "word": "piano",
-    "category": "thing",
+    "answer": "piano",
+    "title": "thing",
     "clues": [
       "keys",
       "music",
@@ -1595,8 +1595,8 @@
     ]
   },
   {
-    "word": "drum",
-    "category": "thing",
+    "answer": "drum",
+    "title": "thing",
     "clues": [
       "beat",
       "music",
@@ -1606,8 +1606,8 @@
     ]
   },
   {
-    "word": "violin",
-    "category": "thing",
+    "answer": "violin",
+    "title": "thing",
     "clues": [
       "strings",
       "bow",
@@ -1617,8 +1617,8 @@
     ]
   },
   {
-    "word": "dog",
-    "category": "animal",
+    "answer": "dog",
+    "title": "animal",
     "clues": [
       "pet",
       "bark",
@@ -1628,8 +1628,8 @@
     ]
   },
   {
-    "word": "cat",
-    "category": "animal",
+    "answer": "cat",
+    "title": "animal",
     "clues": [
       "pet",
       "meow",
@@ -1639,8 +1639,8 @@
     ]
   },
   {
-    "word": "cow",
-    "category": "animal",
+    "answer": "cow",
+    "title": "animal",
     "clues": [
       "farm",
       "milk",
@@ -1650,8 +1650,8 @@
     ]
   },
   {
-    "word": "horse",
-    "category": "animal",
+    "answer": "horse",
+    "title": "animal",
     "clues": [
       "ride",
       "mane",
@@ -1661,8 +1661,8 @@
     ]
   },
   {
-    "word": "lion",
-    "category": "animal",
+    "answer": "lion",
+    "title": "animal",
     "clues": [
       "mane",
       "roar",
@@ -1672,8 +1672,8 @@
     ]
   },
   {
-    "word": "tiger",
-    "category": "animal",
+    "answer": "tiger",
+    "title": "animal",
     "clues": [
       "stripes",
       "jungle",
@@ -1683,8 +1683,8 @@
     ]
   },
   {
-    "word": "elephant",
-    "category": "animal",
+    "answer": "elephant",
+    "title": "animal",
     "clues": [
       "trunk",
       "tusks",
@@ -1694,8 +1694,8 @@
     ]
   },
   {
-    "word": "monkey",
-    "category": "animal",
+    "answer": "monkey",
+    "title": "animal",
     "clues": [
       "tree",
       "banana",
@@ -1705,8 +1705,8 @@
     ]
   },
   {
-    "word": "bear",
-    "category": "animal",
+    "answer": "bear",
+    "title": "animal",
     "clues": [
       "fur",
       "forest",
@@ -1716,8 +1716,8 @@
     ]
   },
   {
-    "word": "wolf",
-    "category": "animal",
+    "answer": "wolf",
+    "title": "animal",
     "clues": [
       "pack",
       "howl",
@@ -1727,8 +1727,8 @@
     ]
   },
   {
-    "word": "goat",
-    "category": "animal",
+    "answer": "goat",
+    "title": "animal",
     "clues": [
       "horns",
       "farm",
@@ -1738,8 +1738,8 @@
     ]
   },
   {
-    "word": "sheep",
-    "category": "animal",
+    "answer": "sheep",
+    "title": "animal",
     "clues": [
       "wool",
       "farm",
@@ -1749,8 +1749,8 @@
     ]
   },
   {
-    "word": "deer",
-    "category": "animal",
+    "answer": "deer",
+    "title": "animal",
     "clues": [
       "antlers",
       "forest",
@@ -1760,8 +1760,8 @@
     ]
   },
   {
-    "word": "fox",
-    "category": "animal",
+    "answer": "fox",
+    "title": "animal",
     "clues": [
       "tail",
       "forest",
@@ -1771,8 +1771,8 @@
     ]
   },
   {
-    "word": "rabbit",
-    "category": "animal",
+    "answer": "rabbit",
+    "title": "animal",
     "clues": [
       "ears",
       "hop",
@@ -1782,8 +1782,8 @@
     ]
   },
   {
-    "word": "zebra",
-    "category": "animal",
+    "answer": "zebra",
+    "title": "animal",
     "clues": [
       "stripes",
       "savanna",
@@ -1793,8 +1793,8 @@
     ]
   },
   {
-    "word": "giraffe",
-    "category": "animal",
+    "answer": "giraffe",
+    "title": "animal",
     "clues": [
       "neck",
       "tall",
@@ -1804,8 +1804,8 @@
     ]
   },
   {
-    "word": "kangaroo",
-    "category": "animal",
+    "answer": "kangaroo",
+    "title": "animal",
     "clues": [
       "pouch",
       "jump",
@@ -1815,8 +1815,8 @@
     ]
   },
   {
-    "word": "panda",
-    "category": "animal",
+    "answer": "panda",
+    "title": "animal",
     "clues": [
       "bamboo",
       "bear",
@@ -1826,8 +1826,8 @@
     ]
   },
   {
-    "word": "leopard",
-    "category": "animal",
+    "answer": "leopard",
+    "title": "animal",
     "clues": [
       "spots",
       "predator",
@@ -1837,8 +1837,8 @@
     ]
   },
   {
-    "word": "cheetah",
-    "category": "animal",
+    "answer": "cheetah",
+    "title": "animal",
     "clues": [
       "fast",
       "spots",
@@ -1848,8 +1848,8 @@
     ]
   },
   {
-    "word": "camel",
-    "category": "animal",
+    "answer": "camel",
+    "title": "animal",
     "clues": [
       "desert",
       "hump",
@@ -1859,8 +1859,8 @@
     ]
   },
   {
-    "word": "donkey",
-    "category": "animal",
+    "answer": "donkey",
+    "title": "animal",
     "clues": [
       "farm",
       "bray",
@@ -1870,8 +1870,8 @@
     ]
   },
   {
-    "word": "pig",
-    "category": "animal",
+    "answer": "pig",
+    "title": "animal",
     "clues": [
       "farm",
       "snout",
@@ -1881,8 +1881,8 @@
     ]
   },
   {
-    "word": "chicken",
-    "category": "animal",
+    "answer": "chicken",
+    "title": "animal",
     "clues": [
       "farm",
       "egg",
@@ -1892,8 +1892,8 @@
     ]
   },
   {
-    "word": "duck",
-    "category": "animal",
+    "answer": "duck",
+    "title": "animal",
     "clues": [
       "pond",
       "quack",
@@ -1903,8 +1903,8 @@
     ]
   },
   {
-    "word": "goose",
-    "category": "animal",
+    "answer": "goose",
+    "title": "animal",
     "clues": [
       "pond",
       "honk",
@@ -1914,8 +1914,8 @@
     ]
   },
   {
-    "word": "turkey",
-    "category": "animal",
+    "answer": "turkey",
+    "title": "animal",
     "clues": [
       "feathers",
       "bird",
@@ -1925,8 +1925,8 @@
     ]
   },
   {
-    "word": "owl",
-    "category": "animal",
+    "answer": "owl",
+    "title": "animal",
     "clues": [
       "night",
       "wings",
@@ -1936,8 +1936,8 @@
     ]
   },
   {
-    "word": "eagle",
-    "category": "animal",
+    "answer": "eagle",
+    "title": "animal",
     "clues": [
       "wings",
       "sky",
@@ -1947,8 +1947,8 @@
     ]
   },
   {
-    "word": "parrot",
-    "category": "animal",
+    "answer": "parrot",
+    "title": "animal",
     "clues": [
       "bird",
       "colorful",
@@ -1958,8 +1958,8 @@
     ]
   },
   {
-    "word": "sparrow",
-    "category": "animal",
+    "answer": "sparrow",
+    "title": "animal",
     "clues": [
       "small",
       "bird",
@@ -1969,8 +1969,8 @@
     ]
   },
   {
-    "word": "pigeon",
-    "category": "animal",
+    "answer": "pigeon",
+    "title": "animal",
     "clues": [
       "city",
       "bird",
@@ -1980,8 +1980,8 @@
     ]
   },
   {
-    "word": "peacock",
-    "category": "animal",
+    "answer": "peacock",
+    "title": "animal",
     "clues": [
       "feathers",
       "tail",
@@ -1991,8 +1991,8 @@
     ]
   },
   {
-    "word": "penguin",
-    "category": "animal",
+    "answer": "penguin",
+    "title": "animal",
     "clues": [
       "ice",
       "bird",
@@ -2002,8 +2002,8 @@
     ]
   },
   {
-    "word": "flamingo",
-    "category": "animal",
+    "answer": "flamingo",
+    "title": "animal",
     "clues": [
       "pink",
       "bird",
@@ -2013,8 +2013,8 @@
     ]
   },
   {
-    "word": "shark",
-    "category": "animal",
+    "answer": "shark",
+    "title": "animal",
     "clues": [
       "ocean",
       "fins",
@@ -2024,8 +2024,8 @@
     ]
   },
   {
-    "word": "whale",
-    "category": "animal",
+    "answer": "whale",
+    "title": "animal",
     "clues": [
       "ocean",
       "giant",
@@ -2035,8 +2035,8 @@
     ]
   },
   {
-    "word": "dolphin",
-    "category": "animal",
+    "answer": "dolphin",
+    "title": "animal",
     "clues": [
       "ocean",
       "smart",
@@ -2046,8 +2046,8 @@
     ]
   },
   {
-    "word": "octopus",
-    "category": "animal",
+    "answer": "octopus",
+    "title": "animal",
     "clues": [
       "tentacles",
       "ocean",
@@ -2057,8 +2057,8 @@
     ]
   },
   {
-    "word": "crab",
-    "category": "animal",
+    "answer": "crab",
+    "title": "animal",
     "clues": [
       "claws",
       "beach",
@@ -2068,8 +2068,8 @@
     ]
   },
   {
-    "word": "lobster",
-    "category": "animal",
+    "answer": "lobster",
+    "title": "animal",
     "clues": [
       "claws",
       "ocean",
@@ -2079,8 +2079,8 @@
     ]
   },
   {
-    "word": "seal",
-    "category": "animal",
+    "answer": "seal",
+    "title": "animal",
     "clues": [
       "ocean",
       "flippers",
@@ -2090,8 +2090,8 @@
     ]
   },
   {
-    "word": "turtle",
-    "category": "animal",
+    "answer": "turtle",
+    "title": "animal",
     "clues": [
       "shell",
       "slow",
@@ -2101,8 +2101,8 @@
     ]
   },
   {
-    "word": "snake",
-    "category": "animal",
+    "answer": "snake",
+    "title": "animal",
     "clues": [
       "slither",
       "scales",
@@ -2112,8 +2112,8 @@
     ]
   },
   {
-    "word": "crocodile",
-    "category": "animal",
+    "answer": "crocodile",
+    "title": "animal",
     "clues": [
       "river",
       "scales",
@@ -2123,8 +2123,8 @@
     ]
   },
   {
-    "word": "lizard",
-    "category": "animal",
+    "answer": "lizard",
+    "title": "animal",
     "clues": [
       "scales",
       "tail",
@@ -2134,8 +2134,8 @@
     ]
   },
   {
-    "word": "frog",
-    "category": "animal",
+    "answer": "frog",
+    "title": "animal",
     "clues": [
       "pond",
       "jump",
@@ -2145,8 +2145,8 @@
     ]
   },
   {
-    "word": "toad",
-    "category": "animal",
+    "answer": "toad",
+    "title": "animal",
     "clues": [
       "amphibian",
       "warty",
@@ -2156,8 +2156,8 @@
     ]
   },
   {
-    "word": "butterfly",
-    "category": "animal",
+    "answer": "butterfly",
+    "title": "animal",
     "clues": [
       "wings",
       "colorful",
@@ -2167,8 +2167,8 @@
     ]
   },
   {
-    "word": "bee",
-    "category": "animal",
+    "answer": "bee",
+    "title": "animal",
     "clues": [
       "honey",
       "buzz",
@@ -2178,8 +2178,8 @@
     ]
   },
   {
-    "word": "ant",
-    "category": "animal",
+    "answer": "ant",
+    "title": "animal",
     "clues": [
       "tiny",
       "colony",
@@ -2189,8 +2189,8 @@
     ]
   },
   {
-    "word": "spider",
-    "category": "animal",
+    "answer": "spider",
+    "title": "animal",
     "clues": [
       "web",
       "legs",
@@ -2200,8 +2200,8 @@
     ]
   },
   {
-    "word": "mosquito",
-    "category": "animal",
+    "answer": "mosquito",
+    "title": "animal",
     "clues": [
       "buzz",
       "bite",
@@ -2211,8 +2211,8 @@
     ]
   },
   {
-    "word": "ladybug",
-    "category": "animal",
+    "answer": "ladybug",
+    "title": "animal",
     "clues": [
       "spots",
       "red",
@@ -2222,8 +2222,8 @@
     ]
   },
   {
-    "word": "firefly",
-    "category": "animal",
+    "answer": "firefly",
+    "title": "animal",
     "clues": [
       "glow",
       "night",
@@ -2233,8 +2233,8 @@
     ]
   },
   {
-    "word": "batanimal",
-    "category": "animal",
+    "answer": "batanimal",
+    "title": "animal",
     "clues": [
       "wings",
       "night",
@@ -2244,8 +2244,8 @@
     ]
   },
   {
-    "word": "hedgehog",
-    "category": "animal",
+    "answer": "hedgehog",
+    "title": "animal",
     "clues": [
       "spines",
       "small",
@@ -2255,8 +2255,8 @@
     ]
   },
   {
-    "word": "squirrel",
-    "category": "animal",
+    "answer": "squirrel",
+    "title": "animal",
     "clues": [
       "tree",
       "nuts",
@@ -2266,8 +2266,8 @@
     ]
   },
   {
-    "word": "hamster",
-    "category": "animal",
+    "answer": "hamster",
+    "title": "animal",
     "clues": [
       "pet",
       "wheel",
@@ -2277,8 +2277,8 @@
     ]
   },
   {
-    "word": "guineapig",
-    "category": "animal",
+    "answer": "guineapig",
+    "title": "animal",
     "clues": [
       "pet",
       "small",
@@ -2288,8 +2288,8 @@
     ]
   },
   {
-    "word": "otter",
-    "category": "animal",
+    "answer": "otter",
+    "title": "animal",
     "clues": [
       "river",
       "playful",
@@ -2299,8 +2299,8 @@
     ]
   },
   {
-    "word": "beaver",
-    "category": "animal",
+    "answer": "beaver",
+    "title": "animal",
     "clues": [
       "dam",
       "river",
@@ -2310,8 +2310,8 @@
     ]
   },
   {
-    "word": "moose",
-    "category": "animal",
+    "answer": "moose",
+    "title": "animal",
     "clues": [
       "antlers",
       "forest",
@@ -2321,8 +2321,8 @@
     ]
   },
   {
-    "word": "buffalo",
-    "category": "animal",
+    "answer": "buffalo",
+    "title": "animal",
     "clues": [
       "herd",
       "horns",
@@ -2332,8 +2332,8 @@
     ]
   },
   {
-    "word": "rhino",
-    "category": "animal",
+    "answer": "rhino",
+    "title": "animal",
     "clues": [
       "horn",
       "thickskin",
@@ -2343,8 +2343,8 @@
     ]
   },
   {
-    "word": "hippo",
-    "category": "animal",
+    "answer": "hippo",
+    "title": "animal",
     "clues": [
       "river",
       "huge",
@@ -2354,8 +2354,8 @@
     ]
   },
   {
-    "word": "koala",
-    "category": "animal",
+    "answer": "koala",
+    "title": "animal",
     "clues": [
       "tree",
       "australia",
@@ -2365,8 +2365,8 @@
     ]
   },
   {
-    "word": "sloth",
-    "category": "animal",
+    "answer": "sloth",
+    "title": "animal",
     "clues": [
       "slow",
       "tree",
@@ -2376,8 +2376,8 @@
     ]
   },
   {
-    "word": "gorilla",
-    "category": "animal",
+    "answer": "gorilla",
+    "title": "animal",
     "clues": [
       "primate",
       "jungle",
@@ -2387,8 +2387,8 @@
     ]
   },
   {
-    "word": "chimpanzee",
-    "category": "animal",
+    "answer": "chimpanzee",
+    "title": "animal",
     "clues": [
       "primate",
       "smart",
@@ -2398,8 +2398,8 @@
     ]
   },
   {
-    "word": "polarbear",
-    "category": "animal",
+    "answer": "polarbear",
+    "title": "animal",
     "clues": [
       "ice",
       "arctic",
@@ -2409,8 +2409,8 @@
     ]
   },
   {
-    "word": "reindeer",
-    "category": "animal",
+    "answer": "reindeer",
+    "title": "animal",
     "clues": [
       "antlers",
       "snow",
@@ -2420,8 +2420,8 @@
     ]
   },
   {
-    "word": "yak",
-    "category": "animal",
+    "answer": "yak",
+    "title": "animal",
     "clues": [
       "mountain",
       "fur",
@@ -2431,8 +2431,8 @@
     ]
   },
   {
-    "word": "alpaca",
-    "category": "animal",
+    "answer": "alpaca",
+    "title": "animal",
     "clues": [
       "wool",
       "andes",
@@ -2442,8 +2442,8 @@
     ]
   },
   {
-    "word": "llama",
-    "category": "animal",
+    "answer": "llama",
+    "title": "animal",
     "clues": [
       "andes",
       "wool",
@@ -2453,8 +2453,8 @@
     ]
   },
   {
-    "word": "jellyfish",
-    "category": "animal",
+    "answer": "jellyfish",
+    "title": "animal",
     "clues": [
       "ocean",
       "tentacles",
@@ -2464,8 +2464,8 @@
     ]
   },
   {
-    "word": "starfish",
-    "category": "animal",
+    "answer": "starfish",
+    "title": "animal",
     "clues": [
       "ocean",
       "arms",
@@ -2475,8 +2475,8 @@
     ]
   },
   {
-    "word": "seahorse",
-    "category": "animal",
+    "answer": "seahorse",
+    "title": "animal",
     "clues": [
       "ocean",
       "tiny",
@@ -2486,8 +2486,8 @@
     ]
   },
   {
-    "word": "goldfish",
-    "category": "animal",
+    "answer": "goldfish",
+    "title": "animal",
     "clues": [
       "bowl",
       "pet",
@@ -2497,8 +2497,8 @@
     ]
   },
   {
-    "word": "salmon",
-    "category": "animal",
+    "answer": "salmon",
+    "title": "animal",
     "clues": [
       "river",
       "fish",
@@ -2508,8 +2508,8 @@
     ]
   },
   {
-    "word": "trout",
-    "category": "animal",
+    "answer": "trout",
+    "title": "animal",
     "clues": [
       "river",
       "fish",
@@ -2519,8 +2519,8 @@
     ]
   },
   {
-    "word": "swan",
-    "category": "animal",
+    "answer": "swan",
+    "title": "animal",
     "clues": [
       "lake",
       "bird",
@@ -2530,8 +2530,8 @@
     ]
   },
   {
-    "word": "crow",
-    "category": "animal",
+    "answer": "crow",
+    "title": "animal",
     "clues": [
       "black",
       "bird",
@@ -2541,8 +2541,8 @@
     ]
   },
   {
-    "word": "raven",
-    "category": "animal",
+    "answer": "raven",
+    "title": "animal",
     "clues": [
       "black",
       "bird",
@@ -2552,8 +2552,8 @@
     ]
   },
   {
-    "word": "woodpecker",
-    "category": "animal",
+    "answer": "woodpecker",
+    "title": "animal",
     "clues": [
       "tree",
       "bird",
@@ -2563,8 +2563,8 @@
     ]
   },
   {
-    "word": "falcon",
-    "category": "animal",
+    "answer": "falcon",
+    "title": "animal",
     "clues": [
       "bird",
       "fast",
@@ -2574,8 +2574,8 @@
     ]
   },
   {
-    "word": "pelican",
-    "category": "animal",
+    "answer": "pelican",
+    "title": "animal",
     "clues": [
       "bird",
       "beak",
@@ -2585,8 +2585,8 @@
     ]
   },
   {
-    "word": "heron",
-    "category": "animal",
+    "answer": "heron",
+    "title": "animal",
     "clues": [
       "bird",
       "wetland",
@@ -2596,8 +2596,8 @@
     ]
   },
   {
-    "word": "meerkat",
-    "category": "animal",
+    "answer": "meerkat",
+    "title": "animal",
     "clues": [
       "desert",
       "small",
@@ -2607,8 +2607,8 @@
     ]
   },
   {
-    "word": "porcupine",
-    "category": "animal",
+    "answer": "porcupine",
+    "title": "animal",
     "clues": [
       "quills",
       "spines",
@@ -2618,8 +2618,8 @@
     ]
   },
   {
-    "word": "armadillo",
-    "category": "animal",
+    "answer": "armadillo",
+    "title": "animal",
     "clues": [
       "shell",
       "armor",
@@ -2629,8 +2629,8 @@
     ]
   },
   {
-    "word": "lemur",
-    "category": "animal",
+    "answer": "lemur",
+    "title": "animal",
     "clues": [
       "tail",
       "madagascar",
@@ -2640,8 +2640,8 @@
     ]
   },
   {
-    "word": "hyena",
-    "category": "animal",
+    "answer": "hyena",
+    "title": "animal",
     "clues": [
       "savanna",
       "laugh",
@@ -2651,8 +2651,8 @@
     ]
   },
   {
-    "word": "jackal",
-    "category": "animal",
+    "answer": "jackal",
+    "title": "animal",
     "clues": [
       "desert",
       "canine",
@@ -2662,8 +2662,8 @@
     ]
   },
   {
-    "word": "panther",
-    "category": "animal",
+    "answer": "panther",
+    "title": "animal",
     "clues": [
       "feline",
       "black",
@@ -2673,8 +2673,8 @@
     ]
   },
   {
-    "word": "lynx",
-    "category": "animal",
+    "answer": "lynx",
+    "title": "animal",
     "clues": [
       "feline",
       "tuftedears",
@@ -2684,8 +2684,8 @@
     ]
   },
   {
-    "word": "badger",
-    "category": "animal",
+    "answer": "badger",
+    "title": "animal",
     "clues": [
       "burrow",
       "forest",
@@ -2695,8 +2695,8 @@
     ]
   },
   {
-    "word": "mole",
-    "category": "animal",
+    "answer": "mole",
+    "title": "animal",
     "clues": [
       "underground",
       "dig",
@@ -2706,8 +2706,8 @@
     ]
   },
   {
-    "word": "worm",
-    "category": "animal",
+    "answer": "worm",
+    "title": "animal",
     "clues": [
       "soil",
       "tiny",
@@ -2717,8 +2717,8 @@
     ]
   },
   {
-    "word": "snail",
-    "category": "animal",
+    "answer": "snail",
+    "title": "animal",
     "clues": [
       "shell",
       "slow",
@@ -2728,8 +2728,8 @@
     ]
   },
   {
-    "word": "slug",
-    "category": "animal",
+    "answer": "slug",
+    "title": "animal",
     "clues": [
       "slow",
       "garden",
@@ -2739,8 +2739,8 @@
     ]
   },
   {
-    "word": "rooster",
-    "category": "animal",
+    "answer": "rooster",
+    "title": "animal",
     "clues": [
       "farm",
       "crow",
@@ -2750,8 +2750,8 @@
     ]
   },
   {
-    "word": "canary",
-    "category": "animal",
+    "answer": "canary",
+    "title": "animal",
     "clues": [
       "yellow",
       "bird",
@@ -2761,8 +2761,8 @@
     ]
   },
   {
-    "word": "finch",
-    "category": "animal",
+    "answer": "finch",
+    "title": "animal",
     "clues": [
       "small",
       "bird",
@@ -2772,8 +2772,8 @@
     ]
   },
   {
-    "word": "gecko",
-    "category": "animal",
+    "answer": "gecko",
+    "title": "animal",
     "clues": [
       "lizard",
       "wall",
@@ -2783,8 +2783,8 @@
     ]
   },
   {
-    "word": "iguana",
-    "category": "animal",
+    "answer": "iguana",
+    "title": "animal",
     "clues": [
       "lizard",
       "green",
@@ -2794,8 +2794,8 @@
     ]
   },
   {
-    "word": "vulture",
-    "category": "animal",
+    "answer": "vulture",
+    "title": "animal",
     "clues": [
       "bird",
       "scavenge",
@@ -2805,8 +2805,8 @@
     ]
   },
   {
-    "word": "orca",
-    "category": "animal",
+    "answer": "orca",
+    "title": "animal",
     "clues": [
       "ocean",
       "blackwhite",
@@ -2816,8 +2816,8 @@
     ]
   },
   {
-    "word": "house",
-    "category": "place",
+    "answer": "house",
+    "title": "place",
     "clues": [
       "home",
       "rooms",
@@ -2827,8 +2827,8 @@
     ]
   },
   {
-    "word": "apartment",
-    "category": "place",
+    "answer": "apartment",
+    "title": "place",
     "clues": [
       "building",
       "rent",
@@ -2838,8 +2838,8 @@
     ]
   },
   {
-    "word": "school",
-    "category": "place",
+    "answer": "school",
+    "title": "place",
     "clues": [
       "students",
       "teacher",
@@ -2849,8 +2849,8 @@
     ]
   },
   {
-    "word": "college",
-    "category": "place",
+    "answer": "college",
+    "title": "place",
     "clues": [
       "campus",
       "study",
@@ -2860,8 +2860,8 @@
     ]
   },
   {
-    "word": "university",
-    "category": "place",
+    "answer": "university",
+    "title": "place",
     "clues": [
       "campus",
       "research",
@@ -2871,8 +2871,8 @@
     ]
   },
   {
-    "word": "hospital",
-    "category": "place",
+    "answer": "hospital",
+    "title": "place",
     "clues": [
       "doctor",
       "nurse",
@@ -2882,8 +2882,8 @@
     ]
   },
   {
-    "word": "clinic",
-    "category": "place",
+    "answer": "clinic",
+    "title": "place",
     "clues": [
       "doctor",
       "patient",
@@ -2893,8 +2893,8 @@
     ]
   },
   {
-    "word": "pharmacy",
-    "category": "place",
+    "answer": "pharmacy",
+    "title": "place",
     "clues": [
       "medicine",
       "prescription",
@@ -2904,8 +2904,8 @@
     ]
   },
   {
-    "word": "library",
-    "category": "place",
+    "answer": "library",
+    "title": "place",
     "clues": [
       "books",
       "read",
@@ -2915,8 +2915,8 @@
     ]
   },
   {
-    "word": "museum",
-    "category": "place",
+    "answer": "museum",
+    "title": "place",
     "clues": [
       "history",
       "art",
@@ -2926,8 +2926,8 @@
     ]
   },
   {
-    "word": "theater",
-    "category": "place",
+    "answer": "theater",
+    "title": "place",
     "clues": [
       "movie",
       "screen",
@@ -2937,8 +2937,8 @@
     ]
   },
   {
-    "word": "cinema",
-    "category": "place",
+    "answer": "cinema",
+    "title": "place",
     "clues": [
       "movie",
       "screen",
@@ -2948,8 +2948,8 @@
     ]
   },
   {
-    "word": "stadium",
-    "category": "place",
+    "answer": "stadium",
+    "title": "place",
     "clues": [
       "sports",
       "crowd",
@@ -2959,8 +2959,8 @@
     ]
   },
   {
-    "word": "park",
-    "category": "place",
+    "answer": "park",
+    "title": "place",
     "clues": [
       "trees",
       "playground",
@@ -2970,8 +2970,8 @@
     ]
   },
   {
-    "word": "playground",
-    "category": "place",
+    "answer": "playground",
+    "title": "place",
     "clues": [
       "slide",
       "swing",
@@ -2981,8 +2981,8 @@
     ]
   },
   {
-    "word": "zoo",
-    "category": "place",
+    "answer": "zoo",
+    "title": "place",
     "clues": [
       "animals",
       "cages",
@@ -2992,8 +2992,8 @@
     ]
   },
   {
-    "word": "farm",
-    "category": "place",
+    "answer": "farm",
+    "title": "place",
     "clues": [
       "barn",
       "tractor",
@@ -3003,8 +3003,8 @@
     ]
   },
   {
-    "word": "factory",
-    "category": "place",
+    "answer": "factory",
+    "title": "place",
     "clues": [
       "machines",
       "production",
@@ -3014,8 +3014,8 @@
     ]
   },
   {
-    "word": "office",
-    "category": "place",
+    "answer": "office",
+    "title": "place",
     "clues": [
       "work",
       "desk",
@@ -3025,8 +3025,8 @@
     ]
   },
   {
-    "word": "bank",
-    "category": "place",
+    "answer": "bank",
+    "title": "place",
     "clues": [
       "money",
       "account",
@@ -3036,8 +3036,8 @@
     ]
   },
   {
-    "word": "restaurant",
-    "category": "place",
+    "answer": "restaurant",
+    "title": "place",
     "clues": [
       "food",
       "menu",
@@ -3047,8 +3047,8 @@
     ]
   },
   {
-    "word": "cafe",
-    "category": "place",
+    "answer": "cafe",
+    "title": "place",
     "clues": [
       "coffee",
       "pastry",
@@ -3058,8 +3058,8 @@
     ]
   },
   {
-    "word": "bakery",
-    "category": "place",
+    "answer": "bakery",
+    "title": "place",
     "clues": [
       "bread",
       "cake",
@@ -3069,8 +3069,8 @@
     ]
   },
   {
-    "word": "market",
-    "category": "place",
+    "answer": "market",
+    "title": "place",
     "clues": [
       "vendors",
       "buy",
@@ -3080,8 +3080,8 @@
     ]
   },
   {
-    "word": "store",
-    "category": "place",
+    "answer": "store",
+    "title": "place",
     "clues": [
       "shop",
       "buy",
@@ -3091,8 +3091,8 @@
     ]
   },
   {
-    "word": "mall",
-    "category": "place",
+    "answer": "mall",
+    "title": "place",
     "clues": [
       "shopping",
       "stores",
@@ -3102,8 +3102,8 @@
     ]
   },
   {
-    "word": "hotel",
-    "category": "place",
+    "answer": "hotel",
+    "title": "place",
     "clues": [
       "travel",
       "room",
@@ -3113,8 +3113,8 @@
     ]
   },
   {
-    "word": "motel",
-    "category": "place",
+    "answer": "motel",
+    "title": "place",
     "clues": [
       "roadside",
       "room",
@@ -3124,8 +3124,8 @@
     ]
   },
   {
-    "word": "airport",
-    "category": "place",
+    "answer": "airport",
+    "title": "place",
     "clues": [
       "flight",
       "terminal",
@@ -3135,8 +3135,8 @@
     ]
   },
   {
-    "word": "station",
-    "category": "place",
+    "answer": "station",
+    "title": "place",
     "clues": [
       "train",
       "platform",
@@ -3146,8 +3146,8 @@
     ]
   },
   {
-    "word": "busstop",
-    "category": "place",
+    "answer": "busstop",
+    "title": "place",
     "clues": [
       "route",
       "wait",
@@ -3157,8 +3157,8 @@
     ]
   },
   {
-    "word": "harbor",
-    "category": "place",
+    "answer": "harbor",
+    "title": "place",
     "clues": [
       "ships",
       "water",
@@ -3168,8 +3168,8 @@
     ]
   },
   {
-    "word": "port",
-    "category": "place",
+    "answer": "port",
+    "title": "place",
     "clues": [
       "cargo",
       "ships",
@@ -3179,8 +3179,8 @@
     ]
   },
   {
-    "word": "bridge",
-    "category": "place",
+    "answer": "bridge",
+    "title": "place",
     "clues": [
       "river",
       "cross",
@@ -3190,8 +3190,8 @@
     ]
   },
   {
-    "word": "tunnel",
-    "category": "place",
+    "answer": "tunnel",
+    "title": "place",
     "clues": [
       "underground",
       "road",
@@ -3201,8 +3201,8 @@
     ]
   },
   {
-    "word": "road",
-    "category": "place",
+    "answer": "road",
+    "title": "place",
     "clues": [
       "cars",
       "travel",
@@ -3212,8 +3212,8 @@
     ]
   },
   {
-    "word": "street",
-    "category": "place",
+    "answer": "street",
+    "title": "place",
     "clues": [
       "city",
       "road",
@@ -3223,8 +3223,8 @@
     ]
   },
   {
-    "word": "highway",
-    "category": "place",
+    "answer": "highway",
+    "title": "place",
     "clues": [
       "cars",
       "fast",
@@ -3234,8 +3234,8 @@
     ]
   },
   {
-    "word": "sidewalk",
-    "category": "place",
+    "answer": "sidewalk",
+    "title": "place",
     "clues": [
       "walk",
       "street",
@@ -3245,8 +3245,8 @@
     ]
   },
   {
-    "word": "parkinglot",
-    "category": "place",
+    "answer": "parkinglot",
+    "title": "place",
     "clues": [
       "cars",
       "spaces",
@@ -3256,8 +3256,8 @@
     ]
   },
   {
-    "word": "gasstation",
-    "category": "place",
+    "answer": "gasstation",
+    "title": "place",
     "clues": [
       "fuel",
       "car",
@@ -3267,8 +3267,8 @@
     ]
   },
   {
-    "word": "garage",
-    "category": "place",
+    "answer": "garage",
+    "title": "place",
     "clues": [
       "car",
       "tools",
@@ -3278,8 +3278,8 @@
     ]
   },
   {
-    "word": "warehouse",
-    "category": "place",
+    "answer": "warehouse",
+    "title": "place",
     "clues": [
       "storage",
       "boxes",
@@ -3289,8 +3289,8 @@
     ]
   },
   {
-    "word": "barn",
-    "category": "place",
+    "answer": "barn",
+    "title": "place",
     "clues": [
       "farm",
       "hay",
@@ -3300,8 +3300,8 @@
     ]
   },
   {
-    "word": "church",
-    "category": "place",
+    "answer": "church",
+    "title": "place",
     "clues": [
       "prayer",
       "bells",
@@ -3311,8 +3311,8 @@
     ]
   },
   {
-    "word": "temple",
-    "category": "place",
+    "answer": "temple",
+    "title": "place",
     "clues": [
       "prayer",
       "worship",
@@ -3322,8 +3322,8 @@
     ]
   },
   {
-    "word": "mosque",
-    "category": "place",
+    "answer": "mosque",
+    "title": "place",
     "clues": [
       "prayer",
       "worship",
@@ -3333,8 +3333,8 @@
     ]
   },
   {
-    "word": "synagogue",
-    "category": "place",
+    "answer": "synagogue",
+    "title": "place",
     "clues": [
       "prayer",
       "worship",
@@ -3344,8 +3344,8 @@
     ]
   },
   {
-    "word": "castle",
-    "category": "place",
+    "answer": "castle",
+    "title": "place",
     "clues": [
       "stone",
       "king",
@@ -3355,8 +3355,8 @@
     ]
   },
   {
-    "word": "palace",
-    "category": "place",
+    "answer": "palace",
+    "title": "place",
     "clues": [
       "royal",
       "king",
@@ -3366,8 +3366,8 @@
     ]
   },
   {
-    "word": "fort",
-    "category": "place",
+    "answer": "fort",
+    "title": "place",
     "clues": [
       "walls",
       "soldiers",
@@ -3377,8 +3377,8 @@
     ]
   },
   {
-    "word": "tower",
-    "category": "place",
+    "answer": "tower",
+    "title": "place",
     "clues": [
       "tall",
       "view",
@@ -3388,8 +3388,8 @@
     ]
   },
   {
-    "word": "skyscraper",
-    "category": "place",
+    "answer": "skyscraper",
+    "title": "place",
     "clues": [
       "tall",
       "glass",
@@ -3399,8 +3399,8 @@
     ]
   },
   {
-    "word": "village",
-    "category": "place",
+    "answer": "village",
+    "title": "place",
     "clues": [
       "small",
       "rural",
@@ -3410,8 +3410,8 @@
     ]
   },
   {
-    "word": "town",
-    "category": "place",
+    "answer": "town",
+    "title": "place",
     "clues": [
       "small",
       "streets",
@@ -3421,8 +3421,8 @@
     ]
   },
   {
-    "word": "city",
-    "category": "place",
+    "answer": "city",
+    "title": "place",
     "clues": [
       "buildings",
       "traffic",
@@ -3432,8 +3432,8 @@
     ]
   },
   {
-    "word": "country",
-    "category": "place",
+    "answer": "country",
+    "title": "place",
     "clues": [
       "nation",
       "border",
@@ -3443,8 +3443,8 @@
     ]
   },
   {
-    "word": "capital",
-    "category": "place",
+    "answer": "capital",
+    "title": "place",
     "clues": [
       "government",
       "city",
@@ -3454,8 +3454,8 @@
     ]
   },
   {
-    "word": "downtown",
-    "category": "place",
+    "answer": "downtown",
+    "title": "place",
     "clues": [
       "city",
       "busy",
@@ -3465,8 +3465,8 @@
     ]
   },
   {
-    "word": "suburb",
-    "category": "place",
+    "answer": "suburb",
+    "title": "place",
     "clues": [
       "homes",
       "city",
@@ -3476,8 +3476,8 @@
     ]
   },
   {
-    "word": "neighborhood",
-    "category": "place",
+    "answer": "neighborhood",
+    "title": "place",
     "clues": [
       "homes",
       "local",
@@ -3487,8 +3487,8 @@
     ]
   },
   {
-    "word": "forest",
-    "category": "place",
+    "answer": "forest",
+    "title": "place",
     "clues": [
       "trees",
       "wild",
@@ -3498,8 +3498,8 @@
     ]
   },
   {
-    "word": "jungle",
-    "category": "place",
+    "answer": "jungle",
+    "title": "place",
     "clues": [
       "dense",
       "trees",
@@ -3509,8 +3509,8 @@
     ]
   },
   {
-    "word": "desert",
-    "category": "place",
+    "answer": "desert",
+    "title": "place",
     "clues": [
       "sand",
       "dry",
@@ -3520,8 +3520,8 @@
     ]
   },
   {
-    "word": "beach",
-    "category": "place",
+    "answer": "beach",
+    "title": "place",
     "clues": [
       "sand",
       "waves",
@@ -3531,8 +3531,8 @@
     ]
   },
   {
-    "word": "coast",
-    "category": "place",
+    "answer": "coast",
+    "title": "place",
     "clues": [
       "sea",
       "shore",
@@ -3542,8 +3542,8 @@
     ]
   },
   {
-    "word": "island",
-    "category": "place",
+    "answer": "island",
+    "title": "place",
     "clues": [
       "water",
       "shore",
@@ -3553,8 +3553,8 @@
     ]
   },
   {
-    "word": "mountain",
-    "category": "place",
+    "answer": "mountain",
+    "title": "place",
     "clues": [
       "peak",
       "snow",
@@ -3564,8 +3564,8 @@
     ]
   },
   {
-    "word": "hill",
-    "category": "place",
+    "answer": "hill",
+    "title": "place",
     "clues": [
       "slope",
       "grass",
@@ -3575,8 +3575,8 @@
     ]
   },
   {
-    "word": "valley",
-    "category": "place",
+    "answer": "valley",
+    "title": "place",
     "clues": [
       "between",
       "mountains",
@@ -3586,8 +3586,8 @@
     ]
   },
   {
-    "word": "canyon",
-    "category": "place",
+    "answer": "canyon",
+    "title": "place",
     "clues": [
       "rock",
       "deep",
@@ -3597,8 +3597,8 @@
     ]
   },
   {
-    "word": "cliff",
-    "category": "place",
+    "answer": "cliff",
+    "title": "place",
     "clues": [
       "edge",
       "rock",
@@ -3608,8 +3608,8 @@
     ]
   },
   {
-    "word": "cave",
-    "category": "place",
+    "answer": "cave",
+    "title": "place",
     "clues": [
       "dark",
       "rock",
@@ -3619,8 +3619,8 @@
     ]
   },
   {
-    "word": "river",
-    "category": "place",
+    "answer": "river",
+    "title": "place",
     "clues": [
       "water",
       "flow",
@@ -3630,8 +3630,8 @@
     ]
   },
   {
-    "word": "lake",
-    "category": "place",
+    "answer": "lake",
+    "title": "place",
     "clues": [
       "water",
       "shore",
@@ -3641,8 +3641,8 @@
     ]
   },
   {
-    "word": "pond",
-    "category": "place",
+    "answer": "pond",
+    "title": "place",
     "clues": [
       "water",
       "small",
@@ -3652,8 +3652,8 @@
     ]
   },
   {
-    "word": "waterfall",
-    "category": "place",
+    "answer": "waterfall",
+    "title": "place",
     "clues": [
       "water",
       "cliff",
@@ -3663,8 +3663,8 @@
     ]
   },
   {
-    "word": "stream",
-    "category": "place",
+    "answer": "stream",
+    "title": "place",
     "clues": [
       "water",
       "small",
@@ -3674,8 +3674,8 @@
     ]
   },
   {
-    "word": "ocean",
-    "category": "place",
+    "answer": "ocean",
+    "title": "place",
     "clues": [
       "waves",
       "salt",
@@ -3685,8 +3685,8 @@
     ]
   },
   {
-    "word": "sea",
-    "category": "place",
+    "answer": "sea",
+    "title": "place",
     "clues": [
       "salt",
       "waves",
@@ -3696,8 +3696,8 @@
     ]
   },
   {
-    "word": "bay",
-    "category": "place",
+    "answer": "bay",
+    "title": "place",
     "clues": [
       "water",
       "coast",
@@ -3707,8 +3707,8 @@
     ]
   },
   {
-    "word": "lagoon",
-    "category": "place",
+    "answer": "lagoon",
+    "title": "place",
     "clues": [
       "water",
       "coast",
@@ -3718,8 +3718,8 @@
     ]
   },
   {
-    "word": "reef",
-    "category": "place",
+    "answer": "reef",
+    "title": "place",
     "clues": [
       "coral",
       "ocean",
@@ -3729,8 +3729,8 @@
     ]
   },
   {
-    "word": "glacier",
-    "category": "place",
+    "answer": "glacier",
+    "title": "place",
     "clues": [
       "ice",
       "mountain",
@@ -3740,8 +3740,8 @@
     ]
   },
   {
-    "word": "volcano",
-    "category": "place",
+    "answer": "volcano",
+    "title": "place",
     "clues": [
       "lava",
       "mountain",
@@ -3751,8 +3751,8 @@
     ]
   },
   {
-    "word": "meadow",
-    "category": "place",
+    "answer": "meadow",
+    "title": "place",
     "clues": [
       "grass",
       "flowers",
@@ -3762,8 +3762,8 @@
     ]
   },
   {
-    "word": "field",
-    "category": "place",
+    "answer": "field",
+    "title": "place",
     "clues": [
       "grass",
       "farm",
@@ -3773,8 +3773,8 @@
     ]
   },
   {
-    "word": "garden",
-    "category": "place",
+    "answer": "garden",
+    "title": "place",
     "clues": [
       "flowers",
       "plants",
@@ -3784,8 +3784,8 @@
     ]
   },
   {
-    "word": "orchard",
-    "category": "place",
+    "answer": "orchard",
+    "title": "place",
     "clues": [
       "trees",
       "fruit",
@@ -3795,8 +3795,8 @@
     ]
   },
   {
-    "word": "vineyard",
-    "category": "place",
+    "answer": "vineyard",
+    "title": "place",
     "clues": [
       "grapes",
       "rows",
@@ -3806,8 +3806,8 @@
     ]
   },
   {
-    "word": "campground",
-    "category": "place",
+    "answer": "campground",
+    "title": "place",
     "clues": [
       "tent",
       "forest",
@@ -3817,8 +3817,8 @@
     ]
   },
   {
-    "word": "campsite",
-    "category": "place",
+    "answer": "campsite",
+    "title": "place",
     "clues": [
       "tent",
       "fire",
@@ -3828,8 +3828,8 @@
     ]
   },
   {
-    "word": "trail",
-    "category": "place",
+    "answer": "trail",
+    "title": "place",
     "clues": [
       "walk",
       "forest",
@@ -3839,8 +3839,8 @@
     ]
   },
   {
-    "word": "path",
-    "category": "place",
+    "answer": "path",
+    "title": "place",
     "clues": [
       "walk",
       "trail",
@@ -3850,8 +3850,8 @@
     ]
   },
   {
-    "word": "gardenpath",
-    "category": "place",
+    "answer": "gardenpath",
+    "title": "place",
     "clues": [
       "walk",
       "stones",
@@ -3861,8 +3861,8 @@
     ]
   },
   {
-    "word": "courtyard",
-    "category": "place",
+    "answer": "courtyard",
+    "title": "place",
     "clues": [
       "building",
       "open",
@@ -3872,8 +3872,8 @@
     ]
   },
   {
-    "word": "playfield",
-    "category": "place",
+    "answer": "playfield",
+    "title": "place",
     "clues": [
       "sports",
       "grass",
@@ -3883,8 +3883,8 @@
     ]
   },
   {
-    "word": "gym",
-    "category": "place",
+    "answer": "gym",
+    "title": "place",
     "clues": [
       "exercise",
       "weights",
@@ -3894,8 +3894,8 @@
     ]
   },
   {
-    "word": "swimmingpool",
-    "category": "place",
+    "answer": "swimmingpool",
+    "title": "place",
     "clues": [
       "water",
       "swim",
@@ -3905,8 +3905,8 @@
     ]
   },
   {
-    "word": "arena",
-    "category": "place",
+    "answer": "arena",
+    "title": "place",
     "clues": [
       "event",
       "crowd",
@@ -3916,8 +3916,8 @@
     ]
   },
   {
-    "word": "court",
-    "category": "place",
+    "answer": "court",
+    "title": "place",
     "clues": [
       "tennis",
       "basketball",
@@ -3927,8 +3927,8 @@
     ]
   },
   {
-    "word": "kitchen",
-    "category": "place",
+    "answer": "kitchen",
+    "title": "place",
     "clues": [
       "cook",
       "food",
@@ -3938,8 +3938,8 @@
     ]
   },
   {
-    "word": "bedroom",
-    "category": "place",
+    "answer": "bedroom",
+    "title": "place",
     "clues": [
       "sleep",
       "bed",
@@ -3949,8 +3949,8 @@
     ]
   },
   {
-    "word": "bathroom",
-    "category": "place",
+    "answer": "bathroom",
+    "title": "place",
     "clues": [
       "sink",
       "shower",
@@ -3960,8 +3960,8 @@
     ]
   },
   {
-    "word": "livingroom",
-    "category": "place",
+    "answer": "livingroom",
+    "title": "place",
     "clues": [
       "sofa",
       "television",
@@ -3971,8 +3971,8 @@
     ]
   },
   {
-    "word": "balcony",
-    "category": "place",
+    "answer": "balcony",
+    "title": "place",
     "clues": [
       "apartment",
       "outside",
@@ -3982,8 +3982,8 @@
     ]
   },
   {
-    "word": "basement",
-    "category": "place",
+    "answer": "basement",
+    "title": "place",
     "clues": [
       "house",
       "below",
@@ -3993,8 +3993,8 @@
     ]
   },
   {
-    "word": "attic",
-    "category": "place",
+    "answer": "attic",
+    "title": "place",
     "clues": [
       "roof",
       "storage",
@@ -4004,8 +4004,8 @@
     ]
   },
   {
-    "word": "classroom",
-    "category": "place",
+    "answer": "classroom",
+    "title": "place",
     "clues": [
       "students",
       "teacher",
@@ -4015,8 +4015,8 @@
     ]
   },
   {
-    "word": "laboratory",
-    "category": "place",
+    "answer": "laboratory",
+    "title": "place",
     "clues": [
       "science",
       "experiment",
@@ -4026,8 +4026,8 @@
     ]
   },
   {
-    "word": "workshop",
-    "category": "place",
+    "answer": "workshop",
+    "title": "place",
     "clues": [
       "tools",
       "repair",
@@ -4037,8 +4037,8 @@
     ]
   },
   {
-    "word": "studio",
-    "category": "place",
+    "answer": "studio",
+    "title": "place",
     "clues": [
       "art",
       "music",
@@ -4048,8 +4048,8 @@
     ]
   },
   {
-    "word": "salon",
-    "category": "place",
+    "answer": "salon",
+    "title": "place",
     "clues": [
       "hair",
       "beauty",
@@ -4059,8 +4059,8 @@
     ]
   },
   {
-    "word": "barbershop",
-    "category": "place",
+    "answer": "barbershop",
+    "title": "place",
     "clues": [
       "haircut",
       "razor",
@@ -4070,8 +4070,8 @@
     ]
   },
   {
-    "word": "bar",
-    "category": "place",
+    "answer": "bar",
+    "title": "place",
     "clues": [
       "drinks",
       "counter",
@@ -4081,8 +4081,8 @@
     ]
   },
   {
-    "word": "lounge",
-    "category": "place",
+    "answer": "lounge",
+    "title": "place",
     "clues": [
       "chairs",
       "relax",
@@ -4092,8 +4092,8 @@
     ]
   },
   {
-    "word": "resort",
-    "category": "place",
+    "answer": "resort",
+    "title": "place",
     "clues": [
       "vacation",
       "pool",
@@ -4103,8 +4103,8 @@
     ]
   },
   {
-    "word": "spa",
-    "category": "place",
+    "answer": "spa",
+    "title": "place",
     "clues": [
       "relax",
       "massage",
@@ -4114,8 +4114,8 @@
     ]
   },
   {
-    "word": "embassy",
-    "category": "place",
+    "answer": "embassy",
+    "title": "place",
     "clues": [
       "country",
       "diplomat",
@@ -4125,8 +4125,8 @@
     ]
   },
   {
-    "word": "courthouse",
-    "category": "place",
+    "answer": "courthouse",
+    "title": "place",
     "clues": [
       "judge",
       "law",
@@ -4136,8 +4136,8 @@
     ]
   },
   {
-    "word": "prison",
-    "category": "place",
+    "answer": "prison",
+    "title": "place",
     "clues": [
       "cells",
       "guards",
@@ -4147,8 +4147,8 @@
     ]
   },
   {
-    "word": "policestation",
-    "category": "place",
+    "answer": "policestation",
+    "title": "place",
     "clues": [
       "law",
       "officers",
@@ -4158,8 +4158,8 @@
     ]
   },
   {
-    "word": "firestation",
-    "category": "place",
+    "answer": "firestation",
+    "title": "place",
     "clues": [
       "firetruck",
       "firefighters",
@@ -4169,8 +4169,8 @@
     ]
   },
   {
-    "word": "postoffice",
-    "category": "place",
+    "answer": "postoffice",
+    "title": "place",
     "clues": [
       "mail",
       "letters",
@@ -4180,8 +4180,8 @@
     ]
   },
   {
-    "word": "trainyard",
-    "category": "place",
+    "answer": "trainyard",
+    "title": "place",
     "clues": [
       "tracks",
       "cars",
@@ -4191,8 +4191,8 @@
     ]
   },
   {
-    "word": "dock",
-    "category": "place",
+    "answer": "dock",
+    "title": "place",
     "clues": [
       "boat",
       "water",
@@ -4202,8 +4202,8 @@
     ]
   },
   {
-    "word": "pier",
-    "category": "place",
+    "answer": "pier",
+    "title": "place",
     "clues": [
       "water",
       "wood",
@@ -4213,8 +4213,8 @@
     ]
   },
   {
-    "word": "lighthouse",
-    "category": "place",
+    "answer": "lighthouse",
+    "title": "place",
     "clues": [
       "coast",
       "light",
@@ -4224,8 +4224,8 @@
     ]
   },
   {
-    "word": "observatory",
-    "category": "place",
+    "answer": "observatory",
+    "title": "place",
     "clues": [
       "stars",
       "telescope",
@@ -4235,8 +4235,8 @@
     ]
   },
   {
-    "word": "planetarium",
-    "category": "place",
+    "answer": "planetarium",
+    "title": "place",
     "clues": [
       "stars",
       "dome",
@@ -4246,8 +4246,8 @@
     ]
   },
   {
-    "word": "cemetery",
-    "category": "place",
+    "answer": "cemetery",
+    "title": "place",
     "clues": [
       "graves",
       "quiet",
@@ -4257,8 +4257,8 @@
     ]
   },
   {
-    "word": "monument",
-    "category": "place",
+    "answer": "monument",
+    "title": "place",
     "clues": [
       "history",
       "statue",
@@ -4268,8 +4268,8 @@
     ]
   },
   {
-    "word": "statue",
-    "category": "place",
+    "answer": "statue",
+    "title": "place",
     "clues": [
       "stone",
       "figure",
@@ -4279,8 +4279,8 @@
     ]
   },
   {
-    "word": "fountain",
-    "category": "place",
+    "answer": "fountain",
+    "title": "place",
     "clues": [
       "water",
       "square",
@@ -4290,8 +4290,8 @@
     ]
   },
   {
-    "word": "square",
-    "category": "place",
+    "answer": "square",
+    "title": "place",
     "clues": [
       "city",
       "open",
@@ -4301,8 +4301,8 @@
     ]
   },
   {
-    "word": "plaza",
-    "category": "place",
+    "answer": "plaza",
+    "title": "place",
     "clues": [
       "open",
       "city",
@@ -4312,8 +4312,8 @@
     ]
   },
   {
-    "word": "marketplace",
-    "category": "place",
+    "answer": "marketplace",
+    "title": "place",
     "clues": [
       "vendors",
       "buy",
@@ -4323,8 +4323,8 @@
     ]
   },
   {
-    "word": "crossroad",
-    "category": "place",
+    "answer": "crossroad",
+    "title": "place",
     "clues": [
       "intersection",
       "road",
@@ -4334,8 +4334,8 @@
     ]
   },
   {
-    "word": "roundabout",
-    "category": "place",
+    "answer": "roundabout",
+    "title": "place",
     "clues": [
       "circle",
       "traffic",
@@ -4345,8 +4345,8 @@
     ]
   },
   {
-    "word": "border",
-    "category": "place",
+    "answer": "border",
+    "title": "place",
     "clues": [
       "country",
       "line",
@@ -4356,8 +4356,8 @@
     ]
   },
   {
-    "word": "checkpoint",
-    "category": "place",
+    "answer": "checkpoint",
+    "title": "place",
     "clues": [
       "security",
       "border",
@@ -4367,8 +4367,8 @@
     ]
   },
   {
-    "word": "runway",
-    "category": "place",
+    "answer": "runway",
+    "title": "place",
     "clues": [
       "plane",
       "airport",
@@ -4378,8 +4378,8 @@
     ]
   },
   {
-    "word": "terminal",
-    "category": "place",
+    "answer": "terminal",
+    "title": "place",
     "clues": [
       "airport",
       "gate",
@@ -4389,8 +4389,8 @@
     ]
   },
   {
-    "word": "subwaystation",
-    "category": "place",
+    "answer": "subwaystation",
+    "title": "place",
     "clues": [
       "metro",
       "underground",
@@ -4400,8 +4400,8 @@
     ]
   },
   {
-    "word": "platform",
-    "category": "place",
+    "answer": "platform",
+    "title": "place",
     "clues": [
       "station",
       "train",
@@ -4411,8 +4411,8 @@
     ]
   },
   {
-    "word": "dockyard",
-    "category": "place",
+    "answer": "dockyard",
+    "title": "place",
     "clues": [
       "ships",
       "repair",
@@ -4422,8 +4422,8 @@
     ]
   },
   {
-    "word": "aquarium",
-    "category": "place",
+    "answer": "aquarium",
+    "title": "place",
     "clues": [
       "fish",
       "tank",
@@ -4433,8 +4433,8 @@
     ]
   },
   {
-    "word": "greenhouse",
-    "category": "place",
+    "answer": "greenhouse",
+    "title": "place",
     "clues": [
       "plants",
       "glass",
@@ -4444,8 +4444,8 @@
     ]
   },
   {
-    "word": "nationalpark",
-    "category": "place",
+    "answer": "nationalpark",
+    "title": "place",
     "clues": [
       "nature",
       "trails",
@@ -4455,8 +4455,8 @@
     ]
   },
   {
-    "word": "apple",
-    "category": "thing",
+    "answer": "apple",
+    "title": "thing",
     "clues": [
       "fruit",
       "red",
@@ -4466,8 +4466,8 @@
     ]
   },
   {
-    "word": "banana",
-    "category": "thing",
+    "answer": "banana",
+    "title": "thing",
     "clues": [
       "fruit",
       "yellow",
@@ -4477,8 +4477,8 @@
     ]
   },
   {
-    "word": "orange",
-    "category": "thing",
+    "answer": "orange",
+    "title": "thing",
     "clues": [
       "fruit",
       "citrus",
@@ -4488,8 +4488,8 @@
     ]
   },
   {
-    "word": "grape",
-    "category": "thing",
+    "answer": "grape",
+    "title": "thing",
     "clues": [
       "fruit",
       "vine",
@@ -4499,8 +4499,8 @@
     ]
   },
   {
-    "word": "mango",
-    "category": "thing",
+    "answer": "mango",
+    "title": "thing",
     "clues": [
       "fruit",
       "tropical",
@@ -4510,8 +4510,8 @@
     ]
   },
   {
-    "word": "watermelon",
-    "category": "thing",
+    "answer": "watermelon",
+    "title": "thing",
     "clues": [
       "fruit",
       "summer",
@@ -4521,8 +4521,8 @@
     ]
   },
   {
-    "word": "bread",
-    "category": "thing",
+    "answer": "bread",
+    "title": "thing",
     "clues": [
       "bake",
       "loaf",
@@ -4532,8 +4532,8 @@
     ]
   },
   {
-    "word": "rice",
-    "category": "thing",
+    "answer": "rice",
+    "title": "thing",
     "clues": [
       "grain",
       "cook",
@@ -4543,8 +4543,8 @@
     ]
   },
   {
-    "word": "pizza",
-    "category": "thing",
+    "answer": "pizza",
+    "title": "thing",
     "clues": [
       "cheese",
       "slice",
@@ -4554,8 +4554,8 @@
     ]
   },
   {
-    "word": "burger",
-    "category": "thing",
+    "answer": "burger",
+    "title": "thing",
     "clues": [
       "bun",
       "patty",
@@ -4565,8 +4565,8 @@
     ]
   },
   {
-    "word": "sandwich",
-    "category": "thing",
+    "answer": "sandwich",
+    "title": "thing",
     "clues": [
       "bread",
       "lunch",
@@ -4576,8 +4576,8 @@
     ]
   },
   {
-    "word": "salad",
-    "category": "thing",
+    "answer": "salad",
+    "title": "thing",
     "clues": [
       "vegetables",
       "bowl",
@@ -4587,8 +4587,8 @@
     ]
   },
   {
-    "word": "soup",
-    "category": "thing",
+    "answer": "soup",
+    "title": "thing",
     "clues": [
       "bowl",
       "hot",
@@ -4598,8 +4598,8 @@
     ]
   },
   {
-    "word": "coffee",
-    "category": "thing",
+    "answer": "coffee",
+    "title": "thing",
     "clues": [
       "drink",
       "beans",
@@ -4609,8 +4609,8 @@
     ]
   },
   {
-    "word": "tea",
-    "category": "thing",
+    "answer": "tea",
+    "title": "thing",
     "clues": [
       "drink",
       "leaves",
@@ -4620,8 +4620,8 @@
     ]
   },
   {
-    "word": "juice",
-    "category": "thing",
+    "answer": "juice",
+    "title": "thing",
     "clues": [
       "drink",
       "fruit",
@@ -4631,8 +4631,8 @@
     ]
   },
   {
-    "word": "water",
-    "category": "thing",
+    "answer": "water",
+    "title": "thing",
     "clues": [
       "drink",
       "clear",
@@ -4642,8 +4642,8 @@
     ]
   },
   {
-    "word": "icecream",
-    "category": "thing",
+    "answer": "icecream",
+    "title": "thing",
     "clues": [
       "cold",
       "dessert",
@@ -4653,8 +4653,8 @@
     ]
   },
   {
-    "word": "cake",
-    "category": "thing",
+    "answer": "cake",
+    "title": "thing",
     "clues": [
       "dessert",
       "birthday",
@@ -4664,8 +4664,8 @@
     ]
   },
   {
-    "word": "cookie",
-    "category": "thing",
+    "answer": "cookie",
+    "title": "thing",
     "clues": [
       "sweet",
       "bake",
@@ -4675,8 +4675,8 @@
     ]
   },
   {
-    "word": "tree",
-    "category": "thing",
+    "answer": "tree",
+    "title": "thing",
     "clues": [
       "leaves",
       "trunk",
@@ -4686,8 +4686,8 @@
     ]
   },
   {
-    "word": "flower",
-    "category": "thing",
+    "answer": "flower",
+    "title": "thing",
     "clues": [
       "petals",
       "garden",
@@ -4697,8 +4697,8 @@
     ]
   },
   {
-    "word": "grass",
-    "category": "thing",
+    "answer": "grass",
+    "title": "thing",
     "clues": [
       "green",
       "lawn",
@@ -4708,8 +4708,8 @@
     ]
   },
   {
-    "word": "leaf",
-    "category": "thing",
+    "answer": "leaf",
+    "title": "thing",
     "clues": [
       "tree",
       "green",
@@ -4719,8 +4719,8 @@
     ]
   },
   {
-    "word": "stone",
-    "category": "thing",
+    "answer": "stone",
+    "title": "thing",
     "clues": [
       "rock",
       "hard",
@@ -4730,8 +4730,8 @@
     ]
   },
   {
-    "word": "cloud",
-    "category": "thing",
+    "answer": "cloud",
+    "title": "thing",
     "clues": [
       "sky",
       "white",
@@ -4741,8 +4741,8 @@
     ]
   },
   {
-    "word": "rain",
-    "category": "thing",
+    "answer": "rain",
+    "title": "thing",
     "clues": [
       "water",
       "cloud",
@@ -4752,8 +4752,8 @@
     ]
   },
   {
-    "word": "snow",
-    "category": "thing",
+    "answer": "snow",
+    "title": "thing",
     "clues": [
       "winter",
       "cold",
@@ -4763,8 +4763,8 @@
     ]
   },
   {
-    "word": "sun",
-    "category": "thing",
+    "answer": "sun",
+    "title": "thing",
     "clues": [
       "sky",
       "light",
@@ -4774,8 +4774,8 @@
     ]
   },
   {
-    "word": "moon",
-    "category": "thing",
+    "answer": "moon",
+    "title": "thing",
     "clues": [
       "night",
       "sky",
@@ -4785,8 +4785,8 @@
     ]
   },
   {
-    "word": "star",
-    "category": "thing",
+    "answer": "star",
+    "title": "thing",
     "clues": [
       "sky",
       "night",
@@ -4796,8 +4796,8 @@
     ]
   },
   {
-    "word": "planet",
-    "category": "thing",
+    "answer": "planet",
+    "title": "thing",
     "clues": [
       "space",
       "orbit",
@@ -4807,8 +4807,8 @@
     ]
   },
   {
-    "word": "beard",
-    "category": "thing",
+    "answer": "beard",
+    "title": "thing",
     "clues": [
       "face",
       "hair",
@@ -4818,8 +4818,8 @@
     ]
   },
   {
-    "word": "gardenbench",
-    "category": "thing",
+    "answer": "gardenbench",
+    "title": "thing",
     "clues": [
       "park",
       "sit",
@@ -4829,8 +4829,8 @@
     ]
   },
   {
-    "word": "airplane",
-    "category": "thing",
+    "answer": "airplane",
+    "title": "thing",
     "clues": [
       "flight",
       "wings",
@@ -4840,8 +4840,8 @@
     ]
   },
   {
-    "word": "shipyard",
-    "category": "place",
+    "answer": "shipyard",
+    "title": "place",
     "clues": [
       "ships",
       "repair",
@@ -4851,8 +4851,8 @@
     ]
   },
   {
-    "word": "notepad",
-    "category": "thing",
+    "answer": "notepad",
+    "title": "thing",
     "clues": [
       "write",
       "paper",
@@ -4862,8 +4862,8 @@
     ]
   },
   {
-    "word": "envelope",
-    "category": "thing",
+    "answer": "envelope",
+    "title": "thing",
     "clues": [
       "mail",
       "letter",
@@ -4873,8 +4873,8 @@
     ]
   },
   {
-    "word": "stamp",
-    "category": "thing",
+    "answer": "stamp",
+    "title": "thing",
     "clues": [
       "mail",
       "post",
@@ -4884,8 +4884,8 @@
     ]
   },
   {
-    "word": "mailbox",
-    "category": "thing",
+    "answer": "mailbox",
+    "title": "thing",
     "clues": [
       "letters",
       "post",
@@ -4895,8 +4895,8 @@
     ]
   },
   {
-    "word": "newspaper",
-    "category": "thing",
+    "answer": "newspaper",
+    "title": "thing",
     "clues": [
       "news",
       "paper",
@@ -4906,8 +4906,8 @@
     ]
   },
   {
-    "word": "magazine",
-    "category": "thing",
+    "answer": "magazine",
+    "title": "thing",
     "clues": [
       "pages",
       "photos",
@@ -4917,8 +4917,8 @@
     ]
   },
   {
-    "word": "calendar",
-    "category": "thing",
+    "answer": "calendar",
+    "title": "thing",
     "clues": [
       "date",
       "month",
@@ -4928,8 +4928,8 @@
     ]
   },
   {
-    "word": "alarm",
-    "category": "thing",
+    "answer": "alarm",
+    "title": "thing",
     "clues": [
       "wake",
       "clock",
@@ -4939,8 +4939,8 @@
     ]
   },
   {
-    "word": "flashlight",
-    "category": "thing",
+    "answer": "flashlight",
+    "title": "thing",
     "clues": [
       "light",
       "battery",
@@ -4950,8 +4950,8 @@
     ]
   },
   {
-    "word": "candle",
-    "category": "thing",
+    "answer": "candle",
+    "title": "thing",
     "clues": [
       "wax",
       "flame",
@@ -4961,8 +4961,8 @@
     ]
   },
   {
-    "word": "matchbox",
-    "category": "thing",
+    "answer": "matchbox",
+    "title": "thing",
     "clues": [
       "fire",
       "sticks",
@@ -4972,8 +4972,8 @@
     ]
   },
   {
-    "word": "torch",
-    "category": "thing",
+    "answer": "torch",
+    "title": "thing",
     "clues": [
       "light",
       "carry",
@@ -4983,8 +4983,8 @@
     ]
   },
   {
-    "word": "binoculars",
-    "category": "thing",
+    "answer": "binoculars",
+    "title": "thing",
     "clues": [
       "view",
       "distance",
@@ -4994,8 +4994,8 @@
     ]
   },
   {
-    "word": "microscope",
-    "category": "thing",
+    "answer": "microscope",
+    "title": "thing",
     "clues": [
       "science",
       "lens",
@@ -5005,8 +5005,8 @@
     ]
   },
   {
-    "word": "telescope",
-    "category": "thing",
+    "answer": "telescope",
+    "title": "thing",
     "clues": [
       "stars",
       "lens",
@@ -5016,8 +5016,8 @@
     ]
   },
   {
-    "word": "calculator",
-    "category": "thing",
+    "answer": "calculator",
+    "title": "thing",
     "clues": [
       "math",
       "numbers",
@@ -5027,8 +5027,8 @@
     ]
   },
   {
-    "word": "backyard",
-    "category": "place",
+    "answer": "backyard",
+    "title": "place",
     "clues": [
       "house",
       "grass",
@@ -5038,8 +5038,8 @@
     ]
   },
   {
-    "word": "frontyard",
-    "category": "place",
+    "answer": "frontyard",
+    "title": "place",
     "clues": [
       "house",
       "grass",
@@ -5049,8 +5049,8 @@
     ]
   },
   {
-    "word": "fence",
-    "category": "thing",
+    "answer": "fence",
+    "title": "thing",
     "clues": [
       "yard",
       "wood",
@@ -5060,8 +5060,8 @@
     ]
   },
   {
-    "word": "gate",
-    "category": "thing",
+    "answer": "gate",
+    "title": "thing",
     "clues": [
       "entry",
       "fence",
@@ -5071,8 +5071,8 @@
     ]
   },
   {
-    "word": "stairs",
-    "category": "thing",
+    "answer": "stairs",
+    "title": "thing",
     "clues": [
       "steps",
       "climb",
@@ -5082,8 +5082,8 @@
     ]
   },
   {
-    "word": "elevator",
-    "category": "thing",
+    "answer": "elevator",
+    "title": "thing",
     "clues": [
       "lift",
       "building",
@@ -5093,8 +5093,8 @@
     ]
   },
   {
-    "word": "escalator",
-    "category": "thing",
+    "answer": "escalator",
+    "title": "thing",
     "clues": [
       "stairs",
       "moving",
@@ -5104,8 +5104,8 @@
     ]
   },
   {
-    "word": "corridor",
-    "category": "place",
+    "answer": "corridor",
+    "title": "place",
     "clues": [
       "hallway",
       "doors",
@@ -5115,8 +5115,8 @@
     ]
   },
   {
-    "word": "hallway",
-    "category": "place",
+    "answer": "hallway",
+    "title": "place",
     "clues": [
       "corridor",
       "doors",
@@ -5126,8 +5126,8 @@
     ]
   },
   {
-    "word": "kiosk",
-    "category": "place",
+    "answer": "kiosk",
+    "title": "place",
     "clues": [
       "small",
       "shop",
@@ -5137,8 +5137,8 @@
     ]
   },
   {
-    "word": "bookstore",
-    "category": "place",
+    "answer": "bookstore",
+    "title": "place",
     "clues": [
       "books",
       "shop",
@@ -5148,8 +5148,8 @@
     ]
   },
   {
-    "word": "toyshop",
-    "category": "place",
+    "answer": "toyshop",
+    "title": "place",
     "clues": [
       "toys",
       "children",
@@ -5159,8 +5159,8 @@
     ]
   },
   {
-    "word": "petshop",
-    "category": "place",
+    "answer": "petshop",
+    "title": "place",
     "clues": [
       "animals",
       "cages",
@@ -5170,8 +5170,8 @@
     ]
   },
   {
-    "word": "supermarket",
-    "category": "place",
+    "answer": "supermarket",
+    "title": "place",
     "clues": [
       "groceries",
       "carts",
@@ -5181,8 +5181,8 @@
     ]
   },
   {
-    "word": "butcher",
-    "category": "place",
+    "answer": "butcher",
+    "title": "place",
     "clues": [
       "meat",
       "shop",
@@ -5192,8 +5192,8 @@
     ]
   },
   {
-    "word": "fruitshop",
-    "category": "place",
+    "answer": "fruitshop",
+    "title": "place",
     "clues": [
       "apples",
       "bananas",
@@ -5203,8 +5203,8 @@
     ]
   },
   {
-    "word": "classmate",
-    "category": "thing",
+    "answer": "classmate",
+    "title": "thing",
     "clues": [
       "school",
       "student",
@@ -5214,8 +5214,8 @@
     ]
   },
   {
-    "word": "backboard",
-    "category": "thing",
+    "answer": "backboard",
+    "title": "thing",
     "clues": [
       "basketball",
       "hoop",
@@ -5225,8 +5225,8 @@
     ]
   },
   {
-    "word": "goalpost",
-    "category": "thing",
+    "answer": "goalpost",
+    "title": "thing",
     "clues": [
       "soccer",
       "field",
@@ -5236,8 +5236,8 @@
     ]
   },
   {
-    "word": "net",
-    "category": "thing",
+    "answer": "net",
+    "title": "thing",
     "clues": [
       "goal",
       "mesh",
@@ -5247,8 +5247,8 @@
     ]
   },
   {
-    "word": "whistle",
-    "category": "thing",
+    "answer": "whistle",
+    "title": "thing",
     "clues": [
       "referee",
       "sound",
@@ -5258,8 +5258,8 @@
     ]
   },
   {
-    "word": "medal",
-    "category": "thing",
+    "answer": "medal",
+    "title": "thing",
     "clues": [
       "award",
       "gold",
@@ -5269,8 +5269,8 @@
     ]
   },
   {
-    "word": "trophy",
-    "category": "thing",
+    "answer": "trophy",
+    "title": "thing",
     "clues": [
       "award",
       "win",
@@ -5280,8 +5280,8 @@
     ]
   },
   {
-    "word": "backseat",
-    "category": "thing",
+    "answer": "backseat",
+    "title": "thing",
     "clues": [
       "car",
       "passenger",
@@ -5291,8 +5291,8 @@
     ]
   },
   {
-    "word": "seatbelt",
-    "category": "thing",
+    "answer": "seatbelt",
+    "title": "thing",
     "clues": [
       "car",
       "safety",
@@ -5302,8 +5302,8 @@
     ]
   },
   {
-    "word": "steeringwheel",
-    "category": "thing",
+    "answer": "steeringwheel",
+    "title": "thing",
     "clues": [
       "car",
       "turn",
@@ -5313,8 +5313,8 @@
     ]
   },
   {
-    "word": "dashboard",
-    "category": "thing",
+    "answer": "dashboard",
+    "title": "thing",
     "clues": [
       "car",
       "speed",
@@ -5324,8 +5324,8 @@
     ]
   },
   {
-    "word": "headlight",
-    "category": "thing",
+    "answer": "headlight",
+    "title": "thing",
     "clues": [
       "car",
       "light",
@@ -5335,8 +5335,8 @@
     ]
   },
   {
-    "word": "taillight",
-    "category": "thing",
+    "answer": "taillight",
+    "title": "thing",
     "clues": [
       "car",
       "rear",
@@ -5346,8 +5346,8 @@
     ]
   },
   {
-    "word": "windshield",
-    "category": "thing",
+    "answer": "windshield",
+    "title": "thing",
     "clues": [
       "car",
       "glass",
@@ -5357,8 +5357,8 @@
     ]
   },
   {
-    "word": "wiper",
-    "category": "thing",
+    "answer": "wiper",
+    "title": "thing",
     "clues": [
       "car",
       "rain",
@@ -5368,8 +5368,8 @@
     ]
   },
   {
-    "word": "garagekey",
-    "category": "thing",
+    "answer": "garagekey",
+    "title": "thing",
     "clues": [
       "remote",
       "garage",
@@ -5379,8 +5379,8 @@
     ]
   },
   {
-    "word": "skateboard",
-    "category": "thing",
+    "answer": "skateboard",
+    "title": "thing",
     "clues": [
       "wheels",
       "ride",
@@ -5390,8 +5390,8 @@
     ]
   },
   {
-    "word": "rollerblades",
-    "category": "thing",
+    "answer": "rollerblades",
+    "title": "thing",
     "clues": [
       "wheels",
       "feet",
@@ -5401,8 +5401,8 @@
     ]
   },
   {
-    "word": "snowman",
-    "category": "thing",
+    "answer": "snowman",
+    "title": "thing",
     "clues": [
       "snow",
       "winter",
@@ -5412,8 +5412,8 @@
     ]
   },
   {
-    "word": "birdhouse",
-    "category": "thing",
+    "answer": "birdhouse",
+    "title": "thing",
     "clues": [
       "birds",
       "nest",
@@ -5423,8 +5423,8 @@
     ]
   },
   {
-    "word": "birdnest",
-    "category": "thing",
+    "answer": "birdnest",
+    "title": "thing",
     "clues": [
       "twigs",
       "eggs",
@@ -5434,8 +5434,8 @@
     ]
   },
   {
-    "word": "teapot",
-    "category": "thing",
+    "answer": "teapot",
+    "title": "thing",
     "clues": [
       "tea",
       "pour",
@@ -5445,8 +5445,8 @@
     ]
   },
   {
-    "word": "coffeepot",
-    "category": "thing",
+    "answer": "coffeepot",
+    "title": "thing",
     "clues": [
       "coffee",
       "brew",
@@ -5456,8 +5456,8 @@
     ]
   },
   {
-    "word": "soapdish",
-    "category": "thing",
+    "answer": "soapdish",
+    "title": "thing",
     "clues": [
       "bathroom",
       "soap",
@@ -5467,8 +5467,8 @@
     ]
   },
   {
-    "word": "dishwasher",
-    "category": "thing",
+    "answer": "dishwasher",
+    "title": "thing",
     "clues": [
       "kitchen",
       "plates",
@@ -5478,8 +5478,8 @@
     ]
   },
   {
-    "word": "freezer",
-    "category": "thing",
+    "answer": "freezer",
+    "title": "thing",
     "clues": [
       "cold",
       "ice",
@@ -5489,8 +5489,8 @@
     ]
   },
   {
-    "word": "ward",
-    "category": "place",
+    "answer": "ward",
+    "title": "place",
     "clues": [
       "hospital",
       "patients",
