@@ -131,9 +131,13 @@ const openapi = {
             type: 'object',
             properties: {
               NoOfWords: { type: 'integer', example: 3 },
+              GamePrompt: {
+                type: 'string',
+                example: 'Make the overall game feel dramatic and accessible to casual music fans.',
+              },
               TitlePrompt: {
                 type: 'string',
-                example: 'Make the title hint feel like a magazine blurb.',
+                example: 'Make the title feel like a magazine blurb.',
               },
               CluesPrompt: {
                 type: 'string',

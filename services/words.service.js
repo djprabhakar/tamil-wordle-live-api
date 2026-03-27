@@ -437,7 +437,7 @@ class WordsService {
     return {
       category,
       version: 1,
-      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, title, and clues. The generated entry category value must be "{{EntryCategory}}". {{MetaInstruction}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
+      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, title, and clues. The generated entry category value must be "{{EntryCategory}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
     }
   }
 
@@ -502,6 +502,7 @@ class WordsService {
     if (notes === undefined) {
       return {
         noOfWords: 1,
+        gamePrompt: '',
         titlePrompt: '',
         cluesPrompt: '',
       }
@@ -517,11 +518,13 @@ class WordsService {
       throw new HttpError(400, 'notes.NoOfWords must be an integer between 1 and 20.')
     }
 
+    const gamePrompt = typeof notes.GamePrompt === 'string' ? notes.GamePrompt.trim() : ''
     const titlePrompt = typeof notes.TitlePrompt === 'string' ? notes.TitlePrompt.trim() : ''
     const cluesPrompt = typeof notes.CluesPrompt === 'string' ? notes.CluesPrompt.trim() : ''
 
     return {
       noOfWords,
+      gamePrompt,
       titlePrompt,
       cluesPrompt,
     }
@@ -726,6 +729,7 @@ class WordsService {
       CategoryName: resolvedCategory,
       EntryCategory: resolvedCategory === "80's Rock Hits" || resolvedCategory === 'Contemporary  Hits' ? 'song' : 'thing',
       NickName: nickName,
+      GamePrompt: notes.gamePrompt || 'Keep the overall game coherent, recognizable, and fun to solve without revealing the answer too directly.',
       TitlePrompt: notes.titlePrompt || 'Generate a concise teaser sentence for the title.',
       CluesPrompt: notes.cluesPrompt || 'Generate 5 clues from broad to specific.',
       MetaInstruction: resolvedCategory === "80's Rock Hits" || resolvedCategory === 'Contemporary  Hits'
