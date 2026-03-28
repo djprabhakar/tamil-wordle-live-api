@@ -1164,9 +1164,14 @@ class WordsService {
 
   get5HintWordCategories() {
     const fileMap = this.readCategoryFileMap()
+    const categories = [...new Set(
+      Object.values(fileMap)
+        .map((entry) => typeof entry?.category === 'string' ? entry.category.trim() : '')
+        .filter(Boolean),
+    )]
 
     return {
-      categories: Object.keys(fileMap).sort((left, right) => left.localeCompare(right)),
+      categories: categories.sort((left, right) => left.localeCompare(right)),
     }
   }
 
