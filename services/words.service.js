@@ -881,7 +881,7 @@ class WordsService {
     const templateVariables = {
       NoOfWords: notes.noOfWords,
       CategoryName: resolvedCategory,
-      EntryCategory: resolvedCategory === "80's Rock Hits" || resolvedCategory === 'Contemporary  Hits' ? 'song' : 'thing',
+      EntryCategory: resolvedCategory,
       NickName: nickName,
       GamePrompt: notes.gamePrompt || 'Keep the overall game coherent, recognizable, and fun to solve without revealing the answer too directly.',
       TitlePrompt: notes.titlePrompt || 'Generate a concise teaser sentence for the title.',
