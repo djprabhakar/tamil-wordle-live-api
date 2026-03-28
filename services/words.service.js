@@ -7,8 +7,16 @@ const DEFAULT_DATA_FILE = path.join(__dirname, '..', 'data', 'common_500_words_w
 const DEFAULT_CATEGORY_FILE_MAP = path.join(__dirname, '..', 'data', 'category-file-map.json')
 const DEFAULT_CATEGORY_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'category-prompts')
 const DEFAULT_CATEGORY_FILE_SEED = {
-  Common: 'common_500_words_with_5_clues.json',
-  "80's Rock Hits": '80s_Rock_Hits.json',
+  Common: {
+    category: 'Common',
+    file_name: 'common_500_words_with_5_clues.json',
+    created_by: 'system',
+  },
+  "80's Rock Hits": {
+    category: "80's Rock Hits",
+    file_name: '80s_Rock_Hits.json',
+    created_by: 'system',
+  },
 }
 
 class HttpError extends Error {
@@ -328,7 +336,45 @@ class WordsService {
       throw new Error('Category file map must contain a top-level object.')
     }
 
-    return parsed
+    const normalizedMap = {}
+
+    for (const [key, value] of Object.entries(parsed)) {
+      if (typeof value === 'string') {
+        normalizedMap[key] = {
+          category: key,
+          file_name: value,
+          created_by: 'system',
+        }
+        continue
+      }
+
+      if (!value || typeof value !== 'object' || Array.isArray(value)) {
+        throw new Error(`Category file map entry "${key}" must be a string or object.`)
+      }
+
+      const categoryName = typeof value.category === 'string' && value.category.trim()
+        ? value.category.trim()
+        : key
+      const fileName = typeof value.file_name === 'string' && value.file_name.trim()
+        ? value.file_name.trim()
+        : typeof value.fileName === 'string' && value.fileName.trim()
+          ? value.fileName.trim()
+          : ''
+
+      if (!fileName) {
+        throw new Error(`Category file map entry "${key}" must contain a non-empty "file_name".`)
+      }
+
+      normalizedMap[key] = {
+        category: categoryName,
+        file_name: fileName,
+        created_by: typeof value.created_by === 'string' && value.created_by.trim()
+          ? value.created_by.trim()
+          : 'system',
+      }
+    }
+
+    return normalizedMap
   }
 
   writeCategoryFileMap(fileMap) {
@@ -372,7 +418,8 @@ class WordsService {
     if (existingCategory) {
       return {
         category: existingCategory,
-        fileName: fileMap[existingCategory],
+        fileName: fileMap[existingCategory].file_name,
+        createdBy: fileMap[existingCategory].created_by,
         isNew: false,
         fileMap,
       }
@@ -383,7 +430,11 @@ class WordsService {
     }
 
     const derivedFileName = this.deriveFileNameFromCategory(category)
-    fileMap[String(category).trim()] = derivedFileName
+    fileMap[String(category).trim()] = {
+      category: String(category).trim(),
+      file_name: derivedFileName,
+      created_by: String(options.createdBy || 'system').trim() || 'system',
+    }
     this.writeCategoryFileMap(fileMap)
 
     const filePath = path.join(path.dirname(this.categoryFileMapPath), derivedFileName)
@@ -394,6 +445,7 @@ class WordsService {
     return {
       category: String(category).trim(),
       fileName: derivedFileName,
+      createdBy: fileMap[String(category).trim()].created_by,
       isNew: true,
       fileMap,
     }
@@ -438,7 +490,7 @@ class WordsService {
     return {
       category,
       version: 1,
-      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, title, and clues. The generated entry category value must be "{{EntryCategory}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
+      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, and clues. The generated entry category value must be "{{EntryCategory}}". The generated entry game_name value must be "{{GameName}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
     }
   }
 
@@ -692,6 +744,9 @@ class WordsService {
         media.duration = Number(media.duration)
       }
     }
+    const gameName = typeof entry.game_name === 'string' && entry.game_name.trim()
+      ? entry.game_name.trim()
+      : ''
     const category = typeof entry.category === 'string' && entry.category.trim()
       ? entry.category.trim()
       : String(fallbackCategory || '').trim()
@@ -699,6 +754,7 @@ class WordsService {
     const orderedEntry = {
       ...('id' in normalizedEntry ? { id: normalizedEntry.id } : {}),
       category,
+      ...(gameName ? { game_name: gameName } : {}),
       answer,
       ...(meta ? { meta } : {}),
       ...(title ? { title } : {}),
@@ -707,7 +763,7 @@ class WordsService {
     }
 
     for (const [key, value] of Object.entries(normalizedEntry)) {
-      if (['id', 'category', 'answer', 'meta', 'title', 'clues', 'media'].includes(key)) {
+      if (['id', 'category', 'game_name', 'answer', 'meta', 'title', 'clues', 'media'].includes(key)) {
         continue
       }
       orderedEntry[key] = value
@@ -725,6 +781,7 @@ class WordsService {
     const sanitizedEntry = this.sanitizeCategoryWordEntry(wordEntry, safeCategory)
     const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(safeCategory, {
       createIfMissing: true,
+      createdBy: typeof sanitizedEntry.created_by === 'string' ? sanitizedEntry.created_by : 'system',
     })
 
     entries.push(sanitizedEntry)
@@ -753,11 +810,17 @@ class WordsService {
   }
 
   create5HintGame(options = {}) {
-    const safeCategory = String(options.category || '').trim()
+    const categoryType = String(options.category || '').trim()
+    const gameName = String(options.gameName || options.game_name || options.categoryName || '').trim()
+      || (categoryType && categoryType !== 'audio-songs' ? categoryType : '')
     const nickName = String(options.nickName || options.nick_name || '').trim()
 
-    if (!safeCategory) {
+    if (!categoryType) {
       throw new HttpError(400, 'category is required.')
+    }
+
+    if (!gameName) {
+      throw new HttpError(400, 'game_name is required.')
     }
 
     if (!nickName) {
@@ -769,7 +832,8 @@ class WordsService {
     const job = {
       jobId,
       status: 'queued',
-      category: safeCategory,
+      category: categoryType,
+      game_name: gameName,
       nick_name: nickName,
       queuedAt,
       startedAt: null,
@@ -803,7 +867,8 @@ class WordsService {
     return {
       jobId,
       status: job.status,
-      category: safeCategory,
+      category: categoryType,
+      game_name: gameName,
       nick_name: nickName,
       queuedAt,
       statusUrl: `/api/words/Create5HintGameJobs/${jobId}`,
@@ -811,13 +876,19 @@ class WordsService {
   }
 
   async create5HintGameInternal(options = {}) {
-    const safeCategory = String(options.category || '').trim()
+    const categoryType = String(options.category || '').trim()
+    const gameName = String(options.gameName || options.game_name || options.categoryName || '').trim()
+      || (categoryType && categoryType !== 'audio-songs' ? categoryType : '')
     const nickName = String(options.nickName || options.nick_name || '').trim()
     const notes = this.parseCreate5HintNotes(options.notes)
     const audioEnabled = options.audioEnabled === true || options.audio_enabled === true
 
-    if (!safeCategory) {
+    if (!categoryType) {
       throw new HttpError(400, 'category is required.')
+    }
+
+    if (!gameName) {
+      throw new HttpError(400, 'game_name is required.')
     }
 
     if (!nickName) {
@@ -837,8 +908,9 @@ class WordsService {
 
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-    const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(safeCategory, {
+    const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(gameName, {
       createIfMissing: true,
+      createdBy: nickName,
     })
     const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedCategory, fileName)
     let nextId = this.getNextEntryId(entries)
@@ -849,6 +921,7 @@ class WordsService {
       properties: {
         answer: { type: 'string' },
         category: { type: 'string' },
+        game_name: { type: 'string' },
         title: { type: 'string' },
         clues: {
           type: 'array',
@@ -869,8 +942,8 @@ class WordsService {
         },
       },
       required: audioEnabled
-        ? ['answer', 'category', 'title', 'clues', 'media']
-        : ['answer', 'category', 'title', 'clues'],
+        ? ['answer', 'category', 'game_name', 'title', 'clues', 'media']
+        : ['answer', 'category', 'game_name', 'title', 'clues'],
     }
 
     const defaultTemplate = this.createDefaultPromptConfig(resolvedCategory).promptTemplate
@@ -881,7 +954,8 @@ class WordsService {
     const templateVariables = {
       NoOfWords: notes.noOfWords,
       CategoryName: resolvedCategory,
-      EntryCategory: resolvedCategory,
+      EntryCategory: categoryType,
+      GameName: resolvedCategory,
       NickName: nickName,
       GamePrompt: notes.gamePrompt || 'Keep the overall game coherent, recognizable, and fun to solve without revealing the answer too directly.',
       TitlePrompt: notes.titlePrompt || 'Generate a concise teaser sentence for the title.',
@@ -984,7 +1058,8 @@ class WordsService {
     this.writeCategoryEntries(filePath, entries)
 
     return {
-      category: resolvedCategory,
+      category: categoryType,
+      game_name: resolvedCategory,
       fileName,
       promptFile: path.basename(promptFilePath),
       created,

@@ -126,7 +126,8 @@ const openapi = {
       Create5HintGameRequest: {
         type: 'object',
         properties: {
-          category: { type: 'string', example: "80's Rock Hits" },
+          category: { type: 'string', example: 'audio-songs' },
+          game_name: { type: 'string', example: 'Greatest Classic Rock Hits' },
           notes: {
             type: 'object',
             properties: {
@@ -152,12 +153,13 @@ const openapi = {
           nick_name: { type: 'string', example: 'prabhakar' },
           audio_enabled: { type: 'boolean', example: true },
         },
-        required: ['category', 'nick_name'],
+        required: ['category', 'game_name', 'nick_name'],
       },
       Create5HintGameResponse: {
         type: 'object',
         properties: {
-          category: { type: 'string', example: "80's Rock Hits" },
+          category: { type: 'string', example: 'audio-songs' },
+          game_name: { type: 'string', example: 'Greatest Classic Rock Hits' },
           fileName: { type: 'string', example: '80s_Rock_Hits.json' },
           promptFile: { type: 'string', example: '80s_Rock_Hits.prompt.json' },
           created: {
@@ -166,7 +168,8 @@ const openapi = {
               type: 'object',
               properties: {
                 id: { type: 'integer', example: 51 },
-                category: { type: 'string', example: 'song' },
+                category: { type: 'string', example: 'audio-songs' },
+                game_name: { type: 'string', example: "80's Rock Hits" },
                 answer: { type: 'string', example: 'Another Brick in the Wall (Part 2)' },
                 title: {
                   type: 'string',
@@ -189,32 +192,34 @@ const openapi = {
                 },
                 created_by: { type: 'string', example: 'prabhakar' },
               },
-              required: ['id', 'category', 'answer', 'title', 'clues', 'created_by'],
+              required: ['id', 'category', 'game_name', 'answer', 'title', 'clues', 'created_by'],
             },
           },
           totalCreated: { type: 'integer', example: 3 },
           totalEntries: { type: 'integer', example: 51 },
         },
-        required: ['category', 'fileName', 'promptFile', 'created', 'totalCreated', 'totalEntries'],
+        required: ['category', 'game_name', 'fileName', 'promptFile', 'created', 'totalCreated', 'totalEntries'],
       },
       Create5HintGameJobAcceptedResponse: {
         type: 'object',
         properties: {
           jobId: { type: 'string', example: 'JABC1234' },
           status: { type: 'string', example: 'queued' },
-          category: { type: 'string', example: "80's Rock Hits" },
+          category: { type: 'string', example: 'audio-songs' },
+          game_name: { type: 'string', example: 'Greatest Classic Rock Hits' },
           nick_name: { type: 'string', example: 'prabhakar' },
           queuedAt: { type: 'integer', example: 1743200000000 },
           statusUrl: { type: 'string', example: '/api/words/Create5HintGameJobs/JABC1234' },
         },
-        required: ['jobId', 'status', 'category', 'nick_name', 'queuedAt', 'statusUrl'],
+        required: ['jobId', 'status', 'category', 'game_name', 'nick_name', 'queuedAt', 'statusUrl'],
       },
       Create5HintGameJobStatusResponse: {
         type: 'object',
         properties: {
           jobId: { type: 'string', example: 'JABC1234' },
           status: { type: 'string', enum: ['queued', 'running', 'completed', 'failed'] },
-          category: { type: 'string', example: "80's Rock Hits" },
+          category: { type: 'string', example: 'audio-songs' },
+          game_name: { type: 'string', example: 'Greatest Classic Rock Hits' },
           nick_name: { type: 'string', example: 'prabhakar' },
           queuedAt: { type: 'integer', example: 1743200000000 },
           startedAt: { type: 'integer', nullable: true, example: 1743200001000 },
@@ -240,7 +245,7 @@ const openapi = {
             ],
           },
         },
-        required: ['jobId', 'status', 'category', 'nick_name', 'queuedAt', 'startedAt', 'finishedAt', 'result', 'error'],
+        required: ['jobId', 'status', 'category', 'game_name', 'nick_name', 'queuedAt', 'startedAt', 'finishedAt', 'result', 'error'],
       },
       Create5HintGameEnvironmentResponse: {
         type: 'object',

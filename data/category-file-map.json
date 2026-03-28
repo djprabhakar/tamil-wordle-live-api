@@ -1,5 +1,17 @@
 {
-  "Common": "common_500_words_with_5_clues.json",
-  "80's Rock Hits": "80s_Rock_Hits.json",
-  "Contemporary  Hits": "contemporary_top_100.json"
+  "Common": {
+    "category": "common",
+    "file_name": "common_500_words_with_5_clues.json",
+    "created_by": "system"
+  },
+  "80's Rock Hits": {
+    "category": "audio-songs",
+    "file_name": "80s_Rock_Hits.json",
+    "created_by": "system"
+  },
+  "Contemporary  Hits": {
+    "category": "audio-songs",
+    "file_name": "contemporary_top_100.json",
+    "created_by": "system"
+  }
 }
