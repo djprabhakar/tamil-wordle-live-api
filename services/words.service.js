@@ -6,6 +6,7 @@ const { normalizeString, normalizeWord } = require('../utils/normalize')
 const DEFAULT_DATA_FILE = path.join(__dirname, '..', 'data', 'common_500_words_with_5_clues.json')
 const DEFAULT_CATEGORY_FILE_MAP = path.join(__dirname, '..', 'data', 'category-file-map.json')
 const DEFAULT_CATEGORY_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'category-prompts')
+const DEFAULT_PROMPT_LOGS_DIR = path.join(__dirname, '..', 'data', 'prompt-logs')
 const DEFAULT_CATEGORY_FILE_SEED = {
   Common: {
     category: 'common',
@@ -35,6 +36,7 @@ class WordsService {
     this.dataFilePath = options.dataFilePath || DEFAULT_DATA_FILE
     this.categoryFileMapPath = options.categoryFileMapPath || DEFAULT_CATEGORY_FILE_MAP
     this.categoryPromptsDir = options.categoryPromptsDir || DEFAULT_CATEGORY_PROMPTS_DIR
+    this.promptLogsDir = options.promptLogsDir || DEFAULT_PROMPT_LOGS_DIR
     this.words = []
     this.wordMap = new Map()
     this.categoryMap = new Map()
@@ -492,6 +494,10 @@ class WordsService {
     fs.mkdirSync(this.categoryPromptsDir, { recursive: true })
   }
 
+  ensurePromptLogsDir() {
+    fs.mkdirSync(this.promptLogsDir, { recursive: true })
+  }
+
   getPromptFilePath(fileName) {
     return path.join(this.categoryPromptsDir, fileName.replace(/\.json$/i, '.prompt.json'))
   }
@@ -500,7 +506,7 @@ class WordsService {
     return {
       category,
       version: 1,
-      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, and clues. The generated entry category value must be "{{EntryCategory}}". The generated entry game_name value must be "{{GameName}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
+      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, and clues. The generated entry category value must be "{{EntryCategory}}". The generated entry game_name value must be "{{GameName}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} {{DuplicateAvoidanceInstruction}} Existing answers to avoid: {{ExistingAnswersInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
     }
   }
 
@@ -548,6 +554,32 @@ class WordsService {
 
       return String(variables[key])
     })
+  }
+
+  buildDuplicateAvoidanceInstruction() {
+    return 'Duplicate avoidance is mandatory. Before returning JSON, normalize the candidate answer by trimming leading and trailing whitespace and converting it to lowercase, then compare it against every answer in the avoid list and every answer already generated in this batch. If the normalized form matches any existing answer, discard it and choose a completely different answer. Do not return the same answer twice, and do not return casing variants, whitespace variants, or near-identical repeats of an existing answer.'
+  }
+
+  toSafeSlug(value) {
+    const safeValue = String(value || '').trim().toLowerCase()
+    return safeValue.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'unknown'
+  }
+
+  writePromptLog(jobId, gameName, entryIndex, attemptIndex, promptText) {
+    this.ensurePromptLogsDir()
+    const safeJobId = this.toSafeSlug(jobId)
+    const safeGameName = this.toSafeSlug(gameName)
+    const fileName = `${safeJobId}-${safeGameName}-entry-${entryIndex}-attempt-${attemptIndex}.prompt.txt`
+    const filePath = path.join(this.promptLogsDir, fileName)
+    fs.writeFileSync(filePath, `${String(promptText || '')}\n`, 'utf8')
+    return filePath
+  }
+
+  getExistingAnswers(entries) {
+    return entries
+      .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .map((entry) => (typeof entry.answer === 'string' ? entry.answer.trim() : ''))
+      .filter(Boolean)
   }
 
   getCreate5HintGameEnvironment() {
@@ -860,7 +892,10 @@ class WordsService {
       job.startedAt = Date.now()
 
       try {
-        const result = await this.create5HintGameInternal(options)
+        const result = await this.create5HintGameInternal({
+          ...options,
+          jobId,
+        })
         job.status = 'completed'
         job.result = result
       } catch (error) {
@@ -891,6 +926,7 @@ class WordsService {
     const gameName = String(options.gameName || options.game_name || options.categoryName || '').trim()
       || (categoryType && categoryType !== 'audio-songs' ? categoryType : '')
     const nickName = String(options.nickName || options.nick_name || '').trim()
+    const jobId = String(options.jobId || '').trim()
     const notes = this.parseCreate5HintNotes(options.notes)
     const audioEnabled = options.audioEnabled === true || options.audio_enabled === true
 
@@ -904,6 +940,10 @@ class WordsService {
 
     if (!nickName) {
       throw new HttpError(400, 'nick_name is required.')
+    }
+
+    if (!jobId) {
+      throw new HttpError(400, 'jobId is required.')
     }
 
     this.assertCreate5HintGameEnvironment()
@@ -926,6 +966,11 @@ class WordsService {
     })
     const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedGameName, fileName)
     let nextId = this.getNextEntryId(entries)
+    const existingAnswerMap = new Map()
+    for (const answer of this.getExistingAnswers(entries)) {
+      existingAnswerMap.set(normalizeWord(answer), answer)
+    }
+    const existingAnswers = new Set(existingAnswerMap.keys())
 
     const schema = {
       type: 'object',
@@ -972,7 +1017,11 @@ class WordsService {
       GamePrompt: notes.gamePrompt || 'Keep the overall game coherent, recognizable, and fun to solve without revealing the answer too directly.',
       TitlePrompt: notes.titlePrompt || 'Generate a concise teaser sentence for the title.',
       CluesPrompt: notes.cluesPrompt || 'Generate 5 clues from broad to specific.',
+      DuplicateAvoidanceInstruction: this.buildDuplicateAvoidanceInstruction(),
       MetaInstruction: '',
+      ExistingAnswersInstruction: existingAnswers.size > 0
+        ? Array.from(existingAnswerMap.values()).join(' | ')
+        : 'None yet.',
       CategorySpecificRules: resolvedGameName === "80's Rock Hits"
         ? 'The answer should be the song title only, not the artist name. Mention the artist or era in the title without revealing the answer directly. Write clues that move from broad cultural context to more identifying specifics.'
         : resolvedGameName === 'Contemporary  Hits'
@@ -982,84 +1031,116 @@ class WordsService {
         ? notes.audioPrompt || 'After the clues section, include a media object with type, videoId, start, and duration. Search YouTube for karaoke videos of the answer and retrieve the YouTube videoId from the best fitting karaoke result.'
         : 'Do not include a media object.',
     }
-
-    const renderedPrompt = this.renderPromptTemplate(promptTemplate, templateVariables)
-
     const created = []
+    const promptLogs = []
 
     for (let index = 0; index < notes.noOfWords; index += 1) {
-      let response
-      try {
-        response = await client.responses.create({
-          model: process.env.OPENAI_MODEL || 'gpt-5',
-          instructions: renderedPrompt,
-          tools: audioEnabled
-            ? [
-              {
-                type: 'web_search',
-                filters: {
-                  allowed_domains: [
-                    'youtube.com',
-                    'www.youtube.com',
-                    'm.youtube.com',
-                  ],
+      let finalEntry = null
+
+      for (let attempt = 0; attempt < 4; attempt += 1) {
+        const renderedPrompt = this.renderPromptTemplate(promptTemplate, {
+          ...templateVariables,
+          ExistingAnswersInstruction: existingAnswers.size > 0
+            ? Array.from(existingAnswerMap.values()).join(' | ')
+            : 'None yet.',
+        })
+        const promptLogPath = this.writePromptLog(
+          jobId,
+          resolvedGameName,
+          index + 1,
+          attempt + 1,
+          renderedPrompt
+        )
+        promptLogs.push(promptLogPath)
+
+        let response
+        try {
+          response = await client.responses.create({
+            model: process.env.OPENAI_MODEL || 'gpt-5',
+            instructions: renderedPrompt,
+            tools: audioEnabled
+              ? [
+                {
+                  type: 'web_search',
+                  filters: {
+                    allowed_domains: [
+                      'youtube.com',
+                      'www.youtube.com',
+                      'm.youtube.com',
+                    ],
+                  },
                 },
+              ]
+              : [],
+            tool_choice: audioEnabled ? 'auto' : 'none',
+            input: `Generate new 5-hint game entry ${index + 1} of ${notes.noOfWords} for the category "${resolvedGameName}". Attempt ${attempt + 1} of 4. Choose an answer that is unique after trim-and-lowercase normalization and is not already present in the avoid list or already generated in this batch.`,
+            text: {
+              format: {
+                type: 'json_schema',
+                name: 'five_hint_game_entry',
+                strict: true,
+                schema,
               },
-            ]
-            : [],
-          tool_choice: audioEnabled ? 'auto' : 'none',
-          input: `Generate new 5-hint game entry ${index + 1} of ${notes.noOfWords} for the category "${resolvedGameName}".`,
-          text: {
-            format: {
-              type: 'json_schema',
-              name: 'five_hint_game_entry',
-              strict: true,
-              schema,
             },
-          },
-        })
-      } catch (error) {
-        const status = Number(error && error.status)
+          })
+        } catch (error) {
+          const status = Number(error && error.status)
 
-        if (status === 401 || status === 403) {
-          throw new HttpError(502, 'OpenAI rejected the request. Check OPENAI_API_KEY and project permissions.', {
-            status,
+          if (status === 401 || status === 403) {
+            throw new HttpError(502, 'OpenAI rejected the request. Check OPENAI_API_KEY and project permissions.', {
+              status,
+              code: error && error.code ? error.code : undefined,
+              type: error && error.type ? error.type : undefined,
+              reason: error && error.message ? error.message : 'Authorization failed.',
+            })
+          }
+
+          if (status === 429) {
+            throw new HttpError(502, 'OpenAI rate limit or quota error.', {
+              status,
+              code: error && error.code ? error.code : undefined,
+              type: error && error.type ? error.type : undefined,
+              reason: error && error.message ? error.message : 'Rate limited.',
+            })
+          }
+
+          throw new HttpError(502, 'OpenAI request failed.', {
+            status: Number.isInteger(status) ? status : undefined,
             code: error && error.code ? error.code : undefined,
             type: error && error.type ? error.type : undefined,
-            reason: error && error.message ? error.message : 'Authorization failed.',
+            reason: error && error.message ? error.message : 'Unknown OpenAI error.',
           })
         }
 
-        if (status === 429) {
-          throw new HttpError(502, 'OpenAI rate limit or quota error.', {
-            status,
-            code: error && error.code ? error.code : undefined,
-            type: error && error.type ? error.type : undefined,
-            reason: error && error.message ? error.message : 'Rate limited.',
-          })
+        let generatedEntry
+
+        try {
+          generatedEntry = JSON.parse(response.output_text)
+        } catch (error) {
+          throw new Error(`OpenAI returned invalid JSON: ${error.message}`)
         }
 
-        throw new HttpError(502, 'OpenAI request failed.', {
-          status: Number.isInteger(status) ? status : undefined,
-          code: error && error.code ? error.code : undefined,
-          type: error && error.type ? error.type : undefined,
-          reason: error && error.message ? error.message : 'Unknown OpenAI error.',
+        const sanitizedEntry = this.sanitizeCategoryWordEntry(generatedEntry, resolvedCategory)
+        const normalizedAnswer = normalizeWord(sanitizedEntry.answer)
+
+        if (existingAnswers.has(normalizedAnswer)) {
+          continue
+        }
+
+        finalEntry = {
+          id: nextId,
+          ...sanitizedEntry,
+          created_by: nickName,
+        }
+        existingAnswers.add(normalizedAnswer)
+        existingAnswerMap.set(normalizedAnswer, sanitizedEntry.answer)
+        break
+      }
+
+      if (!finalEntry) {
+        throw new HttpError(409, 'Unable to generate a unique entry after multiple attempts.', {
+          game_name: resolvedGameName,
         })
-      }
-
-      let generatedEntry
-
-      try {
-        generatedEntry = JSON.parse(response.output_text)
-      } catch (error) {
-        throw new Error(`OpenAI returned invalid JSON: ${error.message}`)
-      }
-
-      const sanitizedEntry = this.sanitizeCategoryWordEntry(generatedEntry, resolvedCategory)
-      const finalEntry = {
-        id: nextId,
-        ...sanitizedEntry,
-        created_by: nickName,
       }
 
       entries.push(finalEntry)
@@ -1074,6 +1155,7 @@ class WordsService {
       game_name: resolvedGameName,
       fileName,
       promptFile: path.basename(promptFilePath),
+      promptLogs,
       created,
       totalCreated: created.length,
       totalEntries: entries.length,
