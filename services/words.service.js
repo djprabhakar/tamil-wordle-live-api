@@ -1180,6 +1180,38 @@ class WordsService {
     }
   }
 
+  getAll5HintGames(options = {}) {
+    const fileMap = this.readCategoryFileMap()
+    const normalizedCategory = typeof options.category === 'string'
+      ? normalizeString(options.category)
+      : ''
+    const normalizedCreatedBy = typeof options.createdBy === 'string'
+      ? normalizeString(options.createdBy)
+      : ''
+
+    const games = Object.values(fileMap)
+      .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .map((entry) => ({
+        category: typeof entry.category === 'string' ? entry.category.trim() : '',
+        game_name: typeof entry.game_name === 'string' ? entry.game_name.trim() : '',
+        file_name: typeof entry.file_name === 'string' ? entry.file_name.trim() : '',
+        created_by: typeof entry.created_by === 'string' ? entry.created_by.trim() : '',
+      }))
+      .filter((entry) => entry.game_name && entry.file_name)
+      .filter((entry) => (
+        !normalizedCategory || normalizeString(entry.category) === normalizedCategory
+      ))
+      .filter((entry) => (
+        !normalizedCreatedBy || normalizeString(entry.created_by) === normalizedCreatedBy
+      ))
+      .sort((left, right) => left.game_name.localeCompare(right.game_name))
+
+    return {
+      count: games.length,
+      games,
+    }
+  }
+
   get5HintWordBeginningWith(category, startsWith) {
     const safePrefix = String(startsWith || '').trim()
     if (!safePrefix) {

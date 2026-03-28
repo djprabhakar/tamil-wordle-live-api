@@ -277,6 +277,26 @@ const openapi = {
         },
         required: ['categories'],
       },
+      All5HintGamesResponse: {
+        type: 'object',
+        properties: {
+          count: { type: 'integer' },
+          games: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                category: { type: 'string', example: 'audio-songs' },
+                game_name: { type: 'string', example: "80's Rock Hits" },
+                file_name: { type: 'string', example: '80s_Rock_Hits.json' },
+                created_by: { type: 'string', example: 'system' },
+              },
+              required: ['category', 'game_name', 'file_name', 'created_by'],
+            },
+          },
+        },
+        required: ['count', 'games'],
+      },
       HintWordBeginningWithResponse: {
         type: 'object',
         properties: {
@@ -612,6 +632,26 @@ const openapi = {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/HintWordCategoriesResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/GetAll5HintGames': {
+      get: {
+        tags: ['Words'],
+        summary: 'List 5-hint games with optional filtering',
+        parameters: [
+          { in: 'query', name: 'category', schema: { type: 'string' } },
+          { in: 'query', name: 'createdby', schema: { type: 'string' } },
+        ],
+        responses: {
+          200: {
+            description: 'Matched games',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/All5HintGamesResponse' },
               },
             },
           },

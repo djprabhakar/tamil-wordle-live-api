@@ -61,6 +61,7 @@ Startup validation will fail fast if:
 - `GET /api/words/Create5HintGameEnvironment`
 - `POST /api/words/SaveA5HintWord`
 - `GET /api/words/Get5HintWordCategories`
+- `GET /api/words/GetAll5HintGames?category=audio-songs&createdby=system`
 - `GET /api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca`
 - `GET /api/words/Get20RandomWordsWith5Clues?game=Common`
 
@@ -76,6 +77,7 @@ curl -X POST http://localhost:4000/api/words/Create5HintGame ^
   -d "{\"category\":\"audio-songs\",\"game_name\":\"80's Rock Hits\",\"nick_name\":\"prabhakar\",\"audio_enabled\":true,\"notes\":{\"NoOfWords\":2,\"GamePrompt\":\"Make the overall game feel like a stadium-rock challenge.\",\"AudioPrompt\":\"After the clues, add a karaoke-focused YouTube media object for the answer.\",\"TitlePrompt\":\"Make the title punchy.\",\"CluesPrompt\":\"Go from broad to iconic.\"}}"
 curl http://localhost:4000/api/words/Create5HintGameJobs/JABC1234
 curl http://localhost:4000/api/words/Get5HintWordCategories
+curl "http://localhost:4000/api/words/GetAll5HintGames?category=audio-songs&createdby=system"
 curl "http://localhost:4000/api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca"
 curl "http://localhost:4000/api/words/random?category=thing"
 curl "http://localhost:4000/api/words/random-set?count=10&category=thing"
@@ -172,6 +174,28 @@ Response from `GET /api/words/Get20RandomWordsWith5Clues?game=Common`:
       "answer": "car",
       "title": "thing",
       "clues": ["vehicle", "engine", "road", "electric", "autonomous"]
+    }
+  ]
+}
+```
+
+Response from `GET /api/words/GetAll5HintGames?category=audio-songs&createdby=system`:
+
+```json
+{
+  "count": 2,
+  "games": [
+    {
+      "category": "audio-songs",
+      "game_name": "80's Rock Hits",
+      "file_name": "80s_Rock_Hits.json",
+      "created_by": "system"
+    },
+    {
+      "category": "audio-songs",
+      "game_name": "Contemporary  Hits",
+      "file_name": "contemporary_top_100.json",
+      "created_by": "system"
     }
   ]
 }

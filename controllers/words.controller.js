@@ -134,6 +134,18 @@ function createWordsController(wordsService) {
       }
     },
 
+    getAll5HintGames(req, res, next) {
+      try {
+        const result = wordsService.getAll5HintGames({
+          category: req.query.category,
+          createdBy: req.query.createdby || req.query.created_by,
+        })
+        res.json(result)
+      } catch (error) {
+        next(error)
+      }
+    },
+
     get5HintWordBeginningWith(req, res, next) {
       try {
         const result = wordsService.get5HintWordBeginningWith(req.query.category, req.query.startsWith)
