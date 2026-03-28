@@ -160,11 +160,19 @@ function createWordsController(wordsService) {
       }
     },
 
-    async create5HintGame(req, res, next) {
+    getCreate5HintGameJob(req, res, next) {
+      try {
+        res.json(wordsService.getCreate5HintGameJob(req.params.jobId))
+      } catch (error) {
+        next(error)
+      }
+    },
+
+    create5HintGame(req, res, next) {
       try {
         const body = getSafeBody(req.body)
-        const result = await wordsService.create5HintGame(body)
-        res.status(201).json(result)
+        const result = wordsService.create5HintGame(body)
+        res.status(202).json(result)
       } catch (error) {
         next(error)
       }

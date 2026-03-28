@@ -30,6 +30,7 @@ class WordsService {
     this.categoryMap = new Map()
     this.categories = []
     this.isLoaded = false
+    this.create5HintGameJobs = new Map()
   }
 
   loadFromDisk() {
@@ -576,6 +577,10 @@ class WordsService {
     }, 0) + 1
   }
 
+  createJobId() {
+    return `J${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`.toUpperCase()
+  }
+
   parseCreate5HintNotes(notes) {
     if (notes === undefined) {
       return {
@@ -733,7 +738,79 @@ class WordsService {
     }
   }
 
-  async create5HintGame(options = {}) {
+  getCreate5HintGameJob(jobId) {
+    const safeJobId = String(jobId || '').trim().toUpperCase()
+    if (!safeJobId) {
+      throw new HttpError(400, 'jobId is required.')
+    }
+
+    const job = this.create5HintGameJobs.get(safeJobId)
+    if (!job) {
+      throw new HttpError(404, `Create5HintGame job "${safeJobId}" was not found.`)
+    }
+
+    return { ...job }
+  }
+
+  create5HintGame(options = {}) {
+    const safeCategory = String(options.category || '').trim()
+    const nickName = String(options.nickName || options.nick_name || '').trim()
+
+    if (!safeCategory) {
+      throw new HttpError(400, 'category is required.')
+    }
+
+    if (!nickName) {
+      throw new HttpError(400, 'nick_name is required.')
+    }
+
+    const jobId = this.createJobId()
+    const queuedAt = Date.now()
+    const job = {
+      jobId,
+      status: 'queued',
+      category: safeCategory,
+      nick_name: nickName,
+      queuedAt,
+      startedAt: null,
+      finishedAt: null,
+      result: null,
+      error: null,
+    }
+
+    this.create5HintGameJobs.set(jobId, job)
+
+    setImmediate(async () => {
+      job.status = 'running'
+      job.startedAt = Date.now()
+
+      try {
+        const result = await this.create5HintGameInternal(options)
+        job.status = 'completed'
+        job.result = result
+      } catch (error) {
+        job.status = 'failed'
+        job.error = {
+          message: error instanceof HttpError ? error.message : 'Internal server error.',
+          details: error instanceof HttpError ? error.details || null : { reason: error.message },
+          statusCode: error instanceof HttpError ? error.statusCode : 500,
+        }
+      } finally {
+        job.finishedAt = Date.now()
+      }
+    })
+
+    return {
+      jobId,
+      status: job.status,
+      category: safeCategory,
+      nick_name: nickName,
+      queuedAt,
+      statusUrl: `/api/words/Create5HintGameJobs/${jobId}`,
+    }
+  }
+
+  async create5HintGameInternal(options = {}) {
     const safeCategory = String(options.category || '').trim()
     const nickName = String(options.nickName || options.nick_name || '').trim()
     const notes = this.parseCreate5HintNotes(options.notes)

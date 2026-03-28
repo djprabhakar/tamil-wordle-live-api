@@ -197,6 +197,51 @@ const openapi = {
         },
         required: ['category', 'fileName', 'promptFile', 'created', 'totalCreated', 'totalEntries'],
       },
+      Create5HintGameJobAcceptedResponse: {
+        type: 'object',
+        properties: {
+          jobId: { type: 'string', example: 'JABC1234' },
+          status: { type: 'string', example: 'queued' },
+          category: { type: 'string', example: "80's Rock Hits" },
+          nick_name: { type: 'string', example: 'prabhakar' },
+          queuedAt: { type: 'integer', example: 1743200000000 },
+          statusUrl: { type: 'string', example: '/api/words/Create5HintGameJobs/JABC1234' },
+        },
+        required: ['jobId', 'status', 'category', 'nick_name', 'queuedAt', 'statusUrl'],
+      },
+      Create5HintGameJobStatusResponse: {
+        type: 'object',
+        properties: {
+          jobId: { type: 'string', example: 'JABC1234' },
+          status: { type: 'string', enum: ['queued', 'running', 'completed', 'failed'] },
+          category: { type: 'string', example: "80's Rock Hits" },
+          nick_name: { type: 'string', example: 'prabhakar' },
+          queuedAt: { type: 'integer', example: 1743200000000 },
+          startedAt: { type: 'integer', nullable: true, example: 1743200001000 },
+          finishedAt: { type: 'integer', nullable: true, example: 1743200009000 },
+          result: {
+            anyOf: [
+              { $ref: '#/components/schemas/Create5HintGameResponse' },
+              { type: 'null' },
+            ],
+          },
+          error: {
+            anyOf: [
+              {
+                type: 'object',
+                properties: {
+                  message: { type: 'string', example: 'OpenAI request failed.' },
+                  details: { type: 'object', nullable: true, additionalProperties: true },
+                  statusCode: { type: 'integer', example: 502 },
+                },
+                required: ['message', 'statusCode'],
+              },
+              { type: 'null' },
+            ],
+          },
+        },
+        required: ['jobId', 'status', 'category', 'nick_name', 'queuedAt', 'startedAt', 'finishedAt', 'result', 'error'],
+      },
       Create5HintGameEnvironmentResponse: {
         type: 'object',
         properties: {
@@ -496,7 +541,7 @@ const openapi = {
     '/api/words/Create5HintGame': {
       post: {
         tags: ['Words'],
-        summary: 'Generate and save a new 5-hint game entry using the OpenAI API',
+        summary: 'Queue a background job to generate and save new 5-hint game entries using the OpenAI API',
         requestBody: {
           required: true,
           content: {
@@ -506,11 +551,30 @@ const openapi = {
           },
         },
         responses: {
-          201: {
-            description: 'Entry generated and saved',
+          202: {
+            description: 'Job queued',
             content: {
               'application/json': {
-                schema: { $ref: '#/components/schemas/Create5HintGameResponse' },
+                schema: { $ref: '#/components/schemas/Create5HintGameJobAcceptedResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/Create5HintGameJobs/{jobId}': {
+      get: {
+        tags: ['Words'],
+        summary: 'Get the status of a queued Create5HintGame job',
+        parameters: [
+          { in: 'path', name: 'jobId', required: true, schema: { type: 'string' } },
+        ],
+        responses: {
+          200: {
+            description: 'Job status',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/Create5HintGameJobStatusResponse' },
               },
             },
           },
