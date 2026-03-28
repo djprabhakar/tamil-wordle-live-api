@@ -127,7 +127,7 @@ Response from `POST /api/words/SaveA5HintWord`:
 Behavior:
 
 - category-to-file mapping is stored in `data/category-file-map.json`
-- each category-file-map entry stores `category`, `file_name`, and `created_by`
+- each category-file-map entry stores `category`, `game_name`, `file_name`, and `created_by`
 - if a category does not exist, the API creates a new mapping entry
 - the new filename is derived from the category name, for example `Movie Titles` -> `Movie_Titles.json`
 - `WordEntry` must be a JSON object with a non-empty `answer` and exactly 5 non-empty `clues`

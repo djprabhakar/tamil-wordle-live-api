@@ -8,12 +8,14 @@ const DEFAULT_CATEGORY_FILE_MAP = path.join(__dirname, '..', 'data', 'category-f
 const DEFAULT_CATEGORY_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'category-prompts')
 const DEFAULT_CATEGORY_FILE_SEED = {
   Common: {
-    category: 'Common',
+    category: 'common',
+    game_name: 'Common',
     file_name: 'common_500_words_with_5_clues.json',
     created_by: 'system',
   },
   "80's Rock Hits": {
-    category: "80's Rock Hits",
+    category: 'audio-songs',
+    game_name: "80's Rock Hits",
     file_name: '80s_Rock_Hits.json',
     created_by: 'system',
   },
@@ -341,7 +343,8 @@ class WordsService {
     for (const [key, value] of Object.entries(parsed)) {
       if (typeof value === 'string') {
         normalizedMap[key] = {
-          category: key,
+          category: 'audio-songs',
+          game_name: key,
           file_name: value,
           created_by: 'system',
         }
@@ -354,6 +357,9 @@ class WordsService {
 
       const categoryName = typeof value.category === 'string' && value.category.trim()
         ? value.category.trim()
+        : 'audio-songs'
+      const gameName = typeof value.game_name === 'string' && value.game_name.trim()
+        ? value.game_name.trim()
         : key
       const fileName = typeof value.file_name === 'string' && value.file_name.trim()
         ? value.file_name.trim()
@@ -367,6 +373,7 @@ class WordsService {
 
       normalizedMap[key] = {
         category: categoryName,
+        game_name: gameName,
         file_name: fileName,
         created_by: typeof value.created_by === 'string' && value.created_by.trim()
           ? value.created_by.trim()
@@ -417,7 +424,8 @@ class WordsService {
 
     if (existingCategory) {
       return {
-        category: existingCategory,
+        category: fileMap[existingCategory].category,
+        gameName: fileMap[existingCategory].game_name,
         fileName: fileMap[existingCategory].file_name,
         createdBy: fileMap[existingCategory].created_by,
         isNew: false,
@@ -431,7 +439,8 @@ class WordsService {
 
     const derivedFileName = this.deriveFileNameFromCategory(category)
     fileMap[String(category).trim()] = {
-      category: String(category).trim(),
+      category: String(options.categoryType || 'audio-songs').trim() || 'audio-songs',
+      game_name: String(category).trim(),
       file_name: derivedFileName,
       created_by: String(options.createdBy || 'system').trim() || 'system',
     }
@@ -443,7 +452,8 @@ class WordsService {
     }
 
     return {
-      category: String(category).trim(),
+      category: fileMap[String(category).trim()].category,
+      gameName: fileMap[String(category).trim()].game_name,
       fileName: derivedFileName,
       createdBy: fileMap[String(category).trim()].created_by,
       isNew: true,
@@ -779,16 +789,17 @@ class WordsService {
     }
 
     const sanitizedEntry = this.sanitizeCategoryWordEntry(wordEntry, safeCategory)
-    const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(safeCategory, {
+    const { category: resolvedCategory, gameName: resolvedGameName, fileName, filePath, entries } = this.readCategoryEntries(safeCategory, {
       createIfMissing: true,
       createdBy: typeof sanitizedEntry.created_by === 'string' ? sanitizedEntry.created_by : 'system',
+      categoryType: typeof sanitizedEntry.category === 'string' ? sanitizedEntry.category : undefined,
     })
 
     entries.push(sanitizedEntry)
     this.writeCategoryEntries(filePath, entries)
 
     return {
-      category: resolvedCategory,
+      category: resolvedGameName,
       fileName,
       saved: sanitizedEntry,
       totalEntries: entries.length,
@@ -908,11 +919,12 @@ class WordsService {
 
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-    const { category: resolvedCategory, fileName, filePath, entries } = this.readCategoryEntries(gameName, {
+    const { category: resolvedCategory, gameName: resolvedGameName, fileName, filePath, entries } = this.readCategoryEntries(gameName, {
       createIfMissing: true,
       createdBy: nickName,
+      categoryType,
     })
-    const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedCategory, fileName)
+    const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedGameName, fileName)
     let nextId = this.getNextEntryId(entries)
 
     const schema = {
@@ -946,24 +958,24 @@ class WordsService {
         : ['answer', 'category', 'game_name', 'title', 'clues'],
     }
 
-    const defaultTemplate = this.createDefaultPromptConfig(resolvedCategory).promptTemplate
+    const defaultTemplate = this.createDefaultPromptConfig(resolvedGameName).promptTemplate
     const promptTemplate = typeof promptConfig.promptTemplate === 'string' && promptConfig.promptTemplate.trim()
       ? promptConfig.promptTemplate
       : defaultTemplate
 
     const templateVariables = {
       NoOfWords: notes.noOfWords,
-      CategoryName: resolvedCategory,
+      CategoryName: resolvedGameName,
       EntryCategory: categoryType,
-      GameName: resolvedCategory,
+      GameName: resolvedGameName,
       NickName: nickName,
       GamePrompt: notes.gamePrompt || 'Keep the overall game coherent, recognizable, and fun to solve without revealing the answer too directly.',
       TitlePrompt: notes.titlePrompt || 'Generate a concise teaser sentence for the title.',
       CluesPrompt: notes.cluesPrompt || 'Generate 5 clues from broad to specific.',
       MetaInstruction: '',
-      CategorySpecificRules: resolvedCategory === "80's Rock Hits"
+      CategorySpecificRules: resolvedGameName === "80's Rock Hits"
         ? 'The answer should be the song title only, not the artist name. Mention the artist or era in the title without revealing the answer directly. Write clues that move from broad cultural context to more identifying specifics.'
-        : resolvedCategory === 'Contemporary  Hits'
+        : resolvedGameName === 'Contemporary  Hits'
           ? 'The answer should be the song title only, not the artist name. Prefer globally recognizable songs from the modern streaming era unless the request narrows the scope.'
           : 'Choose a familiar everyday word or phrase that is broadly recognizable. Order the clues from broader and easier to more specific.',
       AudioInstruction: audioEnabled
@@ -996,7 +1008,7 @@ class WordsService {
             ]
             : [],
           tool_choice: audioEnabled ? 'auto' : 'none',
-          input: `Generate new 5-hint game entry ${index + 1} of ${notes.noOfWords} for the category "${resolvedCategory}".`,
+          input: `Generate new 5-hint game entry ${index + 1} of ${notes.noOfWords} for the category "${resolvedGameName}".`,
           text: {
             format: {
               type: 'json_schema',
@@ -1059,7 +1071,7 @@ class WordsService {
 
     return {
       category: categoryType,
-      game_name: resolvedCategory,
+      game_name: resolvedGameName,
       fileName,
       promptFile: path.basename(promptFilePath),
       created,

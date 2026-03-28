@@ -1,16 +1,19 @@
 {
   "Common": {
     "category": "common",
+    "game_name": "Common",
     "file_name": "common_500_words_with_5_clues.json",
     "created_by": "system"
   },
   "80's Rock Hits": {
     "category": "audio-songs",
+    "game_name": "80's Rock Hits",
     "file_name": "80s_Rock_Hits.json",
     "created_by": "system"
   },
   "Contemporary  Hits": {
     "category": "audio-songs",
+    "game_name": "Contemporary  Hits",
     "file_name": "contemporary_top_100.json",
     "created_by": "system"
   }
