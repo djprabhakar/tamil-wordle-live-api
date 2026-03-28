@@ -779,15 +779,6 @@ class WordsService {
           minItems: 5,
           maxItems: 5,
         },
-        meta: {
-          type: 'object',
-          additionalProperties: true,
-          properties: {
-            artist: { type: 'string' },
-            year: { type: 'integer' },
-          },
-          required: [],
-        },
         media: {
           type: 'object',
           additionalProperties: false,
@@ -818,9 +809,7 @@ class WordsService {
       GamePrompt: notes.gamePrompt || 'Keep the overall game coherent, recognizable, and fun to solve without revealing the answer too directly.',
       TitlePrompt: notes.titlePrompt || 'Generate a concise teaser sentence for the title.',
       CluesPrompt: notes.cluesPrompt || 'Generate 5 clues from broad to specific.',
-      MetaInstruction: resolvedCategory === "80's Rock Hits" || resolvedCategory === 'Contemporary  Hits'
-        ? 'Include a meta object with artist and year whenever possible.'
-        : 'Include a meta object only if it adds meaningful value.',
+      MetaInstruction: '',
       CategorySpecificRules: resolvedCategory === "80's Rock Hits"
         ? 'The answer should be the song title only, not the artist name. Mention the artist or era in the title without revealing the answer directly. Write clues that move from broad cultural context to more identifying specifics.'
         : resolvedCategory === 'Contemporary  Hits'

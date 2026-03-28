@@ -178,10 +178,6 @@ const openapi = {
                   minItems: 5,
                   maxItems: 5,
                 },
-                meta: {
-                  type: 'object',
-                  additionalProperties: true,
-                },
                 media: {
                   type: 'object',
                   properties: {
