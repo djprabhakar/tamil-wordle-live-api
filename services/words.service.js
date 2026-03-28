@@ -422,15 +422,20 @@ class WordsService {
     }
 
     const fileMap = this.readCategoryFileMap()
-    const existingCategory = Object.keys(fileMap).find((key) => normalizeString(key) === normalizedCategory)
+    const existingCategory = Object.entries(fileMap).find(([key, value]) => (
+      normalizeString(key) === normalizedCategory
+      || normalizeString(value?.game_name) === normalizedCategory
+    ))
 
     if (existingCategory) {
+      const [existingKey, existingValue] = existingCategory
       return {
-        category: fileMap[existingCategory].category,
-        gameName: fileMap[existingCategory].game_name,
-        fileName: fileMap[existingCategory].file_name,
-        createdBy: fileMap[existingCategory].created_by,
+        category: existingValue.category,
+        gameName: existingValue.game_name,
+        fileName: existingValue.file_name,
+        createdBy: existingValue.created_by,
         isNew: false,
+        mapKey: existingKey,
         fileMap,
       }
     }
@@ -1205,11 +1210,12 @@ class WordsService {
 
     const eligibleEntries = entries
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .filter((entry) => typeof entry.answer === 'string' && entry.answer.trim())
       .filter((entry) => (
-        (typeof entry.answer === 'string' && entry.answer.trim())
-        || (typeof entry.word === 'string' && entry.word.trim())
+        Array.isArray(entry.clues)
+        && entry.clues.length === 5
+        && entry.clues.every((clue) => typeof clue === 'string' && clue.trim())
       ))
-      .filter((entry) => Array.isArray(entry.clues) && entry.clues.length === 5)
       .map((entry) => this.sanitizeCategoryWordEntry(entry, resolvedCategory))
 
     if (eligibleEntries.length === 0) {

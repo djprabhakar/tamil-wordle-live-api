@@ -272,7 +272,7 @@ const openapi = {
           categories: {
             type: 'array',
             items: { type: 'string' },
-            example: ['80\'s Rock Hits', 'Common'],
+            example: ['audio-songs', 'common'],
           },
         },
         required: ['categories'],
