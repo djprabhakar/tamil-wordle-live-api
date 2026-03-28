@@ -1188,6 +1188,11 @@ class WordsService {
     const normalizedCreatedBy = typeof options.createdBy === 'string'
       ? normalizeString(options.createdBy)
       : ''
+    const isUserFilter = normalizedCreatedBy === 'user'
+
+    if (isUserFilter && !normalizedCategory) {
+      throw new HttpError(400, 'Query parameter "category" is required when createdby is "user".')
+    }
 
     const games = Object.values(fileMap)
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
@@ -1202,7 +1207,10 @@ class WordsService {
         !normalizedCategory || normalizeString(entry.category) === normalizedCategory
       ))
       .filter((entry) => (
-        !normalizedCreatedBy || normalizeString(entry.created_by) === normalizedCreatedBy
+        !normalizedCreatedBy
+        || (isUserFilter
+          ? normalizeString(entry.created_by) !== 'system'
+          : normalizeString(entry.created_by) === normalizedCreatedBy)
       ))
       .sort((left, right) => left.game_name.localeCompare(right.game_name))
 
