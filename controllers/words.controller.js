@@ -145,7 +145,8 @@ function createWordsController(wordsService) {
 
     get20RandomWordsWith5Clues(req, res, next) {
       try {
-        const result = wordsService.get20RandomWordsWith5Clues(req.query.category)
+        const gameName = req.query.game || req.query.game_name
+        const result = wordsService.get20RandomWordsWith5Clues(gameName)
         res.json(result)
       } catch (error) {
         next(error)

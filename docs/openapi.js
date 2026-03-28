@@ -643,7 +643,7 @@ const openapi = {
         tags: ['Words'],
         summary: 'Get up to 20 random word entries with 5 clues from a category file',
         parameters: [
-          { in: 'query', name: 'category', required: true, schema: { type: 'string' } },
+          { in: 'query', name: 'game', required: true, schema: { type: 'string' } },
         ],
         responses: {
           200: {

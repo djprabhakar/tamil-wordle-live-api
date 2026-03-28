@@ -62,7 +62,7 @@ Startup validation will fail fast if:
 - `POST /api/words/SaveA5HintWord`
 - `GET /api/words/Get5HintWordCategories`
 - `GET /api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca`
-- `GET /api/words/Get20RandomWordsWith5Clues?category=Common`
+- `GET /api/words/Get20RandomWordsWith5Clues?game=Common`
 
 ### curl examples
 
@@ -87,7 +87,7 @@ curl -X POST http://localhost:4000/api/words/check ^
 curl -X POST http://localhost:4000/api/words/SaveA5HintWord ^
   -H "Content-Type: application/json" ^
   -d "{\"category\":\"Common\",\"wordEntry\":{\"answer\":\"plane\",\"category\":\"thing\",\"title\":\"thing\",\"clues\":[\"wings\",\"travel\",\"airport\",\"pilot\",\"sky\"]}}"
-curl "http://localhost:4000/api/words/Get20RandomWordsWith5Clues?category=Common"
+curl "http://localhost:4000/api/words/Get20RandomWordsWith5Clues?game=Common"
 ```
 
 Response from `POST /api/words/check`:
@@ -160,7 +160,7 @@ Response from `POST /api/words/Create5HintGame`:
 }
 ```
 
-Response from `GET /api/words/Get20RandomWordsWith5Clues?category=Common`:
+Response from `GET /api/words/Get20RandomWordsWith5Clues?game=Common`:
 
 ```json
 {

@@ -441,7 +441,7 @@ class WordsService {
     }
 
     if (!options.createIfMissing) {
-      throw new HttpError(404, `Category "${String(category).trim()}" was not found.`)
+      throw new HttpError(404, `Game "${String(category).trim()}" was not found.`)
     }
 
     const derivedFileName = this.deriveFileNameFromCategory(category)
