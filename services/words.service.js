@@ -1220,24 +1220,73 @@ class WordsService {
     }
   }
 
-  get5HintWordBeginningWith(category, startsWith) {
+  get5HintWordBeginningWith(category, game, createdBy, startsWith) {
+    const safeCategory = String(category || '').trim()
+    const safeGame = String(game || '').trim()
+    const safeCreatedBy = String(createdBy || '').trim()
     const safePrefix = String(startsWith || '').trim()
+
+    if (!safeCategory) {
+      throw new HttpError(400, 'category is required.')
+    }
+    if (!safeGame) {
+      throw new HttpError(400, 'game is required.')
+    }
+    if (!safeCreatedBy) {
+      throw new HttpError(400, 'createdBy is required.')
+    }
     if (!safePrefix) {
       throw new HttpError(400, 'startsWith is required.')
     }
 
-    const normalizedPrefix = normalizeWord(safePrefix)
-    const { category: resolvedCategory, fileName, entries } = this.readCategoryEntries(category)
+    const normalizedCategory = normalizeString(safeCategory)
+    const normalizedGame = normalizeString(safeGame)
+    const normalizedCreatedBy = normalizeString(safeCreatedBy)
 
-    const words = entries
+    const fileMap = this.readCategoryFileMap()
+    const matchedEntry = Object.entries(fileMap).find(([key, value]) => {
+      const entryCategory = typeof value?.category === 'string' ? value.category.trim() : ''
+      const entryGameName = typeof value?.game_name === 'string' ? value.game_name.trim() : ''
+      const entryCreatedBy = typeof value?.created_by === 'string' ? value.created_by.trim() : ''
+
+      return normalizeString(entryCategory) === normalizedCategory
+        && (normalizeString(entryGameName) === normalizedGame || normalizeString(key) === normalizedGame)
+        && normalizeString(entryCreatedBy) === normalizedCreatedBy
+    })
+
+    if (!matchedEntry) {
+      throw new HttpError(
+        404,
+        `Game "${safeGame}" was not found for category "${safeCategory}" created by "${safeCreatedBy}".`
+      )
+    }
+
+    const fileName = matchedEntry[1].file_name
+    const filePath = path.join(path.dirname(this.categoryFileMapPath), fileName)
+
+    let parsed
+    try {
+      parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    } catch (error) {
+      throw new Error(`Malformed JSON in category data file "${fileName}": ${error.message}`)
+    }
+
+    if (!Array.isArray(parsed)) {
+      throw new Error(`Category data file "${fileName}" must contain a top-level array.`)
+    }
+
+    const normalizedPrefix = normalizeWord(safePrefix)
+    const words = parsed
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
-      .map((entry) => this.sanitizeCategoryWordEntry(entry, resolvedCategory))
+      .map((entry) => this.sanitizeCategoryWordEntry(entry, safeCategory))
       .map((entry) => entry.answer)
       .filter((answer) => normalizeWord(answer).startsWith(normalizedPrefix))
       .sort((left, right) => left.localeCompare(right))
 
     return {
-      category: resolvedCategory,
+      category: safeCategory,
+      game: safeGame,
+      createdBy: safeCreatedBy,
       fileName,
       startsWith: safePrefix,
       count: words.length,

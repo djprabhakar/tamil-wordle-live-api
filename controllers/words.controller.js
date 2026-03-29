@@ -148,7 +148,12 @@ function createWordsController(wordsService) {
 
     get5HintWordBeginningWith(req, res, next) {
       try {
-        const result = wordsService.get5HintWordBeginningWith(req.query.category, req.query.startsWith)
+        const result = wordsService.get5HintWordBeginningWith(
+          req.query.category,
+          req.query.game || req.query.game_name,
+          req.query.createdby || req.query.created_by,
+          req.query.startsWith
+        )
         res.json(result)
       } catch (error) {
         next(error)

@@ -62,7 +62,7 @@ Startup validation will fail fast if:
 - `POST /api/words/SaveA5HintWord`
 - `GET /api/words/Get5HintWordCategories`
 - `GET /api/words/GetAll5HintGames?category=audio-songs&createdby=system`
-- `GET /api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca`
+- `GET /api/words/Get5HintWordBeginningWith?category=audio-songs&game=80's Rock Hits&createdby=system&startsWith=Ba`
 - `GET /api/words/Get20RandomWordsWith5Clues?game=Common`
 
 ### curl examples
@@ -78,7 +78,7 @@ curl -X POST http://localhost:4000/api/words/Create5HintGame ^
 curl http://localhost:4000/api/words/Create5HintGameJobs/JABC1234
 curl http://localhost:4000/api/words/Get5HintWordCategories
 curl "http://localhost:4000/api/words/GetAll5HintGames?category=audio-songs&createdby=system"
-curl "http://localhost:4000/api/words/Get5HintWordBeginningWith?category=Common&startsWith=ca"
+curl "http://localhost:4000/api/words/Get5HintWordBeginningWith?category=audio-songs&game=80's Rock Hits&createdby=system&startsWith=Ba"
 curl "http://localhost:4000/api/words/random?category=thing"
 curl "http://localhost:4000/api/words/random-set?count=10&category=thing"
 curl "http://localhost:4000/api/words/all?limit=10&page=1"

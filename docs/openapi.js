@@ -301,6 +301,8 @@ const openapi = {
         type: 'object',
         properties: {
           category: { type: 'string', example: "80's Rock Hits" },
+          game: { type: 'string', example: "80's Rock Hits" },
+          createdBy: { type: 'string', example: 'system' },
           fileName: { type: 'string', example: '80s_Rock_Hits.json' },
           startsWith: { type: 'string', example: 'Ba' },
           count: { type: 'integer', example: 2 },
@@ -310,7 +312,7 @@ const openapi = {
             example: ['Back In Black - AC/DC', 'Bad Medicine - Bon Jovi'],
           },
         },
-        required: ['category', 'fileName', 'startsWith', 'count', 'words'],
+        required: ['category', 'game', 'createdBy', 'fileName', 'startsWith', 'count', 'words'],
       },
       TwentyWordsResponse: {
         type: 'object',
@@ -664,6 +666,8 @@ const openapi = {
         summary: 'Get all words in a category file that begin with the provided string',
         parameters: [
           { in: 'query', name: 'category', required: true, schema: { type: 'string' } },
+          { in: 'query', name: 'game', required: true, schema: { type: 'string' } },
+          { in: 'query', name: 'createdby', required: true, schema: { type: 'string' } },
           { in: 'query', name: 'startsWith', required: true, schema: { type: 'string' } },
         ],
         responses: {
