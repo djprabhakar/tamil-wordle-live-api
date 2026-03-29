@@ -1013,6 +1013,10 @@ class WordsService {
       ? promptConfig.promptTemplate
       : defaultTemplate
 
+    const baseAudioInstruction = 'After the clues section, include a media object with type, videoId, start, and duration.'
+    const defaultAudioSearchInstruction = 'Search YouTube for karaoke videos of the answer and retrieve the YouTube videoId from the best fitting karaoke result.'
+    const audioSearchInstruction = notes.audioPrompt ? notes.audioPrompt : defaultAudioSearchInstruction
+
     const templateVariables = {
       NoOfWords: notes.noOfWords,
       CategoryName: resolvedGameName,
@@ -1033,7 +1037,7 @@ class WordsService {
           ? 'The answer should be the song title only, not the artist name. Prefer globally recognizable songs from the modern streaming era unless the request narrows the scope.'
           : 'Choose a familiar everyday word or phrase that is broadly recognizable. Order the clues from broader and easier to more specific.',
       AudioInstruction: audioEnabled
-        ? notes.audioPrompt || 'After the clues section, include a media object with type, videoId, start, and duration. Search YouTube for karaoke videos of the answer and retrieve the YouTube videoId from the best fitting karaoke result.'
+        ? `${baseAudioInstruction} ${audioSearchInstruction}`
         : 'Do not include a media object.',
     }
     const created = []
