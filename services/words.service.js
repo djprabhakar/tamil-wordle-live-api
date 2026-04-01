@@ -1284,7 +1284,7 @@ class WordsService {
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
       .map((entry) => this.sanitizeCategoryWordEntry(entry, safeCategory))
       .map((entry) => entry.answer)
-      .filter((answer) => normalizeWord(answer).startsWith(normalizedPrefix))
+      .filter((answer) => normalizeWord(answer).includes(normalizedPrefix))
       .sort((left, right) => left.localeCompare(right))
 
     return {
