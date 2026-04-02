@@ -977,7 +977,7 @@ class WordsService {
     }
     const existingAnswers = new Set(existingAnswerMap.keys())
 
-    const schema = {
+    const baseSchema = {
       type: 'object',
       additionalProperties: false,
       properties: {
@@ -991,22 +991,30 @@ class WordsService {
           minItems: 5,
           maxItems: 5,
         },
-        media: {
-          type: 'object',
-          additionalProperties: false,
-          properties: {
-            type: { type: 'string' },
-            videoId: { type: 'string' },
-            start: { type: 'integer' },
-            duration: { type: 'integer' },
-          },
-          required: ['type', 'videoId', 'start', 'duration'],
-        },
       },
-      required: audioEnabled
-        ? ['answer', 'category', 'game_name', 'title', 'clues', 'media']
-        : ['answer', 'category', 'game_name', 'title', 'clues'],
+      required: ['answer', 'category', 'game_name', 'title', 'clues'],
     }
+
+    const schema = audioEnabled
+      ? {
+        ...baseSchema,
+        properties: {
+          ...baseSchema.properties,
+          media: {
+            type: 'object',
+            additionalProperties: false,
+            properties: {
+              type: { type: 'string' },
+              videoId: { type: 'string' },
+              start: { type: 'integer' },
+              duration: { type: 'integer' },
+            },
+            required: ['type', 'videoId', 'start', 'duration'],
+          },
+        },
+        required: [...baseSchema.required, 'media'],
+      }
+      : baseSchema
 
     const defaultTemplate = this.createDefaultPromptConfig(resolvedGameName).promptTemplate
     const promptTemplate = typeof promptConfig.promptTemplate === 'string' && promptConfig.promptTemplate.trim()
