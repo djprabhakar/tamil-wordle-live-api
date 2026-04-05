@@ -1181,14 +1181,28 @@ class WordsService {
 
   get5HintWordCategories() {
     const fileMap = this.readCategoryFileMap()
-    const categories = [...new Set(
-      Object.values(fileMap)
-        .map((entry) => typeof entry?.category === 'string' ? entry.category.trim() : '')
-        .filter(Boolean),
-    )]
+    const categoryCounts = new Map()
+
+    Object.values(fileMap)
+      .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .forEach((entry) => {
+        const rawCategory = typeof entry.category === 'string' ? entry.category.trim() : ''
+        if (!rawCategory) {
+          return
+        }
+
+        const key = normalizeString(rawCategory)
+        const existing = categoryCounts.get(key)
+        if (existing) {
+          existing.games += 1
+        } else {
+          categoryCounts.set(key, { category: rawCategory, games: 1 })
+        }
+      })
 
     return {
-      categories: categories.sort((left, right) => left.localeCompare(right)),
+      categories: Array.from(categoryCounts.values())
+        .sort((left, right) => left.category.localeCompare(right.category)),
     }
   }
 
