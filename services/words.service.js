@@ -1192,11 +1192,21 @@ class WordsService {
         }
 
         const key = normalizeString(rawCategory)
+        const createdBy = typeof entry.created_by === 'string' ? entry.created_by.trim() : ''
+        const createdByKey = normalizeString(createdBy) || 'unknown'
+
         const existing = categoryCounts.get(key)
         if (existing) {
           existing.games += 1
+          existing.created_by[createdByKey] = (existing.created_by[createdByKey] || 0) + 1
         } else {
-          categoryCounts.set(key, { category: rawCategory, games: 1 })
+          categoryCounts.set(key, {
+            category: rawCategory,
+            games: 1,
+            created_by: {
+              [createdByKey]: 1,
+            },
+          })
         }
       })
 
