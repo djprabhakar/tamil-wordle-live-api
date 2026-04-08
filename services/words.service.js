@@ -1221,14 +1221,8 @@ class WordsService {
     const normalizedCategory = typeof options.category === 'string'
       ? normalizeString(options.category)
       : ''
-    const normalizedCreatedBy = typeof options.createdBy === 'string'
-      ? normalizeString(options.createdBy)
-      : ''
-    const isUserFilter = normalizedCreatedBy === 'user'
-    const isCreatedByMissing = !normalizedCreatedBy
-
-    if ((isUserFilter || isCreatedByMissing) && !normalizedCategory) {
-      throw new HttpError(400, 'Query parameter "category" is required when createdby is empty or "user".')
+    if (!normalizedCategory) {
+      throw new HttpError(400, 'Query parameter "category" is required.')
     }
 
     const games = Object.values(fileMap)
@@ -1240,22 +1234,7 @@ class WordsService {
         created_by: typeof entry.created_by === 'string' ? entry.created_by.trim() : '',
       }))
       .filter((entry) => entry.game_name && entry.file_name)
-      .filter((entry) => (
-        !normalizedCategory || normalizeString(entry.category) === normalizedCategory
-      ))
-      .filter((entry) => {
-        const normalizedEntryCreatedBy = normalizeString(entry.created_by)
-
-        if (isCreatedByMissing) {
-          return normalizedEntryCreatedBy !== 'system'
-        }
-
-        if (isUserFilter) {
-          return normalizedEntryCreatedBy !== 'system'
-        }
-
-        return normalizedEntryCreatedBy === normalizedCreatedBy
-      })
+      .filter((entry) => normalizeString(entry.category) === normalizedCategory)
       .sort((left, right) => left.game_name.localeCompare(right.game_name))
 
     return {

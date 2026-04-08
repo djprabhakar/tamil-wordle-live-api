@@ -138,7 +138,6 @@ function createWordsController(wordsService) {
       try {
         const result = wordsService.getAll5HintGames({
           category: req.query.category,
-          createdBy: req.query.createdby || req.query.created_by,
         })
         res.json(result)
       } catch (error) {
