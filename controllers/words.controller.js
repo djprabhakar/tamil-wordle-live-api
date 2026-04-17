@@ -138,7 +138,21 @@ function createWordsController(wordsService) {
       try {
         const result = wordsService.getAll5HintGames({
           category: req.query.category,
+          state: req.query.state,
         })
+        res.json(result)
+      } catch (error) {
+        next(error)
+      }
+    },
+
+    getStaging5HintGame(req, res, next) {
+      try {
+        const result = wordsService.getStaging5HintGame(
+          req.query.category,
+          req.query.game || req.query.game_name,
+          req.query.createdby || req.query.created_by
+        )
         res.json(result)
       } catch (error) {
         next(error)
@@ -190,6 +204,16 @@ function createWordsController(wordsService) {
         const body = getSafeBody(req.body)
         const result = wordsService.create5HintGame(body)
         res.status(202).json(result)
+      } catch (error) {
+        next(error)
+      }
+    },
+
+    approve5HintGameEntry(req, res, next) {
+      try {
+        const body = getSafeBody(req.body)
+        const result = wordsService.approve5HintGameEntry(body)
+        res.status(201).json(result)
       } catch (error) {
         next(error)
       }

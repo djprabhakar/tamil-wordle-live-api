@@ -353,6 +353,7 @@ class WordsService {
           game_name: key,
           file_name: value,
           created_by: 'system',
+          state: 'published',
         }
         continue
       }
@@ -384,6 +385,9 @@ class WordsService {
         created_by: typeof value.created_by === 'string' && value.created_by.trim()
           ? value.created_by.trim()
           : 'system',
+        state: typeof value.state === 'string' && value.state.trim()
+          ? value.state.trim()
+          : 'published',
       }
     }
 
@@ -438,6 +442,7 @@ class WordsService {
         gameName: existingValue.game_name,
         fileName: existingValue.file_name,
         createdBy: existingValue.created_by,
+        state: existingValue.state,
         isNew: false,
         mapKey: existingKey,
         fileMap,
@@ -454,6 +459,7 @@ class WordsService {
       game_name: String(category).trim(),
       file_name: derivedFileName,
       created_by: String(options.createdBy || 'system').trim() || 'system',
+      state: 'staging',
     }
     this.writeCategoryFileMap(fileMap)
 
@@ -467,6 +473,7 @@ class WordsService {
       gameName: fileMap[String(category).trim()].game_name,
       fileName: derivedFileName,
       createdBy: fileMap[String(category).trim()].created_by,
+      state: fileMap[String(category).trim()].state,
       isNew: true,
       fileMap,
     }
@@ -990,6 +997,28 @@ class WordsService {
     }
   }
 
+  sanitizeApproved5HintEntry(entry, fallbackCategory) {
+    if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+      throw new HttpError(400, 'entry_json must be a JSON object.')
+    }
+
+    return this.sanitizeCategoryWordEntry(
+      {
+        ...entry,
+        clues: Array.isArray(entry.clues)
+          ? entry.clues.map((clue) => {
+            if (clue && typeof clue === 'object' && !Array.isArray(clue)) {
+              return clue.text
+            }
+
+            return clue
+          })
+          : entry.clues,
+      },
+      fallbackCategory
+    )
+  }
+
   saveA5HintWord(category, wordEntry) {
     const safeCategory = String(category || '').trim()
     if (!safeCategory) {
@@ -1423,6 +1452,9 @@ class WordsService {
     if (!normalizedCategory) {
       throw new HttpError(400, 'Query parameter "category" is required.')
     }
+    const normalizedState = typeof options.state === 'string' && options.state.trim()
+      ? normalizeString(options.state)
+      : normalizeString('published')
 
     const games = Object.values(fileMap)
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
@@ -1431,14 +1463,162 @@ class WordsService {
         game_name: typeof entry.game_name === 'string' ? entry.game_name.trim() : '',
         file_name: typeof entry.file_name === 'string' ? entry.file_name.trim() : '',
         created_by: typeof entry.created_by === 'string' ? entry.created_by.trim() : '',
+        state: typeof entry.state === 'string' && entry.state.trim() ? entry.state.trim() : 'published',
       }))
       .filter((entry) => entry.game_name && entry.file_name)
       .filter((entry) => normalizeString(entry.category) === normalizedCategory)
+      .filter((entry) => normalizeString(entry.state) === normalizedState)
       .sort((left, right) => left.game_name.localeCompare(right.game_name))
 
     return {
       count: games.length,
+      state: normalizedState,
       games,
+    }
+  }
+
+  getStaging5HintGame(category, game, createdBy) {
+    const safeCategory = String(category || '').trim()
+    const safeGame = String(game || '').trim()
+    const safeCreatedBy = String(createdBy || '').trim()
+
+    if (!safeCategory) {
+      throw new HttpError(400, 'category is required.')
+    }
+    if (!safeGame) {
+      throw new HttpError(400, 'game is required.')
+    }
+    if (!safeCreatedBy) {
+      throw new HttpError(400, 'createdBy is required.')
+    }
+
+    const normalizedCategory = normalizeString(safeCategory)
+    const normalizedGame = normalizeString(safeGame)
+    const normalizedCreatedBy = normalizeString(safeCreatedBy)
+
+    const fileMap = this.readCategoryFileMap()
+    const matchedEntry = Object.entries(fileMap).find(([key, value]) => {
+      const entryCategory = typeof value?.category === 'string' ? value.category.trim() : ''
+      const entryGameName = typeof value?.game_name === 'string' ? value.game_name.trim() : ''
+      const entryCreatedBy = typeof value?.created_by === 'string' ? value.created_by.trim() : ''
+
+      return normalizeString(entryCategory) === normalizedCategory
+        && (normalizeString(entryGameName) === normalizedGame || normalizeString(key) === normalizedGame)
+        && normalizeString(entryCreatedBy) === normalizedCreatedBy
+    })
+
+    if (!matchedEntry) {
+      throw new HttpError(
+        404,
+        `Game "${safeGame}" was not found for category "${safeCategory}" created by "${safeCreatedBy}".`
+      )
+    }
+
+    const mapEntry = matchedEntry[1]
+    const sourceFileName = mapEntry.file_name
+    const stagingFilePath = this.getStagingFilePath(sourceFileName)
+    const stagingFileName = path.basename(stagingFilePath)
+
+    if (!fs.existsSync(stagingFilePath)) {
+      throw new HttpError(404, `Staging file "${stagingFileName}" was not found.`)
+    }
+
+    let parsed
+
+    try {
+      parsed = JSON.parse(fs.readFileSync(stagingFilePath, 'utf8'))
+    } catch (error) {
+      throw new Error(`Malformed JSON in staging data file "${stagingFileName}": ${error.message}`)
+    }
+
+    if (!Array.isArray(parsed)) {
+      throw new Error(`Staging data file "${stagingFileName}" must contain a top-level array.`)
+    }
+
+    return {
+      category: mapEntry.category,
+      game_name: mapEntry.game_name,
+      created_by: mapEntry.created_by,
+      fileName: stagingFileName,
+      sourceFileName,
+      count: parsed.length,
+      data: parsed,
+    }
+  }
+
+  approve5HintGameEntry(options = {}) {
+    const safeCategory = String(options.category || '').trim()
+    const safeGame = String(options.game_name || options.gameName || '').trim()
+    const safeUserName = String(options.user_name || options.userName || '').trim()
+    const entryJson = options.entry_json || options.entryJson
+
+    if (!safeCategory) {
+      throw new HttpError(400, 'category is required.')
+    }
+    if (!safeGame) {
+      throw new HttpError(400, 'game_name is required.')
+    }
+    if (!safeUserName) {
+      throw new HttpError(400, 'user_name is required.')
+    }
+
+    const normalizedCategory = normalizeString(safeCategory)
+    const normalizedGame = normalizeString(safeGame)
+    const normalizedUserName = normalizeString(safeUserName)
+
+    const fileMap = this.readCategoryFileMap()
+    const matchedEntry = Object.entries(fileMap).find(([key, value]) => {
+      const entryCategory = typeof value?.category === 'string' ? value.category.trim() : ''
+      const entryGameName = typeof value?.game_name === 'string' ? value.game_name.trim() : ''
+      const entryCreatedBy = typeof value?.created_by === 'string' ? value.created_by.trim() : ''
+
+      return normalizeString(entryCategory) === normalizedCategory
+        && (normalizeString(entryGameName) === normalizedGame || normalizeString(key) === normalizedGame)
+        && normalizeString(entryCreatedBy) === normalizedUserName
+    })
+
+    if (!matchedEntry) {
+      throw new HttpError(
+        404,
+        `Game "${safeGame}" was not found for category "${safeCategory}" created by "${safeUserName}".`
+      )
+    }
+
+    const [mapKey, mapEntry] = matchedEntry
+    const fileName = mapEntry.file_name
+    const filePath = path.join(path.dirname(this.categoryFileMapPath), fileName)
+
+    let entries = []
+    if (fs.existsSync(filePath)) {
+      try {
+        entries = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+      } catch (error) {
+        throw new Error(`Malformed JSON in category data file "${fileName}": ${error.message}`)
+      }
+
+      if (!Array.isArray(entries)) {
+        throw new Error(`Category data file "${fileName}" must contain a top-level array.`)
+      }
+    }
+
+    const approvedEntry = this.sanitizeApproved5HintEntry(entryJson, mapEntry.category)
+    entries.push(approvedEntry)
+    this.writeCategoryEntries(filePath, entries)
+
+    fileMap[mapKey] = {
+      ...mapEntry,
+      state: 'published',
+    }
+    this.writeCategoryFileMap(fileMap)
+
+    return {
+      category: mapEntry.category,
+      game_name: mapEntry.game_name,
+      created_by: mapEntry.created_by,
+      fileName,
+      state: 'published',
+      approved: approvedEntry,
+      totalEntries: entries.length,
     }
   }
 

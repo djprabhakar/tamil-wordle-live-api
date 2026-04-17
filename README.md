@@ -61,9 +61,11 @@ Startup validation will fail fast if:
 - `GET /api/words/Create5HintGameEnvironment`
 - `POST /api/words/SaveA5HintWord`
 - `GET /api/words/Get5HintWordCategories`
-- `GET /api/words/GetAll5HintGames?category=audio-songs&createdby=system`
+- `GET /api/words/GetAll5HintGames?category=audio-songs&createdby=system&state=published`
+- `GET /api/words/GetStaging5HintGame?category=audio-songs&game=80's Rock Hits&createdby=system`
 - `GET /api/words/Get5HintWordBeginningWith?category=audio-songs&game=80's Rock Hits&createdby=system&startsWith=Ba`
 - `GET /api/words/Get20RandomWordsWith5Clues?game=Common`
+- `POST /api/words/Approve5HintGameEntry`
 
 ### curl examples
 
@@ -77,7 +79,8 @@ curl -X POST http://localhost:4000/api/words/Create5HintGame ^
   -d "{\"category\":\"audio-songs\",\"game_name\":\"80's Rock Hits\",\"nick_name\":\"prabhakar\",\"audio_enabled\":true,\"notes\":{\"NoOfWords\":2,\"GamePrompt\":\"Make the overall game feel like a stadium-rock challenge.\",\"AudioPrompt\":\"After the clues, add a karaoke-focused YouTube media object for the answer.\",\"TitlePrompt\":\"Make the title punchy.\",\"CluesPrompt\":\"Go from broad to iconic.\"}}"
 curl http://localhost:4000/api/words/Create5HintGameJobs/JABC1234
 curl http://localhost:4000/api/words/Get5HintWordCategories
-curl "http://localhost:4000/api/words/GetAll5HintGames?category=audio-songs&createdby=system"
+curl "http://localhost:4000/api/words/GetAll5HintGames?category=audio-songs&createdby=system&state=published"
+curl "http://localhost:4000/api/words/GetStaging5HintGame?category=audio-songs&game=80's Rock Hits&createdby=system"
 curl "http://localhost:4000/api/words/Get5HintWordBeginningWith?category=audio-songs&game=80's Rock Hits&createdby=system&startsWith=Ba"
 curl "http://localhost:4000/api/words/random?category=thing"
 curl "http://localhost:4000/api/words/random-set?count=10&category=thing"
@@ -129,7 +132,7 @@ Response from `POST /api/words/SaveA5HintWord`:
 Behavior:
 
 - category-to-file mapping is stored in `data/category-file-map.json`
-- each category-file-map entry stores `category`, `game_name`, `file_name`, and `created_by`
+- each category-file-map entry stores `category`, `game_name`, `file_name`, `created_by`, and `state`
 - if a category does not exist, the API creates a new mapping entry
 - the new filename is derived from the category name, for example `Movie Titles` -> `Movie_Titles.json`
 - `WordEntry` must be a JSON object with a non-empty `answer` and exactly 5 non-empty `clues`
@@ -140,6 +143,9 @@ Behavior:
 - `POST /api/words/Create5HintGame` requires `OPENAI_API_KEY`; `OPENAI_MODEL` is optional and defaults to `gpt-5`
 - `POST /api/words/Create5HintGame` requires a non-empty `category`
 - `POST /api/words/Create5HintGame` expects `game_name` to be the human-readable game label used for `data/category-file-map.json`
+- `GET /api/words/GetAll5HintGames` accepts optional `state`; when omitted, it returns only `state: "published"` games
+- `GET /api/words/GetStaging5HintGame` looks up the mapped game and reads `data/staging/<file>_staging.json`
+- `POST /api/words/Approve5HintGameEntry` appends an approved staged entry to the mapped live game file and updates the mapped game `state` to `published`
 - `category` is the type label stored in generated entries, for example `audio-songs`
 - `POST /api/words/Create5HintGame` expects `notes` as a JSON object with `NoOfWords`, `GamePrompt`, `AudioPrompt`, `TitlePrompt`, and `CluesPrompt`
 - `POST /api/words/Create5HintGame` returns `202 Accepted` with a `jobId` and `statusUrl`

@@ -123,6 +123,54 @@ const openapi = {
         },
         required: ['category', 'fileName', 'saved', 'totalEntries'],
       },
+      Approve5HintGameEntryRequest: {
+        type: 'object',
+        properties: {
+          game_name: { type: 'string', example: 'World Class Athletes' },
+          category: { type: 'string', example: 'personalities' },
+          user_name: { type: 'string', example: 'Dj' },
+          entry_json: {
+            type: 'object',
+            properties: {
+              id: { type: 'integer', example: 1 },
+              category: { type: 'string', example: 'personalities' },
+              game_name: { type: 'string', example: 'World Class Athletes' },
+              answer: { type: 'string', example: 'Usain Bolt' },
+              title: { type: 'string', example: 'Jamaican sprint star who set all-time marks in the 100m and 200m' },
+              clues: {
+                type: 'array',
+                items: {
+                  type: 'object',
+                  properties: {
+                    text: { type: 'string' },
+                    is_confirmed: { type: 'string', example: 'Yes' },
+                  },
+                  required: ['text', 'is_confirmed'],
+                },
+                minItems: 5,
+                maxItems: 5,
+              },
+              created_by: { type: 'string', example: 'Dj' },
+            },
+            required: ['answer', 'clues'],
+            additionalProperties: true,
+          },
+        },
+        required: ['game_name', 'category', 'user_name', 'entry_json'],
+      },
+      Approve5HintGameEntryResponse: {
+        type: 'object',
+        properties: {
+          category: { type: 'string', example: 'personalities' },
+          game_name: { type: 'string', example: 'World Class Athletes' },
+          created_by: { type: 'string', example: 'Dj' },
+          fileName: { type: 'string', example: 'World_Class_Athletes.json' },
+          state: { type: 'string', example: 'published' },
+          approved: { type: 'object' },
+          totalEntries: { type: 'integer', example: 1 },
+        },
+        required: ['category', 'game_name', 'created_by', 'fileName', 'state', 'approved', 'totalEntries'],
+      },
       Create5HintGameRequest: {
         type: 'object',
         properties: {
@@ -299,12 +347,30 @@ const openapi = {
                 game_name: { type: 'string', example: "80's Rock Hits" },
                 file_name: { type: 'string', example: '80s_Rock_Hits.json' },
                 created_by: { type: 'string', example: 'system' },
+                state: { type: 'string', example: 'published' },
               },
-              required: ['category', 'game_name', 'file_name', 'created_by'],
+              required: ['category', 'game_name', 'file_name', 'created_by', 'state'],
             },
           },
+          state: { type: 'string', example: 'published' },
         },
-        required: ['count', 'games'],
+        required: ['count', 'state', 'games'],
+      },
+      Staging5HintGameResponse: {
+        type: 'object',
+        properties: {
+          category: { type: 'string', example: 'audio-songs' },
+          game_name: { type: 'string', example: "80's Rock Hits" },
+          created_by: { type: 'string', example: 'system' },
+          fileName: { type: 'string', example: '80s_Rock_Hits_staging.json' },
+          sourceFileName: { type: 'string', example: '80s_Rock_Hits.json' },
+          count: { type: 'integer', example: 3 },
+          data: {
+            type: 'array',
+            items: { type: 'object' },
+          },
+        },
+        required: ['category', 'game_name', 'created_by', 'fileName', 'sourceFileName', 'count', 'data'],
       },
       HintWordBeginningWithResponse: {
         type: 'object',
@@ -598,6 +664,30 @@ const openapi = {
         },
       },
     },
+    '/api/words/Approve5HintGameEntry': {
+      post: {
+        tags: ['Words'],
+        summary: 'Approve a staged 5-hint game entry and append it to the published game file',
+        requestBody: {
+          required: true,
+          content: {
+            'application/json': {
+              schema: { $ref: '#/components/schemas/Approve5HintGameEntryRequest' },
+            },
+          },
+        },
+        responses: {
+          201: {
+            description: 'Entry approved',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/Approve5HintGameEntryResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
     '/api/words/Create5HintGameJobs/{jobId}': {
       get: {
         tags: ['Words'],
@@ -656,6 +746,7 @@ const openapi = {
         parameters: [
           { in: 'query', name: 'category', schema: { type: 'string' } },
           { in: 'query', name: 'createdby', schema: { type: 'string' } },
+          { in: 'query', name: 'state', schema: { type: 'string', default: 'published' } },
         ],
         responses: {
           200: {
@@ -663,6 +754,27 @@ const openapi = {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/All5HintGamesResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/GetStaging5HintGame': {
+      get: {
+        tags: ['Words'],
+        summary: 'Get staged 5-hint game entries for a mapped game',
+        parameters: [
+          { in: 'query', name: 'category', required: true, schema: { type: 'string' } },
+          { in: 'query', name: 'game', required: true, schema: { type: 'string' } },
+          { in: 'query', name: 'createdby', required: true, schema: { type: 'string' } },
+        ],
+        responses: {
+          200: {
+            description: 'Staged game entries',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/Staging5HintGameResponse' },
               },
             },
           },
