@@ -1259,6 +1259,10 @@ class WordsService {
           game_name: resolvedGameName,
           entry_index: index + 1,
           attempt_index: attempt + 1,
+          game_prompt: notes.gamePrompt,
+          title_prompt: notes.titlePrompt,
+          clues_prompt: notes.cluesPrompt,
+          audio_prompt: notes.audioPrompt,
           prompt: renderedPrompt,
           created_at: new Date().toISOString(),
         })
