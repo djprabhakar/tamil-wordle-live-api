@@ -134,6 +134,8 @@ Behavior:
 - the new filename is derived from the category name, for example `Movie Titles` -> `Movie_Titles.json`
 - `WordEntry` must be a JSON object with a non-empty `answer` and exactly 5 non-empty `clues`
 - `POST /api/words/Create5HintGame` creates prompt files in `data/category-prompts/` when they do not already exist
+- `POST /api/words/Create5HintGame` writes generated entries to `data/staging/<file>_staging.json` instead of the live category file
+- staged `Create5HintGame` clues are objects with `text` and `is_confirmed: "No"`
 - `POST /api/words/Create5HintGame` requires `OPENAI_API_KEY`; `OPENAI_MODEL` is optional and defaults to `gpt-5`
 - `POST /api/words/Create5HintGame` requires a non-empty `category`
 - `POST /api/words/Create5HintGame` expects `game_name` to be the human-readable game label used for `data/category-file-map.json`

@@ -7,6 +7,7 @@ const DEFAULT_DATA_FILE = path.join(__dirname, '..', 'data', 'common_500_words_w
 const DEFAULT_CATEGORY_FILE_MAP = path.join(__dirname, '..', 'data', 'category-file-map.json')
 const DEFAULT_CATEGORY_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'category-prompts')
 const DEFAULT_PROMPT_LOGS_DIR = path.join(__dirname, '..', 'data', 'prompt-logs')
+const DEFAULT_STAGING_DIR = path.join(__dirname, '..', 'data', 'staging')
 const DEFAULT_CATEGORY_FILE_SEED = {
   Common: {
     category: 'common',
@@ -37,6 +38,7 @@ class WordsService {
     this.categoryFileMapPath = options.categoryFileMapPath || DEFAULT_CATEGORY_FILE_MAP
     this.categoryPromptsDir = options.categoryPromptsDir || DEFAULT_CATEGORY_PROMPTS_DIR
     this.promptLogsDir = options.promptLogsDir || DEFAULT_PROMPT_LOGS_DIR
+    this.stagingDir = options.stagingDir || DEFAULT_STAGING_DIR
     this.words = []
     this.wordMap = new Map()
     this.categoryMap = new Map()
@@ -503,6 +505,43 @@ class WordsService {
     fs.mkdirSync(this.promptLogsDir, { recursive: true })
   }
 
+  ensureStagingDir() {
+    fs.mkdirSync(this.stagingDir, { recursive: true })
+  }
+
+  getStagingFilePath(fileName) {
+    this.ensureStagingDir()
+    const parsed = path.parse(fileName)
+    return path.join(this.stagingDir, `${parsed.name}_staging${parsed.ext || '.json'}`)
+  }
+
+  readStagingEntries(fileName) {
+    const stagingFilePath = this.getStagingFilePath(fileName)
+    if (!fs.existsSync(stagingFilePath)) {
+      return {
+        stagingFilePath,
+        entries: [],
+      }
+    }
+
+    let parsed
+
+    try {
+      parsed = JSON.parse(fs.readFileSync(stagingFilePath, 'utf8'))
+    } catch (error) {
+      throw new Error(`Malformed JSON in staging data file "${path.basename(stagingFilePath)}": ${error.message}`)
+    }
+
+    if (!Array.isArray(parsed)) {
+      throw new Error(`Staging data file "${path.basename(stagingFilePath)}" must contain a top-level array.`)
+    }
+
+    return {
+      stagingFilePath,
+      entries: parsed,
+    }
+  }
+
   getPromptFilePath(fileName) {
     return path.join(this.categoryPromptsDir, fileName.replace(/\.json$/i, '.prompt.json'))
   }
@@ -510,8 +549,8 @@ class WordsService {
   createDefaultPromptConfig(category) {
     return {
       category,
-      version: 1,
-      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, and clues. The generated entry category value must be "{{EntryCategory}}". The generated entry game_name value must be "{{GameName}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} {{DuplicateAvoidanceInstruction}} Existing answers to avoid: {{ExistingAnswersInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
+      version: 2,
+      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, and clues. The generated entry category value must be "{{EntryCategory}}". The generated entry game_name value must be "{{GameName}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 clue nodes. Each clue node must contain text with the clue text and is_confirmed with the value "No". {{CategorySpecificRules}} {{AudioInstruction}} {{DuplicateAvoidanceInstruction}} Existing answers to avoid: {{ExistingAnswersInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
     }
   }
 
@@ -647,6 +686,22 @@ class WordsService {
     } catch (error) {
       checks.push({
         name: 'data directory',
+        ok: false,
+        message: `Not accessible: ${error.message}`,
+      })
+    }
+
+    try {
+      this.ensureStagingDir()
+      fs.accessSync(this.stagingDir, fs.constants.R_OK | fs.constants.W_OK)
+      checks.push({
+        name: 'staging directory',
+        ok: true,
+        message: `Readable and writable: ${this.stagingDir}`,
+      })
+    } catch (error) {
+      checks.push({
+        name: 'staging directory',
         ok: false,
         message: `Not accessible: ${error.message}`,
       })
@@ -819,6 +874,40 @@ class WordsService {
     return orderedEntry
   }
 
+  sanitizeGenerated5HintEntry(entry, fallbackCategory) {
+    const sanitizedEntry = this.sanitizeCategoryWordEntry(
+      {
+        ...entry,
+        clues: Array.isArray(entry?.clues)
+          ? entry.clues.map((clue) => {
+            if (clue && typeof clue === 'object' && !Array.isArray(clue)) {
+              return clue.text
+            }
+
+            return clue
+          })
+          : entry?.clues,
+      },
+      fallbackCategory
+    )
+
+    const clueNodes = entry.clues.map((clue, index) => {
+      const text = clue && typeof clue === 'object' && !Array.isArray(clue)
+        ? String(clue.text || '').trim()
+        : sanitizedEntry.clues[index]
+
+      return {
+        text,
+        is_confirmed: 'No',
+      }
+    })
+
+    return {
+      ...sanitizedEntry,
+      clues: clueNodes,
+    }
+  }
+
   saveA5HintWord(category, wordEntry) {
     const safeCategory = String(category || '').trim()
     if (!safeCategory) {
@@ -964,15 +1053,16 @@ class WordsService {
 
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-    const { category: resolvedCategory, gameName: resolvedGameName, fileName, filePath, entries } = this.readCategoryEntries(gameName, {
+    const { category: resolvedCategory, gameName: resolvedGameName, fileName, entries } = this.readCategoryEntries(gameName, {
       createIfMissing: true,
       createdBy: nickName,
       categoryType,
     })
+    const { stagingFilePath, entries: stagingEntries } = this.readStagingEntries(fileName)
     const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedGameName, fileName)
-    let nextId = this.getNextEntryId(entries)
+    let nextId = this.getNextEntryId([...entries, ...stagingEntries])
     const existingAnswerMap = new Map()
-    for (const answer of this.getExistingAnswers(entries)) {
+    for (const answer of this.getExistingAnswers([...entries, ...stagingEntries])) {
       existingAnswerMap.set(normalizeWord(answer), answer)
     }
     const existingAnswers = new Set(existingAnswerMap.keys())
@@ -987,7 +1077,15 @@ class WordsService {
         title: { type: 'string' },
         clues: {
           type: 'array',
-          items: { type: 'string' },
+          items: {
+            type: 'object',
+            additionalProperties: false,
+            properties: {
+              text: { type: 'string' },
+              is_confirmed: { type: 'string', enum: ['No'] },
+            },
+            required: ['text', 'is_confirmed'],
+          },
           minItems: 5,
           maxItems: 5,
         },
@@ -1137,7 +1235,7 @@ class WordsService {
           throw new Error(`OpenAI returned invalid JSON: ${error.message}`)
         }
 
-        const sanitizedEntry = this.sanitizeCategoryWordEntry(generatedEntry, resolvedCategory)
+        const sanitizedEntry = this.sanitizeGenerated5HintEntry(generatedEntry, resolvedCategory)
         const normalizedAnswer = normalizeWord(sanitizedEntry.answer)
 
         if (existingAnswers.has(normalizedAnswer)) {
@@ -1160,22 +1258,23 @@ class WordsService {
         })
       }
 
-      entries.push(finalEntry)
       created.push(finalEntry)
       nextId += 1
     }
 
-    this.writeCategoryEntries(filePath, entries)
+    stagingEntries.push(...created)
+    this.writeCategoryEntries(stagingFilePath, stagingEntries)
 
     return {
       category: categoryType,
       game_name: resolvedGameName,
-      fileName,
+      fileName: path.basename(stagingFilePath),
+      stagingFile: path.basename(stagingFilePath),
       promptFile: path.basename(promptFilePath),
       promptLogs,
       created,
       totalCreated: created.length,
-      totalEntries: entries.length,
+      totalEntries: stagingEntries.length,
     }
   }
 
