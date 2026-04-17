@@ -8,6 +8,7 @@ const DEFAULT_CATEGORY_FILE_MAP = path.join(__dirname, '..', 'data', 'category-f
 const DEFAULT_CATEGORY_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'category-prompts')
 const DEFAULT_PROMPT_LOGS_DIR = path.join(__dirname, '..', 'data', 'prompt-logs')
 const DEFAULT_STAGING_DIR = path.join(__dirname, '..', 'data', 'staging')
+const DEFAULT_GAME_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'game-prompts')
 const DEFAULT_CATEGORY_FILE_SEED = {
   Common: {
     category: 'common',
@@ -39,6 +40,7 @@ class WordsService {
     this.categoryPromptsDir = options.categoryPromptsDir || DEFAULT_CATEGORY_PROMPTS_DIR
     this.promptLogsDir = options.promptLogsDir || DEFAULT_PROMPT_LOGS_DIR
     this.stagingDir = options.stagingDir || DEFAULT_STAGING_DIR
+    this.gamePromptsDir = options.gamePromptsDir || DEFAULT_GAME_PROMPTS_DIR
     this.words = []
     this.wordMap = new Map()
     this.categoryMap = new Map()
@@ -456,7 +458,7 @@ class WordsService {
     this.writeCategoryFileMap(fileMap)
 
     const filePath = path.join(path.dirname(this.categoryFileMapPath), derivedFileName)
-    if (!fs.existsSync(filePath)) {
+    if (!options.skipDataFileCreate && !fs.existsSync(filePath)) {
       fs.writeFileSync(filePath, '[]\n', 'utf8')
     }
 
@@ -493,6 +495,27 @@ class WordsService {
     }
   }
 
+  readExistingCategoryEntries(fileName) {
+    const filePath = path.join(path.dirname(this.categoryFileMapPath), fileName)
+    if (!fs.existsSync(filePath)) {
+      return []
+    }
+
+    let parsed
+
+    try {
+      parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    } catch (error) {
+      throw new Error(`Malformed JSON in category data file "${fileName}": ${error.message}`)
+    }
+
+    if (!Array.isArray(parsed)) {
+      throw new Error(`Category data file "${fileName}" must contain a top-level array.`)
+    }
+
+    return parsed
+  }
+
   writeCategoryEntries(filePath, entries) {
     fs.writeFileSync(filePath, `${JSON.stringify(entries, null, 2)}\n`, 'utf8')
   }
@@ -503,6 +526,10 @@ class WordsService {
 
   ensurePromptLogsDir() {
     fs.mkdirSync(this.promptLogsDir, { recursive: true })
+  }
+
+  ensureGamePromptsDir() {
+    fs.mkdirSync(this.gamePromptsDir, { recursive: true })
   }
 
   ensureStagingDir() {
@@ -518,6 +545,7 @@ class WordsService {
   readStagingEntries(fileName) {
     const stagingFilePath = this.getStagingFilePath(fileName)
     if (!fs.existsSync(stagingFilePath)) {
+      fs.writeFileSync(stagingFilePath, '[]\n', 'utf8')
       return {
         stagingFilePath,
         entries: [],
@@ -544,6 +572,40 @@ class WordsService {
 
   getPromptFilePath(fileName) {
     return path.join(this.categoryPromptsDir, fileName.replace(/\.json$/i, '.prompt.json'))
+  }
+
+  getGamePromptsFilePath(fileName) {
+    this.ensureGamePromptsDir()
+    const parsed = path.parse(fileName)
+    return path.join(this.gamePromptsDir, `${parsed.name}_prompts.json`)
+  }
+
+  readGamePromptEntries(fileName) {
+    const gamePromptsFilePath = this.getGamePromptsFilePath(fileName)
+    if (!fs.existsSync(gamePromptsFilePath)) {
+      fs.writeFileSync(gamePromptsFilePath, '[]\n', 'utf8')
+      return {
+        gamePromptsFilePath,
+        entries: [],
+      }
+    }
+
+    let parsed
+
+    try {
+      parsed = JSON.parse(fs.readFileSync(gamePromptsFilePath, 'utf8'))
+    } catch (error) {
+      throw new Error(`Malformed JSON in game prompts file "${path.basename(gamePromptsFilePath)}": ${error.message}`)
+    }
+
+    if (!Array.isArray(parsed)) {
+      throw new Error(`Game prompts file "${path.basename(gamePromptsFilePath)}" must contain a top-level array.`)
+    }
+
+    return {
+      gamePromptsFilePath,
+      entries: parsed,
+    }
   }
 
   createDefaultPromptConfig(category) {
@@ -617,6 +679,10 @@ class WordsService {
     const filePath = path.join(this.promptLogsDir, fileName)
     fs.writeFileSync(filePath, `${String(promptText || '')}\n`, 'utf8')
     return filePath
+  }
+
+  writeGamePromptEntries(filePath, entries) {
+    fs.writeFileSync(filePath, `${JSON.stringify(entries, null, 2)}\n`, 'utf8')
   }
 
   getExistingAnswers(entries) {
@@ -702,6 +768,22 @@ class WordsService {
     } catch (error) {
       checks.push({
         name: 'staging directory',
+        ok: false,
+        message: `Not accessible: ${error.message}`,
+      })
+    }
+
+    try {
+      this.ensureGamePromptsDir()
+      fs.accessSync(this.gamePromptsDir, fs.constants.R_OK | fs.constants.W_OK)
+      checks.push({
+        name: 'game prompts directory',
+        ok: true,
+        message: `Readable and writable: ${this.gamePromptsDir}`,
+      })
+    } catch (error) {
+      checks.push({
+        name: 'game prompts directory',
         ok: false,
         message: `Not accessible: ${error.message}`,
       })
@@ -1053,13 +1135,16 @@ class WordsService {
 
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-    const { category: resolvedCategory, gameName: resolvedGameName, fileName, entries } = this.readCategoryEntries(gameName, {
+    const { category: resolvedCategory, gameName: resolvedGameName, fileName } = this.getCategoryFileInfo(gameName, {
       createIfMissing: true,
       createdBy: nickName,
       categoryType,
+      skipDataFileCreate: true,
     })
+    const entries = this.readExistingCategoryEntries(fileName)
     const { stagingFilePath, entries: stagingEntries } = this.readStagingEntries(fileName)
     const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedGameName, fileName)
+    const { gamePromptsFilePath, entries: gamePromptEntries } = this.readGamePromptEntries(fileName)
     let nextId = this.getNextEntryId([...entries, ...stagingEntries])
     const existingAnswerMap = new Map()
     for (const answer of this.getExistingAnswers([...entries, ...stagingEntries])) {
@@ -1148,6 +1233,7 @@ class WordsService {
     }
     const created = []
     const promptLogs = []
+    const gamePromptFile = path.basename(gamePromptsFilePath)
 
     for (let index = 0; index < notes.noOfWords; index += 1) {
       let finalEntry = null
@@ -1167,6 +1253,16 @@ class WordsService {
           renderedPrompt
         )
         promptLogs.push(promptLogPath)
+        gamePromptEntries.push({
+          job_id: jobId,
+          category: categoryType,
+          game_name: resolvedGameName,
+          entry_index: index + 1,
+          attempt_index: attempt + 1,
+          prompt: renderedPrompt,
+          created_at: new Date().toISOString(),
+        })
+        this.writeGamePromptEntries(gamePromptsFilePath, gamePromptEntries)
 
         let response
         try {
@@ -1259,11 +1355,10 @@ class WordsService {
       }
 
       created.push(finalEntry)
+      stagingEntries.push(finalEntry)
+      this.writeCategoryEntries(stagingFilePath, stagingEntries)
       nextId += 1
     }
-
-    stagingEntries.push(...created)
-    this.writeCategoryEntries(stagingFilePath, stagingEntries)
 
     return {
       category: categoryType,
@@ -1271,6 +1366,7 @@ class WordsService {
       fileName: path.basename(stagingFilePath),
       stagingFile: path.basename(stagingFilePath),
       promptFile: path.basename(promptFilePath),
+      gamePromptFile,
       promptLogs,
       created,
       totalCreated: created.length,

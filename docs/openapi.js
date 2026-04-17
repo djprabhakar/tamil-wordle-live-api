@@ -163,6 +163,7 @@ const openapi = {
           fileName: { type: 'string', example: '80s_Rock_Hits_staging.json' },
           stagingFile: { type: 'string', example: '80s_Rock_Hits_staging.json' },
           promptFile: { type: 'string', example: '80s_Rock_Hits.prompt.json' },
+          gamePromptFile: { type: 'string', example: '80s_Rock_Hits_prompts.json' },
           created: {
             type: 'array',
             items: {
@@ -206,7 +207,7 @@ const openapi = {
           totalCreated: { type: 'integer', example: 3 },
           totalEntries: { type: 'integer', example: 3 },
         },
-        required: ['category', 'game_name', 'fileName', 'stagingFile', 'promptFile', 'created', 'totalCreated', 'totalEntries'],
+        required: ['category', 'game_name', 'fileName', 'stagingFile', 'promptFile', 'gamePromptFile', 'created', 'totalCreated', 'totalEntries'],
       },
       Create5HintGameJobAcceptedResponse: {
         type: 'object',
