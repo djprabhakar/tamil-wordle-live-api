@@ -1477,6 +1477,46 @@ class WordsService {
     }
   }
 
+  getAll5HintGamesByUser(options = {}) {
+    const safeUserName = String(options.user_name || options.userName || '').trim()
+
+    if (!safeUserName) {
+      throw new HttpError(400, 'Query parameter "user_name" is required.')
+    }
+
+    const normalizedUserName = normalizeString(safeUserName)
+    const fileMap = this.readCategoryFileMap()
+
+    const games = Object.values(fileMap)
+      .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .map((entry) => {
+        const state = typeof entry.state === 'string' && entry.state.trim()
+          ? entry.state.trim()
+          : 'published'
+
+        return {
+          category: typeof entry.category === 'string' ? entry.category.trim() : '',
+          game_name: typeof entry.game_name === 'string' ? entry.game_name.trim() : '',
+          file_name: typeof entry.file_name === 'string' ? entry.file_name.trim() : '',
+          created_by: typeof entry.created_by === 'string' ? entry.created_by.trim() : '',
+          state,
+          status: state,
+        }
+      })
+      .filter((entry) => entry.game_name && entry.file_name)
+      .filter((entry) => normalizeString(entry.created_by) === normalizedUserName)
+      .sort((left, right) => {
+        const categoryCompare = left.category.localeCompare(right.category)
+        return categoryCompare || left.game_name.localeCompare(right.game_name)
+      })
+
+    return {
+      count: games.length,
+      user_name: safeUserName,
+      games,
+    }
+  }
+
   getStaging5HintGame(category, game, createdBy) {
     const safeCategory = String(category || '').trim()
     const safeGame = String(game || '').trim()

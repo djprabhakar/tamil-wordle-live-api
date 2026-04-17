@@ -146,6 +146,17 @@ function createWordsController(wordsService) {
       }
     },
 
+    getAll5HintGamesByUser(req, res, next) {
+      try {
+        const result = wordsService.getAll5HintGamesByUser({
+          user_name: req.query.user_name,
+        })
+        res.json(result)
+      } catch (error) {
+        next(error)
+      }
+    },
+
     getStaging5HintGame(req, res, next) {
       try {
         const result = wordsService.getStaging5HintGame(

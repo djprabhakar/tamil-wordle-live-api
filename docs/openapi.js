@@ -356,6 +356,29 @@ const openapi = {
         },
         required: ['count', 'state', 'games'],
       },
+      All5HintGamesByUserResponse: {
+        type: 'object',
+        properties: {
+          count: { type: 'integer' },
+          user_name: { type: 'string', example: 'system' },
+          games: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                category: { type: 'string', example: 'audio-songs' },
+                game_name: { type: 'string', example: "80's Rock Hits" },
+                file_name: { type: 'string', example: '80s_Rock_Hits.json' },
+                created_by: { type: 'string', example: 'system' },
+                state: { type: 'string', example: 'published' },
+                status: { type: 'string', example: 'published' },
+              },
+              required: ['category', 'game_name', 'file_name', 'created_by', 'state', 'status'],
+            },
+          },
+        },
+        required: ['count', 'user_name', 'games'],
+      },
       Staging5HintGameResponse: {
         type: 'object',
         properties: {
@@ -754,6 +777,25 @@ const openapi = {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/All5HintGamesResponse' },
+              },
+            },
+          },
+        },
+      },
+    },
+    '/api/words/GetAll5HintGamesByUser': {
+      get: {
+        tags: ['Words'],
+        summary: 'List 5-hint games and status created by a user',
+        parameters: [
+          { in: 'query', name: 'user_name', required: true, schema: { type: 'string' } },
+        ],
+        responses: {
+          200: {
+            description: 'Matched games created by the user',
+            content: {
+              'application/json': {
+                schema: { $ref: '#/components/schemas/All5HintGamesByUserResponse' },
               },
             },
           },
