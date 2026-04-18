@@ -33,6 +33,28 @@ class HttpError extends Error {
   }
 }
 
+function parseAutoApproveOption(options = {}) {
+  const value = Object.prototype.hasOwnProperty.call(options, 'auto-approve')
+    ? options['auto-approve']
+    : Object.prototype.hasOwnProperty.call(options, 'auto_approve')
+      ? options.auto_approve
+      : options.autoApprove
+
+  if (value === undefined || value === null || value === '') {
+    return true
+  }
+
+  if (value === true || value === 'true') {
+    return true
+  }
+
+  if (value === false || value === 'false') {
+    return false
+  }
+
+  throw new HttpError(400, 'auto-approve must be true or false.')
+}
+
 class WordsService {
   constructor(options = {}) {
     this.dataFilePath = options.dataFilePath || DEFAULT_DATA_FILE
@@ -1062,6 +1084,7 @@ class WordsService {
     const gameName = String(options.gameName || options.game_name || options.categoryName || '').trim()
       || (categoryType && categoryType !== 'audio-songs' ? categoryType : '')
     const nickName = String(options.nickName || options.nick_name || '').trim()
+    const autoApprove = parseAutoApproveOption(options)
 
     if (!categoryType) {
       throw new HttpError(400, 'category is required.')
@@ -1083,6 +1106,7 @@ class WordsService {
       category: categoryType,
       game_name: gameName,
       nick_name: nickName,
+      auto_approve: autoApprove,
       queuedAt,
       startedAt: null,
       finishedAt: null,
@@ -1121,6 +1145,7 @@ class WordsService {
       category: categoryType,
       game_name: gameName,
       nick_name: nickName,
+      auto_approve: autoApprove,
       queuedAt,
       statusUrl: `/api/words/Create5HintGameJobs/${jobId}`,
     }
@@ -1134,6 +1159,7 @@ class WordsService {
     const jobId = String(options.jobId || '').trim()
     const notes = this.parseCreate5HintNotes(options.notes)
     const audioEnabled = options.audioEnabled === true || options.audio_enabled === true
+    const autoApprove = parseAutoApproveOption(options)
 
     if (!categoryType) {
       throw new HttpError(400, 'category is required.')
@@ -1171,12 +1197,16 @@ class WordsService {
       skipDataFileCreate: true,
     })
     const entries = this.readExistingCategoryEntries(fileName)
-    const { stagingFilePath, entries: stagingEntries } = this.readStagingEntries(fileName)
+    const targetFilePath = path.join(path.dirname(this.categoryFileMapPath), fileName)
+    const { stagingFilePath, entries: stagingEntries } = autoApprove
+      ? { stagingFilePath: null, entries: [] }
+      : this.readStagingEntries(fileName)
     const { promptFilePath, promptConfig } = this.readCategoryPromptConfig(resolvedGameName, fileName)
     const { gamePromptsFilePath, entries: gamePromptEntries } = this.readGamePromptEntries(fileName)
-    let nextId = this.getNextEntryId([...entries, ...stagingEntries])
+    const targetEntries = autoApprove ? entries : stagingEntries
+    let nextId = this.getNextEntryId(autoApprove ? entries : [...entries, ...stagingEntries])
     const existingAnswerMap = new Map()
-    for (const answer of this.getExistingAnswers([...entries, ...stagingEntries])) {
+    for (const answer of this.getExistingAnswers(autoApprove ? entries : [...entries, ...stagingEntries])) {
       existingAnswerMap.set(normalizeWord(answer), answer)
     }
     const existingAnswers = new Set(existingAnswerMap.keys())
@@ -1388,22 +1418,40 @@ class WordsService {
       }
 
       created.push(finalEntry)
-      stagingEntries.push(finalEntry)
-      this.writeCategoryEntries(stagingFilePath, stagingEntries)
+      targetEntries.push(finalEntry)
+      this.writeCategoryEntries(autoApprove ? targetFilePath : stagingFilePath, targetEntries)
       nextId += 1
+    }
+
+    if (autoApprove) {
+      const fileMap = this.readCategoryFileMap()
+      const matchingKey = Object.keys(fileMap).find((key) => (
+        normalizeString(key) === normalizeString(resolvedGameName)
+        || normalizeString(fileMap[key]?.game_name) === normalizeString(resolvedGameName)
+      ))
+
+      if (matchingKey) {
+        fileMap[matchingKey] = {
+          ...fileMap[matchingKey],
+          state: 'published',
+        }
+        this.writeCategoryFileMap(fileMap)
+      }
     }
 
     return {
       category: categoryType,
       game_name: resolvedGameName,
-      fileName: path.basename(stagingFilePath),
-      stagingFile: path.basename(stagingFilePath),
+      fileName: autoApprove ? path.basename(targetFilePath) : path.basename(stagingFilePath),
+      stagingFile: autoApprove ? null : path.basename(stagingFilePath),
+      auto_approve: autoApprove,
+      state: autoApprove ? 'published' : 'staging',
       promptFile: path.basename(promptFilePath),
       gamePromptFile,
       promptLogs,
       created,
       totalCreated: created.length,
-      totalEntries: stagingEntries.length,
+      totalEntries: targetEntries.length,
     }
   }
 

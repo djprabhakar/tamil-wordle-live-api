@@ -200,6 +200,12 @@ const openapi = {
           },
           nick_name: { type: 'string', example: 'prabhakar' },
           audio_enabled: { type: 'boolean', example: true },
+          'auto-approve': {
+            type: 'boolean',
+            default: true,
+            example: true,
+            description: 'When true, generated entries are written directly to the mapped data file. When false, entries are written to the staging file.',
+          },
         },
         required: ['category', 'game_name', 'nick_name'],
       },
@@ -208,8 +214,10 @@ const openapi = {
         properties: {
           category: { type: 'string', example: 'audio-songs' },
           game_name: { type: 'string', example: 'Greatest Classic Rock Hits' },
-          fileName: { type: 'string', example: '80s_Rock_Hits_staging.json' },
-          stagingFile: { type: 'string', example: '80s_Rock_Hits_staging.json' },
+          fileName: { type: 'string', example: '80s_Rock_Hits.json' },
+          stagingFile: { type: 'string', nullable: true, example: null },
+          auto_approve: { type: 'boolean', example: true },
+          state: { type: 'string', example: 'published' },
           promptFile: { type: 'string', example: '80s_Rock_Hits.prompt.json' },
           gamePromptFile: { type: 'string', example: '80s_Rock_Hits_prompts.json' },
           created: {
@@ -255,7 +263,7 @@ const openapi = {
           totalCreated: { type: 'integer', example: 3 },
           totalEntries: { type: 'integer', example: 3 },
         },
-        required: ['category', 'game_name', 'fileName', 'stagingFile', 'promptFile', 'gamePromptFile', 'created', 'totalCreated', 'totalEntries'],
+        required: ['category', 'game_name', 'fileName', 'stagingFile', 'auto_approve', 'state', 'promptFile', 'gamePromptFile', 'created', 'totalCreated', 'totalEntries'],
       },
       Create5HintGameJobAcceptedResponse: {
         type: 'object',
@@ -265,10 +273,11 @@ const openapi = {
           category: { type: 'string', example: 'audio-songs' },
           game_name: { type: 'string', example: 'Greatest Classic Rock Hits' },
           nick_name: { type: 'string', example: 'prabhakar' },
+          auto_approve: { type: 'boolean', example: true },
           queuedAt: { type: 'integer', example: 1743200000000 },
           statusUrl: { type: 'string', example: '/api/words/Create5HintGameJobs/JABC1234' },
         },
-        required: ['jobId', 'status', 'category', 'game_name', 'nick_name', 'queuedAt', 'statusUrl'],
+        required: ['jobId', 'status', 'category', 'game_name', 'nick_name', 'auto_approve', 'queuedAt', 'statusUrl'],
       },
       Create5HintGameJobStatusResponse: {
         type: 'object',
@@ -666,7 +675,7 @@ const openapi = {
     '/api/words/Create5HintGame': {
       post: {
         tags: ['Words'],
-        summary: 'Queue a background job to generate new 5-hint game entries into a staging file using the OpenAI API',
+        summary: 'Queue a background job to generate new 5-hint game entries using the OpenAI API',
         requestBody: {
           required: true,
           content: {
