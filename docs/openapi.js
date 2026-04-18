@@ -236,12 +236,8 @@ const openapi = {
                 clues: {
                   type: 'array',
                   items: {
-                    type: 'object',
-                    properties: {
-                      text: { type: 'string', example: 'This rock anthem became a classroom chant.' },
-                      is_confirmed: { type: 'string', example: 'No' },
-                    },
-                    required: ['text', 'is_confirmed'],
+                    type: 'string',
+                    example: 'This rock anthem became a classroom chant.',
                   },
                   minItems: 5,
                   maxItems: 5,
@@ -758,7 +754,7 @@ const openapi = {
     '/api/words/Get5HintWordCategories': {
       get: {
         tags: ['Words'],
-        summary: 'Get available 5-clue word categories from the category-file-map',
+        summary: 'Get available published 5-clue word categories from the category-file-map',
         responses: {
           200: {
             description: 'Available mapped categories',

@@ -1019,6 +1019,19 @@ class WordsService {
     }
   }
 
+  createAutoApproved5HintEntry(entry) {
+    return {
+      ...entry,
+      clues: entry.clues.map((clue) => {
+        if (clue && typeof clue === 'object' && !Array.isArray(clue)) {
+          return String(clue.text || '').trim()
+        }
+
+        return String(clue || '').trim()
+      }),
+    }
+  }
+
   sanitizeApproved5HintEntry(entry, fallbackCategory) {
     if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
       throw new HttpError(400, 'entry_json must be a JSON object.')
@@ -1417,8 +1430,11 @@ class WordsService {
         })
       }
 
-      created.push(finalEntry)
-      targetEntries.push(finalEntry)
+      const persistedEntry = autoApprove
+        ? this.createAutoApproved5HintEntry(finalEntry)
+        : finalEntry
+      created.push(persistedEntry)
+      targetEntries.push(persistedEntry)
       this.writeCategoryEntries(autoApprove ? targetFilePath : stagingFilePath, targetEntries)
       nextId += 1
     }
@@ -1461,6 +1477,12 @@ class WordsService {
 
     Object.values(fileMap)
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .filter((entry) => {
+        const state = typeof entry.state === 'string' && entry.state.trim()
+          ? entry.state.trim()
+          : 'published'
+        return normalizeString(state) === normalizeString('published')
+      })
       .forEach((entry) => {
         const rawCategory = typeof entry.category === 'string' ? entry.category.trim() : ''
         if (!rawCategory) {

@@ -1,0 +1,5 @@
+{
+  "category": "Greatest Tennis Stars",
+  "version": 1,
+  "promptTemplate": "Generate {{NoOfWords}} distinct entries for the category \"{{CategoryName}}\". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, and clues. The generated entry category value must be \"{{EntryCategory}}\". The generated entry game_name value must be \"{{GameName}}\". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 non-empty strings. {{CategorySpecificRules}} {{AudioInstruction}} {{DuplicateAvoidanceInstruction}} Existing answers to avoid: {{ExistingAnswersInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to \"{{NickName}}\" will be handled by the server. Do not include explanation text outside the JSON object."
+}

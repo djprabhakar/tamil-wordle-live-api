@@ -138,13 +138,14 @@ Behavior:
 - `WordEntry` must be a JSON object with a non-empty `answer` and exactly 5 non-empty `clues`
 - `POST /api/words/Create5HintGame` creates prompt files in `data/category-prompts/` when they do not already exist
 - `POST /api/words/Create5HintGame` accepts `auto-approve`, which defaults to `true`
-- when `auto-approve` is `true`, `POST /api/words/Create5HintGame` writes generated entries directly to the mapped `data/<file_name>` file and marks the game as `published`
-- when `auto-approve` is `false`, `POST /api/words/Create5HintGame` follows the staging flow and writes generated entries to `data/staging/<file>_staging.json`
+- when `auto-approve` is `true`, `POST /api/words/Create5HintGame` writes generated entries directly to the mapped `data/<file_name>` file with `clues` as an array of strings and marks the game as `published`
+- when `auto-approve` is `false`, `POST /api/words/Create5HintGame` follows the staging flow and writes generated entries to `data/staging/<file>_staging.json` with review clue objects
 - staged `Create5HintGame` clues are objects with `text` and `is_confirmed: "No"`
 - rendered `Create5HintGame` prompts are stored as JSON nodes in `data/game-prompts/<file>_prompts.json` with separate `game_prompt`, `title_prompt`, `clues_prompt`, and `audio_prompt` fields
 - `POST /api/words/Create5HintGame` requires `OPENAI_API_KEY`; `OPENAI_MODEL` is optional and defaults to `gpt-5`
 - `POST /api/words/Create5HintGame` requires a non-empty `category`
 - `POST /api/words/Create5HintGame` expects `game_name` to be the human-readable game label used for `data/category-file-map.json`
+- `GET /api/words/Get5HintWordCategories` returns only categories with at least one `state: "published"` game; missing state is treated as `published`
 - `GET /api/words/GetAll5HintGames` accepts optional `state`; when omitted, it returns only `state: "published"` games
 - `GET /api/words/GetStaging5HintGame` looks up the mapped game and reads `data/staging/<file>_staging.json`
 - `POST /api/words/Approve5HintGameEntry` appends an approved staged entry to the mapped live game file and updates the mapped game `state` to `published`
