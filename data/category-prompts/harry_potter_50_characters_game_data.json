@@ -1,0 +1,702 @@
+[
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Harry Potter",
+    "title": "A boy with messy black hair, bright green eyes, and a lightning-bolt scar, marked by an unsettling link to a dark enemy",
+    "clues": [
+      "He learns on his eleventh birthday that he is famous in a hidden magical world he did not know existed.",
+      "He catches a tiny winged key in his first year, draws a sword from a Sorting Hat later on, and repeatedly survives encounters others would not.",
+      "A wand core twin to his enemy’s, a talent for flying, and the ability to speak to snakes set him apart even when he wishes they would not.",
+      "He becomes one of the few people to survive the Triwizard Tournament’s graveyard return and later walks willingly into the Forbidden Forest.",
+      "The piece of soul lodged in him explains why his scar burns and why he sometimes sees thoughts that are not his own."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Hermione Granger",
+    "title": "A girl with bushy brown hair and large front teeth, carrying a relentless need to be prepared that even her friends sometimes underestimate",
+    "clues": [
+      "Before her first train ride, she has already read nearly all her schoolbooks and begins correcting other students almost at once.",
+      "She brews Polyjuice Potion in a bathroom, solves Snape’s logic puzzle guarding the Stone, and traps a journalist in an unregistered beetle form.",
+      "Her handbag later carries almost impossibly many supplies because of an Undetectable Extension Charm.",
+      "She founds a society for house-elf rights and quietly wipes herself from her parents’ memories to protect them.",
+      "A Time-Turner once lets her attend overlapping classes long before she uses knowledge, law, and nerve in open resistance."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Ron Weasley",
+    "title": "A lanky red-haired boy with a long nose and freckles, hiding deep insecurity beneath humor and unexpected nerve",
+    "clues": [
+      "He grows up in a large wizarding family where hand-me-down robes, old pets, and secondhand wands are common facts of life.",
+      "His skill at wizard chess helps him win a life-sized match in first year, and he later imitates Parseltongue well enough to open a hidden chamber.",
+      "He is often overshadowed by brothers, famous friends, and his own self-doubt, which the locket Horcrux exploits mercilessly.",
+      "Though terrified of spiders after an early prank involving a teddy bear, he follows them into the Forbidden Forest anyway.",
+      "He leaves during the hunt but comes back to destroy the locket after pulling his best friend from an icy pool."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Albus Dumbledore",
+    "title": "A tall wizard with a long silver beard and half-moon spectacles, concealing old guilt beneath wit, calm, and careful misdirection",
+    "clues": [
+      "He is one of the very few wizards dark opponents openly feared, yet he often speaks in riddles and gentle observations rather than commands.",
+      "His office holds strange instruments, a phoenix, and a Pensieve through which crucial memories of the past are revealed.",
+      "He defeats Grindelwald in a legendary duel, discovers the twelve uses of dragon’s blood, and later drinks a terrible potion by a sea cave.",
+      "His left hand blackens after he puts on a ring that is more dangerous than it first appears.",
+      "He tells one boy that help will always be given at Hogwarts to those who ask for it, while privately planning far more than he says aloud."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Severus Snape",
+    "title": "A man with greasy black hair, a sallow face, and cold black eyes, driven by an old love he never stopped carrying",
+    "clues": [
+      "Students know him for curt insults, sweeping black robes, and a classroom manner that can make brewing a potion feel like a duel.",
+      "He makes the counter-curse during a Quidditch match, teaches Occlumency badly, and writes old textbook spells under the name of a prince.",
+      "His bitterness toward one boy is sharpened by school memories of that boy’s father, yet his protection never entirely stops.",
+      "A silver doe leads someone to a sword hidden beneath ice, long after many readers have reason to mistrust him.",
+      "His final memories reveal that he asked only one thing in return for his service: to keep a green-eyed child alive for a woman with the same eyes."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Rubeus Hagrid",
+    "title": "A half-giant with beetle-black eyes and a tangled beard, unable to resist any creature that looks dangerous, rare, or misunderstood",
+    "clues": [
+      "He arrives through storm and sea to tell a neglected boy the truth about his parents and his place in the magical world.",
+      "His hut is home to boars, hounds, dragons, and occasionally creatures that should plainly not be there.",
+      "He was expelled in his third year but still becomes the person many students trust first when fear or confusion sets in.",
+      "A broken pink umbrella hides more ability than most realize, and his giant blood later makes him unusually hard to stun.",
+      "He once wins a dragon egg from a hooded stranger by revealing exactly how to calm a three-headed dog."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Draco Malfoy",
+    "title": "A pale boy with pointed features and slick blond hair, masking fear with swagger learned from privilege and prejudice",
+    "clues": [
+      "He reaches out early with the confidence of someone sure he knows who matters and who does not.",
+      "His insults toward Muggle-borns, his father’s influence, and his constant need to perform superiority make him a frequent school antagonist.",
+      "He joins the Inquisitorial Squad, becomes a Seeker, and later spends a year trying to repair a cabinet instead of mastering open violence.",
+      "A mission forced on him leaves him ill, frightened, and often alone in a bathroom where the pressure finally breaks him.",
+      "At a crucial moment atop a tower, he cannot bring himself to cast the final curse he was ordered to use."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Minerva McGonagall",
+    "title": "A witch with square spectacles and a severe expression, combining tart discipline with a loyalty fiercer than many ever notice",
+    "clues": [
+      "She is strict about rules, homework, and house points, yet her judgments are often sharper and kinder than students first think.",
+      "Her lessons begin by turning desks into pigs and continue through some of the most exacting magic taught at the school.",
+      "She once leaves a child on a doorstep after spending hours in cat form watching a perfectly ordinary street.",
+      "In battle she animates desks, suits of armor, and statues with a satisfaction rare for her usually controlled manner.",
+      "Under the tart comments and clipped tone is the Head of Gryffindor who quietly bends rules whenever courage deserves backing."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Lord Voldemort",
+    "title": "A tall figure with a snakelike face and red eyes, driven by a terror of death so extreme it twists every choice he makes",
+    "clues": [
+      "Long before he loses his human features, he is a brilliant, charming student who steals trophies, asks dangerous questions, and collects followers.",
+      "He hides pieces of himself in a diary, a ring, a cup, a diadem, a locket, a snake, and something he never meant to use that way.",
+      "His rebirth in a graveyard uses bone, flesh, and blood, restoring a body that had existed for years only through possession and fragments.",
+      "He misunderstands sacrificial protection again and again because he values domination far above love.",
+      "A boyhood spent at an orphanage and a hatred of the father whose name he discards sit beneath the title he invents for himself."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Sirius Black",
+    "title": "A gaunt man with long dark hair and gray eyes, carrying reckless affection and old wounds behind a laugh that returns too quickly",
+    "clues": [
+      "Once believed to have betrayed close friends, he escapes the prison no one is supposed to escape by using magic he was never officially registered to possess.",
+      "He is one of the Marauders and helps create a map that knows every corridor, passage, and moving resident of a castle.",
+      "A huge black dog begins appearing near a young hero long before the truth about this figure becomes clear.",
+      "His childhood home is full of dark objects, pure-blood prejudice, and a house-elf who despises him.",
+      "He offers a hunted boy a home more than once, even though he himself has never really had one."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Remus Lupin",
+    "title": "A prematurely lined man in shabby robes, carrying quiet scholarship and deep self-disgust in equal measure",
+    "clues": [
+      "He is one of the few teachers whose lessons students remember with uncomplicated gratitude, especially after boggarts, grindylows, and hinkypunks.",
+      "Chocolate is his first remedy after a soul-sucking encounter on a train, and practical kindness shapes much of his teaching.",
+      "He helped create a secret map as a schoolboy and once ran with friends who changed form to keep him company safely.",
+      "A forgotten potion and a full moon transform an admired professor into the danger he has always feared being.",
+      "He later tries to run from fatherhood before being forced to hear the truth about cowardice from someone much younger."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Neville Longbottom",
+    "title": "A round-faced boy with a poor memory and awkward manner, hiding stubborn heroism that grows strongest when adults fail him",
+    "clues": [
+      "He is raised by relatives who measure him against a family legacy and once nearly discover his magic by dropping him from a window.",
+      "A lost toad and constant classroom mishaps make him seem comic early on, especially when potions are involved.",
+      "He improves dramatically in a resistance group, learns from a sympathetic Defence teacher, and later becomes one of a school’s fiercest defenders.",
+      "His parents still live, but not in any way that gives him back the childhood he should have had.",
+      "In the final battle he pulls a sword from a hat and destroys the last snake that matters."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Luna Lovegood",
+    "title": "A girl with straggly fair hair and protuberant eyes, wearing odd things with complete calm and seeing truth where others dismiss nonsense",
+    "clues": [
+      "She reads upside down, says improbable things without embarrassment, and makes classmates uncomfortable only because she refuses their rules for normal.",
+      "People laugh at her beliefs about hidden creatures, yet she notices social cruelties and emotional realities that sharper minds miss.",
+      "She can see the skeletal winged carriage-pullers because she has already witnessed death.",
+      "She comments on wrackspurts, radishes, and dirigible-plum earrings with the same serene certainty she later brings to prison rescue and battle.",
+      "A painted ceiling in one friend’s room reveals how deeply treasured she feels the companionship others sometimes forget to offer her."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Ginny Weasley",
+    "title": "A small red-haired girl with bright brown eyes, possessing a fierce will that survives even after being used as someone else’s instrument",
+    "clues": [
+      "At first she can barely speak in front of one famous boy, though that shyness disappears completely as she grows older.",
+      "A little black book becomes her confidant, then her captor, drawing her into acts she does not understand until far too late.",
+      "She later becomes a powerful flyer, a quick-casting duelist, and one of the sharpest wits in a crowded family.",
+      "Her Bat-Bogey Hex earns real respect, and her relationships never entirely overshadow her own force of character.",
+      "Long before the final war, she has already descended into a hidden chamber and lived."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Fred Weasley",
+    "title": "A tall red-haired twin with a permanently amused face, turning danger into laughter even when the cost is rising around him",
+    "clues": [
+      "He and his twin test sweets, invent joke goods, and treat rule-breaking as both an art and a public service.",
+      "A bewitched map, a flying car, and a spectacular swamp all benefit from his flair for chaos with purpose.",
+      "He leaves school in fireworks and dragon-shaped smoke, giving a headmistress one of the finest exits the castle has seen.",
+      "His jokes rarely mean he misses the truth; he notices fear, pomp, and hypocrisy quickly and answers each with mockery.",
+      "His final laugh comes in the middle of a war, moments before the twin bond at the center of so much mischief is broken forever."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "George Weasley",
+    "title": "A tall red-haired twin with identical features and a quicker undertone of tenderness, carrying grief no mirror can correct",
+    "clues": [
+      "He builds inventions, sells portable chaos, and treats disruption as both defense and delight.",
+      "On one dangerous flight he loses part of himself to a curse aimed at something much worse.",
+      "Even after battle wounds, he keeps joking because humor is part of how his family survives fear.",
+      "He helps create a shop that turns schoolboy rebellion into a thriving business of tricks, disguises, and shield hats.",
+      "After the war, every laugh he makes has an absence beside it that no spell can restore."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Arthur Weasley",
+    "title": "A thin red-haired wizard with glasses and a distracted air, pairing gentle decency with an almost scholarly fascination for nonmagical objects",
+    "clues": [
+      "He works in a Ministry office so small and unfashionable that ambition-seekers would never choose it willingly.",
+      "His delight in plugs, batteries, rubber ducks, and cars is sincere rather than mocking, which makes it all the more endearing.",
+      "He faces a giant snake in the line of duty and survives because someone far away sees through another’s eyes.",
+      "Though mild in manner, he can become unexpectedly sharp when pure-blood arrogance or cruelty toward the powerless surfaces.",
+      "He asks a question about the purpose of a rubber duck with exactly the seriousness others reserve for dragon law."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Molly Weasley",
+    "title": "A plump red-haired witch with a warm face, hiding battle-grade ferocity beneath domestic fussing and knitted affection",
+    "clues": [
+      "Her home is noisy, loving, patched together, and full of food, laundry, scolding, and the sort of safety children remember forever.",
+      "She sends sweaters, worries over lost sons, and can make a kitchen obey her wand while still spotting trouble across a crowded room.",
+      "A clock in her house tracks family members not by hour but by danger, work, travel, and mortal fear.",
+      "Her worst private fear emerges from a boggart that keeps reshaping itself into the bodies of those she loves.",
+      "In the final battle she proves that maternal tenderness and lethal magical skill can occupy the same wand hand."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Dobby",
+    "title": "A small house-elf with batlike ears and bulging green eyes, driven by a fierce hunger for freedom that makes him both troublesome and brave",
+    "clues": [
+      "He first appears trying to save someone by ruining a dinner, sealing a gateway, and causing havoc no polite guest could ignore.",
+      "His language is self-punishing, his clothes are symbols, and his loyalty once given is more dangerous to enemies than they expect.",
+      "He masters Apparition in places where most wizards assume it should be impossible or forbidden.",
+      "A mismatched collection of hats, socks, and cast-off garments becomes a wardrobe of liberation rather than shame.",
+      "He dies on a beach after rescuing prisoners from a manor, and the grave is dug without magic."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Bellatrix Lestrange",
+    "title": "A tall woman with heavy-lidded eyes and wild dark hair, turning devotion into cruelty with a joy that unsettles even allies",
+    "clues": [
+      "She treats pain as performance, mockery as sport, and loyalty to her master as a kind of exalted calling.",
+      "A vault at Gringotts, a prison break from Azkaban, and a duel in the Department of Mysteries all bear her violent mark.",
+      "She tortures for information and for pleasure, leaving damage that does not end when the spell stops.",
+      "Her family connections tie her to old pure-blood lines, but she burns every ordinary bond for fanatic allegiance.",
+      "She kills a beloved fugitive cousin and later underestimates a mother who is no longer willing to retreat."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Lucius Malfoy",
+    "title": "A pale aristocrat with long blond hair and a polished cane, disguising cowardice as refinement and influence as principle",
+    "clues": [
+      "He moves easily through Ministry corridors, board politics, and drawing rooms where power wears expensive fabric.",
+      "A school governor’s vote, a cursed diary slipped into the wrong cauldron, and repeated denials all show how he prefers indirect harm.",
+      "His family name opens doors, yet the return of the master he once served reveals how little control privilege finally grants him.",
+      "He values blood purity and appearances, but terror begins to erode both once his household becomes a place of punishment.",
+      "The silver-headed cane vanishes from importance when fear replaces status at his own dinner table."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Narcissa Malfoy",
+    "title": "A pale woman with carefully arranged blond hair, letting family devotion outrank every ideology she once lived beside",
+    "clues": [
+      "She belongs to an old pure-blood line and moves in the same circles that prize lineage, secrecy, and dark alliances.",
+      "Though not openly branded like some around her, she knows enough about fear and power to move carefully when both close in.",
+      "She makes a private vow for her son’s sake, even when that promise pulls her into perilous magic.",
+      "Her deepest loyalty is not to doctrine, status, or war, but to one boy she believes is being used.",
+      "A whispered lie in a forest changes the outcome of a battle because the answer she wants concerns only whether her child still lives."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Cedric Diggory",
+    "title": "A handsome, athletic boy with an easy manner, carrying a fairness that matters more than the applause surrounding him",
+    "clues": [
+      "He is admired at school for talent and decency in nearly equal measure, which is rarer than the books let on at first.",
+      "He becomes a Triwizard champion and handles fame with less vanity than many older wizards would manage.",
+      "A clue about golden eggs, a prefects’ bathroom, and an underwater task all become part of his path.",
+      "He insists on honorable play even in Quidditch, asking for rematches where others would gladly keep a tainted win.",
+      "His death in a graveyard transforms a tournament tragedy into proof that the war has truly returned."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Cho Chang",
+    "title": "A pretty Ravenclaw with long dark hair, carrying visible composure over grief she cannot neatly control",
+    "clues": [
+      "She is first noticed on a broomstick and later known through awkward conversations rather than dramatic speeches.",
+      "School romance, public pressure, and private mourning all entangle around her during one particularly difficult year.",
+      "Her connection to a champion lost in the tournament never entirely leaves the way others see her.",
+      "A date in a teashop becomes one of the most uncomfortable afternoons in the series because sorrow and jealousy are both present.",
+      "She joins a student resistance group even while carrying the complicated aftermath of bereavement and divided loyalties."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Dolores Umbridge",
+    "title": "A squat woman with a toadlike face and a fondness for pink, masking bureaucratic sadism behind kitten plates and false sweetness",
+    "clues": [
+      "She speaks in a simpering voice that makes cruelty sound like etiquette rather than punishment.",
+      "Educational decrees multiply around her until a school begins to feel less like a place of learning than a captured institution.",
+      "Detentions under her care leave words carved into skin without any visible blade.",
+      "She fears centaurs, loathes dissent, and mistakes petty authority for moral righteousness at every opportunity.",
+      "A blood quill, a sugar-coated cough, and a wall of decorative plates together create one of the series’ most hated presences."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Mad-Eye Moody",
+    "title": "A heavily scarred wizard with a magical blue eye, living by vigilance so absolute it has become both wisdom and wound",
+    "clues": [
+      "He is famous as an Auror long before students meet him, mostly through stories of dark wizards caught and curses survived.",
+      "His trunk, his paranoia, and his booby-trapped habits all suggest a man who trusts preparation more than peace.",
+      "One school year linked to his name includes Unforgivable Curses in class, unusual helpfulness, and a cup touched at the wrong time.",
+      "The constant turning eye can see through wood, invisibility cloaks, and the backs of heads.",
+      "His motto becomes famous at school even though for much of that year the person saying it is not actually him."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Nymphadora Tonks",
+    "title": "A young witch with a frequently changing face and short, spiky hair, hiding deeper sadness beneath clumsiness and defiant humor",
+    "clues": [
+      "She can alter her features at will, making disguise an instinct rather than a difficult spell.",
+      "Though often cheerful and physically awkward, she is a trained Auror trusted with dangerous work.",
+      "Her patronus changes after emotional upheaval, revealing feeling before she fully admits it aloud.",
+      "A disastrous war makes her seem dimmer for a time, not because her gift fades, but because hope does.",
+      "She rejects the first part of her own given name and marries a man who thinks he is too damaged to deserve her."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Kingsley Shacklebolt",
+    "title": "A tall bald wizard with a deep calm voice, concealing sharp strategic skill beneath effortless composure",
+    "clues": [
+      "He serves within official structures while quietly helping resist the corruption spreading through them.",
+      "Even when other authorities flounder, he remains competent, discreet, and hard to unsettle.",
+      "He can direct protection for fugitives, deceive powerful colleagues, and still appear merely professional on the surface.",
+      "His patronus is among those used to send urgent warnings when collapse comes suddenly.",
+      "After the war, his steadiness proves so trusted that he helps lead the rebuilding of magical government."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Horace Slughorn",
+    "title": "A bald wizard with a large silver mustache, hiding shame behind genial appetite and a collector’s eye for promising people",
+    "clues": [
+      "He likes comfort, candied fruit, velvet armchairs, and the reflected glow of famous former students.",
+      "His dinners and invitations form a private web of influence students jokingly name after him.",
+      "He avoids danger when he can, but not because he lacks talent; his preferred art is self-preservation.",
+      "One altered memory about a conversation with a gifted schoolboy becomes crucial to understanding a dark secret.",
+      "He returns to teach only after being coaxed out of hiding, where he has been disguising both his house and his conscience."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Peter Pettigrew",
+    "title": "A short balding wizard with watery eyes and a ratlike face, burying opportunism beneath the appearance of weakness",
+    "clues": [
+      "As a schoolboy he runs with brighter, braver friends whose loyalty he benefits from more than he deserves.",
+      "He becomes an unregistered Animagus not out of brilliance alone, but because fear can be patient and useful.",
+      "The wizarding world mourns him as a victim while the truth sits for years in a child’s pocket and sleeps in a cage.",
+      "He cuts off a finger, kills bystanders, and lets others carry the blame for betrayal on a massive scale.",
+      "A silver hand granted as reward later turns on him for a brief hesitation that suggests he once owed a life-debt."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "James Potter",
+    "title": "A tall boy with untidy black hair and glasses, remembered for arrogance in youth but for loyalty and courage in the end",
+    "clues": [
+      "He is popular, talented, and often infuriating at school, especially to one housemate who never forgets the humiliation.",
+      "With his closest friends he helps create a map that reveals secrets of a castle down to hidden passages and moving names.",
+      "He becomes an Animagus with antlers so that one friend will not face monthly suffering alone.",
+      "His worst memories involve swagger, teasing, and a dangerous confidence that takes years to outgrow.",
+      "He dies wandless in his own home after trying to hold off a killer long enough for his wife and child to run."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Lily Potter",
+    "title": "A young woman with dark red hair and bright green eyes, combining warmth, talent, and moral clarity stronger than fear",
+    "clues": [
+      "She is born outside the magical world yet becomes one of the most gifted students of her year.",
+      "Her friendship with a lonely boy from a poor home shapes both his happiest memories and his worst future choices.",
+      "She eventually rejects cruelty and prejudice so completely that old affection cannot survive the difference.",
+      "A headmaster later describes her talent in charms and the brightness of her nature to someone who needs reminding.",
+      "Her refusal to step aside places ancient protection around her infant son and changes the entire course of the war."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Gilderoy Lockhart",
+    "title": "A handsome wizard with gleaming blond curls and dazzling teeth, hiding cowardice behind polished vanity and stolen glory",
+    "clues": [
+      "His books line shop windows and classroom lists, each one making him sound braver, cleverer, and busier than he really is.",
+      "He signs photographs of himself, smiles at danger, and assumes admiration is a substitute for competence.",
+      "Pixies, dueling clubs, and Valentine theatrics all go badly once actual skill is required instead of performance.",
+      "His specialty is not heroism but memory modification, which he uses to claim other people’s adventures as his own.",
+      "A broken wand reflects his final spell back on him, leaving him trapped in the kind of emptiness his fraud helped create."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Argus Filch",
+    "title": "A gaunt man with stringy hair and a sour expression, nursing private resentment because he lives in magic without sharing it",
+    "clues": [
+      "He prowls corridors after curfew with a lantern, a cat, and an enthusiasm for punishment that students dread.",
+      "Chains, dungeons, and old disciplinary methods fascinate him in ways that reveal more than comic unpleasantness.",
+      "He knows the castle’s messes, stains, and rule-breakers intimately, even if students mostly notice only his bitterness.",
+      "A pamphlet about quick magical courses hints at a humiliation he would never willingly discuss in public.",
+      "His inability to perform spells makes every magical prank around him feel like mockery layered over exclusion."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Moaning Myrtle",
+    "title": "A ghostly girl with thick glasses and a mournful voice, turning self-pity into unexpected usefulness for anyone patient enough to listen",
+    "clues": [
+      "She haunts a bathroom, complains noisily, and measures insults with a memory that never seems to fade.",
+      "Students tend to avoid her until hidden passages, suspicious plumbing, and old school tragedies make her knowledge suddenly valuable.",
+      "She once followed a bully all the way home after death because grievance remained easier than peace.",
+      "A dangerous clue about eyes and sinks lies close to where she spends most of her afterlife.",
+      "She died when a monster opened its attack through a gaze she met near a set of taps."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Viktor Krum",
+    "title": "A dark-haired young man with a hooked nose and heavy brows, combining world fame with an awkward reserve off the Quidditch pitch",
+    "clues": [
+      "He arrives at school already known internationally, though his manner among classmates is far quieter than his reputation suggests.",
+      "On a broom he is angular, relentless, and capable of breathtaking dives that spectators remember instantly.",
+      "He enters the Triwizard Tournament and shows a colder, sterner magical seriousness than some of the other champions.",
+      "A library table conversation and a Yule Ball invitation reveal a shy side easy to miss beneath sporting celebrity.",
+      "Years later he is still prickly about symbols tied to dark magic, especially when he sees one hanging from another wizard’s neck."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Fleur Delacour",
+    "title": "A stunning young witch with silvery-blonde hair and an almost unearthly grace, concealing iron loyalty beneath elegance many mistake for vanity",
+    "clues": [
+      "Her beauty affects people before she speaks, which often leads them to underestimate what firmness lies underneath.",
+      "She competes in the Triwizard Tournament and suffers setbacks that would reduce a less proud person to bitterness.",
+      "At first she can sound dismissive of rustic homes and school kitchens, yet affection changes how she speaks and what she values.",
+      "Her partial Veela heritage explains some of the reactions she inspires, but not the courage with which she faces war and injury.",
+      "When the face of the man she loves is ruined, she answers pity with outrage and proves she never wanted him only for looks."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Barty Crouch Jr.",
+    "title": "A young man with a strained, restless look, burying fanatic intelligence beneath one of the longest deceptions in the series",
+    "clues": [
+      "He vanishes from ordinary public life under scandal, secrecy, and a family arrangement rooted in fear and control.",
+      "A house-elf, a hidden room, and a father’s harsh ambition all play parts in how long his survival goes unnoticed.",
+      "For an entire school year, careful guidance and suspicious helpfulness push one student exactly where a dark master wants him.",
+      "Polyjuice Potion, a stolen magical eye, and a trunk with multiple compartments are essential to his masquerade.",
+      "His loyalty is so absolute that once revealed, he speaks with pride about delivering a boy to a graveyard rather than any remorse."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Cornelius Fudge",
+    "title": "A stout wizard in a pinstriped cloak and bowler hat, preferring comfort and denial long after the facts turn dangerous",
+    "clues": [
+      "He begins as a plausible authority figure, cordial enough in crisis so long as the crisis remains containable.",
+      "His fear of instability makes him distrust truth-tellers whenever the truth threatens his own position.",
+      "Newspapers, school inspections, and whisper campaigns become tools once simple persuasion no longer works.",
+      "He repeatedly mistakes bad news for political inconvenience instead of acting on evidence placed directly before him.",
+      "By the time he finally admits the return everyone else has risked their lives warning him about, the cost of delay is enormous."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Rita Skeeter",
+    "title": "A blonde witch with jeweled fingers and sharp glasses, turning gossip into weaponry by treating privacy as a problem to be overcome",
+    "clues": [
+      "Her articles prefer scandal to fairness and implication to proof, especially when children can be made to look dramatic or unstable.",
+      "She knows details she should not know because she gathers them in ways both illegal and unannounced.",
+      "A tournament year gives her rich material: a famous boy, jealous classmates, grieving girls, and a school hungry for stories.",
+      "Even respected figures find themselves twisted into caricature once she gets ink and audience on her side.",
+      "Her unregistered beetle form finally traps her in a jar when someone more observant grows tired of being used."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Dean Thomas",
+    "title": "A tall dark-haired Gryffindor with an easy manner, carrying quiet resilience through a history he understands only in pieces",
+    "clues": [
+      "He is one of the steady background friends whose loyalty becomes more visible as the school years darken.",
+      "Posters, Quidditch talk, and dormitory life show him as sociable long before flight and hiding force a harder role.",
+      "He cannot prove a blood status that others suddenly decide matters, even though the truth about his family is more complicated than he knows.",
+      "On the run he travels with goblins, outcasts, and fellow fugitives before being captured and taken to a manor.",
+      "He was raised by Muggles because his wizard father died before revealing the truth to protect the family from dark enemies."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Seamus Finnigan",
+    "title": "A sandy-haired boy with an expressive face, pairing loud humor with a talent for accidental explosions and eventual courage",
+    "clues": [
+      "He begins as a lively Gryffindor whose magic has a habit of going off with more force than intended.",
+      "Dormitory scenes often place him amid jokes, sparks, and the kind of minor disaster that leaves soot behind.",
+      "For a time he believes official lies about a classmate more readily than friendship might excuse.",
+      "His mother’s caution shapes his views early, but war and experience push him toward a firmer understanding of where the danger lies.",
+      "By the final defense of the castle, he is blasting bridges and barricades instead of merely singeing feathers in class."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Percy Weasley",
+    "title": "A tall red-haired wizard with horn-rimmed glasses and a pompous air, hiding loneliness beneath ambition and perfect posture",
+    "clues": [
+      "He loves rules, titles, badges, and official approval with a sincerity his siblings find almost impossible not to mock.",
+      "As a student he patrols corridors, writes letters of reproof, and behaves as though school discipline is a sacred calling.",
+      "Ministry advancement tempts him into valuing career respectability over family trust when politics become toxic.",
+      "His estrangement lasts painfully long, especially for a household built on noisy closeness.",
+      "He returns at the battle with apologies, self-mockery, and more courage than his earlier choices had suggested."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Oliver Wood",
+    "title": "A burly young wizard with a weathered Quidditch face, turning sporting determination into something close to military command",
+    "clues": [
+      "He values practice schedules, tactical adjustments, and winning margins with an intensity that sometimes borders on mania.",
+      "New players are less recruited than conscripted once he decides they can help Gryffindor take the Cup.",
+      "Rain, broken brooms, rogue Bludgers, and even fainting spells rarely distract him from the larger campaign.",
+      "He can sound utterly tragic after a loss and utterly evangelical before a match, as though Quidditch contains the fate of kingdoms.",
+      "His captaincy is so consuming that even a deadly dog guarding a trapdoor briefly competes with match strategy for his attention."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Kreacher",
+    "title": "An ancient house-elf with a shriveled body and muttering voice, concealing a bruised capacity for devotion beneath bitterness and prejudice",
+    "clues": [
+      "He belongs to an old dark house and clings fiercely to its traditions, portraits, and grudges.",
+      "At first he seems only malicious, speaking insults under his breath and serving obedience poisoned by contempt.",
+      "A forgotten locket, a dead master’s impossible order, and an abandoned mission explain far more about him than his new owners know.",
+      "Kindness, proper authority, and the gift of a former master’s possessions transform him more effectively than punishment ever did.",
+      "When he leads elves into battle from the kitchens, the change is startling precisely because readers remember how nasty he once seemed."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Buckbeak",
+    "title": "A proud creature with steel-gray plumage and fierce orange eyes, ruled by ceremonial dignity that humans ignore at their peril",
+    "clues": [
+      "He is neither horse nor bird, and any approach to him must begin with manners rather than ownership.",
+      "A first lesson in respect turns ugly when a student insults what he has not bothered to understand.",
+      "Chains, an appeal, and a pumpkin patch all become part of the effort to save him from a punishment born of political influence.",
+      "He later carries fugitives through dark skies and perches in caves as if exile were simply another landscape.",
+      "A bow offered properly earns his cooperation at once; disrespect earns claws faster than explanations can follow."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Nearly Headless Nick",
+    "title": "A translucent nobleman in a ruff, carrying old courtly pride and quiet embarrassment over a death that was almost, but not quite, complete",
+    "clues": [
+      "He serves as a ghostly guide to one house of students, offering sympathy, gossip, and historical perspective in equal measure.",
+      "His longing for acceptance among the Headless Hunt reveals that even ghosts can remain painfully status-conscious.",
+      "Banquets for the dead, petrified students, and one locked cabinet all bring him into view at important moments.",
+      "His execution required many blows and still failed to separate head from neck cleanly enough to satisfy him centuries later.",
+      "He can hinge his head over one shoulder for effect, but never enough to win the club membership he wants."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Professor Trelawney",
+    "title": "A frail woman with enormous magnifying glasses and layers of shawls, performing vagueness so often that her rare real visions go almost unnoticed",
+    "clues": [
+      "Most of her lessons involve tea leaves, mist, ominous sighs, and predictions of doom that could apply to nearly anyone.",
+      "Students often doubt her because theatricality surrounds almost everything she says and does.",
+      "Yet at key moments a stranger, harsher voice speaks through her, delivering truths others fail to understand in time.",
+      "Her job exists because of one prophecy overheard incompletely in a public house years before the school ever meets the boy concerned.",
+      "She is usually ridiculous until the books remind readers that two of the most consequential predictions in the series came from her mouth."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Professor Sprout",
+    "title": "A squat witch with flyaway hair and earth-stained robes, combining practical warmth with an expert’s intimacy with dangerous plants",
+    "clues": [
+      "She teaches in greenhouses where dirt, sap, pods, and roots matter more than polished wand flourishes.",
+      "Her students learn quickly that the magical world grows many things that heal, choke, sting, scream, or strangle depending on handling.",
+      "Though less dramatic than some teachers, she becomes crucial when a restorative plant is needed to reverse a schoolwide catastrophe.",
+      "Her house values loyalty and patience, qualities mirrored in the steady competence with which she runs lessons.",
+      "Mandrakes maturing under her care provide the cure that finally wakes victims petrified by a hidden monster."
+    ],
+    "created_by": "system"
+  },
+  {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "answer": "Professor Flitwick",
+    "title": "A tiny wizard with a high voice and quick movements, pairing cheerful charm with formidable mastery too many students underestimate",
+    "clues": [
+      "His classroom often rings with precise pronunciation, feather-lifting, and the sort of technical correction that seems gentle until one notices how exacting it is.",
+      "He conducts choirs, organizes enchanted decorations, and generally appears among the more approachable members of staff.",
+      "Yet in dueling and defensive magic he carries serious pedigree and no small amount of tactical value.",
+      "During the final battle he helps cast complex protective enchantments over the castle before joining the fight directly.",
+      "The same teacher who introduces students to Wingardium Leviosa is also a former dueling champion."
+    ],
+    "created_by": "system"
+  }
+]

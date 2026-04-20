@@ -1,0 +1,5502 @@
+[
+  {
+    "answer": "car",
+    "title": "thing",
+    "clues": [
+      "vehicle",
+      "engine",
+      "road",
+      "electric",
+      "autonomous"
+    ]
+  },
+  {
+    "answer": "bus",
+    "title": "thing",
+    "clues": [
+      "transport",
+      "passengers",
+      "route",
+      "stop",
+      "public"
+    ]
+  },
+  {
+    "answer": "train",
+    "title": "thing",
+    "clues": [
+      "rail",
+      "engine",
+      "track",
+      "station",
+      "commute"
+    ]
+  },
+  {
+    "answer": "bike",
+    "title": "thing",
+    "clues": [
+      "pedal",
+      "wheel",
+      "helmet",
+      "ride",
+      "cycle"
+    ]
+  },
+  {
+    "answer": "truck",
+    "title": "thing",
+    "clues": [
+      "cargo",
+      "engine",
+      "road",
+      "delivery",
+      "heavy"
+    ]
+  },
+  {
+    "answer": "boat",
+    "title": "thing",
+    "clues": [
+      "water",
+      "sail",
+      "river",
+      "harbor",
+      "float"
+    ]
+  },
+  {
+    "answer": "ship",
+    "title": "thing",
+    "clues": [
+      "ocean",
+      "cargo",
+      "deck",
+      "captain",
+      "voyage"
+    ]
+  },
+  {
+    "answer": "plane",
+    "title": "thing",
+    "clues": [
+      "flight",
+      "wing",
+      "airport",
+      "pilot",
+      "travel"
+    ]
+  },
+  {
+    "answer": "helicopter",
+    "title": "thing",
+    "clues": [
+      "rotor",
+      "hover",
+      "pilot",
+      "rescue",
+      "air"
+    ]
+  },
+  {
+    "answer": "scooter",
+    "title": "thing",
+    "clues": [
+      "ride",
+      "small",
+      "electric",
+      "street",
+      "wheel"
+    ]
+  },
+  {
+    "answer": "motorcycle",
+    "title": "thing",
+    "clues": [
+      "helmet",
+      "engine",
+      "ride",
+      "speed",
+      "road"
+    ]
+  },
+  {
+    "answer": "subway",
+    "title": "thing",
+    "clues": [
+      "underground",
+      "train",
+      "city",
+      "station",
+      "metro"
+    ]
+  },
+  {
+    "answer": "tram",
+    "title": "thing",
+    "clues": [
+      "track",
+      "city",
+      "street",
+      "public",
+      "ride"
+    ]
+  },
+  {
+    "answer": "van",
+    "title": "thing",
+    "clues": [
+      "cargo",
+      "family",
+      "road",
+      "delivery",
+      "vehicle"
+    ]
+  },
+  {
+    "answer": "taxi",
+    "title": "thing",
+    "clues": [
+      "fare",
+      "city",
+      "ride",
+      "driver",
+      "meter"
+    ]
+  },
+  {
+    "answer": "ambulance",
+    "title": "thing",
+    "clues": [
+      "emergency",
+      "siren",
+      "hospital",
+      "paramedic",
+      "rescue"
+    ]
+  },
+  {
+    "answer": "firetruck",
+    "title": "thing",
+    "clues": [
+      "siren",
+      "fire",
+      "ladder",
+      "rescue",
+      "engine"
+    ]
+  },
+  {
+    "answer": "tractor",
+    "title": "thing",
+    "clues": [
+      "farm",
+      "field",
+      "engine",
+      "pull",
+      "agriculture"
+    ]
+  },
+  {
+    "answer": "rocket",
+    "title": "thing",
+    "clues": [
+      "space",
+      "launch",
+      "fuel",
+      "orbit",
+      "astronaut"
+    ]
+  },
+  {
+    "answer": "satellite",
+    "title": "thing",
+    "clues": [
+      "orbit",
+      "signal",
+      "space",
+      "communication",
+      "gps"
+    ]
+  },
+  {
+    "answer": "drone",
+    "title": "thing",
+    "clues": [
+      "camera",
+      "flying",
+      "remote",
+      "aerial",
+      "autonomous"
+    ]
+  },
+  {
+    "answer": "robot",
+    "title": "thing",
+    "clues": [
+      "machine",
+      "sensor",
+      "automation",
+      "ai",
+      "factory"
+    ]
+  },
+  {
+    "answer": "computer",
+    "title": "thing",
+    "clues": [
+      "screen",
+      "keyboard",
+      "software",
+      "digital",
+      "device"
+    ]
+  },
+  {
+    "answer": "laptop",
+    "title": "thing",
+    "clues": [
+      "portable",
+      "screen",
+      "keyboard",
+      "battery",
+      "work"
+    ]
+  },
+  {
+    "answer": "tablet",
+    "title": "thing",
+    "clues": [
+      "touchscreen",
+      "portable",
+      "app",
+      "digital",
+      "screen"
+    ]
+  },
+  {
+    "answer": "phone",
+    "title": "thing",
+    "clues": [
+      "call",
+      "screen",
+      "message",
+      "mobile",
+      "smart"
+    ]
+  },
+  {
+    "answer": "camera",
+    "title": "thing",
+    "clues": [
+      "photo",
+      "lens",
+      "flash",
+      "image",
+      "video"
+    ]
+  },
+  {
+    "answer": "television",
+    "title": "thing",
+    "clues": [
+      "screen",
+      "channel",
+      "remote",
+      "show",
+      "broadcast"
+    ]
+  },
+  {
+    "answer": "radio",
+    "title": "thing",
+    "clues": [
+      "music",
+      "signal",
+      "broadcast",
+      "station",
+      "audio"
+    ]
+  },
+  {
+    "answer": "speaker",
+    "title": "thing",
+    "clues": [
+      "sound",
+      "music",
+      "audio",
+      "volume",
+      "wireless"
+    ]
+  },
+  {
+    "answer": "headphones",
+    "title": "thing",
+    "clues": [
+      "audio",
+      "ears",
+      "music",
+      "wireless",
+      "listen"
+    ]
+  },
+  {
+    "answer": "keyboard",
+    "title": "thing",
+    "clues": [
+      "type",
+      "keys",
+      "computer",
+      "input",
+      "letters"
+    ]
+  },
+  {
+    "answer": "mouse",
+    "title": "thing",
+    "clues": [
+      "cursor",
+      "click",
+      "computer",
+      "scroll",
+      "input"
+    ]
+  },
+  {
+    "answer": "printer",
+    "title": "thing",
+    "clues": [
+      "paper",
+      "ink",
+      "print",
+      "document",
+      "office"
+    ]
+  },
+  {
+    "answer": "charger",
+    "title": "thing",
+    "clues": [
+      "battery",
+      "power",
+      "cable",
+      "electric",
+      "device"
+    ]
+  },
+  {
+    "answer": "battery",
+    "title": "thing",
+    "clues": [
+      "power",
+      "energy",
+      "charge",
+      "electric",
+      "portable"
+    ]
+  },
+  {
+    "answer": "watch",
+    "title": "thing",
+    "clues": [
+      "time",
+      "wrist",
+      "clock",
+      "smart",
+      "wearable"
+    ]
+  },
+  {
+    "answer": "clock",
+    "title": "thing",
+    "clues": [
+      "time",
+      "wall",
+      "alarm",
+      "hour",
+      "minute"
+    ]
+  },
+  {
+    "answer": "lamp",
+    "title": "thing",
+    "clues": [
+      "light",
+      "bulb",
+      "desk",
+      "shade",
+      "glow"
+    ]
+  },
+  {
+    "answer": "fan",
+    "title": "thing",
+    "clues": [
+      "air",
+      "cool",
+      "blade",
+      "spin",
+      "breeze"
+    ]
+  },
+  {
+    "answer": "heater",
+    "title": "thing",
+    "clues": [
+      "warmth",
+      "winter",
+      "heat",
+      "room",
+      "electric"
+    ]
+  },
+  {
+    "answer": "airconditioner",
+    "title": "thing",
+    "clues": [
+      "cooling",
+      "room",
+      "summer",
+      "compressor",
+      "climate"
+    ]
+  },
+  {
+    "answer": "refrigerator",
+    "title": "thing",
+    "clues": [
+      "cold",
+      "kitchen",
+      "food",
+      "freezer",
+      "cool"
+    ]
+  },
+  {
+    "answer": "microwave",
+    "title": "thing",
+    "clues": [
+      "heat",
+      "food",
+      "kitchen",
+      "quick",
+      "oven"
+    ]
+  },
+  {
+    "answer": "oven",
+    "title": "thing",
+    "clues": [
+      "bake",
+      "kitchen",
+      "heat",
+      "food",
+      "temperature"
+    ]
+  },
+  {
+    "answer": "stove",
+    "title": "thing",
+    "clues": [
+      "cook",
+      "flame",
+      "kitchen",
+      "pan",
+      "burner"
+    ]
+  },
+  {
+    "answer": "toaster",
+    "title": "thing",
+    "clues": [
+      "bread",
+      "breakfast",
+      "heat",
+      "kitchen",
+      "slice"
+    ]
+  },
+  {
+    "answer": "blender",
+    "title": "thing",
+    "clues": [
+      "smoothie",
+      "kitchen",
+      "mix",
+      "blade",
+      "drink"
+    ]
+  },
+  {
+    "answer": "kettle",
+    "title": "thing",
+    "clues": [
+      "water",
+      "boil",
+      "tea",
+      "steam",
+      "kitchen"
+    ]
+  },
+  {
+    "answer": "vacuum",
+    "title": "thing",
+    "clues": [
+      "clean",
+      "floor",
+      "dust",
+      "suction",
+      "home"
+    ]
+  },
+  {
+    "answer": "washer",
+    "title": "thing",
+    "clues": [
+      "laundry",
+      "clothes",
+      "soap",
+      "spin",
+      "clean"
+    ]
+  },
+  {
+    "answer": "dryer",
+    "title": "thing",
+    "clues": [
+      "laundry",
+      "heat",
+      "clothes",
+      "spin",
+      "dry"
+    ]
+  },
+  {
+    "answer": "iron",
+    "title": "thing",
+    "clues": [
+      "clothes",
+      "steam",
+      "press",
+      "wrinkle",
+      "heat"
+    ]
+  },
+  {
+    "answer": "broom",
+    "title": "thing",
+    "clues": [
+      "sweep",
+      "floor",
+      "dust",
+      "clean",
+      "handle"
+    ]
+  },
+  {
+    "answer": "mop",
+    "title": "thing",
+    "clues": [
+      "floor",
+      "water",
+      "clean",
+      "bucket",
+      "swab"
+    ]
+  },
+  {
+    "answer": "bucket",
+    "title": "thing",
+    "clues": [
+      "carry",
+      "water",
+      "handle",
+      "container",
+      "cleaning"
+    ]
+  },
+  {
+    "answer": "chair",
+    "title": "thing",
+    "clues": [
+      "sit",
+      "seat",
+      "legs",
+      "furniture",
+      "table"
+    ]
+  },
+  {
+    "answer": "table",
+    "title": "thing",
+    "clues": [
+      "surface",
+      "meal",
+      "legs",
+      "furniture",
+      "desk"
+    ]
+  },
+  {
+    "answer": "desk",
+    "title": "thing",
+    "clues": [
+      "work",
+      "office",
+      "drawer",
+      "study",
+      "table"
+    ]
+  },
+  {
+    "answer": "bed",
+    "title": "thing",
+    "clues": [
+      "sleep",
+      "mattress",
+      "pillow",
+      "rest",
+      "bedroom"
+    ]
+  },
+  {
+    "answer": "sofa",
+    "title": "thing",
+    "clues": [
+      "cushion",
+      "livingroom",
+      "sit",
+      "comfort",
+      "couch"
+    ]
+  },
+  {
+    "answer": "couch",
+    "title": "thing",
+    "clues": [
+      "sofa",
+      "livingroom",
+      "cushion",
+      "sit",
+      "relax"
+    ]
+  },
+  {
+    "answer": "wardrobe",
+    "title": "thing",
+    "clues": [
+      "clothes",
+      "closet",
+      "hanger",
+      "bedroom",
+      "storage"
+    ]
+  },
+  {
+    "answer": "bookshelf",
+    "title": "thing",
+    "clues": [
+      "books",
+      "shelf",
+      "library",
+      "storage",
+      "wood"
+    ]
+  },
+  {
+    "answer": "door",
+    "title": "thing",
+    "clues": [
+      "entry",
+      "open",
+      "handle",
+      "room",
+      "lock"
+    ]
+  },
+  {
+    "answer": "window",
+    "title": "thing",
+    "clues": [
+      "glass",
+      "view",
+      "open",
+      "light",
+      "frame"
+    ]
+  },
+  {
+    "answer": "mirror",
+    "title": "thing",
+    "clues": [
+      "reflection",
+      "glass",
+      "face",
+      "bathroom",
+      "look"
+    ]
+  },
+  {
+    "answer": "curtain",
+    "title": "thing",
+    "clues": [
+      "window",
+      "fabric",
+      "privacy",
+      "shade",
+      "room"
+    ]
+  },
+  {
+    "answer": "carpet",
+    "title": "thing",
+    "clues": [
+      "floor",
+      "soft",
+      "rug",
+      "room",
+      "fabric"
+    ]
+  },
+  {
+    "answer": "pillow",
+    "title": "thing",
+    "clues": [
+      "sleep",
+      "soft",
+      "bed",
+      "head",
+      "cushion"
+    ]
+  },
+  {
+    "answer": "blanket",
+    "title": "thing",
+    "clues": [
+      "warmth",
+      "bed",
+      "sleep",
+      "fabric",
+      "cover"
+    ]
+  },
+  {
+    "answer": "towel",
+    "title": "thing",
+    "clues": [
+      "bath",
+      "dry",
+      "fabric",
+      "water",
+      "bathroom"
+    ]
+  },
+  {
+    "answer": "umbrella",
+    "title": "thing",
+    "clues": [
+      "rain",
+      "cover",
+      "wet",
+      "weather",
+      "fold"
+    ]
+  },
+  {
+    "answer": "backpack",
+    "title": "thing",
+    "clues": [
+      "school",
+      "carry",
+      "zipper",
+      "travel",
+      "bag"
+    ]
+  },
+  {
+    "answer": "suitcase",
+    "title": "thing",
+    "clues": [
+      "travel",
+      "airport",
+      "luggage",
+      "trip",
+      "pack"
+    ]
+  },
+  {
+    "answer": "wallet",
+    "title": "thing",
+    "clues": [
+      "money",
+      "cards",
+      "pocket",
+      "leather",
+      "cash"
+    ]
+  },
+  {
+    "answer": "purse",
+    "title": "thing",
+    "clues": [
+      "bag",
+      "carry",
+      "money",
+      "fashion",
+      "hand"
+    ]
+  },
+  {
+    "answer": "key",
+    "title": "thing",
+    "clues": [
+      "lock",
+      "door",
+      "metal",
+      "open",
+      "access"
+    ]
+  },
+  {
+    "answer": "lock",
+    "title": "thing",
+    "clues": [
+      "key",
+      "secure",
+      "door",
+      "metal",
+      "safety"
+    ]
+  },
+  {
+    "answer": "bottle",
+    "title": "thing",
+    "clues": [
+      "water",
+      "drink",
+      "cap",
+      "container",
+      "plastic"
+    ]
+  },
+  {
+    "answer": "cup",
+    "title": "thing",
+    "clues": [
+      "drink",
+      "handle",
+      "tea",
+      "mug",
+      "sip"
+    ]
+  },
+  {
+    "answer": "mug",
+    "title": "thing",
+    "clues": [
+      "coffee",
+      "cup",
+      "handle",
+      "ceramic",
+      "drink"
+    ]
+  },
+  {
+    "answer": "plate",
+    "title": "thing",
+    "clues": [
+      "meal",
+      "food",
+      "dish",
+      "table",
+      "ceramic"
+    ]
+  },
+  {
+    "answer": "bowl",
+    "title": "thing",
+    "clues": [
+      "soup",
+      "round",
+      "dish",
+      "food",
+      "kitchen"
+    ]
+  },
+  {
+    "answer": "spoon",
+    "title": "thing",
+    "clues": [
+      "eat",
+      "soup",
+      "silverware",
+      "kitchen",
+      "stir"
+    ]
+  },
+  {
+    "answer": "fork",
+    "title": "thing",
+    "clues": [
+      "eat",
+      "prongs",
+      "silverware",
+      "kitchen",
+      "plate"
+    ]
+  },
+  {
+    "answer": "knife",
+    "title": "thing",
+    "clues": [
+      "cut",
+      "blade",
+      "kitchen",
+      "sharp",
+      "slice"
+    ]
+  },
+  {
+    "answer": "pan",
+    "title": "thing",
+    "clues": [
+      "cook",
+      "stove",
+      "fry",
+      "kitchen",
+      "metal"
+    ]
+  },
+  {
+    "answer": "pot",
+    "title": "thing",
+    "clues": [
+      "cook",
+      "boil",
+      "kitchen",
+      "lid",
+      "metal"
+    ]
+  },
+  {
+    "answer": "scissors",
+    "title": "thing",
+    "clues": [
+      "cut",
+      "paper",
+      "blade",
+      "school",
+      "craft"
+    ]
+  },
+  {
+    "answer": "hammer",
+    "title": "thing",
+    "clues": [
+      "nail",
+      "tool",
+      "hit",
+      "metal",
+      "build"
+    ]
+  },
+  {
+    "answer": "screwdriver",
+    "title": "thing",
+    "clues": [
+      "tool",
+      "screw",
+      "repair",
+      "turn",
+      "handle"
+    ]
+  },
+  {
+    "answer": "wrench",
+    "title": "thing",
+    "clues": [
+      "tool",
+      "bolt",
+      "repair",
+      "turn",
+      "metal"
+    ]
+  },
+  {
+    "answer": "drill",
+    "title": "thing",
+    "clues": [
+      "tool",
+      "hole",
+      "power",
+      "repair",
+      "spin"
+    ]
+  },
+  {
+    "answer": "saw",
+    "title": "thing",
+    "clues": [
+      "cut",
+      "wood",
+      "tool",
+      "teeth",
+      "carpenter"
+    ]
+  },
+  {
+    "answer": "ladder",
+    "title": "thing",
+    "clues": [
+      "climb",
+      "steps",
+      "height",
+      "repair",
+      "rungs"
+    ]
+  },
+  {
+    "answer": "rope",
+    "title": "thing",
+    "clues": [
+      "tie",
+      "pull",
+      "knot",
+      "climb",
+      "fiber"
+    ]
+  },
+  {
+    "answer": "box",
+    "title": "thing",
+    "clues": [
+      "container",
+      "cardboard",
+      "pack",
+      "storage",
+      "square"
+    ]
+  },
+  {
+    "answer": "bag",
+    "title": "thing",
+    "clues": [
+      "carry",
+      "container",
+      "shopping",
+      "pack",
+      "handle"
+    ]
+  },
+  {
+    "answer": "basket",
+    "title": "thing",
+    "clues": [
+      "carry",
+      "woven",
+      "handle",
+      "fruit",
+      "storage"
+    ]
+  },
+  {
+    "answer": "book",
+    "title": "thing",
+    "clues": [
+      "pages",
+      "read",
+      "story",
+      "library",
+      "author"
+    ]
+  },
+  {
+    "answer": "notebook",
+    "title": "thing",
+    "clues": [
+      "write",
+      "pages",
+      "school",
+      "notes",
+      "paper"
+    ]
+  },
+  {
+    "answer": "paper",
+    "title": "thing",
+    "clues": [
+      "write",
+      "sheet",
+      "print",
+      "notebook",
+      "page"
+    ]
+  },
+  {
+    "answer": "pen",
+    "title": "thing",
+    "clues": [
+      "write",
+      "ink",
+      "paper",
+      "school",
+      "sign"
+    ]
+  },
+  {
+    "answer": "pencil",
+    "title": "thing",
+    "clues": [
+      "write",
+      "graphite",
+      "erase",
+      "school",
+      "draw"
+    ]
+  },
+  {
+    "answer": "eraser",
+    "title": "thing",
+    "clues": [
+      "pencil",
+      "remove",
+      "mistake",
+      "rubber",
+      "school"
+    ]
+  },
+  {
+    "answer": "ruler",
+    "title": "thing",
+    "clues": [
+      "measure",
+      "line",
+      "school",
+      "straight",
+      "scale"
+    ]
+  },
+  {
+    "answer": "crayon",
+    "title": "thing",
+    "clues": [
+      "color",
+      "wax",
+      "draw",
+      "child",
+      "art"
+    ]
+  },
+  {
+    "answer": "paintbrush",
+    "title": "thing",
+    "clues": [
+      "paint",
+      "art",
+      "bristles",
+      "canvas",
+      "color"
+    ]
+  },
+  {
+    "answer": "glue",
+    "title": "thing",
+    "clues": [
+      "stick",
+      "craft",
+      "school",
+      "paste",
+      "bond"
+    ]
+  },
+  {
+    "answer": "ball",
+    "title": "thing",
+    "clues": [
+      "round",
+      "throw",
+      "catch",
+      "game",
+      "sport"
+    ]
+  },
+  {
+    "answer": "bat",
+    "title": "thing",
+    "clues": [
+      "baseball",
+      "hit",
+      "wood",
+      "sport",
+      "swing"
+    ]
+  },
+  {
+    "answer": "helmet",
+    "title": "thing",
+    "clues": [
+      "safety",
+      "head",
+      "ride",
+      "sport",
+      "protection"
+    ]
+  },
+  {
+    "answer": "shoe",
+    "title": "thing",
+    "clues": [
+      "foot",
+      "walk",
+      "lace",
+      "wear",
+      "sole"
+    ]
+  },
+  {
+    "answer": "sock",
+    "title": "thing",
+    "clues": [
+      "foot",
+      "wear",
+      "shoe",
+      "fabric",
+      "pair"
+    ]
+  },
+  {
+    "answer": "shirt",
+    "title": "thing",
+    "clues": [
+      "clothes",
+      "wear",
+      "fabric",
+      "button",
+      "top"
+    ]
+  },
+  {
+    "answer": "pants",
+    "title": "thing",
+    "clues": [
+      "clothes",
+      "wear",
+      "legs",
+      "fabric",
+      "pocket"
+    ]
+  },
+  {
+    "answer": "jacket",
+    "title": "thing",
+    "clues": [
+      "wear",
+      "warmth",
+      "zipper",
+      "coat",
+      "outerwear"
+    ]
+  },
+  {
+    "answer": "hat",
+    "title": "thing",
+    "clues": [
+      "head",
+      "wear",
+      "cap",
+      "sun",
+      "fashion"
+    ]
+  },
+  {
+    "answer": "gloves",
+    "title": "thing",
+    "clues": [
+      "hands",
+      "winter",
+      "wear",
+      "warmth",
+      "pair"
+    ]
+  },
+  {
+    "answer": "glasses",
+    "title": "thing",
+    "clues": [
+      "vision",
+      "eyes",
+      "frames",
+      "lenses",
+      "wear"
+    ]
+  },
+  {
+    "answer": "ring",
+    "title": "thing",
+    "clues": [
+      "finger",
+      "jewelry",
+      "gold",
+      "circle",
+      "wedding"
+    ]
+  },
+  {
+    "answer": "necklace",
+    "title": "thing",
+    "clues": [
+      "jewelry",
+      "neck",
+      "chain",
+      "gold",
+      "fashion"
+    ]
+  },
+  {
+    "answer": "soap",
+    "title": "thing",
+    "clues": [
+      "clean",
+      "bath",
+      "wash",
+      "foam",
+      "hygiene"
+    ]
+  },
+  {
+    "answer": "toothbrush",
+    "title": "thing",
+    "clues": [
+      "teeth",
+      "brush",
+      "bathroom",
+      "paste",
+      "hygiene"
+    ]
+  },
+  {
+    "answer": "toothpaste",
+    "title": "thing",
+    "clues": [
+      "teeth",
+      "mint",
+      "brush",
+      "bathroom",
+      "hygiene"
+    ]
+  },
+  {
+    "answer": "shampoo",
+    "title": "thing",
+    "clues": [
+      "hair",
+      "wash",
+      "bath",
+      "bottle",
+      "clean"
+    ]
+  },
+  {
+    "answer": "medicine",
+    "title": "thing",
+    "clues": [
+      "health",
+      "doctor",
+      "pill",
+      "treatment",
+      "pharmacy"
+    ]
+  },
+  {
+    "answer": "bandage",
+    "title": "thing",
+    "clues": [
+      "wound",
+      "cover",
+      "firstaid",
+      "heal",
+      "strip"
+    ]
+  },
+  {
+    "answer": "mask",
+    "title": "thing",
+    "clues": [
+      "face",
+      "cover",
+      "health",
+      "filter",
+      "protection"
+    ]
+  },
+  {
+    "answer": "ticket",
+    "title": "thing",
+    "clues": [
+      "entry",
+      "travel",
+      "seat",
+      "event",
+      "pass"
+    ]
+  },
+  {
+    "answer": "map",
+    "title": "thing",
+    "clues": [
+      "route",
+      "location",
+      "travel",
+      "direction",
+      "navigation"
+    ]
+  },
+  {
+    "answer": "compass",
+    "title": "thing",
+    "clues": [
+      "direction",
+      "north",
+      "travel",
+      "needle",
+      "navigate"
+    ]
+  },
+  {
+    "answer": "passport",
+    "title": "thing",
+    "clues": [
+      "travel",
+      "border",
+      "identity",
+      "visa",
+      "document"
+    ]
+  },
+  {
+    "answer": "money",
+    "title": "thing",
+    "clues": [
+      "cash",
+      "buy",
+      "value",
+      "currency",
+      "payment"
+    ]
+  },
+  {
+    "answer": "coin",
+    "title": "thing",
+    "clues": [
+      "money",
+      "metal",
+      "currency",
+      "small",
+      "change"
+    ]
+  },
+  {
+    "answer": "creditcard",
+    "title": "thing",
+    "clues": [
+      "payment",
+      "bank",
+      "swipe",
+      "wallet",
+      "digital"
+    ]
+  },
+  {
+    "answer": "receipt",
+    "title": "thing",
+    "clues": [
+      "purchase",
+      "store",
+      "paper",
+      "proof",
+      "payment"
+    ]
+  },
+  {
+    "answer": "gift",
+    "title": "thing",
+    "clues": [
+      "present",
+      "wrap",
+      "birthday",
+      "surprise",
+      "give"
+    ]
+  },
+  {
+    "answer": "toy",
+    "title": "thing",
+    "clues": [
+      "play",
+      "child",
+      "fun",
+      "game",
+      "plastic"
+    ]
+  },
+  {
+    "answer": "doll",
+    "title": "thing",
+    "clues": [
+      "toy",
+      "child",
+      "dress",
+      "play",
+      "figure"
+    ]
+  },
+  {
+    "answer": "puzzle",
+    "title": "thing",
+    "clues": [
+      "pieces",
+      "solve",
+      "game",
+      "picture",
+      "brain"
+    ]
+  },
+  {
+    "answer": "chessboard",
+    "title": "thing",
+    "clues": [
+      "game",
+      "squares",
+      "strategy",
+      "pieces",
+      "board"
+    ]
+  },
+  {
+    "answer": "guitar",
+    "title": "thing",
+    "clues": [
+      "music",
+      "strings",
+      "instrument",
+      "play",
+      "acoustic"
+    ]
+  },
+  {
+    "answer": "piano",
+    "title": "thing",
+    "clues": [
+      "keys",
+      "music",
+      "instrument",
+      "play",
+      "melody"
+    ]
+  },
+  {
+    "answer": "drum",
+    "title": "thing",
+    "clues": [
+      "beat",
+      "music",
+      "stick",
+      "rhythm",
+      "instrument"
+    ]
+  },
+  {
+    "answer": "violin",
+    "title": "thing",
+    "clues": [
+      "strings",
+      "bow",
+      "music",
+      "instrument",
+      "classical"
+    ]
+  },
+  {
+    "answer": "dog",
+    "title": "animal",
+    "clues": [
+      "pet",
+      "bark",
+      "tail",
+      "loyal",
+      "puppy"
+    ]
+  },
+  {
+    "answer": "cat",
+    "title": "animal",
+    "clues": [
+      "pet",
+      "meow",
+      "whiskers",
+      "feline",
+      "kitten"
+    ]
+  },
+  {
+    "answer": "cow",
+    "title": "animal",
+    "clues": [
+      "farm",
+      "milk",
+      "grass",
+      "horns",
+      "cattle"
+    ]
+  },
+  {
+    "answer": "horse",
+    "title": "animal",
+    "clues": [
+      "ride",
+      "mane",
+      "stable",
+      "gallop",
+      "hoof"
+    ]
+  },
+  {
+    "answer": "lion",
+    "title": "animal",
+    "clues": [
+      "mane",
+      "roar",
+      "savanna",
+      "predator",
+      "king"
+    ]
+  },
+  {
+    "answer": "tiger",
+    "title": "animal",
+    "clues": [
+      "stripes",
+      "jungle",
+      "predator",
+      "feline",
+      "roar"
+    ]
+  },
+  {
+    "answer": "elephant",
+    "title": "animal",
+    "clues": [
+      "trunk",
+      "tusks",
+      "giant",
+      "savanna",
+      "memory"
+    ]
+  },
+  {
+    "answer": "monkey",
+    "title": "animal",
+    "clues": [
+      "tree",
+      "banana",
+      "tail",
+      "primate",
+      "jungle"
+    ]
+  },
+  {
+    "answer": "bear",
+    "title": "animal",
+    "clues": [
+      "fur",
+      "forest",
+      "hibernate",
+      "claws",
+      "wild"
+    ]
+  },
+  {
+    "answer": "wolf",
+    "title": "animal",
+    "clues": [
+      "pack",
+      "howl",
+      "forest",
+      "predator",
+      "wild"
+    ]
+  },
+  {
+    "answer": "goat",
+    "title": "animal",
+    "clues": [
+      "horns",
+      "farm",
+      "climb",
+      "beard",
+      "graze"
+    ]
+  },
+  {
+    "answer": "sheep",
+    "title": "animal",
+    "clues": [
+      "wool",
+      "farm",
+      "flock",
+      "graze",
+      "lamb"
+    ]
+  },
+  {
+    "answer": "deer",
+    "title": "animal",
+    "clues": [
+      "antlers",
+      "forest",
+      "hoof",
+      "graze",
+      "swift"
+    ]
+  },
+  {
+    "answer": "fox",
+    "title": "animal",
+    "clues": [
+      "tail",
+      "forest",
+      "sly",
+      "red",
+      "wild"
+    ]
+  },
+  {
+    "answer": "rabbit",
+    "title": "animal",
+    "clues": [
+      "ears",
+      "hop",
+      "carrot",
+      "burrow",
+      "fur"
+    ]
+  },
+  {
+    "answer": "zebra",
+    "title": "animal",
+    "clues": [
+      "stripes",
+      "savanna",
+      "hoof",
+      "wild",
+      "herd"
+    ]
+  },
+  {
+    "answer": "giraffe",
+    "title": "animal",
+    "clues": [
+      "neck",
+      "tall",
+      "spots",
+      "savanna",
+      "leaf"
+    ]
+  },
+  {
+    "answer": "kangaroo",
+    "title": "animal",
+    "clues": [
+      "pouch",
+      "jump",
+      "australia",
+      "marsupial",
+      "tail"
+    ]
+  },
+  {
+    "answer": "panda",
+    "title": "animal",
+    "clues": [
+      "bamboo",
+      "bear",
+      "blackwhite",
+      "china",
+      "gentle"
+    ]
+  },
+  {
+    "answer": "leopard",
+    "title": "animal",
+    "clues": [
+      "spots",
+      "predator",
+      "climb",
+      "feline",
+      "swift"
+    ]
+  },
+  {
+    "answer": "cheetah",
+    "title": "animal",
+    "clues": [
+      "fast",
+      "spots",
+      "savanna",
+      "predator",
+      "sprint"
+    ]
+  },
+  {
+    "answer": "camel",
+    "title": "animal",
+    "clues": [
+      "desert",
+      "hump",
+      "sand",
+      "caravan",
+      "dry"
+    ]
+  },
+  {
+    "answer": "donkey",
+    "title": "animal",
+    "clues": [
+      "farm",
+      "bray",
+      "load",
+      "ears",
+      "stubborn"
+    ]
+  },
+  {
+    "answer": "pig",
+    "title": "animal",
+    "clues": [
+      "farm",
+      "snout",
+      "mud",
+      "pink",
+      "oink"
+    ]
+  },
+  {
+    "answer": "chicken",
+    "title": "animal",
+    "clues": [
+      "farm",
+      "egg",
+      "feathers",
+      "cluck",
+      "coop"
+    ]
+  },
+  {
+    "answer": "duck",
+    "title": "animal",
+    "clues": [
+      "pond",
+      "quack",
+      "feathers",
+      "bill",
+      "swim"
+    ]
+  },
+  {
+    "answer": "goose",
+    "title": "animal",
+    "clues": [
+      "pond",
+      "honk",
+      "feathers",
+      "migrate",
+      "bird"
+    ]
+  },
+  {
+    "answer": "turkey",
+    "title": "animal",
+    "clues": [
+      "feathers",
+      "bird",
+      "farm",
+      "gobble",
+      "holiday"
+    ]
+  },
+  {
+    "answer": "owl",
+    "title": "animal",
+    "clues": [
+      "night",
+      "wings",
+      "hoot",
+      "forest",
+      "wise"
+    ]
+  },
+  {
+    "answer": "eagle",
+    "title": "animal",
+    "clues": [
+      "wings",
+      "sky",
+      "predator",
+      "beak",
+      "soar"
+    ]
+  },
+  {
+    "answer": "parrot",
+    "title": "animal",
+    "clues": [
+      "bird",
+      "colorful",
+      "talk",
+      "beak",
+      "tropical"
+    ]
+  },
+  {
+    "answer": "sparrow",
+    "title": "animal",
+    "clues": [
+      "small",
+      "bird",
+      "chirp",
+      "nest",
+      "feathers"
+    ]
+  },
+  {
+    "answer": "pigeon",
+    "title": "animal",
+    "clues": [
+      "city",
+      "bird",
+      "coo",
+      "square",
+      "feathers"
+    ]
+  },
+  {
+    "answer": "peacock",
+    "title": "animal",
+    "clues": [
+      "feathers",
+      "tail",
+      "colorful",
+      "display",
+      "bird"
+    ]
+  },
+  {
+    "answer": "penguin",
+    "title": "animal",
+    "clues": [
+      "ice",
+      "bird",
+      "waddle",
+      "antarctica",
+      "swim"
+    ]
+  },
+  {
+    "answer": "flamingo",
+    "title": "animal",
+    "clues": [
+      "pink",
+      "bird",
+      "lake",
+      "legs",
+      "flock"
+    ]
+  },
+  {
+    "answer": "shark",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "fins",
+      "predator",
+      "teeth",
+      "swim"
+    ]
+  },
+  {
+    "answer": "whale",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "giant",
+      "blowhole",
+      "mammal",
+      "swim"
+    ]
+  },
+  {
+    "answer": "dolphin",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "smart",
+      "jump",
+      "mammal",
+      "sonar"
+    ]
+  },
+  {
+    "answer": "octopus",
+    "title": "animal",
+    "clues": [
+      "tentacles",
+      "ocean",
+      "ink",
+      "smart",
+      "camouflage"
+    ]
+  },
+  {
+    "answer": "crab",
+    "title": "animal",
+    "clues": [
+      "claws",
+      "beach",
+      "shell",
+      "sideways",
+      "ocean"
+    ]
+  },
+  {
+    "answer": "lobster",
+    "title": "animal",
+    "clues": [
+      "claws",
+      "ocean",
+      "shell",
+      "red",
+      "seafood"
+    ]
+  },
+  {
+    "answer": "seal",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "flippers",
+      "ice",
+      "mammal",
+      "bark"
+    ]
+  },
+  {
+    "answer": "turtle",
+    "title": "animal",
+    "clues": [
+      "shell",
+      "slow",
+      "pond",
+      "reptile",
+      "swim"
+    ]
+  },
+  {
+    "answer": "snake",
+    "title": "animal",
+    "clues": [
+      "slither",
+      "scales",
+      "reptile",
+      "venom",
+      "coil"
+    ]
+  },
+  {
+    "answer": "crocodile",
+    "title": "animal",
+    "clues": [
+      "river",
+      "scales",
+      "teeth",
+      "reptile",
+      "predator"
+    ]
+  },
+  {
+    "answer": "lizard",
+    "title": "animal",
+    "clues": [
+      "scales",
+      "tail",
+      "reptile",
+      "crawl",
+      "sun"
+    ]
+  },
+  {
+    "answer": "frog",
+    "title": "animal",
+    "clues": [
+      "pond",
+      "jump",
+      "green",
+      "amphibian",
+      "croak"
+    ]
+  },
+  {
+    "answer": "toad",
+    "title": "animal",
+    "clues": [
+      "amphibian",
+      "warty",
+      "jump",
+      "pond",
+      "croak"
+    ]
+  },
+  {
+    "answer": "butterfly",
+    "title": "animal",
+    "clues": [
+      "wings",
+      "colorful",
+      "garden",
+      "insect",
+      "flutter"
+    ]
+  },
+  {
+    "answer": "bee",
+    "title": "animal",
+    "clues": [
+      "honey",
+      "buzz",
+      "flower",
+      "insect",
+      "hive"
+    ]
+  },
+  {
+    "answer": "ant",
+    "title": "animal",
+    "clues": [
+      "tiny",
+      "colony",
+      "insect",
+      "carry",
+      "trail"
+    ]
+  },
+  {
+    "answer": "spider",
+    "title": "animal",
+    "clues": [
+      "web",
+      "legs",
+      "insectlike",
+      "crawl",
+      "silk"
+    ]
+  },
+  {
+    "answer": "mosquito",
+    "title": "animal",
+    "clues": [
+      "buzz",
+      "bite",
+      "insect",
+      "wings",
+      "itch"
+    ]
+  },
+  {
+    "answer": "ladybug",
+    "title": "animal",
+    "clues": [
+      "spots",
+      "red",
+      "insect",
+      "garden",
+      "tiny"
+    ]
+  },
+  {
+    "answer": "firefly",
+    "title": "animal",
+    "clues": [
+      "glow",
+      "night",
+      "insect",
+      "summer",
+      "light"
+    ]
+  },
+  {
+    "answer": "batanimal",
+    "title": "animal",
+    "clues": [
+      "wings",
+      "night",
+      "cave",
+      "mammal",
+      "echo"
+    ]
+  },
+  {
+    "answer": "hedgehog",
+    "title": "animal",
+    "clues": [
+      "spines",
+      "small",
+      "curl",
+      "mammal",
+      "garden"
+    ]
+  },
+  {
+    "answer": "squirrel",
+    "title": "animal",
+    "clues": [
+      "tree",
+      "nuts",
+      "tail",
+      "park",
+      "climb"
+    ]
+  },
+  {
+    "answer": "hamster",
+    "title": "animal",
+    "clues": [
+      "pet",
+      "wheel",
+      "small",
+      "fur",
+      "cage"
+    ]
+  },
+  {
+    "answer": "guineapig",
+    "title": "animal",
+    "clues": [
+      "pet",
+      "small",
+      "cage",
+      "squeak",
+      "fur"
+    ]
+  },
+  {
+    "answer": "otter",
+    "title": "animal",
+    "clues": [
+      "river",
+      "playful",
+      "swim",
+      "fur",
+      "mammal"
+    ]
+  },
+  {
+    "answer": "beaver",
+    "title": "animal",
+    "clues": [
+      "dam",
+      "river",
+      "teeth",
+      "wood",
+      "mammal"
+    ]
+  },
+  {
+    "answer": "moose",
+    "title": "animal",
+    "clues": [
+      "antlers",
+      "forest",
+      "large",
+      "hoof",
+      "wild"
+    ]
+  },
+  {
+    "answer": "buffalo",
+    "title": "animal",
+    "clues": [
+      "herd",
+      "horns",
+      "plains",
+      "hoof",
+      "large"
+    ]
+  },
+  {
+    "answer": "rhino",
+    "title": "animal",
+    "clues": [
+      "horn",
+      "thickskin",
+      "savanna",
+      "heavy",
+      "wild"
+    ]
+  },
+  {
+    "answer": "hippo",
+    "title": "animal",
+    "clues": [
+      "river",
+      "huge",
+      "mouth",
+      "africa",
+      "water"
+    ]
+  },
+  {
+    "answer": "koala",
+    "title": "animal",
+    "clues": [
+      "tree",
+      "australia",
+      "eucalyptus",
+      "marsupial",
+      "sleep"
+    ]
+  },
+  {
+    "answer": "sloth",
+    "title": "animal",
+    "clues": [
+      "slow",
+      "tree",
+      "jungle",
+      "mammal",
+      "hang"
+    ]
+  },
+  {
+    "answer": "gorilla",
+    "title": "animal",
+    "clues": [
+      "primate",
+      "jungle",
+      "strong",
+      "forest",
+      "silverback"
+    ]
+  },
+  {
+    "answer": "chimpanzee",
+    "title": "animal",
+    "clues": [
+      "primate",
+      "smart",
+      "forest",
+      "tool",
+      "ape"
+    ]
+  },
+  {
+    "answer": "polarbear",
+    "title": "animal",
+    "clues": [
+      "ice",
+      "arctic",
+      "fur",
+      "predator",
+      "white"
+    ]
+  },
+  {
+    "answer": "reindeer",
+    "title": "animal",
+    "clues": [
+      "antlers",
+      "snow",
+      "arctic",
+      "hoof",
+      "sled"
+    ]
+  },
+  {
+    "answer": "yak",
+    "title": "animal",
+    "clues": [
+      "mountain",
+      "fur",
+      "horns",
+      "cold",
+      "herd"
+    ]
+  },
+  {
+    "answer": "alpaca",
+    "title": "animal",
+    "clues": [
+      "wool",
+      "andes",
+      "soft",
+      "herd",
+      "camelid"
+    ]
+  },
+  {
+    "answer": "llama",
+    "title": "animal",
+    "clues": [
+      "andes",
+      "wool",
+      "pack",
+      "spit",
+      "camelid"
+    ]
+  },
+  {
+    "answer": "jellyfish",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "tentacles",
+      "stinging",
+      "float",
+      "transparent"
+    ]
+  },
+  {
+    "answer": "starfish",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "arms",
+      "seafloor",
+      "marine",
+      "star"
+    ]
+  },
+  {
+    "answer": "seahorse",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "tiny",
+      "tail",
+      "marine",
+      "upright"
+    ]
+  },
+  {
+    "answer": "goldfish",
+    "title": "animal",
+    "clues": [
+      "bowl",
+      "pet",
+      "orange",
+      "swim",
+      "scales"
+    ]
+  },
+  {
+    "answer": "salmon",
+    "title": "animal",
+    "clues": [
+      "river",
+      "fish",
+      "pink",
+      "swim",
+      "migrate"
+    ]
+  },
+  {
+    "answer": "trout",
+    "title": "animal",
+    "clues": [
+      "river",
+      "fish",
+      "swim",
+      "freshwater",
+      "angler"
+    ]
+  },
+  {
+    "answer": "swan",
+    "title": "animal",
+    "clues": [
+      "lake",
+      "bird",
+      "white",
+      "graceful",
+      "neck"
+    ]
+  },
+  {
+    "answer": "crow",
+    "title": "animal",
+    "clues": [
+      "black",
+      "bird",
+      "smart",
+      "caw",
+      "city"
+    ]
+  },
+  {
+    "answer": "raven",
+    "title": "animal",
+    "clues": [
+      "black",
+      "bird",
+      "smart",
+      "forest",
+      "caw"
+    ]
+  },
+  {
+    "answer": "woodpecker",
+    "title": "animal",
+    "clues": [
+      "tree",
+      "bird",
+      "peck",
+      "forest",
+      "beak"
+    ]
+  },
+  {
+    "answer": "falcon",
+    "title": "animal",
+    "clues": [
+      "bird",
+      "fast",
+      "predator",
+      "sky",
+      "wings"
+    ]
+  },
+  {
+    "answer": "pelican",
+    "title": "animal",
+    "clues": [
+      "bird",
+      "beak",
+      "ocean",
+      "fish",
+      "coast"
+    ]
+  },
+  {
+    "answer": "heron",
+    "title": "animal",
+    "clues": [
+      "bird",
+      "wetland",
+      "longlegs",
+      "fish",
+      "shore"
+    ]
+  },
+  {
+    "answer": "meerkat",
+    "title": "animal",
+    "clues": [
+      "desert",
+      "small",
+      "upright",
+      "group",
+      "watchful"
+    ]
+  },
+  {
+    "answer": "porcupine",
+    "title": "animal",
+    "clues": [
+      "quills",
+      "spines",
+      "forest",
+      "defense",
+      "mammal"
+    ]
+  },
+  {
+    "answer": "armadillo",
+    "title": "animal",
+    "clues": [
+      "shell",
+      "armor",
+      "dig",
+      "mammal",
+      "desert"
+    ]
+  },
+  {
+    "answer": "lemur",
+    "title": "animal",
+    "clues": [
+      "tail",
+      "madagascar",
+      "primate",
+      "tree",
+      "jump"
+    ]
+  },
+  {
+    "answer": "hyena",
+    "title": "animal",
+    "clues": [
+      "savanna",
+      "laugh",
+      "predator",
+      "pack",
+      "scavenge"
+    ]
+  },
+  {
+    "answer": "jackal",
+    "title": "animal",
+    "clues": [
+      "desert",
+      "canine",
+      "predator",
+      "wild",
+      "howl"
+    ]
+  },
+  {
+    "answer": "panther",
+    "title": "animal",
+    "clues": [
+      "feline",
+      "black",
+      "predator",
+      "jungle",
+      "stealth"
+    ]
+  },
+  {
+    "answer": "lynx",
+    "title": "animal",
+    "clues": [
+      "feline",
+      "tuftedears",
+      "forest",
+      "predator",
+      "wild"
+    ]
+  },
+  {
+    "answer": "badger",
+    "title": "animal",
+    "clues": [
+      "burrow",
+      "forest",
+      "claws",
+      "striped",
+      "mammal"
+    ]
+  },
+  {
+    "answer": "mole",
+    "title": "animal",
+    "clues": [
+      "underground",
+      "dig",
+      "small",
+      "fur",
+      "tunnel"
+    ]
+  },
+  {
+    "answer": "worm",
+    "title": "animal",
+    "clues": [
+      "soil",
+      "tiny",
+      "earth",
+      "crawl",
+      "garden"
+    ]
+  },
+  {
+    "answer": "snail",
+    "title": "animal",
+    "clues": [
+      "shell",
+      "slow",
+      "garden",
+      "slime",
+      "crawl"
+    ]
+  },
+  {
+    "answer": "slug",
+    "title": "animal",
+    "clues": [
+      "slow",
+      "garden",
+      "slime",
+      "shellless",
+      "crawl"
+    ]
+  },
+  {
+    "answer": "rooster",
+    "title": "animal",
+    "clues": [
+      "farm",
+      "crow",
+      "feathers",
+      "sunrise",
+      "bird"
+    ]
+  },
+  {
+    "answer": "canary",
+    "title": "animal",
+    "clues": [
+      "yellow",
+      "bird",
+      "sing",
+      "cage",
+      "small"
+    ]
+  },
+  {
+    "answer": "finch",
+    "title": "animal",
+    "clues": [
+      "small",
+      "bird",
+      "seed",
+      "chirp",
+      "feathers"
+    ]
+  },
+  {
+    "answer": "gecko",
+    "title": "animal",
+    "clues": [
+      "lizard",
+      "wall",
+      "sticky",
+      "tail",
+      "reptile"
+    ]
+  },
+  {
+    "answer": "iguana",
+    "title": "animal",
+    "clues": [
+      "lizard",
+      "green",
+      "tail",
+      "reptile",
+      "tropical"
+    ]
+  },
+  {
+    "answer": "vulture",
+    "title": "animal",
+    "clues": [
+      "bird",
+      "scavenge",
+      "sky",
+      "wings",
+      "desert"
+    ]
+  },
+  {
+    "answer": "orca",
+    "title": "animal",
+    "clues": [
+      "ocean",
+      "blackwhite",
+      "predator",
+      "pod",
+      "whale"
+    ]
+  },
+  {
+    "answer": "house",
+    "title": "place",
+    "clues": [
+      "home",
+      "rooms",
+      "roof",
+      "family",
+      "living"
+    ]
+  },
+  {
+    "answer": "apartment",
+    "title": "place",
+    "clues": [
+      "building",
+      "rent",
+      "city",
+      "rooms",
+      "living"
+    ]
+  },
+  {
+    "answer": "school",
+    "title": "place",
+    "clues": [
+      "students",
+      "teacher",
+      "classroom",
+      "learn",
+      "education"
+    ]
+  },
+  {
+    "answer": "college",
+    "title": "place",
+    "clues": [
+      "campus",
+      "study",
+      "degree",
+      "students",
+      "university"
+    ]
+  },
+  {
+    "answer": "university",
+    "title": "place",
+    "clues": [
+      "campus",
+      "research",
+      "degree",
+      "college",
+      "students"
+    ]
+  },
+  {
+    "answer": "hospital",
+    "title": "place",
+    "clues": [
+      "doctor",
+      "nurse",
+      "patient",
+      "emergency",
+      "health"
+    ]
+  },
+  {
+    "answer": "clinic",
+    "title": "place",
+    "clues": [
+      "doctor",
+      "patient",
+      "health",
+      "appointment",
+      "care"
+    ]
+  },
+  {
+    "answer": "pharmacy",
+    "title": "place",
+    "clues": [
+      "medicine",
+      "prescription",
+      "health",
+      "store",
+      "drugs"
+    ]
+  },
+  {
+    "answer": "library",
+    "title": "place",
+    "clues": [
+      "books",
+      "read",
+      "quiet",
+      "study",
+      "shelves"
+    ]
+  },
+  {
+    "answer": "museum",
+    "title": "place",
+    "clues": [
+      "history",
+      "art",
+      "exhibit",
+      "gallery",
+      "culture"
+    ]
+  },
+  {
+    "answer": "theater",
+    "title": "place",
+    "clues": [
+      "movie",
+      "screen",
+      "seats",
+      "show",
+      "ticket"
+    ]
+  },
+  {
+    "answer": "cinema",
+    "title": "place",
+    "clues": [
+      "movie",
+      "screen",
+      "ticket",
+      "popcorn",
+      "seats"
+    ]
+  },
+  {
+    "answer": "stadium",
+    "title": "place",
+    "clues": [
+      "sports",
+      "crowd",
+      "seats",
+      "field",
+      "event"
+    ]
+  },
+  {
+    "answer": "park",
+    "title": "place",
+    "clues": [
+      "trees",
+      "playground",
+      "bench",
+      "grass",
+      "walk"
+    ]
+  },
+  {
+    "answer": "playground",
+    "title": "place",
+    "clues": [
+      "slide",
+      "swing",
+      "children",
+      "park",
+      "play"
+    ]
+  },
+  {
+    "answer": "zoo",
+    "title": "place",
+    "clues": [
+      "animals",
+      "cages",
+      "tickets",
+      "wildlife",
+      "visit"
+    ]
+  },
+  {
+    "answer": "farm",
+    "title": "place",
+    "clues": [
+      "barn",
+      "tractor",
+      "field",
+      "animals",
+      "crops"
+    ]
+  },
+  {
+    "answer": "factory",
+    "title": "place",
+    "clues": [
+      "machines",
+      "production",
+      "workers",
+      "industry",
+      "assembly"
+    ]
+  },
+  {
+    "answer": "office",
+    "title": "place",
+    "clues": [
+      "work",
+      "desk",
+      "meeting",
+      "computer",
+      "business"
+    ]
+  },
+  {
+    "answer": "bank",
+    "title": "place",
+    "clues": [
+      "money",
+      "account",
+      "loan",
+      "cash",
+      "finance"
+    ]
+  },
+  {
+    "answer": "restaurant",
+    "title": "place",
+    "clues": [
+      "food",
+      "menu",
+      "chef",
+      "table",
+      "dining"
+    ]
+  },
+  {
+    "answer": "cafe",
+    "title": "place",
+    "clues": [
+      "coffee",
+      "pastry",
+      "table",
+      "wifi",
+      "relax"
+    ]
+  },
+  {
+    "answer": "bakery",
+    "title": "place",
+    "clues": [
+      "bread",
+      "cake",
+      "oven",
+      "pastry",
+      "shop"
+    ]
+  },
+  {
+    "answer": "market",
+    "title": "place",
+    "clues": [
+      "vendors",
+      "buy",
+      "fresh",
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "answer": "store",
+    "title": "place",
+    "clues": [
+      "shop",
+      "buy",
+      "cashier",
+      "shelves",
+      "goods"
+    ]
+  },
+  {
+    "answer": "mall",
+    "title": "place",
+    "clues": [
+      "shopping",
+      "stores",
+      "foodcourt",
+      "parking",
+      "indoor"
+    ]
+  },
+  {
+    "answer": "hotel",
+    "title": "place",
+    "clues": [
+      "travel",
+      "room",
+      "stay",
+      "lobby",
+      "guest"
+    ]
+  },
+  {
+    "answer": "motel",
+    "title": "place",
+    "clues": [
+      "roadside",
+      "room",
+      "travel",
+      "parking",
+      "stay"
+    ]
+  },
+  {
+    "answer": "airport",
+    "title": "place",
+    "clues": [
+      "flight",
+      "terminal",
+      "runway",
+      "luggage",
+      "travel"
+    ]
+  },
+  {
+    "answer": "station",
+    "title": "place",
+    "clues": [
+      "train",
+      "platform",
+      "ticket",
+      "travel",
+      "commute"
+    ]
+  },
+  {
+    "answer": "busstop",
+    "title": "place",
+    "clues": [
+      "route",
+      "wait",
+      "public",
+      "transport",
+      "shelter"
+    ]
+  },
+  {
+    "answer": "harbor",
+    "title": "place",
+    "clues": [
+      "ships",
+      "water",
+      "dock",
+      "port",
+      "coast"
+    ]
+  },
+  {
+    "answer": "port",
+    "title": "place",
+    "clues": [
+      "cargo",
+      "ships",
+      "harbor",
+      "trade",
+      "dock"
+    ]
+  },
+  {
+    "answer": "bridge",
+    "title": "place",
+    "clues": [
+      "river",
+      "cross",
+      "road",
+      "span",
+      "traffic"
+    ]
+  },
+  {
+    "answer": "tunnel",
+    "title": "place",
+    "clues": [
+      "underground",
+      "road",
+      "dark",
+      "passage",
+      "mountain"
+    ]
+  },
+  {
+    "answer": "road",
+    "title": "place",
+    "clues": [
+      "cars",
+      "travel",
+      "street",
+      "pavement",
+      "route"
+    ]
+  },
+  {
+    "answer": "street",
+    "title": "place",
+    "clues": [
+      "city",
+      "road",
+      "buildings",
+      "traffic",
+      "address"
+    ]
+  },
+  {
+    "answer": "highway",
+    "title": "place",
+    "clues": [
+      "cars",
+      "fast",
+      "lanes",
+      "road",
+      "travel"
+    ]
+  },
+  {
+    "answer": "sidewalk",
+    "title": "place",
+    "clues": [
+      "walk",
+      "street",
+      "pavement",
+      "city",
+      "pedestrian"
+    ]
+  },
+  {
+    "answer": "parkinglot",
+    "title": "place",
+    "clues": [
+      "cars",
+      "spaces",
+      "store",
+      "asphalt",
+      "park"
+    ]
+  },
+  {
+    "answer": "gasstation",
+    "title": "place",
+    "clues": [
+      "fuel",
+      "car",
+      "pump",
+      "road",
+      "service"
+    ]
+  },
+  {
+    "answer": "garage",
+    "title": "place",
+    "clues": [
+      "car",
+      "tools",
+      "house",
+      "parking",
+      "storage"
+    ]
+  },
+  {
+    "answer": "warehouse",
+    "title": "place",
+    "clues": [
+      "storage",
+      "boxes",
+      "shipping",
+      "inventory",
+      "large"
+    ]
+  },
+  {
+    "answer": "barn",
+    "title": "place",
+    "clues": [
+      "farm",
+      "hay",
+      "animals",
+      "wooden",
+      "rural"
+    ]
+  },
+  {
+    "answer": "church",
+    "title": "place",
+    "clues": [
+      "prayer",
+      "bells",
+      "worship",
+      "faith",
+      "community"
+    ]
+  },
+  {
+    "answer": "temple",
+    "title": "place",
+    "clues": [
+      "prayer",
+      "worship",
+      "sacred",
+      "ritual",
+      "shrine"
+    ]
+  },
+  {
+    "answer": "mosque",
+    "title": "place",
+    "clues": [
+      "prayer",
+      "worship",
+      "minaret",
+      "faith",
+      "community"
+    ]
+  },
+  {
+    "answer": "synagogue",
+    "title": "place",
+    "clues": [
+      "prayer",
+      "worship",
+      "faith",
+      "community",
+      "torah"
+    ]
+  },
+  {
+    "answer": "castle",
+    "title": "place",
+    "clues": [
+      "stone",
+      "king",
+      "tower",
+      "fortress",
+      "medieval"
+    ]
+  },
+  {
+    "answer": "palace",
+    "title": "place",
+    "clues": [
+      "royal",
+      "king",
+      "luxury",
+      "rooms",
+      "historic"
+    ]
+  },
+  {
+    "answer": "fort",
+    "title": "place",
+    "clues": [
+      "walls",
+      "soldiers",
+      "defense",
+      "historic",
+      "stone"
+    ]
+  },
+  {
+    "answer": "tower",
+    "title": "place",
+    "clues": [
+      "tall",
+      "view",
+      "building",
+      "height",
+      "city"
+    ]
+  },
+  {
+    "answer": "skyscraper",
+    "title": "place",
+    "clues": [
+      "tall",
+      "glass",
+      "city",
+      "office",
+      "tower"
+    ]
+  },
+  {
+    "answer": "village",
+    "title": "place",
+    "clues": [
+      "small",
+      "rural",
+      "homes",
+      "community",
+      "town"
+    ]
+  },
+  {
+    "answer": "town",
+    "title": "place",
+    "clues": [
+      "small",
+      "streets",
+      "shops",
+      "community",
+      "local"
+    ]
+  },
+  {
+    "answer": "city",
+    "title": "place",
+    "clues": [
+      "buildings",
+      "traffic",
+      "crowd",
+      "urban",
+      "downtown"
+    ]
+  },
+  {
+    "answer": "country",
+    "title": "place",
+    "clues": [
+      "nation",
+      "border",
+      "flag",
+      "people",
+      "government"
+    ]
+  },
+  {
+    "answer": "capital",
+    "title": "place",
+    "clues": [
+      "government",
+      "city",
+      "nation",
+      "leader",
+      "center"
+    ]
+  },
+  {
+    "answer": "downtown",
+    "title": "place",
+    "clues": [
+      "city",
+      "busy",
+      "shops",
+      "offices",
+      "central"
+    ]
+  },
+  {
+    "answer": "suburb",
+    "title": "place",
+    "clues": [
+      "homes",
+      "city",
+      "quiet",
+      "residential",
+      "commute"
+    ]
+  },
+  {
+    "answer": "neighborhood",
+    "title": "place",
+    "clues": [
+      "homes",
+      "local",
+      "community",
+      "street",
+      "nearby"
+    ]
+  },
+  {
+    "answer": "forest",
+    "title": "place",
+    "clues": [
+      "trees",
+      "wild",
+      "birds",
+      "shade",
+      "nature"
+    ]
+  },
+  {
+    "answer": "jungle",
+    "title": "place",
+    "clues": [
+      "dense",
+      "trees",
+      "tropical",
+      "wild",
+      "rain"
+    ]
+  },
+  {
+    "answer": "desert",
+    "title": "place",
+    "clues": [
+      "sand",
+      "dry",
+      "hot",
+      "camel",
+      "dunes"
+    ]
+  },
+  {
+    "answer": "beach",
+    "title": "place",
+    "clues": [
+      "sand",
+      "waves",
+      "sea",
+      "shore",
+      "sun"
+    ]
+  },
+  {
+    "answer": "coast",
+    "title": "place",
+    "clues": [
+      "sea",
+      "shore",
+      "waves",
+      "cliffs",
+      "ocean"
+    ]
+  },
+  {
+    "answer": "island",
+    "title": "place",
+    "clues": [
+      "water",
+      "shore",
+      "palm",
+      "sea",
+      "land"
+    ]
+  },
+  {
+    "answer": "mountain",
+    "title": "place",
+    "clues": [
+      "peak",
+      "snow",
+      "climb",
+      "high",
+      "rock"
+    ]
+  },
+  {
+    "answer": "hill",
+    "title": "place",
+    "clues": [
+      "slope",
+      "grass",
+      "small",
+      "climb",
+      "land"
+    ]
+  },
+  {
+    "answer": "valley",
+    "title": "place",
+    "clues": [
+      "between",
+      "mountains",
+      "river",
+      "lowland",
+      "green"
+    ]
+  },
+  {
+    "answer": "canyon",
+    "title": "place",
+    "clues": [
+      "rock",
+      "deep",
+      "river",
+      "cliffs",
+      "erosion"
+    ]
+  },
+  {
+    "answer": "cliff",
+    "title": "place",
+    "clues": [
+      "edge",
+      "rock",
+      "height",
+      "coast",
+      "drop"
+    ]
+  },
+  {
+    "answer": "cave",
+    "title": "place",
+    "clues": [
+      "dark",
+      "rock",
+      "underground",
+      "bats",
+      "echo"
+    ]
+  },
+  {
+    "answer": "river",
+    "title": "place",
+    "clues": [
+      "water",
+      "flow",
+      "bridge",
+      "stream",
+      "bank"
+    ]
+  },
+  {
+    "answer": "lake",
+    "title": "place",
+    "clues": [
+      "water",
+      "shore",
+      "boat",
+      "calm",
+      "freshwater"
+    ]
+  },
+  {
+    "answer": "pond",
+    "title": "place",
+    "clues": [
+      "water",
+      "small",
+      "ducks",
+      "lily",
+      "calm"
+    ]
+  },
+  {
+    "answer": "waterfall",
+    "title": "place",
+    "clues": [
+      "water",
+      "cliff",
+      "cascade",
+      "mist",
+      "river"
+    ]
+  },
+  {
+    "answer": "stream",
+    "title": "place",
+    "clues": [
+      "water",
+      "small",
+      "flow",
+      "brook",
+      "nature"
+    ]
+  },
+  {
+    "answer": "ocean",
+    "title": "place",
+    "clues": [
+      "waves",
+      "salt",
+      "deep",
+      "sea",
+      "coast"
+    ]
+  },
+  {
+    "answer": "sea",
+    "title": "place",
+    "clues": [
+      "salt",
+      "waves",
+      "shore",
+      "ocean",
+      "sail"
+    ]
+  },
+  {
+    "answer": "bay",
+    "title": "place",
+    "clues": [
+      "water",
+      "coast",
+      "harbor",
+      "shore",
+      "curve"
+    ]
+  },
+  {
+    "answer": "lagoon",
+    "title": "place",
+    "clues": [
+      "water",
+      "coast",
+      "shallow",
+      "tropical",
+      "blue"
+    ]
+  },
+  {
+    "answer": "reef",
+    "title": "place",
+    "clues": [
+      "coral",
+      "ocean",
+      "fish",
+      "marine",
+      "colorful"
+    ]
+  },
+  {
+    "answer": "glacier",
+    "title": "place",
+    "clues": [
+      "ice",
+      "mountain",
+      "cold",
+      "slow",
+      "frozen"
+    ]
+  },
+  {
+    "answer": "volcano",
+    "title": "place",
+    "clues": [
+      "lava",
+      "mountain",
+      "eruption",
+      "smoke",
+      "fire"
+    ]
+  },
+  {
+    "answer": "meadow",
+    "title": "place",
+    "clues": [
+      "grass",
+      "flowers",
+      "open",
+      "field",
+      "nature"
+    ]
+  },
+  {
+    "answer": "field",
+    "title": "place",
+    "clues": [
+      "grass",
+      "farm",
+      "open",
+      "crops",
+      "land"
+    ]
+  },
+  {
+    "answer": "garden",
+    "title": "place",
+    "clues": [
+      "flowers",
+      "plants",
+      "yard",
+      "green",
+      "grow"
+    ]
+  },
+  {
+    "answer": "orchard",
+    "title": "place",
+    "clues": [
+      "trees",
+      "fruit",
+      "farm",
+      "apples",
+      "rows"
+    ]
+  },
+  {
+    "answer": "vineyard",
+    "title": "place",
+    "clues": [
+      "grapes",
+      "rows",
+      "farm",
+      "wine",
+      "field"
+    ]
+  },
+  {
+    "answer": "campground",
+    "title": "place",
+    "clues": [
+      "tent",
+      "forest",
+      "fire",
+      "outdoors",
+      "travel"
+    ]
+  },
+  {
+    "answer": "campsite",
+    "title": "place",
+    "clues": [
+      "tent",
+      "fire",
+      "forest",
+      "night",
+      "outdoors"
+    ]
+  },
+  {
+    "answer": "trail",
+    "title": "place",
+    "clues": [
+      "walk",
+      "forest",
+      "hike",
+      "path",
+      "nature"
+    ]
+  },
+  {
+    "answer": "path",
+    "title": "place",
+    "clues": [
+      "walk",
+      "trail",
+      "route",
+      "ground",
+      "follow"
+    ]
+  },
+  {
+    "answer": "gardenpath",
+    "title": "place",
+    "clues": [
+      "walk",
+      "stones",
+      "flowers",
+      "yard",
+      "path"
+    ]
+  },
+  {
+    "answer": "courtyard",
+    "title": "place",
+    "clues": [
+      "building",
+      "open",
+      "center",
+      "garden",
+      "stone"
+    ]
+  },
+  {
+    "answer": "playfield",
+    "title": "place",
+    "clues": [
+      "sports",
+      "grass",
+      "school",
+      "goal",
+      "running"
+    ]
+  },
+  {
+    "answer": "gym",
+    "title": "place",
+    "clues": [
+      "exercise",
+      "weights",
+      "fitness",
+      "workout",
+      "trainer"
+    ]
+  },
+  {
+    "answer": "swimmingpool",
+    "title": "place",
+    "clues": [
+      "water",
+      "swim",
+      "lane",
+      "summer",
+      "chlorine"
+    ]
+  },
+  {
+    "answer": "arena",
+    "title": "place",
+    "clues": [
+      "event",
+      "crowd",
+      "sports",
+      "music",
+      "seats"
+    ]
+  },
+  {
+    "answer": "court",
+    "title": "place",
+    "clues": [
+      "tennis",
+      "basketball",
+      "lines",
+      "sport",
+      "play"
+    ]
+  },
+  {
+    "answer": "kitchen",
+    "title": "place",
+    "clues": [
+      "cook",
+      "food",
+      "stove",
+      "sink",
+      "home"
+    ]
+  },
+  {
+    "answer": "bedroom",
+    "title": "place",
+    "clues": [
+      "sleep",
+      "bed",
+      "pillow",
+      "rest",
+      "home"
+    ]
+  },
+  {
+    "answer": "bathroom",
+    "title": "place",
+    "clues": [
+      "sink",
+      "shower",
+      "toilet",
+      "mirror",
+      "home"
+    ]
+  },
+  {
+    "answer": "livingroom",
+    "title": "place",
+    "clues": [
+      "sofa",
+      "television",
+      "family",
+      "home",
+      "relax"
+    ]
+  },
+  {
+    "answer": "balcony",
+    "title": "place",
+    "clues": [
+      "apartment",
+      "outside",
+      "view",
+      "rail",
+      "air"
+    ]
+  },
+  {
+    "answer": "basement",
+    "title": "place",
+    "clues": [
+      "house",
+      "below",
+      "storage",
+      "stairs",
+      "underground"
+    ]
+  },
+  {
+    "answer": "attic",
+    "title": "place",
+    "clues": [
+      "roof",
+      "storage",
+      "house",
+      "dusty",
+      "upstairs"
+    ]
+  },
+  {
+    "answer": "classroom",
+    "title": "place",
+    "clues": [
+      "students",
+      "teacher",
+      "desk",
+      "lesson",
+      "school"
+    ]
+  },
+  {
+    "answer": "laboratory",
+    "title": "place",
+    "clues": [
+      "science",
+      "experiment",
+      "research",
+      "equipment",
+      "study"
+    ]
+  },
+  {
+    "answer": "workshop",
+    "title": "place",
+    "clues": [
+      "tools",
+      "repair",
+      "craft",
+      "workbench",
+      "build"
+    ]
+  },
+  {
+    "answer": "studio",
+    "title": "place",
+    "clues": [
+      "art",
+      "music",
+      "record",
+      "creative",
+      "space"
+    ]
+  },
+  {
+    "answer": "salon",
+    "title": "place",
+    "clues": [
+      "hair",
+      "beauty",
+      "cut",
+      "stylist",
+      "mirror"
+    ]
+  },
+  {
+    "answer": "barbershop",
+    "title": "place",
+    "clues": [
+      "haircut",
+      "razor",
+      "chair",
+      "stylist",
+      "men"
+    ]
+  },
+  {
+    "answer": "bar",
+    "title": "place",
+    "clues": [
+      "drinks",
+      "counter",
+      "stools",
+      "nightlife",
+      "music"
+    ]
+  },
+  {
+    "answer": "lounge",
+    "title": "place",
+    "clues": [
+      "chairs",
+      "relax",
+      "airport",
+      "quiet",
+      "wait"
+    ]
+  },
+  {
+    "answer": "resort",
+    "title": "place",
+    "clues": [
+      "vacation",
+      "pool",
+      "hotel",
+      "beach",
+      "relax"
+    ]
+  },
+  {
+    "answer": "spa",
+    "title": "place",
+    "clues": [
+      "relax",
+      "massage",
+      "wellness",
+      "steam",
+      "luxury"
+    ]
+  },
+  {
+    "answer": "embassy",
+    "title": "place",
+    "clues": [
+      "country",
+      "diplomat",
+      "visa",
+      "foreign",
+      "government"
+    ]
+  },
+  {
+    "answer": "courthouse",
+    "title": "place",
+    "clues": [
+      "judge",
+      "law",
+      "trial",
+      "justice",
+      "legal"
+    ]
+  },
+  {
+    "answer": "prison",
+    "title": "place",
+    "clues": [
+      "cells",
+      "guards",
+      "law",
+      "secure",
+      "punishment"
+    ]
+  },
+  {
+    "answer": "policestation",
+    "title": "place",
+    "clues": [
+      "law",
+      "officers",
+      "crime",
+      "report",
+      "city"
+    ]
+  },
+  {
+    "answer": "firestation",
+    "title": "place",
+    "clues": [
+      "firetruck",
+      "firefighters",
+      "rescue",
+      "siren",
+      "city"
+    ]
+  },
+  {
+    "answer": "postoffice",
+    "title": "place",
+    "clues": [
+      "mail",
+      "letters",
+      "stamps",
+      "parcel",
+      "service"
+    ]
+  },
+  {
+    "answer": "trainyard",
+    "title": "place",
+    "clues": [
+      "tracks",
+      "cars",
+      "rail",
+      "repair",
+      "storage"
+    ]
+  },
+  {
+    "answer": "dock",
+    "title": "place",
+    "clues": [
+      "boat",
+      "water",
+      "harbor",
+      "wood",
+      "shore"
+    ]
+  },
+  {
+    "answer": "pier",
+    "title": "place",
+    "clues": [
+      "water",
+      "wood",
+      "ocean",
+      "walk",
+      "fishing"
+    ]
+  },
+  {
+    "answer": "lighthouse",
+    "title": "place",
+    "clues": [
+      "coast",
+      "light",
+      "ships",
+      "tower",
+      "beacon"
+    ]
+  },
+  {
+    "answer": "observatory",
+    "title": "place",
+    "clues": [
+      "stars",
+      "telescope",
+      "science",
+      "sky",
+      "research"
+    ]
+  },
+  {
+    "answer": "planetarium",
+    "title": "place",
+    "clues": [
+      "stars",
+      "dome",
+      "space",
+      "show",
+      "science"
+    ]
+  },
+  {
+    "answer": "cemetery",
+    "title": "place",
+    "clues": [
+      "graves",
+      "quiet",
+      "stones",
+      "memory",
+      "rest"
+    ]
+  },
+  {
+    "answer": "monument",
+    "title": "place",
+    "clues": [
+      "history",
+      "statue",
+      "memory",
+      "landmark",
+      "stone"
+    ]
+  },
+  {
+    "answer": "statue",
+    "title": "place",
+    "clues": [
+      "stone",
+      "figure",
+      "monument",
+      "public",
+      "art"
+    ]
+  },
+  {
+    "answer": "fountain",
+    "title": "place",
+    "clues": [
+      "water",
+      "square",
+      "spray",
+      "park",
+      "stone"
+    ]
+  },
+  {
+    "answer": "square",
+    "title": "place",
+    "clues": [
+      "city",
+      "open",
+      "crowd",
+      "center",
+      "public"
+    ]
+  },
+  {
+    "answer": "plaza",
+    "title": "place",
+    "clues": [
+      "open",
+      "city",
+      "shops",
+      "square",
+      "public"
+    ]
+  },
+  {
+    "answer": "marketplace",
+    "title": "place",
+    "clues": [
+      "vendors",
+      "buy",
+      "crowd",
+      "goods",
+      "square"
+    ]
+  },
+  {
+    "answer": "crossroad",
+    "title": "place",
+    "clues": [
+      "intersection",
+      "road",
+      "travel",
+      "sign",
+      "traffic"
+    ]
+  },
+  {
+    "answer": "roundabout",
+    "title": "place",
+    "clues": [
+      "circle",
+      "traffic",
+      "road",
+      "cars",
+      "intersection"
+    ]
+  },
+  {
+    "answer": "border",
+    "title": "place",
+    "clues": [
+      "country",
+      "line",
+      "crossing",
+      "passport",
+      "boundary"
+    ]
+  },
+  {
+    "answer": "checkpoint",
+    "title": "place",
+    "clues": [
+      "security",
+      "border",
+      "stop",
+      "travel",
+      "inspection"
+    ]
+  },
+  {
+    "answer": "runway",
+    "title": "place",
+    "clues": [
+      "plane",
+      "airport",
+      "takeoff",
+      "landing",
+      "strip"
+    ]
+  },
+  {
+    "answer": "terminal",
+    "title": "place",
+    "clues": [
+      "airport",
+      "gate",
+      "travel",
+      "luggage",
+      "passengers"
+    ]
+  },
+  {
+    "answer": "subwaystation",
+    "title": "place",
+    "clues": [
+      "metro",
+      "underground",
+      "platform",
+      "city",
+      "train"
+    ]
+  },
+  {
+    "answer": "platform",
+    "title": "place",
+    "clues": [
+      "station",
+      "train",
+      "wait",
+      "edge",
+      "travel"
+    ]
+  },
+  {
+    "answer": "dockyard",
+    "title": "place",
+    "clues": [
+      "ships",
+      "repair",
+      "harbor",
+      "industry",
+      "port"
+    ]
+  },
+  {
+    "answer": "aquarium",
+    "title": "place",
+    "clues": [
+      "fish",
+      "tank",
+      "marine",
+      "glass",
+      "visit"
+    ]
+  },
+  {
+    "answer": "greenhouse",
+    "title": "place",
+    "clues": [
+      "plants",
+      "glass",
+      "warm",
+      "garden",
+      "grow"
+    ]
+  },
+  {
+    "answer": "nationalpark",
+    "title": "place",
+    "clues": [
+      "nature",
+      "trails",
+      "wildlife",
+      "protected",
+      "scenic"
+    ]
+  },
+  {
+    "answer": "apple",
+    "title": "thing",
+    "clues": [
+      "fruit",
+      "red",
+      "tree",
+      "sweet",
+      "orchard"
+    ]
+  },
+  {
+    "answer": "banana",
+    "title": "thing",
+    "clues": [
+      "fruit",
+      "yellow",
+      "peel",
+      "tropical",
+      "sweet"
+    ]
+  },
+  {
+    "answer": "orange",
+    "title": "thing",
+    "clues": [
+      "fruit",
+      "citrus",
+      "juice",
+      "peel",
+      "round"
+    ]
+  },
+  {
+    "answer": "grape",
+    "title": "thing",
+    "clues": [
+      "fruit",
+      "vine",
+      "cluster",
+      "purple",
+      "juice"
+    ]
+  },
+  {
+    "answer": "mango",
+    "title": "thing",
+    "clues": [
+      "fruit",
+      "tropical",
+      "sweet",
+      "seed",
+      "summer"
+    ]
+  },
+  {
+    "answer": "watermelon",
+    "title": "thing",
+    "clues": [
+      "fruit",
+      "summer",
+      "green",
+      "slice",
+      "juicy"
+    ]
+  },
+  {
+    "answer": "bread",
+    "title": "thing",
+    "clues": [
+      "bake",
+      "loaf",
+      "food",
+      "slice",
+      "bakery"
+    ]
+  },
+  {
+    "answer": "rice",
+    "title": "thing",
+    "clues": [
+      "grain",
+      "cook",
+      "bowl",
+      "meal",
+      "staple"
+    ]
+  },
+  {
+    "answer": "pizza",
+    "title": "thing",
+    "clues": [
+      "cheese",
+      "slice",
+      "oven",
+      "italian",
+      "delivery"
+    ]
+  },
+  {
+    "answer": "burger",
+    "title": "thing",
+    "clues": [
+      "bun",
+      "patty",
+      "fastfood",
+      "cheese",
+      "grill"
+    ]
+  },
+  {
+    "answer": "sandwich",
+    "title": "thing",
+    "clues": [
+      "bread",
+      "lunch",
+      "fillings",
+      "slice",
+      "snack"
+    ]
+  },
+  {
+    "answer": "salad",
+    "title": "thing",
+    "clues": [
+      "vegetables",
+      "bowl",
+      "fresh",
+      "healthy",
+      "greens"
+    ]
+  },
+  {
+    "answer": "soup",
+    "title": "thing",
+    "clues": [
+      "bowl",
+      "hot",
+      "spoon",
+      "broth",
+      "meal"
+    ]
+  },
+  {
+    "answer": "coffee",
+    "title": "thing",
+    "clues": [
+      "drink",
+      "beans",
+      "cafe",
+      "morning",
+      "caffeine"
+    ]
+  },
+  {
+    "answer": "tea",
+    "title": "thing",
+    "clues": [
+      "drink",
+      "leaves",
+      "hot",
+      "cup",
+      "brew"
+    ]
+  },
+  {
+    "answer": "juice",
+    "title": "thing",
+    "clues": [
+      "drink",
+      "fruit",
+      "glass",
+      "fresh",
+      "sweet"
+    ]
+  },
+  {
+    "answer": "water",
+    "title": "thing",
+    "clues": [
+      "drink",
+      "clear",
+      "river",
+      "life",
+      "liquid"
+    ]
+  },
+  {
+    "answer": "icecream",
+    "title": "thing",
+    "clues": [
+      "cold",
+      "dessert",
+      "sweet",
+      "cone",
+      "flavor"
+    ]
+  },
+  {
+    "answer": "cake",
+    "title": "thing",
+    "clues": [
+      "dessert",
+      "birthday",
+      "sweet",
+      "bake",
+      "slice"
+    ]
+  },
+  {
+    "answer": "cookie",
+    "title": "thing",
+    "clues": [
+      "sweet",
+      "bake",
+      "snack",
+      "chocolate",
+      "crunch"
+    ]
+  },
+  {
+    "answer": "tree",
+    "title": "thing",
+    "clues": [
+      "leaves",
+      "trunk",
+      "forest",
+      "shade",
+      "roots"
+    ]
+  },
+  {
+    "answer": "flower",
+    "title": "thing",
+    "clues": [
+      "petals",
+      "garden",
+      "colorful",
+      "bloom",
+      "fragrance"
+    ]
+  },
+  {
+    "answer": "grass",
+    "title": "thing",
+    "clues": [
+      "green",
+      "lawn",
+      "field",
+      "grow",
+      "blade"
+    ]
+  },
+  {
+    "answer": "leaf",
+    "title": "thing",
+    "clues": [
+      "tree",
+      "green",
+      "fall",
+      "plant",
+      "branch"
+    ]
+  },
+  {
+    "answer": "stone",
+    "title": "thing",
+    "clues": [
+      "rock",
+      "hard",
+      "ground",
+      "gray",
+      "solid"
+    ]
+  },
+  {
+    "answer": "cloud",
+    "title": "thing",
+    "clues": [
+      "sky",
+      "white",
+      "rain",
+      "float",
+      "weather"
+    ]
+  },
+  {
+    "answer": "rain",
+    "title": "thing",
+    "clues": [
+      "water",
+      "cloud",
+      "storm",
+      "umbrella",
+      "wet"
+    ]
+  },
+  {
+    "answer": "snow",
+    "title": "thing",
+    "clues": [
+      "winter",
+      "cold",
+      "white",
+      "flakes",
+      "ice"
+    ]
+  },
+  {
+    "answer": "sun",
+    "title": "thing",
+    "clues": [
+      "sky",
+      "light",
+      "heat",
+      "day",
+      "solar"
+    ]
+  },
+  {
+    "answer": "moon",
+    "title": "thing",
+    "clues": [
+      "night",
+      "sky",
+      "orbit",
+      "craters",
+      "glow"
+    ]
+  },
+  {
+    "answer": "star",
+    "title": "thing",
+    "clues": [
+      "sky",
+      "night",
+      "shine",
+      "space",
+      "constellation"
+    ]
+  },
+  {
+    "answer": "planet",
+    "title": "thing",
+    "clues": [
+      "space",
+      "orbit",
+      "world",
+      "solar",
+      "globe"
+    ]
+  },
+  {
+    "answer": "beard",
+    "title": "thing",
+    "clues": [
+      "face",
+      "hair",
+      "chin",
+      "grow",
+      "trim"
+    ]
+  },
+  {
+    "answer": "gardenbench",
+    "title": "thing",
+    "clues": [
+      "park",
+      "sit",
+      "wood",
+      "outdoor",
+      "rest"
+    ]
+  },
+  {
+    "answer": "airplane",
+    "title": "thing",
+    "clues": [
+      "flight",
+      "wings",
+      "airport",
+      "travel",
+      "jet"
+    ]
+  },
+  {
+    "answer": "shipyard",
+    "title": "place",
+    "clues": [
+      "ships",
+      "repair",
+      "harbor",
+      "dock",
+      "industry"
+    ]
+  },
+  {
+    "answer": "notepad",
+    "title": "thing",
+    "clues": [
+      "write",
+      "paper",
+      "notes",
+      "desk",
+      "pages"
+    ]
+  },
+  {
+    "answer": "envelope",
+    "title": "thing",
+    "clues": [
+      "mail",
+      "letter",
+      "paper",
+      "seal",
+      "address"
+    ]
+  },
+  {
+    "answer": "stamp",
+    "title": "thing",
+    "clues": [
+      "mail",
+      "post",
+      "letter",
+      "adhesive",
+      "corner"
+    ]
+  },
+  {
+    "answer": "mailbox",
+    "title": "thing",
+    "clues": [
+      "letters",
+      "post",
+      "delivery",
+      "mail",
+      "box"
+    ]
+  },
+  {
+    "answer": "newspaper",
+    "title": "thing",
+    "clues": [
+      "news",
+      "paper",
+      "print",
+      "headlines",
+      "daily"
+    ]
+  },
+  {
+    "answer": "magazine",
+    "title": "thing",
+    "clues": [
+      "pages",
+      "photos",
+      "articles",
+      "glossy",
+      "read"
+    ]
+  },
+  {
+    "answer": "calendar",
+    "title": "thing",
+    "clues": [
+      "date",
+      "month",
+      "year",
+      "schedule",
+      "days"
+    ]
+  },
+  {
+    "answer": "alarm",
+    "title": "thing",
+    "clues": [
+      "wake",
+      "clock",
+      "sound",
+      "morning",
+      "ring"
+    ]
+  },
+  {
+    "answer": "flashlight",
+    "title": "thing",
+    "clues": [
+      "light",
+      "battery",
+      "dark",
+      "torch",
+      "beam"
+    ]
+  },
+  {
+    "answer": "candle",
+    "title": "thing",
+    "clues": [
+      "wax",
+      "flame",
+      "light",
+      "melt",
+      "wick"
+    ]
+  },
+  {
+    "answer": "matchbox",
+    "title": "thing",
+    "clues": [
+      "fire",
+      "sticks",
+      "small",
+      "spark",
+      "box"
+    ]
+  },
+  {
+    "answer": "torch",
+    "title": "thing",
+    "clues": [
+      "light",
+      "carry",
+      "dark",
+      "beam",
+      "battery"
+    ]
+  },
+  {
+    "answer": "binoculars",
+    "title": "thing",
+    "clues": [
+      "view",
+      "distance",
+      "lenses",
+      "zoom",
+      "birdwatch"
+    ]
+  },
+  {
+    "answer": "microscope",
+    "title": "thing",
+    "clues": [
+      "science",
+      "lens",
+      "tiny",
+      "lab",
+      "magnify"
+    ]
+  },
+  {
+    "answer": "telescope",
+    "title": "thing",
+    "clues": [
+      "stars",
+      "lens",
+      "space",
+      "observe",
+      "sky"
+    ]
+  },
+  {
+    "answer": "calculator",
+    "title": "thing",
+    "clues": [
+      "math",
+      "numbers",
+      "buttons",
+      "school",
+      "compute"
+    ]
+  },
+  {
+    "answer": "backyard",
+    "title": "place",
+    "clues": [
+      "house",
+      "grass",
+      "fence",
+      "garden",
+      "outside"
+    ]
+  },
+  {
+    "answer": "frontyard",
+    "title": "place",
+    "clues": [
+      "house",
+      "grass",
+      "gate",
+      "flowers",
+      "outside"
+    ]
+  },
+  {
+    "answer": "fence",
+    "title": "thing",
+    "clues": [
+      "yard",
+      "wood",
+      "boundary",
+      "gate",
+      "property"
+    ]
+  },
+  {
+    "answer": "gate",
+    "title": "thing",
+    "clues": [
+      "entry",
+      "fence",
+      "open",
+      "close",
+      "yard"
+    ]
+  },
+  {
+    "answer": "stairs",
+    "title": "thing",
+    "clues": [
+      "steps",
+      "climb",
+      "house",
+      "upstairs",
+      "levels"
+    ]
+  },
+  {
+    "answer": "elevator",
+    "title": "thing",
+    "clues": [
+      "lift",
+      "building",
+      "floors",
+      "buttons",
+      "updown"
+    ]
+  },
+  {
+    "answer": "escalator",
+    "title": "thing",
+    "clues": [
+      "stairs",
+      "moving",
+      "mall",
+      "steps",
+      "transport"
+    ]
+  },
+  {
+    "answer": "corridor",
+    "title": "place",
+    "clues": [
+      "hallway",
+      "doors",
+      "building",
+      "walk",
+      "inside"
+    ]
+  },
+  {
+    "answer": "hallway",
+    "title": "place",
+    "clues": [
+      "corridor",
+      "doors",
+      "house",
+      "walk",
+      "inside"
+    ]
+  },
+  {
+    "answer": "kiosk",
+    "title": "place",
+    "clues": [
+      "small",
+      "shop",
+      "mall",
+      "stand",
+      "counter"
+    ]
+  },
+  {
+    "answer": "bookstore",
+    "title": "place",
+    "clues": [
+      "books",
+      "shop",
+      "read",
+      "shelves",
+      "author"
+    ]
+  },
+  {
+    "answer": "toyshop",
+    "title": "place",
+    "clues": [
+      "toys",
+      "children",
+      "buy",
+      "store",
+      "games"
+    ]
+  },
+  {
+    "answer": "petshop",
+    "title": "place",
+    "clues": [
+      "animals",
+      "cages",
+      "food",
+      "store",
+      "pets"
+    ]
+  },
+  {
+    "answer": "supermarket",
+    "title": "place",
+    "clues": [
+      "groceries",
+      "carts",
+      "food",
+      "aisles",
+      "checkout"
+    ]
+  },
+  {
+    "answer": "butcher",
+    "title": "place",
+    "clues": [
+      "meat",
+      "shop",
+      "cuts",
+      "fresh",
+      "market"
+    ]
+  },
+  {
+    "answer": "fruitshop",
+    "title": "place",
+    "clues": [
+      "apples",
+      "bananas",
+      "fresh",
+      "market",
+      "produce"
+    ]
+  },
+  {
+    "answer": "classmate",
+    "title": "thing",
+    "clues": [
+      "school",
+      "student",
+      "friend",
+      "class",
+      "learn"
+    ]
+  },
+  {
+    "answer": "backboard",
+    "title": "thing",
+    "clues": [
+      "basketball",
+      "hoop",
+      "court",
+      "glass",
+      "score"
+    ]
+  },
+  {
+    "answer": "goalpost",
+    "title": "thing",
+    "clues": [
+      "soccer",
+      "field",
+      "score",
+      "net",
+      "sports"
+    ]
+  },
+  {
+    "answer": "net",
+    "title": "thing",
+    "clues": [
+      "goal",
+      "mesh",
+      "catch",
+      "sport",
+      "web"
+    ]
+  },
+  {
+    "answer": "whistle",
+    "title": "thing",
+    "clues": [
+      "referee",
+      "sound",
+      "blow",
+      "sport",
+      "signal"
+    ]
+  },
+  {
+    "answer": "medal",
+    "title": "thing",
+    "clues": [
+      "award",
+      "gold",
+      "win",
+      "ribbon",
+      "honor"
+    ]
+  },
+  {
+    "answer": "trophy",
+    "title": "thing",
+    "clues": [
+      "award",
+      "win",
+      "cup",
+      "prize",
+      "champion"
+    ]
+  },
+  {
+    "answer": "backseat",
+    "title": "thing",
+    "clues": [
+      "car",
+      "passenger",
+      "rear",
+      "ride",
+      "seat"
+    ]
+  },
+  {
+    "answer": "seatbelt",
+    "title": "thing",
+    "clues": [
+      "car",
+      "safety",
+      "strap",
+      "buckle",
+      "travel"
+    ]
+  },
+  {
+    "answer": "steeringwheel",
+    "title": "thing",
+    "clues": [
+      "car",
+      "turn",
+      "driver",
+      "road",
+      "control"
+    ]
+  },
+  {
+    "answer": "dashboard",
+    "title": "thing",
+    "clues": [
+      "car",
+      "speed",
+      "screen",
+      "driver",
+      "panel"
+    ]
+  },
+  {
+    "answer": "headlight",
+    "title": "thing",
+    "clues": [
+      "car",
+      "light",
+      "night",
+      "road",
+      "beam"
+    ]
+  },
+  {
+    "answer": "taillight",
+    "title": "thing",
+    "clues": [
+      "car",
+      "rear",
+      "light",
+      "brake",
+      "road"
+    ]
+  },
+  {
+    "answer": "windshield",
+    "title": "thing",
+    "clues": [
+      "car",
+      "glass",
+      "front",
+      "wipers",
+      "view"
+    ]
+  },
+  {
+    "answer": "wiper",
+    "title": "thing",
+    "clues": [
+      "car",
+      "rain",
+      "glass",
+      "clean",
+      "windshield"
+    ]
+  },
+  {
+    "answer": "garagekey",
+    "title": "thing",
+    "clues": [
+      "remote",
+      "garage",
+      "door",
+      "open",
+      "car"
+    ]
+  },
+  {
+    "answer": "skateboard",
+    "title": "thing",
+    "clues": [
+      "wheels",
+      "ride",
+      "tricks",
+      "board",
+      "street"
+    ]
+  },
+  {
+    "answer": "rollerblades",
+    "title": "thing",
+    "clues": [
+      "wheels",
+      "feet",
+      "glide",
+      "sport",
+      "helmet"
+    ]
+  },
+  {
+    "answer": "snowman",
+    "title": "thing",
+    "clues": [
+      "snow",
+      "winter",
+      "carrot",
+      "cold",
+      "round"
+    ]
+  },
+  {
+    "answer": "birdhouse",
+    "title": "thing",
+    "clues": [
+      "birds",
+      "nest",
+      "wood",
+      "garden",
+      "hang"
+    ]
+  },
+  {
+    "answer": "birdnest",
+    "title": "thing",
+    "clues": [
+      "twigs",
+      "eggs",
+      "tree",
+      "birds",
+      "home"
+    ]
+  },
+  {
+    "answer": "teapot",
+    "title": "thing",
+    "clues": [
+      "tea",
+      "pour",
+      "kitchen",
+      "handle",
+      "ceramic"
+    ]
+  },
+  {
+    "answer": "coffeepot",
+    "title": "thing",
+    "clues": [
+      "coffee",
+      "brew",
+      "kitchen",
+      "pour",
+      "hot"
+    ]
+  },
+  {
+    "answer": "soapdish",
+    "title": "thing",
+    "clues": [
+      "bathroom",
+      "soap",
+      "sink",
+      "tray",
+      "clean"
+    ]
+  },
+  {
+    "answer": "dishwasher",
+    "title": "thing",
+    "clues": [
+      "kitchen",
+      "plates",
+      "clean",
+      "machine",
+      "soap"
+    ]
+  },
+  {
+    "answer": "freezer",
+    "title": "thing",
+    "clues": [
+      "cold",
+      "ice",
+      "kitchen",
+      "food",
+      "frozen"
+    ]
+  },
+  {
+    "answer": "ward",
+    "title": "place",
+    "clues": [
+      "hospital",
+      "patients",
+      "beds",
+      "nurses",
+      "care"
+    ]
+  }
+]

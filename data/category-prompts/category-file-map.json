@@ -1,0 +1,79 @@
+{
+  "Common": {
+    "category": "common",
+    "game_name": "Common",
+    "file_name": "common_500_words_with_5_clues.json",
+    "created_by": "system",
+    "state": "published"
+  },
+  "80's Rock Hits": {
+    "category": "audio-songs",
+    "game_name": "80's Rock Hits",
+    "file_name": "80s_Rock_Hits.json",
+    "created_by": "system",
+    "state": "published"
+  },
+  "Contemporary  Hits": {
+    "category": "audio-songs",
+    "game_name": "Contemporary  Hits",
+    "file_name": "contemporary_top_100.json",
+    "created_by": "system",
+    "state": "published"
+  },
+  "Classic Rock Hits": {
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "file_name": "Classic_Rock_Hits.json",
+    "created_by": "sid",
+    "state": "published"
+  },
+  "Identify Personalities": {
+    "category": "personalities",
+    "game_name": "Identify Personalities",
+    "file_name": "ultra_premium_personality_game_data.json",
+    "created_by": "system",
+    "state": "published"
+  },
+  "Tourist Places Across the World": {
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "file_name": "Tourist_Places_Across_The_World.json",
+    "created_by": "prabhakar",
+    "state": "published"
+  },
+  "Harry Potter Characters": {
+    "category": "people",
+    "game_name": "Harry Potter Characters",
+    "file_name": "harry_potter_50_characters_game_data.json",
+    "created_by": "system",
+    "state": "published"
+  },
+  "Greatest Tennis Stars": {
+    "category": "people",
+    "game_name": "Greatest Tennis Stars",
+    "file_name": "Greatest_Tennis_Stars.json",
+    "created_by": "ddd",
+    "state": "published"
+  },
+  "Legendary IPL Stars": {
+    "category": "Cricket - IPL",
+    "game_name": "Legendary IPL Stars",
+    "file_name": "Legendary_Ipl_Stars.json",
+    "created_by": "Djpbr",
+    "state": "published"
+  },
+  "World Class Athletes": {
+    "category": "personalities",
+    "game_name": "World Class Athletes",
+    "file_name": "World_Class_Athletes.json",
+    "created_by": "Dj",
+    "state": "published"
+  },
+  "Guess the TV Show": {
+    "category": "Entertainment",
+    "game_name": "Guess the TV Show",
+    "file_name": "Guess_The_Tv_Show.json",
+    "created_by": "DJ",
+    "state": "published"
+  }
+}

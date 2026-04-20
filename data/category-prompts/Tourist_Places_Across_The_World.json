@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Paris",
+    "title": "Romance on every boulevard",
+    "clues": [
+      "A storied city shaped by a winding river that splits it into left and right banks.",
+      "Known for grand 19th‑century avenues and a star of roads radiating from a famous arch.",
+      "An uprising here in 1789 began with the storming of a prison and shook a monarchy.",
+      "Impressionist pioneer Claude Monet was born here before honing his craft along its quays.",
+      "Home to an iron lattice tower and a museum crowned by a glass pyramid."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 2,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Salzburg",
+    "title": "Baroque charm in the shadow of the Alps",
+    "clues": [
+      "A picturesque city framed by snow-capped peaks with a river cutting through its historic core.",
+      "Its old town is famed for ornate Baroque facades and is listed as a UNESCO World Heritage Site.",
+      "A commanding hilltop fortress has guarded the skyline since the 11th century.",
+      "A beloved 1965 musical about a singing governess immortalized its hills and gardens on film.",
+      "It’s the birthplace of a prodigious composer, whose childhood home on Getreidegasse is now a museum."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 3,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "barcelona",
+    "title": "Where Modernism Meets the Mediterranean",
+    "clues": [
+      "A sun-kissed Mediterranean metropolis celebrated for beaches, tapas, and lively plazas.",
+      "Its waterfront was dramatically reshaped for a Summer Olympics that propelled it onto the global stage in the early 1990s.",
+      "A cradle of avant‑garde art that fostered Joan Miró, who’s honored with a hilltop museum.",
+      "A tree-lined promenade buzzing with buskers leads to a beloved market famed for jamón and fresh juices.",
+      "Fantastical spires of an unfinished basilica by Antoni Gaudí dominate the skyline."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 4,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "istanbul",
+    "title": "Where East Meets West",
+    "clues": [
+      "A vast metropolis that bridges two continents, split by a storied strait crisscrossed by ferries.",
+      "For centuries, it was the seat of Roman, Byzantine, and Ottoman power.",
+      "An iconic domed monument here has been a cathedral, a mosque, a museum, and a mosque again.",
+      "A decisive siege in 1453 here ended a thousand-year empire and altered global trade.",
+      "Nobel laureate Orhan Pamuk was born here and often writes about its winding neighborhoods."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 5,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Rio de Janeiro",
+    "title": "Where mountains meet the sea and the party never ends",
+    "clues": [
+      "A coastal metropolis famed for dramatic granite peaks and lush forests framing long crescent beaches.",
+      "It throws one of the world’s biggest pre-Lenten celebrations filled with samba rhythms and glittering parades.",
+      "A towering Art Deco Christ statue watches over the city from the summit of Corcovado.",
+      "It hosted the 2016 Summer Olympics and features Maracanã, once the world’s largest football stadium and site of the 1950 World Cup final.",
+      "Birthplace of bossa nova legend Antônio Carlos Jobim, whose “The Girl from Ipanema” immortalized one of its beaches."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 6,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Tokyo",
+    "title": "Neon dreams beneath a sacred peak",
+    "clues": [
+      "A mega-city where ancient temples share streets with bullet trains and tech-laden towers.",
+      "It sprawls along a wide bay, with clear winter days revealing a snow-capped giant on the horizon.",
+      "Its most famous crossroads surges with synchronized waves of pedestrians every few minutes.",
+      "Rebuilt after the 1923 Great Kanto earthquake and WWII firebombing, it has hosted the Summer Olympics twice.",
+      "Once known as Edo under the Tokugawa shogunate; birthplace of Hayao Miyazaki and home to Akihabara’s “Electric Town.”"
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 7,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Prague",
+    "title": "Where every hour tells a story",
+    "clues": [
+      "A storybook skyline of Gothic towers and red roofs rises above a winding river.",
+      "Its famed stone bridge lined with baroque statues links two historic quarters across the Vltava.",
+      "A hilltop castle complex and lantern-lit lanes have inspired writers and composers for centuries.",
+      "Crowds gather to watch an intricate astronomical clock set its figures in motion each hour.",
+      "Known for dramatic defenestrations, the 1989 Velvet Revolution, and as Franz Kafka’s birthplace."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 8,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Venice",
+    "title": "Where alleys are water and history wears a mask",
+    "clues": [
+      "A maze of canals and stone bridges draped over a centuries-old lagoon.",
+      "Carnival masks and gondolas glide past palazzi that blend Byzantine, Gothic, and Renaissance styles.",
+      "Nearby islands are famed for delicate glassmaking and vibrant lacework traditions.",
+      "A lion-bannered maritime republic once ruled from a pink-hued Gothic palace beside a towering campanile.",
+      "Birthplace of the Silk Road voyager whose name became shorthand for distant marvels."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 9,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Kyoto",
+    "title": "Temples, tea, and timeless streets",
+    "clues": [
+      "A city ringed by low mountains, celebrated for spring blossoms and fiery autumn leaves.",
+      "Home to hundreds of wooden temples and shrines, from hillside verandas to whispering bamboo groves.",
+      "Its summer Gion Matsuri sends towering floats rumbling through lantern-lit avenues, a tradition over a millennium old.",
+      "A landmark 1997 global climate agreement carries this city's name.",
+      "Novelist Haruki Murakami was born here, not far from vermilion gates that climb a sacred hillside."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 10,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "London",
+    "title": "A timeless stage for pageantry and pop culture",
+    "clues": [
+      "A storied river threads past centuries-old markets, parks, and palaces.",
+      "A 1666 inferno reshaped its heart and inspired a towering monument.",
+      "Birthplace of a silent film legend known as the Little Tramp.",
+      "Theater lovers flock to a reconstructed Elizabethan stage celebrating the Bard.",
+      "A zebra crossing outside a famed studio became album-cover lore for a Fab Four."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 11,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Budapest",
+    "title": "Thermal dreams and river scenes",
+    "clues": [
+      "A grand European city split by a great river and linked by stately bridges.",
+      "Renowned for steaming thermal baths housed in palatial complexes.",
+      "A skyline crowned by an illuminated neo-Gothic parliament along the waterfront.",
+      "Known for atmospheric “ruin bars” that revived crumbling courtyards into nightlife hubs.",
+      "Shook the world with a 1956 uprising and is the birthplace of escape artist Harry Houdini (Erik Weisz)."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 12,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "San Francisco",
+    "title": "Where hills, fog, and free spirits meet the sea",
+    "clues": [
+      "A coastal city built on steep streets where cool fog spills in from a narrow strait into a broad bay.",
+      "Its counterculture blossomed in the late 1960s, and nearby tech corridors later helped reshape modern life.",
+      "A catastrophic earthquake and fire in 1906 remade much of its urban fabric.",
+      "A former island prison here once housed Al Capone within sight of the downtown skyline.",
+      "Martial arts icon Bruce Lee was born in its historic Chinatown."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 13,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Sydney",
+    "title": "Where the harbor sparkles and surf never sleeps",
+    "clues": [
+      "A sun-soaked waterfront metropolis famed for golden beaches and a dazzling natural inlet.",
+      "New Year’s Eve here lights up the sky as fireworks cascade over a grand steel arch.",
+      "You can stroll historic lanes in The Rocks, near the 1788 landing site of the First Fleet.",
+      "Clifftop paths link Bondi to Coogee, revealing sandstone headlands and Pacific swells.",
+      "A UNESCO-listed performing arts icon with sail-like shells crowns the harbor."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 14,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Cape Town",
+    "title": "Where Oceans Embrace a Mountain",
+    "clues": [
+      "A coastal city framed by a flat-topped massif and surf-lashed shores, famed for wineries and spring wildflowers.",
+      "Once a pivotal resupply port of the 17th-century Dutch East India Company, its past is entwined with the spice routes and the slave trade.",
+      "Penguins waddle on nearby boulder-strewn beaches, and a dramatic peninsula tumbles toward a stormy cape.",
+      "Ferries visit a former island prison that held a future Nobel Peace Prize laureate for many years.",
+      "Its skyline is defined by Table Mountain, with the colorful facades of Bo-Kaap climbing the slopes below."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 15,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Dubrovnik",
+    "title": "Pearl of the Adriatic, reborn",
+    "clues": [
+      "A luminous walled port city whose medieval skyline rises straight from the Adriatic Sea.",
+      "Its gleaming limestone boulevard links ancient gates, fountains, and cloistered courtyards.",
+      "Hilltop fortresses recall a 1990s siege that scarred the Old Town and is now carefully commemorated.",
+      "Within UNESCO-listed ramparts stand Renaissance palaces and one of Europe’s oldest pharmacies, dating to the 1400s.",
+      "A cable car ascends Mount Srđ above walls that famously doubled as a royal capital in a hit TV series."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 16,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Amsterdam",
+    "title": "Where bikes rule and canals sparkle",
+    "clues": [
+      "A city laced with concentric waterways carved during a booming 17th‑century trade era.",
+      "Its streets hum with more bicycles than cars, threading past gabled houses and cozy cafés.",
+      "A moving World War II diary drew global attention to a hidden annex here.",
+      "Masterpieces like The Night Watch anchor a museum district devoted to Dutch Golden Age art.",
+      "Philosopher Baruch Spinoza was born here, and a famed 1637 tulip bubble still colors its lore along the Amstel."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 17,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "reykjavik",
+    "title": "Where geysers sing and auroras dance",
+    "clues": [
+      "A compact harbor city set amid volcanoes, glaciers, and the midnight sun, powered by abundant geothermal heat.",
+      "Its waterfront concert hall, a shimmering glass landmark, is a beacon of contemporary Nordic design.",
+      "Just outside the city, visitors soak in milky‑blue geothermal pools and chase winter skies painted by the northern lights.",
+      "A hilltop church with a soaring, basalt‑inspired tower watches over colorful tin‑clad houses.",
+      "It hosted the 1972 Fischer–Spassky “Match of the Century” and is the hometown of avant‑pop icon Björk."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 18,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Seville",
+    "title": "Where orange trees perfume the night and guitars keep time",
+    "clues": [
+      "An Andalusian city where sunlit plazas and citrus-lined avenues meet centuries of Moorish and Christian influence along a great Iberian river.",
+      "Its modern makeover for a world exposition in 1992 left striking pavilions on an island in the Guadalquivir.",
+      "A royal palace here blends Mudéjar and Renaissance artistry and still welcomes visiting dignitaries.",
+      "From its docks in 1519, Magellan’s fleet set out on the first circumnavigation of the globe, completed by Elcano.",
+      "Birthplace of painter Diego Velázquez, it’s also famed for a bell tower that began as a mosque’s minaret: La Giralda."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 19,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Lisbon",
+    "title": "Where old-world charm meets ocean breezes",
+    "clues": [
+      "A sunlit port of seven hills gazing across a broad river estuary toward the Atlantic.",
+      "Yellow trams clatter up cobbled lanes to scenic hilltop viewpoints called miradouros.",
+      "A devastating 1755 earthquake reshaped the center into elegant, grid-planned Pombaline streets.",
+      "Riverside monuments in Belém commemorate the Age of Discovery and departures of explorers like Vasco da Gama.",
+      "The city nurtured the soulful tradition of fado, immortalized by iconic singer Amália Rodrigues."
+    ],
+    "created_by": "prabhakar"
+  },
+  {
+    "id": 20,
+    "category": "places",
+    "game_name": "Tourist Places Across the World",
+    "answer": "Rome",
+    "title": "Where empire echoes meet gelato‑fueled evenings",
+    "clues": [
+      "A storied Mediterranean city where layers of antiquity, medieval alleys, and renaissance grandeur intertwine.",
+      "Its colossal stone arena once thundered with gladiatorial contests and roaring crowds.",
+      "Visitors toss coins into a famed baroque fountain here to ensure they’ll come back.",
+      "Within its boundaries sits the world’s smallest independent state and spiritual hub for millions.",
+      "Legend says twin brothers raised by a she‑wolf founded this place long ago."
+    ],
+    "created_by": "prabhakar"
+  }
+]

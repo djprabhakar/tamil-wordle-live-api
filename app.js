@@ -33,7 +33,9 @@ const swaggerJsdoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
 
 const { openapi } = require('./docs/openapi')
+const { createSessionsRouter } = require('./routes/sessions.routes')
 const { createWordsRouter } = require('./routes/words.routes')
+const { SessionsService } = require('./services/sessions.service')
 const { HttpError, WordsService } = require('./services/words.service')
 
 const maxGames = Number(process.env.MAX_LIVE_GAMES || 200)
@@ -164,7 +166,7 @@ function addCors(app) {
     }
 
     res.setHeader('Vary', 'Origin')
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,DELETE,OPTIONS')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
 
     if (req.method === 'OPTIONS') {
@@ -317,6 +319,7 @@ function addDocs(app) {
 function createApp(options = {}) {
   const app = express()
   const wordsService = options.wordsService || new WordsService()
+  const sessionsService = options.sessionsService || new SessionsService({ wordsService })
   const liveGamesStore = createLiveGamesStore()
 
   wordsService.loadFromDisk()
@@ -330,12 +333,14 @@ function createApp(options = {}) {
 
   addDocs(app)
   app.use('/api/words', createWordsRouter(wordsService))
+  app.use('/api/sessions', createSessionsRouter(sessionsService))
   addLiveGameRoutes(app, liveGamesStore)
   addErrorHandling(app)
 
   return {
     app,
     liveGamesStore,
+    sessionsService,
     wordsService,
   }
 }

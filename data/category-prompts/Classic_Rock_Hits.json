@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "Bohemian Rhapsody",
+    "title": "1975 – Queen – 9 weeks at No. 1 on the UK Singles Chart",
+    "clues": [
+      "A six-minute rock epic without a chorus that reshaped radio’s idea of a single in the mid-’70s.",
+      "Its groundbreaking promo clip, directed by Bruce Gowers, helped usher in the modern music-video era.",
+      "A headbanging car scene in a 1992 comedy film reignited its U.S. chart success, peaking at No. 2 on the Hot 100.",
+      "The operatic middle features dense multi‑track vocal layers and Brian May’s ‘Red Special’ guitar harmonies.",
+      "Recorded at Rockfield Studios in Wales in 1975; after its singer’s death in 1991, it returned to No. 1 in the UK."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "n1WomoCiYqg",
+      "start": 0,
+      "duration": 30
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 2,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "back in black",
+    "title": "1980 – AC/DC — RIAA multi‑Platinum single from a 25× Platinum album",
+    "clues": [
+      "An arena-shaking comeback statement released only months after the band lost its original frontman.",
+      "Tracked at Compass Point Studios in Nassau with producer Robert John “Mutt” Lange, the mix is famously dry and punchy.",
+      "Built around a staccato E–D–A riff by Angus Young that’s among the most instantly recognizable in rock.",
+      "Brian Johnson’s lyrics salute survival and legacy — “forget the hearse ’cause I never die” — as a tribute to Bon Scott.",
+      "Name the AC/DC anthem whose title combines a color with a bold declaration of return."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "NFgE_xDxCZ4",
+      "start": 0,
+      "duration": 35
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 3,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "Hotel California",
+    "title": "1977 — Eagles — US Hot 100 No. 1; won Record of the Year at the 1978 Grammys",
+    "clues": [
+      "A mid-’70s rock epic famed for its haunting atmosphere and a long twin‑guitar coda routinely ranked among the greatest solos ever recorded.",
+      "Its storyline follows a weary traveler lured into a glamorous refuge that slowly reveals itself as a gilded cage—often read as a metaphor for 1970s Los Angeles excess and the music industry.",
+      "The initial demo carried the working title “Mexican Reggae,” sketched on a 12‑string at a rented Malibu beach house and captured on a TEAC 4‑track.",
+      "An enduring urban legend tied it to the Church of Satan, a claim the band publicly denied even as the rumor fueled decades of sensational speculation.",
+      "The single topped the US Billboard Hot 100 in May 1977 and later earned Record of the Year at the 1978 Grammy Awards."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "VBuQKzROGtg",
+      "start": 0,
+      "duration": 60
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 4,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "Smoke on the Water",
+    "title": "1972 – Deep Purple – Peaked at No. 4 on the US Billboard Hot 100",
+    "clues": [
+      "A hard-rock anthem born from a real disaster in a Swiss resort town during an annual music event.",
+      "Its album sessions shifted to a grand hotel, tracked with the Rolling Stones Mobile Studio after the intended venue burned down.",
+      "The narrative describes a night when a Frank Zappa gig abruptly ended as a flare gun ignited the casino.",
+      "The title came from the eerie haze seen drifting across Lake Geneva the following morning.",
+      "Built on Ritchie Blackmore’s famous four-note riff, the single later reached No. 4 on the Billboard Hot 100 in 1973."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "7kKoOPf7nWc",
+      "start": 0,
+      "duration": 60
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 5,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "another brick in the wall (part 2)",
+    "title": "1979 — Pink Floyd — Spent 4 weeks at No. 1 on the U.S. Billboard Hot 100",
+    "clues": [
+      "A rebellious anthem from a concept album that indicts rigid, dehumanizing schooling.",
+      "The producer reshaped it with a danceable groove and insisted on adding a children’s chorus to make it single‑ready.",
+      "That chant was recorded with pupils from Islington Green School in London, whose involvement later triggered royalty headlines decades on.",
+      "It topped the UK chart at Christmas 1979 and then ruled the U.S. Hot 100 for four weeks in 1980.",
+      "Adopted by student protesters in apartheid‑era South Africa, it was subsequently banned by the government there."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "pp9BQEqVJh4",
+      "start": 0,
+      "duration": 45
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 6,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "Stairway to Heaven",
+    "title": "1971 – Led Zeppelin – Home to a guitar solo voted No. 1 by Guitar World readers",
+    "clues": [
+      "Not issued as a single in the US or UK on release, yet it dominated album‑oriented FM radio programming throughout the 1970s.",
+      "Its opening uses layered recorders performed by John Paul Jones, and Robert Plant drafted much of the lyric by the fireplace at Headley Grange.",
+      "The band premiered it live at Belfast’s Ulster Hall on March 5, 1971, months before the album reached stores.",
+      "It became a flashpoint in the 1980s backmasking scare, with claims of hidden messages when a mid‑section was played backward—claims the group dismissed.",
+      "Decades later it faced a high‑profile lawsuit over alleged similarity to Spirit’s “Taurus”; a 2016 jury and a 2020 appeals ruling left the band victorious."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "Noz3NWFhVA0",
+      "start": 0,
+      "duration": 90
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 7,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "Sultans of Swing",
+    "title": "1978 — Dire Straits — Peaked at #4 on the US Billboard Hot 100",
+    "clues": [
+      "A late-’70s debut single that transformed a London pub-rock quartet into international stars.",
+      "Its signature lead was played fingerstyle on a Fender Stratocaster—no pick—becoming the guitarist’s calling card.",
+      "The lyric’s rainy-night scene came from watching a near-empty South London pub band whose grandiose self-intro inspired the ironic title.",
+      "A BBC Radio London DJ (Charlie Gillett) spun the homemade demo on his Honky Tonk show, triggering a rush of label interest and a record deal.",
+      "The first cut was done on a shoestring at Pathway Studios; the hit version appeared on the band’s self-titled debut produced by Muff Winwood."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "tTab1AtBJKw",
+      "start": 0,
+      "duration": 35
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 8,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "Sweet Child O' Mine",
+    "title": "1988 – Guns N’ Roses – first and only US Hot 100 No. 1",
+    "clues": [
+      "A breakout power ballad from a Los Angeles hard‑rock band’s 1987 debut album.",
+      "Its shimmering intro began as a string‑skipping warm‑up the lead guitarist once joked about before bandmates urged him to develop it.",
+      "The lyrics grew from a poem the singer wrote for his then‑girlfriend Erin Everly, who also appears in the original video.",
+      "The song’s famous mid‑section hook came when the vocalist ad‑libbed “Where do we go now?” while the band searched for a transition in the studio.",
+      "It topped the Billboard Hot 100 in September 1988, the group’s only U.S. No. 1 single."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "WW_iOXWCGLE",
+      "start": 0,
+      "duration": 35
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 9,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "Layla",
+    "title": "1970 — Derek and the Dominos — hit U.S. Billboard Hot 100 Top 10 (1972)",
+    "clues": [
+      "A split‑personality arrangement: blistering twin‑guitar leads up front, then a separate, tape‑spliced piano coda takes over.",
+      "Its title and tale of forbidden longing were inspired by the medieval Persian romance Layla and Majnun, discovered just before writing.",
+      "Tracked at Criteria Studios in Miami with producer Tom Dowd, it became the definitive anthem of a short‑lived supergroup.",
+      "The soaring coda was written and performed by drummer Jim Gordon—later the subject of a public authorship dispute involving Rita Coolidge.",
+      "It was Eric Clapton’s confession of love for Pattie Boyd (then George Harrison’s wife), and the single ultimately hit No. 10 in the U.S. in 1972."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "jNcJqqGvGz0",
+      "start": 0,
+      "duration": 30
+    },
+    "created_by": "sid"
+  },
+  {
+    "id": 10,
+    "category": "audio-songs",
+    "game_name": "Classic Rock Hits",
+    "answer": "November Rain",
+    "title": "1991 — Guns N' Roses — first ’90s music video to surpass 1B views on YouTube",
+    "clues": [
+      "A near nine‑minute power ballad from an L.A. hard‑rock giant’s Use Your Illusion era, instantly global in reach.",
+      "Its lavish mini‑movie video—part of a loose trilogy with Don’t Cry and Estranged—tracks a wedding that turns to a funeral in a downpour.",
+      "The song grew from Axl Rose’s long‑gestating piano piece and was narratively inspired by Del James’s short story “Without You.”",
+      "In 2018, its official video became the first from the 1990s to cross one billion views on YouTube.",
+      "Model/actress Stephanie Seymour plays the bride, while Slash rips an iconic desert‑chapel solo on a Les Paul."
+    ],
+    "media": {
+      "type": "youtube",
+      "videoId": "fRIQEDrzSHI",
+      "start": 0,
+      "duration": 35
+    },
+    "created_by": "sid"
+  }
+]
