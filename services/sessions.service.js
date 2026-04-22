@@ -88,6 +88,23 @@ function normalizeAnswer(value) {
   return normalizeWord(String(value || '').trim())
 }
 
+function sanitizeSessionEntry(entry, options = {}) {
+  if (!entry || typeof entry !== 'object') {
+    return null
+  }
+
+  const revealAnswer = Boolean(options.revealAnswer)
+
+  return {
+    id: entry.id ?? null,
+    title: typeof entry.title === 'string' ? entry.title : '',
+    category: typeof entry.category === 'string' ? entry.category : '',
+    game_name: typeof entry.game_name === 'string' ? entry.game_name : '',
+    clues: Array.isArray(entry.clues) ? entry.clues : [],
+    answer: revealAnswer && typeof entry.answer === 'string' ? entry.answer : '',
+  }
+}
+
 class SessionsService {
   constructor(options = {}) {
     this.wordsService = options.wordsService
@@ -140,6 +157,11 @@ class SessionsService {
     return entry && typeof entry.answer === 'string' ? entry.answer : ''
   }
 
+  getCurrentEntry(session, options = {}) {
+    const entry = session.entries[session.currentEntry]
+    return sanitizeSessionEntry(entry, options)
+  }
+
   isNicknameTaken(session, nickname) {
     const normalized = normalizeNickname(nickname).toLowerCase()
     return session.players.some((player) => player.name.toLowerCase() === normalized)
@@ -148,6 +170,7 @@ class SessionsService {
   toPublicSession(session) {
     const revealReady = Boolean(session.revealReady)
     const hostPlayer = session.players.find((player) => player.isHost)
+    const activeEntry = this.getCurrentEntry(session, { revealAnswer: revealReady || session.status === 'finished' })
 
     return {
       sessionId: session.sessionId,
@@ -157,7 +180,7 @@ class SessionsService {
       game: session.game,
       entryCount: session.totalEntries,
       currentEntryIndex: session.currentEntry,
-      currentEntry: session.currentEntry,
+      currentEntry: activeEntry,
       totalEntries: session.totalEntries,
       startedAt: session.startedAt || null,
       hostName: hostPlayer ? hostPlayer.name : '',
