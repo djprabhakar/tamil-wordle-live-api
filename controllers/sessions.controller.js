@@ -1,5 +1,13 @@
 function createSessionsController(sessionsService) {
   return {
+    list(_req, res, next) {
+      try {
+        res.json(sessionsService.list(_req.query || {}))
+      } catch (error) {
+        next(error)
+      }
+    },
+
     create(req, res, next) {
       try {
         res.json(sessionsService.create(req.body || {}))

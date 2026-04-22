@@ -6,6 +6,7 @@ const { normalizeWord } = require('../utils/normalize')
 const SESSION_TTL_MS = 2 * 60 * 60 * 1000
 const MAX_PLAYERS = 8
 const VALID_ENTRY_COUNTS = new Set([0, 10, 20, 30, 50])
+const VALID_LIST_STATUSES = new Set(['lobby', 'playing', 'finished', 'all'])
 
 function normalizeNickname(value) {
   return String(value || '').trim()
@@ -221,6 +222,40 @@ class SessionsService {
     this.sessionIdsByCode.set(session.code, session.sessionId)
 
     return this.toPublicSession(session)
+  }
+
+  list(options = {}) {
+    this.cleanupExpiredSessions()
+
+    const requestedStatus = String(options.status || '').trim().toLowerCase() || 'active'
+
+    if (requestedStatus !== 'active' && !VALID_LIST_STATUSES.has(requestedStatus)) {
+      throw new HttpError(400, 'status must be one of lobby, playing, finished, all, or active.')
+    }
+
+    return Array.from(this.sessionsById.values())
+      .filter((session) => {
+        if (requestedStatus === 'active' || requestedStatus === 'all') {
+          return requestedStatus === 'all'
+            ? true
+            : session.status === 'lobby' || session.status === 'playing'
+        }
+
+        return session.status === requestedStatus
+      })
+      .sort((left, right) => right.expiresAt - left.expiresAt)
+      .map((session) => ({
+        sessionId: session.sessionId,
+        code: session.code,
+        category: session.category,
+        game: session.game,
+        status: session.status,
+        currentEntry: session.currentEntry,
+        totalEntries: session.totalEntries,
+        playerCount: session.players.length,
+        hostName: session.players.find((player) => player.isHost)?.name || '',
+        revealReady: Boolean(session.revealReady),
+      }))
   }
 
   join(options = {}) {

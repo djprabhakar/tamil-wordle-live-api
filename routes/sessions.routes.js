@@ -6,6 +6,7 @@ function createSessionsRouter(sessionsService) {
   const router = express.Router()
   const controller = createSessionsController(sessionsService)
 
+  router.get('/', controller.list)
   router.post('/create', controller.create)
   router.post('/join', controller.join)
   router.get('/:id', controller.get)
