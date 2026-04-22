@@ -93,7 +93,7 @@ function sanitizeSessionEntry(entry, options = {}) {
     return null
   }
 
-  const revealAnswer = Boolean(options.revealAnswer)
+  const includeAnswer = Boolean(options.includeAnswer || options.revealAnswer)
 
   return {
     id: entry.id ?? null,
@@ -101,7 +101,7 @@ function sanitizeSessionEntry(entry, options = {}) {
     category: typeof entry.category === 'string' ? entry.category : '',
     game_name: typeof entry.game_name === 'string' ? entry.game_name : '',
     clues: Array.isArray(entry.clues) ? entry.clues : [],
-    answer: revealAnswer && typeof entry.answer === 'string' ? entry.answer : '',
+    answer: includeAnswer && typeof entry.answer === 'string' ? entry.answer : '',
   }
 }
 
@@ -170,7 +170,7 @@ class SessionsService {
   toPublicSession(session) {
     const revealReady = Boolean(session.revealReady)
     const hostPlayer = session.players.find((player) => player.isHost)
-    const activeEntry = this.getCurrentEntry(session, { revealAnswer: revealReady || session.status === 'finished' })
+    const activeEntry = this.getCurrentEntry(session, { includeAnswer: session.status === 'playing', revealAnswer: revealReady || session.status === 'finished' })
 
     return {
       sessionId: session.sessionId,
