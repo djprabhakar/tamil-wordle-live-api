@@ -178,6 +178,8 @@ class SessionsService {
       status: toPublicStatus(session.status),
       category: session.category,
       game: session.game,
+      gameCreatedBy: session.gameCreatedBy || '',
+      createdBy: session.gameCreatedBy || '',
       entryCount: session.totalEntries,
       currentEntryIndex: session.currentEntry,
       currentEntry: activeEntry,
@@ -247,6 +249,7 @@ class SessionsService {
     const nickname = validateNickname(options.nickname)
     const category = validateRequiredString(options.category, 'category')
     const game = validateRequiredString(options.game, 'game')
+    const gameCreatedBy = validateRequiredString(options.gameCreatedBy ?? options.createdBy, 'gameCreatedBy')
     const entryCount = validateEntryCount(options.entryCount)
     const entries = this.loadEntries(game, entryCount)
 
@@ -255,6 +258,7 @@ class SessionsService {
       code: this.createUniqueCode(),
       category,
       game,
+      gameCreatedBy,
       status: 'lobby',
       currentEntry: 0,
       totalEntries: entries.length,
@@ -296,6 +300,8 @@ class SessionsService {
         code: session.code,
         category: session.category,
         game: session.game,
+        gameCreatedBy: session.gameCreatedBy || '',
+        createdBy: session.gameCreatedBy || '',
         status: toPublicStatus(session.status),
         entryCount: session.totalEntries,
         currentEntryIndex: session.currentEntry,
