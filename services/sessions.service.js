@@ -8,6 +8,22 @@ const MAX_PLAYERS = 8
 const VALID_ENTRY_COUNTS = new Set([0, 10, 20, 30, 50])
 const VALID_LIST_STATUSES = new Set(['lobby', 'playing', 'finished', 'all'])
 
+function toPublicStatus(status) {
+  if (status === 'lobby') {
+    return 'Lobby'
+  }
+
+  if (status === 'playing') {
+    return 'InProgress'
+  }
+
+  if (status === 'finished') {
+    return 'Finished'
+  }
+
+  return String(status || '')
+}
+
 function normalizeNickname(value) {
   return String(value || '').trim()
 }
@@ -131,13 +147,20 @@ class SessionsService {
 
   toPublicSession(session) {
     const revealReady = Boolean(session.revealReady)
+    const hostPlayer = session.players.find((player) => player.isHost)
 
     return {
       sessionId: session.sessionId,
       code: session.code,
-      status: session.status,
+      status: toPublicStatus(session.status),
+      category: session.category,
+      game: session.game,
+      entryCount: session.totalEntries,
+      currentEntryIndex: session.currentEntry,
       currentEntry: session.currentEntry,
       totalEntries: session.totalEntries,
+      startedAt: session.startedAt || null,
+      hostName: hostPlayer ? hostPlayer.name : '',
       players: session.players.map((player) => ({
         name: player.name,
         isHost: player.isHost,
@@ -212,6 +235,7 @@ class SessionsService {
       status: 'lobby',
       currentEntry: 0,
       totalEntries: entries.length,
+      startedAt: null,
       players: [createPlayer(nickname, true)],
       revealReady: false,
       entries,
@@ -249,13 +273,53 @@ class SessionsService {
         code: session.code,
         category: session.category,
         game: session.game,
-        status: session.status,
+        status: toPublicStatus(session.status),
+        entryCount: session.totalEntries,
+        currentEntryIndex: session.currentEntry,
         currentEntry: session.currentEntry,
         totalEntries: session.totalEntries,
+        startedAt: session.startedAt || null,
         playerCount: session.players.length,
         hostName: session.players.find((player) => player.isHost)?.name || '',
         revealReady: Boolean(session.revealReady),
       }))
+  }
+
+  start(sessionId, options = {}) {
+    const session = this.getSessionOrThrow(sessionId)
+    const nickname = validateNickname(options.nickname)
+    const player = this.findPlayer(session, nickname)
+
+    if (!player || !player.isHost) {
+      throw new HttpError(403, 'Only the host can start this session.')
+    }
+
+    if (session.status === 'playing' || session.status === 'finished') {
+      throw new HttpError(409, session.status === 'playing'
+        ? 'Session has already started.'
+        : 'Session is not in a startable state.')
+    }
+
+    if (session.status !== 'lobby') {
+      throw new HttpError(409, 'Session is not in a startable state.')
+    }
+
+    if (session.players.length < 2) {
+      throw new HttpError(409, 'At least 2 players are required to start.')
+    }
+
+    session.status = 'playing'
+    session.startedAt = new Date().toISOString()
+    session.currentEntry = 0
+    session.revealReady = false
+    session.players.forEach((sessionPlayer) => {
+      sessionPlayer.submitted = false
+      sessionPlayer.entryPoints = 0
+      sessionPlayer.correct = false
+      sessionPlayer.answer = ''
+    })
+
+    return this.toPublicSession(session)
   }
 
   join(options = {}) {

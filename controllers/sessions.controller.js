@@ -32,6 +32,14 @@ function createSessionsController(sessionsService) {
       }
     },
 
+    start(req, res, next) {
+      try {
+        res.json(sessionsService.start(req.params.id, req.body || {}))
+      } catch (error) {
+        next(error)
+      }
+    },
+
     submit(req, res, next) {
       try {
         res.json(sessionsService.submit(req.params.id, req.body || {}))
