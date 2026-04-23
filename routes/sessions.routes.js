@@ -13,6 +13,7 @@ function createSessionsRouter(sessionsService) {
   router.post('/:id/start', controller.start)
   router.post('/:id/submit', controller.submit)
   router.post('/:id/next', controller.next)
+  router.post('/:id/finalize', controller.finalize)
   router.delete('/:id/leave', controller.leave)
 
   return router

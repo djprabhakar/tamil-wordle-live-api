@@ -56,6 +56,14 @@ function createSessionsController(sessionsService) {
       }
     },
 
+    finalize(req, res, next) {
+      try {
+        res.json(sessionsService.finalize(req.params.id, req.body || {}))
+      } catch (error) {
+        next(error)
+      }
+    },
+
     leave(req, res, next) {
       try {
         res.json(sessionsService.leave(req.params.id, req.body || {}))

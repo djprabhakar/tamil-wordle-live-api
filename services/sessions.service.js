@@ -1,4 +1,7 @@
 const crypto = require('crypto')
+const fs = require('fs')
+const os = require('os')
+const path = require('path')
 
 const { HttpError } = require('./words.service')
 const { normalizeWord } = require('../utils/normalize')
@@ -7,6 +10,7 @@ const SESSION_TTL_MS = 2 * 60 * 60 * 1000
 const MAX_PLAYERS = 8
 const VALID_ENTRY_COUNTS = new Set([0, 10, 20, 30, 50])
 const VALID_LIST_STATUSES = new Set(['lobby', 'playing', 'finished', 'all'])
+const SESSION_RESULTS_DIR = path.join(os.tmpdir(), 'five-hints-session-results')
 
 function toPublicStatus(status) {
   if (status === 'lobby') {
@@ -88,6 +92,16 @@ function normalizeAnswer(value) {
   return normalizeWord(String(value || '').trim())
 }
 
+function toSafeFilePart(value, fallback = 'session') {
+  const safeValue = String(value || '').trim()
+    .replace(/[<>:"/\\|?*\x00-\x1F]/g, '')
+    .replace(/\s+/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_+|_+$/g, '')
+
+  return safeValue || fallback
+}
+
 function sanitizeSessionEntry(entry, options = {}) {
   if (!entry || typeof entry !== 'object') {
     return null
@@ -162,6 +176,80 @@ class SessionsService {
     return sanitizeSessionEntry(entry, options)
   }
 
+  getResultFileName(session) {
+    const hostPlayer = session.players.find((player) => player.isHost)
+    return `${session.code}-${toSafeFilePart(session.game, 'game')}_${toSafeFilePart(hostPlayer?.name, 'host')}.json`
+  }
+
+  getResultFilePath(session) {
+    return path.join(SESSION_RESULTS_DIR, this.getResultFileName(session))
+  }
+
+  buildScorePersistence(session) {
+    return {
+      sessionId: session.sessionId,
+      code: session.code,
+      category: session.category,
+      game: session.game,
+      hostName: session.players.find((player) => player.isHost)?.name || '',
+      status: toPublicStatus(session.status),
+      totalEntries: session.totalEntries,
+      startedAt: session.startedAt || null,
+      finishedAt: session.finishedAt || null,
+      updatedAt: new Date().toISOString(),
+      resultFileName: session.resultFileName || this.getResultFileName(session),
+      entries: Array.isArray(session.scoreLog) ? session.scoreLog : [],
+    }
+  }
+
+  persistScoreFile(session) {
+    fs.mkdirSync(SESSION_RESULTS_DIR, { recursive: true })
+    if (!session.resultFileName) {
+      session.resultFileName = this.getResultFileName(session)
+    }
+    if (!session.resultFilePath) {
+      session.resultFilePath = this.getResultFilePath(session)
+    }
+
+    const payload = this.buildScorePersistence(session)
+    fs.writeFileSync(session.resultFilePath, JSON.stringify(payload, null, 2), 'utf8')
+    return payload
+  }
+
+  upsertScoreLog(session, player, entryIndex) {
+    const safeEntryIndex = Number.isInteger(entryIndex) ? entryIndex : session.currentEntry
+    const entry = session.entries[safeEntryIndex] || null
+    const records = Array.isArray(session.scoreLog) ? session.scoreLog : []
+    const existingIndex = records.findIndex((record) => record.entryIndex === safeEntryIndex && record.playerName === player.name)
+    const nextRecord = {
+      entryIndex: safeEntryIndex,
+      entryNumber: safeEntryIndex + 1,
+      entryId: entry?.id ?? null,
+      entryTitle: typeof entry?.title === 'string' ? entry.title : '',
+      entryCategory: typeof entry?.category === 'string' ? entry.category : session.category,
+      playerName: player.name,
+      isHost: player.isHost,
+      submittedAnswer: player.answer || '',
+      correct: Boolean(player.correct),
+      entryPoints: player.entryPoints ?? 0,
+      totalScore: player.score ?? 0,
+      submittedAt: new Date().toISOString(),
+    }
+
+    if (existingIndex >= 0) {
+      records[existingIndex] = nextRecord
+    } else {
+      records.push(nextRecord)
+    }
+
+    records.sort((left, right) => {
+      if (left.entryIndex !== right.entryIndex) return left.entryIndex - right.entryIndex
+      return left.playerName.localeCompare(right.playerName)
+    })
+
+    session.scoreLog = records
+  }
+
   isNicknameTaken(session, nickname) {
     const normalized = normalizeNickname(nickname).toLowerCase()
     return session.players.some((player) => player.name.toLowerCase() === normalized)
@@ -197,6 +285,50 @@ class SessionsService {
       })),
       revealReady,
       correctAnswer: revealReady ? this.getEntryAnswer(session) : '',
+      finalizedAt: session.finalizedAt || null,
+      resultFileName: session.resultFileName || '',
+    }
+  }
+
+  buildFinalSummary(session) {
+    const hostPlayer = session.players.find((player) => player.isHost)
+    const sortedPlayers = [...session.players]
+      .sort((left, right) => {
+        const scoreDelta = (right.score ?? 0) - (left.score ?? 0)
+        if (scoreDelta !== 0) return scoreDelta
+        return left.name.localeCompare(right.name)
+      })
+
+    const topScore = sortedPlayers[0]?.score ?? 0
+    const winners = sortedPlayers.filter((player) => (player.score ?? 0) === topScore)
+    const fileName = session.resultFileName || this.getResultFileName(session)
+
+    return {
+      sessionId: session.sessionId,
+      code: session.code,
+      category: session.category,
+      game: session.game,
+      hostName: hostPlayer?.name || '',
+      status: toPublicStatus(session.status),
+      totalEntries: session.totalEntries,
+      startedAt: session.startedAt || null,
+      finishedAt: session.finishedAt || null,
+      finalizedAt: session.finalizedAt || null,
+      resultFileName: fileName,
+      entries: Array.isArray(session.scoreLog) ? session.scoreLog : [],
+      winners: winners.map((player) => ({
+        name: player.name,
+        score: player.score ?? 0,
+      })),
+      players: sortedPlayers.map((player, index) => ({
+        rank: index + 1,
+        name: player.name,
+        isHost: player.isHost,
+        score: player.score ?? 0,
+        correct: player.correct,
+        entryPoints: player.entryPoints ?? 0,
+        answer: player.answer || '',
+      })),
     }
   }
 
@@ -266,6 +398,7 @@ class SessionsService {
       players: [createPlayer(nickname, true)],
       revealReady: false,
       entries,
+      scoreLog: [],
       expiresAt: Date.now() + this.ttlMs,
     }
 
@@ -341,12 +474,19 @@ class SessionsService {
     session.startedAt = new Date().toISOString()
     session.currentEntry = 0
     session.revealReady = false
+    session.scoreLog = []
+    session.finalSummary = null
+    session.finalizedAt = null
+    session.resultFileName = this.getResultFileName(session)
+    session.resultFilePath = this.getResultFilePath(session)
     session.players.forEach((sessionPlayer) => {
       sessionPlayer.submitted = false
       sessionPlayer.entryPoints = 0
       sessionPlayer.correct = false
       sessionPlayer.answer = ''
     })
+
+    this.persistScoreFile(session)
 
     return this.toPublicSession(session)
   }
@@ -428,6 +568,8 @@ class SessionsService {
     player.correct = isCorrect
     player.entryPoints = entryPoints
     player.score += entryPoints
+    this.upsertScoreLog(session, player, session.currentEntry)
+    this.persistScoreFile(session)
 
     this.refreshRevealReady(session)
     return this.toPublicSession(session)
@@ -452,6 +594,8 @@ class SessionsService {
     if (session.currentEntry >= session.totalEntries) {
       session.status = 'finished'
       session.currentEntry = session.totalEntries
+      session.finishedAt = new Date().toISOString()
+      this.persistScoreFile(session)
     }
 
     session.players.forEach((sessionPlayer) => {
@@ -463,6 +607,40 @@ class SessionsService {
     session.revealReady = false
 
     return this.toPublicSession(session)
+  }
+
+  finalize(sessionId, options = {}) {
+    const session = this.getSessionOrThrow(sessionId)
+    validateNickname(options.nickname)
+
+    if (session.status !== 'finished') {
+      throw new HttpError(409, 'Session is not finished yet.')
+    }
+
+    if (session.finalSummary) {
+      return session.finalSummary
+    }
+
+    const summary = this.buildFinalSummary(session)
+    session.finalizedAt = new Date().toISOString()
+    session.resultFileName = summary.resultFileName
+    if (!session.resultFilePath) {
+      session.resultFilePath = this.getResultFilePath(session)
+    }
+    const persisted = {
+      ...this.buildScorePersistence(session),
+      finalizedAt: session.finalizedAt,
+      winners: summary.winners,
+      players: summary.players,
+    }
+    fs.writeFileSync(session.resultFilePath, JSON.stringify(persisted, null, 2), 'utf8')
+    session.finalSummary = {
+      ...summary,
+      finalizedAt: session.finalizedAt,
+      filePath: session.resultFilePath,
+    }
+
+    return session.finalSummary
   }
 
   leave(sessionId, options = {}) {
