@@ -1,6 +1,5 @@
 const crypto = require('crypto')
 const fs = require('fs')
-const os = require('os')
 const path = require('path')
 
 const { HttpError } = require('./words.service')
@@ -10,7 +9,7 @@ const SESSION_TTL_MS = 2 * 60 * 60 * 1000
 const MAX_PLAYERS = 8
 const VALID_ENTRY_COUNTS = new Set([0, 10, 20, 30, 50])
 const VALID_LIST_STATUSES = new Set(['lobby', 'playing', 'finished', 'all'])
-const SESSION_RESULTS_DIR = path.join(os.tmpdir(), 'five-hints-session-results')
+const SESSION_RESULTS_DIR = path.join(__dirname, '..', 'data', 'group_game_results')
 
 function toPublicStatus(status) {
   if (status === 'lobby') {
