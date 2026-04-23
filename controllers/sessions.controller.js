@@ -64,6 +64,14 @@ function createSessionsController(sessionsService) {
       }
     },
 
+    deactivate(req, res, next) {
+      try {
+        res.json(sessionsService.deactivate(req.params.id, req.body || {}))
+      } catch (error) {
+        next(error)
+      }
+    },
+
     leave(req, res, next) {
       try {
         res.json(sessionsService.leave(req.params.id, req.body || {}))

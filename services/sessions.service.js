@@ -10,6 +10,7 @@ const MAX_PLAYERS = 8
 const VALID_ENTRY_COUNTS = new Set([0, 10, 20, 30, 50])
 const VALID_LIST_STATUSES = new Set(['lobby', 'playing', 'finished', 'all'])
 const SESSION_RESULTS_DIR = path.join(__dirname, '..', 'data', 'group_game_results')
+const ACTIVE_GROUP_GAMES_FILE = path.join(__dirname, '..', 'data', 'active_group_games.json')
 
 function toPublicStatus(status) {
   if (status === 'lobby') {
@@ -131,10 +132,66 @@ class SessionsService {
 
     for (const [sessionId, session] of this.sessionsById.entries()) {
       if (session.expiresAt <= now) {
+        this.updateActiveGameRecord(session, {
+          active: false,
+          sessionStatus: 'Expired',
+          deactivatedAt: new Date().toISOString(),
+        })
         this.sessionsById.delete(sessionId)
         this.sessionIdsByCode.delete(session.code)
       }
     }
+  }
+
+  readActiveGames() {
+    try {
+      if (!fs.existsSync(ACTIVE_GROUP_GAMES_FILE)) {
+        return []
+      }
+      const text = fs.readFileSync(ACTIVE_GROUP_GAMES_FILE, 'utf8')
+      const parsed = text ? JSON.parse(text) : []
+      return Array.isArray(parsed) ? parsed : []
+    } catch {
+      return []
+    }
+  }
+
+  writeActiveGames(records) {
+    fs.mkdirSync(path.dirname(ACTIVE_GROUP_GAMES_FILE), { recursive: true })
+    fs.writeFileSync(ACTIVE_GROUP_GAMES_FILE, JSON.stringify(records, null, 2), 'utf8')
+  }
+
+  buildActiveGameRecord(session) {
+    const hostPlayer = session.players.find((player) => player.isHost)
+    return {
+      sessionId: session.sessionId,
+      code: session.code,
+      category: session.category,
+      game: session.game,
+      gameCreatedBy: session.gameCreatedBy || '',
+      hostName: hostPlayer?.name || '',
+      playerCount: session.players.length,
+      totalEntries: session.totalEntries,
+      status: toPublicStatus(session.status),
+      active: session.status !== 'finished',
+      createdAt: session.createdAt || null,
+      startedAt: session.startedAt || null,
+      finishedAt: session.finishedAt || null,
+      deactivatedAt: session.deactivatedAt || null,
+    }
+  }
+
+  updateActiveGameRecord(session, overrides = {}) {
+    const current = this.readActiveGames()
+    const nextRecord = {
+      ...this.buildActiveGameRecord(session),
+      ...overrides,
+    }
+    const index = current.findIndex((record) => record.sessionId === session.sessionId)
+    if (index >= 0) current[index] = nextRecord
+    else current.push(nextRecord)
+    this.writeActiveGames(current)
+    return nextRecord
   }
 
   createSessionId() {
@@ -163,6 +220,10 @@ class SessionsService {
     }
 
     return session
+  }
+
+  touchSession(session) {
+    session.expiresAt = Date.now() + this.ttlMs
   }
 
   getEntryAnswer(session) {
@@ -390,6 +451,7 @@ class SessionsService {
       category,
       game,
       gameCreatedBy,
+      createdAt: new Date().toISOString(),
       status: 'lobby',
       currentEntry: 0,
       totalEntries: entries.length,
@@ -403,6 +465,7 @@ class SessionsService {
 
     this.sessionsById.set(session.sessionId, session)
     this.sessionIdsByCode.set(session.code, session.sessionId)
+    this.updateActiveGameRecord(session)
 
     return this.toPublicSession(session)
   }
@@ -416,17 +479,17 @@ class SessionsService {
       throw new HttpError(400, 'status must be one of lobby, playing, finished, all, or active.')
     }
 
-    return Array.from(this.sessionsById.values())
-      .filter((session) => {
-        if (requestedStatus === 'active' || requestedStatus === 'all') {
-          return requestedStatus === 'all'
-            ? true
-            : session.status === 'lobby' || session.status === 'playing'
-        }
+    const sessions = this.readActiveGames()
+    const hostFilter = String(options.nickname || options.hostName || '').trim().toLowerCase()
 
-        return session.status === requestedStatus
+    return sessions
+      .filter((session) => {
+        if (hostFilter && `${session.hostName || ''}`.trim().toLowerCase() !== hostFilter) return false
+        if (requestedStatus === 'all') return true
+        if (requestedStatus === 'active') return session.active !== false
+        return `${session.status || ''}`.trim().toLowerCase() === toPublicStatus(requestedStatus).toLowerCase()
       })
-      .sort((left, right) => right.expiresAt - left.expiresAt)
+      .sort((left, right) => Date.parse(right.createdAt || 0) - Date.parse(left.createdAt || 0))
       .map((session) => ({
         sessionId: session.sessionId,
         code: session.code,
@@ -434,20 +497,23 @@ class SessionsService {
         game: session.game,
         gameCreatedBy: session.gameCreatedBy || '',
         createdBy: session.gameCreatedBy || '',
-        status: toPublicStatus(session.status),
+        status: session.status,
         entryCount: session.totalEntries,
-        currentEntryIndex: session.currentEntry,
-        currentEntry: session.currentEntry,
+        currentEntryIndex: 0,
+        currentEntry: 0,
         totalEntries: session.totalEntries,
         startedAt: session.startedAt || null,
-        playerCount: session.players.length,
-        hostName: session.players.find((player) => player.isHost)?.name || '',
-        revealReady: Boolean(session.revealReady),
+        playerCount: session.playerCount ?? 0,
+        hostName: session.hostName || '',
+        revealReady: false,
+        active: session.active !== false,
+        deactivatedAt: session.deactivatedAt || null,
       }))
   }
 
   start(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
     const nickname = validateNickname(options.nickname)
     const player = this.findPlayer(session, nickname)
 
@@ -486,6 +552,7 @@ class SessionsService {
     })
 
     this.persistScoreFile(session)
+    this.updateActiveGameRecord(session)
 
     return this.toPublicSession(session)
   }
@@ -502,6 +569,7 @@ class SessionsService {
     }
 
     const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
     if (session.status !== 'lobby') {
       throw new HttpError(404, 'Session code not found or session is not in lobby status.')
     }
@@ -515,11 +583,14 @@ class SessionsService {
     }
 
     session.players.push(createPlayer(nickname, false))
+    this.updateActiveGameRecord(session)
     return this.toPublicSession(session)
   }
 
   get(sessionId) {
-    return this.toPublicSession(this.getSessionOrThrow(sessionId))
+    const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
+    return this.toPublicSession(session)
   }
 
   findPlayer(session, nickname) {
@@ -538,6 +609,7 @@ class SessionsService {
 
   submit(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
 
     if (session.status !== 'playing') {
       throw new HttpError(400, 'Session is not in playing status.')
@@ -576,6 +648,7 @@ class SessionsService {
 
   next(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
     const nickname = validateNickname(options.nickname)
     const player = this.findPlayer(session, nickname)
 
@@ -595,6 +668,7 @@ class SessionsService {
       session.currentEntry = session.totalEntries
       session.finishedAt = new Date().toISOString()
       this.persistScoreFile(session)
+      this.updateActiveGameRecord(session, { active: false })
     }
 
     session.players.forEach((sessionPlayer) => {
@@ -610,6 +684,7 @@ class SessionsService {
 
   finalize(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
     validateNickname(options.nickname)
 
     if (session.status !== 'finished') {
@@ -642,8 +717,35 @@ class SessionsService {
     return session.finalSummary
   }
 
+  deactivate(sessionId, options = {}) {
+    const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
+    const nickname = validateNickname(options.nickname)
+    const hostPlayer = session.players.find((player) => player.isHost)
+
+    if (!hostPlayer || hostPlayer.name.toLowerCase() !== nickname.toLowerCase()) {
+      throw new HttpError(403, 'Only the host can deactivate this session.')
+    }
+
+    session.deactivatedAt = new Date().toISOString()
+    this.updateActiveGameRecord(session, {
+      active: false,
+      deactivatedAt: session.deactivatedAt,
+      status: 'Deactivated',
+      sessionStatus: toPublicStatus(session.status),
+    })
+
+    return {
+      sessionId: session.sessionId,
+      code: session.code,
+      active: false,
+      deactivatedAt: session.deactivatedAt,
+    }
+  }
+
   leave(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
     const nickname = validateNickname(options.nickname)
     const playerIndex = session.players.findIndex((player) => player.name.toLowerCase() === nickname.toLowerCase())
 
@@ -663,6 +765,7 @@ class SessionsService {
     }
 
     this.refreshRevealReady(session)
+    this.updateActiveGameRecord(session)
     return this.toPublicSession(session)
   }
 }

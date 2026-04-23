@@ -14,6 +14,7 @@ function createSessionsRouter(sessionsService) {
   router.post('/:id/submit', controller.submit)
   router.post('/:id/next', controller.next)
   router.post('/:id/finalize', controller.finalize)
+  router.post('/:id/deactivate', controller.deactivate)
   router.delete('/:id/leave', controller.leave)
 
   return router
