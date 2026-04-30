@@ -1,0 +1,8 @@
+{
+  "category": "Daily Puzzle",
+  "version": 1,
+  "promptTemplate": "Generate exactly 1 daily puzzle based on the trending topic below. Return a single JSON object only. Always include date, gameName, title, answer, and hints. The date value must be \"{{Date}}\". The gameName value must be \"Daily Puzzle - {{Date}}\". The category is \"Daily Puzzle\". Use this trending topic as the subject: {{Topic}}. Use this topic summary for context: {{TopicSummary}}. Use this overall game guidance when shaping the entry: {{GamePrompt}}. Use this as a direct instruction for generating the title: {{TitlePrompt}}. Use this as rules and guidelines for the 5 hints: {{CluesPrompt}}. The answer should be broadly recognizable to general users and suitable for a word-guessing puzzle. Avoid graphic violence, sexual content, defamation, ongoing criminal allegations, private individuals, and topics that depend on very niche knowledge. The title must not reveal the answer directly. The hints array must contain exactly 5 non-empty strings ordered from broad to specific. Duplicate avoidance is mandatory. Compare the candidate answer against the existing daily answers to avoid repeats. Existing answers to avoid: {{ExistingAnswersInstruction}}. Do not include explanation text outside the JSON object.",
+  "game_prompt": "Pick a highly recognizable, news-relevant subject that can be understood globally and turned into a clean five-hint puzzle.",
+  "title_prompt": "Write a short teaser phrase that gives context without naming the answer.",
+  "clues_prompt": "Write 5 clues from broad context to specific identifiers. Keep them fair, factual, and spoiler-controlled."
+}

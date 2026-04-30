@@ -9,6 +9,9 @@ const DEFAULT_CATEGORY_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'categor
 const DEFAULT_PROMPT_LOGS_DIR = path.join(__dirname, '..', 'data', 'prompt-logs')
 const DEFAULT_STAGING_DIR = path.join(__dirname, '..', 'data', 'staging')
 const DEFAULT_GAME_PROMPTS_DIR = path.join(__dirname, '..', 'data', 'game-prompts')
+const DEFAULT_DAILY_PUZZLES_FILE = path.join(__dirname, '..', 'data', 'daily-puzzles.json')
+const DEFAULT_DAILY_PUZZLE_PROMPT_FILE = path.join(__dirname, '..', 'data', 'daily-puzzle.prompt.json')
+const DEFAULT_DAILY_PROMPT_LOGS_DIR = path.join(__dirname, '..', 'data', 'daily-prompt-logs')
 const DEFAULT_CATEGORY_FILE_SEED = {
   Common: {
     category: 'common',
@@ -63,6 +66,9 @@ class WordsService {
     this.promptLogsDir = options.promptLogsDir || DEFAULT_PROMPT_LOGS_DIR
     this.stagingDir = options.stagingDir || DEFAULT_STAGING_DIR
     this.gamePromptsDir = options.gamePromptsDir || DEFAULT_GAME_PROMPTS_DIR
+    this.dailyPuzzlesFilePath = options.dailyPuzzlesFilePath || DEFAULT_DAILY_PUZZLES_FILE
+    this.dailyPuzzlePromptFilePath = options.dailyPuzzlePromptFilePath || DEFAULT_DAILY_PUZZLE_PROMPT_FILE
+    this.dailyPromptLogsDir = options.dailyPromptLogsDir || DEFAULT_DAILY_PROMPT_LOGS_DIR
     this.words = []
     this.wordMap = new Map()
     this.categoryMap = new Map()
@@ -560,6 +566,55 @@ class WordsService {
   ensureGamePromptsDir() {
     fs.mkdirSync(this.gamePromptsDir, { recursive: true })
   }
+  ensureDailyPromptLogsDir() {
+    fs.mkdirSync(this.dailyPromptLogsDir, { recursive: true })
+  }
+
+  createDefaultDailyPromptConfig() {
+    return {
+      category: 'Daily Puzzle',
+      version: 1,
+      promptTemplate: 'Generate exactly 1 daily puzzle based on the trending topic below. Return a single JSON object only. Always include date, gameName, title, answer, and hints. The date value must be "{{Date}}". The gameName value must be "Daily Puzzle - {{Date}}". The category is "Daily Puzzle". Use this trending topic as the subject: {{Topic}}. Use this topic summary for context: {{TopicSummary}}. Use this overall game guidance when shaping the entry: {{GamePrompt}}. Use this as a direct instruction for generating the title: {{TitlePrompt}}. Use this as rules and guidelines for the 5 hints: {{CluesPrompt}}. The answer should be broadly recognizable to general users and suitable for a word-guessing puzzle. Avoid graphic violence, sexual content, defamation, ongoing criminal allegations, private individuals, and topics that depend on very niche knowledge. The title must not reveal the answer directly. The hints array must contain exactly 5 non-empty strings ordered from broad to specific. Duplicate avoidance is mandatory. Compare the candidate answer against the existing daily answers to avoid repeats. Existing answers to avoid: {{ExistingAnswersInstruction}}. Do not include explanation text outside the JSON object.',
+      game_prompt: 'Pick a highly recognizable, news-relevant subject that can be understood globally and turned into a clean five-hint puzzle.',
+      title_prompt: 'Write a short teaser phrase that gives context without naming the answer.',
+      clues_prompt: 'Write 5 clues from broad context to specific identifiers. Keep them fair, factual, and spoiler-controlled.',
+    }
+  }
+
+  ensureDailyPromptConfigFile() {
+    const dir = path.dirname(this.dailyPuzzlePromptFilePath)
+    fs.mkdirSync(dir, { recursive: true })
+    if (!fs.existsSync(this.dailyPuzzlePromptFilePath)) {
+      fs.writeFileSync(
+        this.dailyPuzzlePromptFilePath,
+        `${JSON.stringify(this.createDefaultDailyPromptConfig(), null, 2)}\n`,
+        'utf8'
+      )
+    }
+    return this.dailyPuzzlePromptFilePath
+  }
+
+  readDailyPromptConfig() {
+    const promptFilePath = this.ensureDailyPromptConfigFile()
+    let parsed
+    try {
+      parsed = JSON.parse(fs.readFileSync(promptFilePath, 'utf8'))
+    } catch (error) {
+      throw new Error(`Malformed JSON in daily prompt file "${path.basename(promptFilePath)}": ${error.message}`)
+    }
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      throw new Error(`Daily prompt file "${path.basename(promptFilePath)}" must contain a top-level object.`)
+    }
+    return { promptFilePath, promptConfig: parsed }
+  }
+
+  writeDailyPromptLog(date, promptText) {
+    this.ensureDailyPromptLogsDir()
+    const safeDate = this.toSafeSlug(date || 'unknown-date')
+    const filePath = path.join(this.dailyPromptLogsDir, `${safeDate}.prompt.txt`)
+    fs.writeFileSync(filePath, `${String(promptText || '')}\n`, 'utf8')
+    return filePath
+  }
 
   ensureStagingDir() {
     fs.mkdirSync(this.stagingDir, { recursive: true })
@@ -813,6 +868,37 @@ class WordsService {
     } catch (error) {
       checks.push({
         name: 'game prompts directory',
+        ok: false,
+        message: `Not accessible: ${error.message}`,
+      })
+    }
+    try {
+      this.ensureDailyPromptConfigFile()
+      fs.accessSync(this.dailyPuzzlePromptFilePath, fs.constants.R_OK | fs.constants.W_OK)
+      checks.push({
+        name: 'daily puzzle prompt file',
+        ok: true,
+        message: `Readable and writable: ${this.dailyPuzzlePromptFilePath}`,
+      })
+    } catch (error) {
+      checks.push({
+        name: 'daily puzzle prompt file',
+        ok: false,
+        message: `Not accessible: ${error.message}`,
+      })
+    }
+
+    try {
+      this.ensureDailyPromptLogsDir()
+      fs.accessSync(this.dailyPromptLogsDir, fs.constants.R_OK | fs.constants.W_OK)
+      checks.push({
+        name: 'daily prompt logs directory',
+        ok: true,
+        message: `Readable and writable: ${this.dailyPromptLogsDir}`,
+      })
+    } catch (error) {
+      checks.push({
+        name: 'daily prompt logs directory',
         ok: false,
         message: `Not accessible: ${error.message}`,
       })
@@ -1832,11 +1918,83 @@ class WordsService {
       data: this.sampleWithoutReplacement(eligibleEntries, count),
     }
   }
+
+  getDailyPuzzles() {
+    let parsed
+
+    try {
+      parsed = JSON.parse(fs.readFileSync(this.dailyPuzzlesFilePath, 'utf8'))
+    } catch (error) {
+      if (error && error.code === 'ENOENT') {
+        throw new HttpError(404,                     `Daily puzzles file not found: ${path.basename(this.dailyPuzzlesFilePath)}`
+        )
+      }
+      throw new Error(`Malformed JSON in daily puzzles file: ${error.message}`)
+    }
+
+    if (!Array.isArray(parsed)) {
+      throw new Error('Daily puzzles file must contain a top-level array.')
+    }
+
+    const puzzles = parsed
+      .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+      .map((entry, index) => {
+        const date = typeof entry.date === 'string' ? entry.date.trim() : ''
+        const gameName = typeof entry.gameName === 'string' && entry.gameName.trim()
+          ? entry.gameName.trim()
+          : `Daily Puzzle - ${date}`
+        const title = typeof entry.title === 'string' ? entry.title.trim() : ''
+        const answer = typeof entry.answer === 'string' ? entry.answer.trim() : ''
+        const hints = Array.isArray(entry.hints)
+          ? entry.hints.map((hint) => String(hint || '').trim()).filter(Boolean)
+          : Array.isArray(entry.clues)
+            ? entry.clues.map((hint) => String(hint || '').trim()).filter(Boolean)
+            : []
+        const createdBy = typeof entry.createdBy === 'string' && entry.createdBy.trim()
+          ? entry.createdBy.trim()
+          : 'System'
+
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+          throw new Error(`Daily puzzle at index ${index} must include a date in YYYY-MM-DD format.`)
+        }
+        if (!answer) {
+          throw new Error(`Daily puzzle at index ${index} must include a non-empty answer.`)
+        }
+        if (hints.length !== 5) {
+          throw new Error(`Daily puzzle at index ${index} must include exactly 5 hints.`)
+        }
+
+        return {
+          id: `daily-${date}`,
+          date,
+          gameName,
+          title,
+          answer,
+          hints,
+          createdBy,
+          category: 'Daily Puzzle',
+        }
+      })
+      .sort((left, right) => right.date.localeCompare(left.date))
+
+    const today = new Date().toISOString().slice(0, 10)
+    const current = puzzles.find((puzzle) => puzzle.date === today) || null
+
+    return {
+      category: 'Daily Puzzle',
+      currentDate: today,
+      current,
+      count: puzzles.length,
+      puzzles,
+    }
+  }
 }
 
 module.exports = {
   DEFAULT_DATA_FILE,
   DEFAULT_CATEGORY_FILE_MAP,
+  DEFAULT_DAILY_PUZZLES_FILE,
   HttpError,
   WordsService,
 }
+

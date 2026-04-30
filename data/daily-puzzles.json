@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-04-20",
+    "gameName": "Daily Puzzle - 2026-04-20",
+    "title": "Breakfast stack",
+    "answer": "Pancake",
+    "hints": ["Breakfast", "Syrup", "Stack", "Griddle", "Fluffy"],
+    "createdBy": "System"
+  },
+  {
+    "date": "2026-04-21",
+    "gameName": "Daily Puzzle - 2026-04-21",
+    "title": "Night sky trail",
+    "answer": "Comet",
+    "hints": ["Space", "Ice", "Tail", "Orbit", "Streak"],
+    "createdBy": "System"
+  },
+  {
+    "date": "2026-04-22",
+    "gameName": "Daily Puzzle - 2026-04-22",
+    "title": "Library clue",
+    "answer": "Bookmark",
+    "hints": ["Reading", "Page", "Ribbon", "Placeholder", "Novel"],
+    "createdBy": "System"
+  },
+  {
+    "date": "2026-04-23",
+    "gameName": "Daily Puzzle - 2026-04-23",
+    "title": "Garden climb",
+    "answer": "Vine",
+    "hints": ["Plant", "Climb", "Trellis", "Twist", "Creeper"],
+    "createdBy": "System"
+  },
+  {
+    "date": "2026-04-24",
+    "gameName": "Daily Puzzle - 2026-04-24",
+    "title": "Traveler's tool",
+    "answer": "Suitcase",
+    "hints": ["Travel", "Handle", "Airport", "Packed", "Luggage"],
+    "createdBy": "System"
+  },
+  {
+    "date": "2026-04-25",
+    "gameName": "Daily Puzzle - 2026-04-25",
+    "title": "Quiet inventor",
+    "answer": "Notebook",
+    "hints": ["Paper", "Ideas", "Spiral", "Pages", "Journal"],
+    "createdBy": "System"
+  },
+  {
+    "date": "2026-04-26",
+    "gameName": "Daily Puzzle - 2026-04-26",
+    "title": "Shoreline souvenir",
+    "answer": "Seashell",
+    "hints": ["Beach", "Ocean", "Curved", "Collected", "Shell"],
+    "createdBy": "System"
+  }
+]

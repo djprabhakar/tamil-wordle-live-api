@@ -194,6 +194,14 @@ function createWordsController(wordsService) {
       }
     },
 
+    getDailyPuzzles(_req, res, next) {
+      try {
+        res.json(wordsService.getDailyPuzzles())
+      } catch (error) {
+        next(error)
+      }
+    },
+
     getCreate5HintGameEnvironment(_req, res, next) {
       try {
         res.json(wordsService.getCreate5HintGameEnvironment())

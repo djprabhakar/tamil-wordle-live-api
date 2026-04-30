@@ -16,6 +16,7 @@ function createWordsRouter(wordsService) {
   router.get('/GetStaging5HintGame', controller.getStaging5HintGame)
   router.get('/Get5HintWordBeginningWith', controller.get5HintWordBeginningWith)
   router.get('/Get20RandomWordsWith5Clues', controller.get20RandomWordsWith5Clues)
+  router.get('/GetDailyPuzzles', controller.getDailyPuzzles)
   router.get('/Create5HintGameEnvironment', controller.getCreate5HintGameEnvironment)
   router.get('/Create5HintGameJobs/:jobId', controller.getCreate5HintGameJob)
   router.get('/:word', controller.getByWord)
