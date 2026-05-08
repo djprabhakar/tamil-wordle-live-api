@@ -33,6 +33,7 @@ const swaggerJsdoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
 
 const { openapi } = require('./docs/openapi')
+const { createShareRouter } = require('./routes/share.routes')
 const { createSessionsRouter } = require('./routes/sessions.routes')
 const { createWordsRouter } = require('./routes/words.routes')
 const { SessionsService } = require('./services/sessions.service')
@@ -332,6 +333,7 @@ function createApp(options = {}) {
   })
 
   addDocs(app)
+  app.use(createShareRouter())
   app.use('/api/words', createWordsRouter(wordsService))
   app.use('/api/sessions', createSessionsRouter(sessionsService))
   addLiveGameRoutes(app, liveGamesStore)

@@ -75,5 +75,12 @@
     "file_name": "Guess_The_Tv_Show.json",
     "created_by": "DJ",
     "state": "staging"
+  },
+  "Global Brand Guess": {
+    "category": "Marketing",
+    "game_name": "Global Brand Guess",
+    "file_name": "global_brands.json",
+    "created_by": "system",
+    "state": "staging"
   }
 }

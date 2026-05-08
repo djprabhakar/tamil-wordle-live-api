@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Dior",
+        "title": "The Parisian house that defined the 'New Look'",
+        "clues": [
+            "This French luxury brand was founded in 1946, just after WWII ended.",
+            "Their debut collection was nicknamed the 'New Look' and featured cinched waists and full skirts.",
+            "The brand sells haute couture but is also known for J'adore perfume and Sauvage cologne.",
+            "Its logo is the founder's last name in capital letters, with four letters.",
+            "It is part of LVMH and its flagship store sits at 30 Avenue Montaigne, Paris."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 2,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Apple",
+        "title": "The fruit that changed personal tech forever",
+        "clues": [
+            "This American company was founded in 1976 in a California garage.",
+            "Its first mass-market computer featured a rainbow logo.",
+            "It launched a music player in 2001 that said '1000 songs in your pocket'.",
+            "The company designs the iPhone, iPad, and Mac, and runs the App Store.",
+            "Its current HQ is a ring-shaped campus called Apple Park in Cupertino."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 3,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Nike",
+        "title": "The swoosh that runs the world",
+        "clues": [
+            "This company started in 1964 as Blue Ribbon Sports distributing Japanese shoes.",
+            "Its logo was designed by a student for just $35 and represents the wing of a Greek goddess.",
+            "The 'Just Do It' slogan debuted in 1988.",
+            "Air Jordan sneakers and Dri-FIT apparel are two of its biggest product lines.",
+            "It is headquartered near Beaverton, Oregon and sponsors athletes worldwide."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 4,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Coca-Cola",
+        "title": "The red can that taught the world to sing",
+        "clues": [
+            "This drink was invented in 1886 by a pharmacist in Atlanta, Georgia.",
+            "Its secret formula is famously stored in a vault at the World of Coca-Cola museum.",
+            "The brand helped popularize the modern image of Santa Claus in red and white.",
+            "It owns Sprite, Fanta, and Minute Maid in addition to its namesake soda.",
+            "The script logo has remained nearly unchanged for over 130 years."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 5,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Tesla",
+        "title": "The electric car company named after an inventor",
+        "clues": [
+            "This company was founded in 2003 and named after a Serbian-American electrical engineer.",
+            "Its first production car was a Roadster based on a Lotus chassis.",
+            "The Model S, 3, X, and Y spell out a word when listed together.",
+            "It operates a network of Supercharger stations for its vehicles.",
+            "The CEO is also known for SpaceX and buying a Marketing platform in 2022."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 6,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "McDonald's",
+        "title": "Golden arches that circle the globe",
+        "clues": [
+            "This restaurant chain began in 1940 as a BBQ drive-in run by two brothers in California.",
+            "A milkshake machine salesman named Ray Kroc turned it into a global franchise.",
+            "The Big Mac was introduced in 1967 and has its own economic index.",
+            "Its clown mascot was retired in the 2010s but was iconic for decades.",
+            "It serves over 69 million customers daily in more than 100 countries."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 7,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Amazon",
+        "title": "From bookstore to everything store",
+        "clues": [
+            "This company started in 1994 selling books out of a garage in Bellevue, Washington.",
+            "Its logo features an arrow pointing from A to Z, symbolizing all products.",
+            "Prime membership launched in 2005 offering two-day shipping.",
+            "AWS, its cloud computing division, powers a huge portion of the internet.",
+            "The founder went to space on a rocket built by his other company in 2021."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 8,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Disney",
+        "title": "The mouse that built an empire",
+        "clues": [
+            "This company was founded in 1923 by two brothers as a cartoon studio.",
+            "Steamboat Willie in 1928 introduced its most famous mascot to the world.",
+            "It opened its first theme park in Anaheim, California in 1955.",
+            "It now owns Pixar, Marvel, Lucasfilm, and 20th Century Studios.",
+            "The corporate logo is a stylized castle, often Cinderella Castle."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 9,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Instagram",
+        "title": "The app that put filters on the world",
+        "clues": [
+            "This app launched in October 2010 as a photo-sharing platform.",
+            "It was originally exclusive to iPhone and reached 1 million users in 2 months.",
+            "Facebook acquired it for $1 billion in 2012 before it had any revenue.",
+            "Stories, Reels, and the heart-shaped Like button are core features.",
+            "Its logo evolved from a vintage camera to a gradient square."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 10,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Starbucks",
+        "title": "The siren that sells a third place",
+        "clues": [
+            "This chain was founded in 1971 in Seattle's Pike Place Market.",
+            "It is named after a character in the novel Moby-Dick.",
+            "The green logo features a twin-tailed mermaid called a siren.",
+            "It popularized terms like Venti, Grande, and Frappuccino globally.",
+            "Customers can order using a mobile app and collect Stars for rewards."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 11,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Ferrari",
+        "title": "The prancing horse from Maranello",
+        "clues": [
+            "This Italian automaker was founded in 1939 by a former race car driver.",
+            "Its logo is a black prancing horse on a yellow background.",
+            "The brand's Formula 1 team is the oldest and most successful in F1 history.",
+            "LaFerrari and the 488 are two of its modern supercar models.",
+            "All its road cars are painted red by default, a color called Rosso Corsa."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 12,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Adidas",
+        "title": "The three stripes from Bavaria",
+        "clues": [
+            "This German company was founded in 1949 after a split between two brothers.",
+            "Its name comes from the founder's nickname, Adi, plus the first three letters of his last name.",
+            "The trefoil logo and three-stripe design are recognized worldwide.",
+            "It signed Run-DMC in the 1980s, one of the first major hip-hop endorsement deals.",
+            "The rival company founded by the other brother is also a major Marketing brand."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 13,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Netflix",
+        "title": "The company that killed the video store",
+        "clues": [
+            "This company started in 1997 by mailing DVDs in red envelopes.",
+            "Its Marketing service launched in 2007 and changed how people watch TV.",
+            "House of Cards in 2013 was its first original series.",
+            "The 'Are you still watching' prompt is both loved and memed by users.",
+            "Its sound logo, called the 'ta-dum', plays before every show."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 14,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Google",
+        "title": "The verb that became a noun",
+        "clues": [
+            "This company began as a research project at Stanford in 1996 called BackRub.",
+            "Its name is a play on the mathematical term 'googol' meaning 10 to the 100th power.",
+            "The homepage is famous for its minimalist design and colorful logo.",
+            "Gmail, Maps, and Chrome are all products from this company.",
+            "Its parent company, formed in 2015, is called Alphabet."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 15,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Gucci",
+        "title": "The double-G from Florence",
+        "clues": [
+            "This Italian fashion house was founded in 1921 by a former hotel porter.",
+            "The interlocking double-G logo represents the founder's initials.",
+            "Its bamboo-handle bag was created in 1947 due to material shortages.",
+            "Alessandro Michele's tenure brought maximalist designs and huge growth after 2015.",
+            "It is now part of the Kering group alongside Yves Saint Laurent and Balenciaga."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 16,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Red Bull",
+        "title": "The drink that gives you wings",
+        "clues": [
+            "This energy drink was inspired by a Thai drink called Krating Daeng.",
+            "An Austrian entrepreneur co-founded the company in 1987 and adapted it for the West.",
+            "Its slogan promises to 'give you wings' and is known globally.",
+            "The brand owns multiple sports teams, including an F1 team and soccer clubs.",
+            "It sponsors extreme events like cliff diving and the Stratos space jump."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 17,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Nintendo",
+        "title": "The card company that captured consoles",
+        "clues": [
+            "This Japanese company was founded in 1889 to produce handmade playing cards.",
+            "It entered video games in the 1970s and released Donkey Kong in 1981.",
+            "The NES launched in 1985 and revived the home console market.",
+            "Mario, Zelda, and Pokémon are franchises owned by this company.",
+            "The Switch console released in 2017 is both handheld and docked."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 18,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "IKEA",
+        "title": "The flat-pack maze with meatballs",
+        "clues": [
+            "This company was founded in 1943 in Sweden by a 17-year-old.",
+            "Its name is an acronym from the founder's initials and his farm and village.",
+            "Stores are famous for their one-way showroom layout and warehouse pickup.",
+            "It sells Marketing that customers assemble themselves from flat boxes.",
+            "The restaurant inside serves Swedish meatballs and lingonberry jam."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 19,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "Visa",
+        "title": "The card that goes everywhere you want to be",
+        "clues": [
+            "This financial services company started as BankAmericard in 1958.",
+            "It was renamed in 1976 to a word that suggests universal acceptance.",
+            "The logo is blue and gold, and used to feature those colors in a striped banner.",
+            "It is not a bank but a network that processes transactions between banks.",
+            "It sponsors the Olympics and FIFA World Cup as the exclusive Marketing partner."
+        ],
+        "created_by": "system"
+    },
+    {
+        "id": 20,
+        "category": "Marketing",
+        "game_name": "Global Brand Guess",
+        "answer": "L'Oréal",
+        "title": "Because the world is worth it",
+        "clues": [
+            "This French company was founded in 1909 by a chemist who created hair dye.",
+            "Its name comes from the French word for 'gold' and the founder's first product.",
+            "The slogan 'Because I'm worth it' launched in 1971 and became iconic.",
+            "It owns Maybelline, Lancôme, Garnier, and Kiehl's among many others.",
+            "It is the world's largest Marketing company by revenue."
+        ],
+        "created_by": "system"
+    }
+]
