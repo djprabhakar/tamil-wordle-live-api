@@ -279,6 +279,50 @@ function addLiveGameRoutes(app, liveGamesStore) {
   })
 }
 
+function createApp(options = {}) {
+  const app = express()
+  app.set('trust proxy', true)
+  const wordsService = options.wordsService || new WordsService()
+  const sessionsService = options.sessionsService || new SessionsService({ wordsService })
+  const liveGamesStore = createLiveGamesStore()
+
+  wordsService.loadFromDisk()
+
+  addCors(app)
+  app.use(express.json({ limit: '64kb' }))
+
+  app.get('/health', (_req, res) => {
+    res.json({ status: 'ok' })
+  })
+
+  app.get('/robots.txt', (_req, res) => {
+    res.type('text/plain').send(
+`User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: *
+Allow: /
+`)
+  })
+
+  addDocs(app)
+  app.use(createShareRouter())
+  app.use('/api/words', createWordsRouter(wordsService))
+  app.use('/api/sessions', createSessionsRouter(sessionsService))
+  addLiveGameRoutes(app, liveGamesStore)
+  addErrorHandling(app)
+
+  return {
+    app,
+    liveGamesStore,
+    sessionsService,
+    wordsService,
+  }
+}
+
 function addErrorHandling(app) {
   app.use((req, res) => {
     res.status(404).json({ error: `Route not found: ${req.method} ${req.originalUrl}` })
