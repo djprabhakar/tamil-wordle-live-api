@@ -319,6 +319,7 @@ function addDocs(app) {
 
 function createApp(options = {}) {
   const app = express()
+  app.set('trust proxy', true)
   const wordsService = options.wordsService || new WordsService()
   const sessionsService = options.sessionsService || new SessionsService({ wordsService })
   const liveGamesStore = createLiveGamesStore()

@@ -33,7 +33,9 @@ function buildPlayPath(category, game) {
 }
 
 function buildAbsoluteUrl(req, pathname, query) {
-  const origin = `${req.protocol}://${req.get('host')}`
+  const forwardedProto = String(req.get('x-forwarded-proto') || '').split(',')[0].trim()
+  const protocol = forwardedProto || req.protocol || 'https'
+  const origin = `${protocol}://${req.get('host')}`
   const url = new URL(pathname, origin)
   Object.entries(query).forEach(([key, value]) => {
     if (value !== undefined && value !== null && value !== '') {
