@@ -28,11 +28,15 @@ function sanitizeScore(value) {
   return Math.min(parsed, 9999)
 }
 
-function buildPlayUrl(category, game) {
-  const frontendBase = String(process.env.FRONTEND_BASE_URL || 'https://fivehints.enasollu.xyz')
-    .trim()
-    .replace(/\/+$/, '')
-  return `${frontendBase}/#/play/${encodeURIComponent(category)}/${encodeURIComponent(game)}`
+function buildPlayUrl(req, category, game) {
+  const configuredBase = String(process.env.FRONTEND_BASE_URL || '').trim().replace(/\/+$/, '')
+  if (configuredBase) {
+    return `${configuredBase}/#/play/${encodeURIComponent(category)}/${encodeURIComponent(game)}`
+  }
+
+  const forwardedProto = String(req.get('x-forwarded-proto') || '').split(',')[0].trim()
+  const protocol = forwardedProto || req.protocol || 'https'
+  return `${protocol}://${req.get('host')}/#/play/${encodeURIComponent(category)}/${encodeURIComponent(game)}`
 }
 
 function buildAbsoluteUrl(req, pathname, query) {
@@ -163,7 +167,7 @@ function createShareController() {
       const ogDescription = buildShareDescription({ game, category, score })
       const ogImageUrl = buildAbsoluteUrl(req, '/og-image', { game, category, score })
       const canonicalUrl = buildAbsoluteUrl(req, '/share', { game, category, score })
-      const playPath = buildPlayUrl(category, game)
+      const playPath = buildPlayUrl(req, category, game)
 
       res.setHeader('Content-Type', 'text/html; charset=utf-8')
       res.send(`<!doctype html>

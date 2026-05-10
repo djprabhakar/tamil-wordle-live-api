@@ -44,6 +44,9 @@ const allowedOrigins = String(process.env.ALLOWED_ORIGINS || '')
   .split(',')
   .map((value) => value.trim())
   .filter(Boolean)
+const frontendDistPath = process.env.FRONTEND_DIST_PATH
+  ? path.resolve(process.env.FRONTEND_DIST_PATH)
+  : path.resolve(__dirname, '..', 'five-hints-game', 'dist')
 const storeFilePath = process.env.STORE_FILE
   ? path.resolve(process.env.STORE_FILE)
   : path.join(__dirname, 'data', 'live-games-store.json')
@@ -361,6 +364,18 @@ function addDocs(app) {
   app.use('/docs', swaggerUi.serve, swaggerUi.setup(spec, { explorer: true }))
 }
 
+function addFrontend(app) {
+  if (!fs.existsSync(frontendDistPath)) {
+    return
+  }
+
+  app.use(express.static(frontendDistPath, { index: 'index.html' }))
+
+  app.get('/', (_req, res) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'))
+  })
+}
+
 function createApp(options = {}) {
   const app = express()
   app.set('trust proxy', true)
@@ -395,6 +410,7 @@ Allow: /
   app.use('/api/words', createWordsRouter(wordsService))
   app.use('/api/sessions', createSessionsRouter(sessionsService))
   addLiveGameRoutes(app, liveGamesStore)
+  addFrontend(app)
   addErrorHandling(app)
 
   return {
