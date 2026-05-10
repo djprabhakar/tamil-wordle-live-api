@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="89" y1="70" x2="1086" y2="576" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FFF7"/>
+      <stop offset=".52" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#FFF8E8"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="score" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#EF4444"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="60" width="1060" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="22"/>
+      <feColorMatrix values="0 0 0 0 0.0588235 0 0 0 0 0.0941176 0 0 0 0 0.196078 0 0 0 0.16 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="#EEF9F2"/>
+  <circle cx="173" cy="118" r="150" fill="#D1FAE5"/>
+  <circle cx="1064" cy="116" r="108" fill="#EDE9FE"/>
+  <circle cx="991" cy="535" r="152" fill="#FEF3C7"/>
+
+  <g filter="url(#shadow)">
+    <rect x="92" y="78" width="1016" height="474" rx="34" fill="url(#bg)"/>
+    <rect x="92.75" y="78.75" width="1014.5" height="472.5" rx="33.25" stroke="#A7F3D0" stroke-width="1.5"/>
+  </g>
+
+  <rect x="132" y="118" width="160" height="46" rx="23" fill="#ECFDF5"/>
+  <text x="162" y="148" fill="#059669" font-family="Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="2">FIVE HINTS</text>
+
+  <text x="132" y="236" fill="#0F172A" font-family="Georgia, serif" font-size="74" font-weight="700">Can your friends</text>
+  <text x="132" y="316" fill="#0F172A" font-family="Georgia, serif" font-size="74" font-weight="700">beat your run?</text>
+
+  <text x="132" y="380" fill="#475569" font-family="Arial, sans-serif" font-size="31" font-weight="600">
+    Five clues. One answer. Enough score pressure to make them click.
+  </text>
+  <text x="132" y="422" fill="#475569" font-family="Arial, sans-serif" font-size="31" font-weight="600">
+    Open the same challenge and post a better finish.
+  </text>
+
+  <rect x="132" y="458" width="360" height="70" rx="20" fill="url(#cta)"/>
+  <text x="182" y="503" fill="white" font-family="Arial, sans-serif" font-size="31" font-weight="800">Play the challenge</text>
+
+  <g>
+    <rect x="760" y="142" width="266" height="148" rx="28" fill="white"/>
+    <rect x="760.75" y="142.75" width="264.5" height="146.5" rx="27.25" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="790" y="184" fill="#64748B" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">YOUR SCORE</text>
+    <text x="786" y="268" fill="url(#score)" font-family="Arial, sans-serif" font-size="86" font-weight="900">38</text>
+    <text x="918" y="268" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="800">pts</text>
+  </g>
+
+  <g>
+    <rect x="718" y="318" width="334" height="154" rx="30" fill="#0F172A"/>
+    <text x="748" y="360" fill="#86EFAC" font-family="Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1.4">THE DARE</text>
+    <text x="748" y="414" fill="white" font-family="Georgia, serif" font-size="38" font-weight="700">"You think</text>
+    <text x="748" y="456" fill="white" font-family="Georgia, serif" font-size="38" font-weight="700">you can top this?"</text>
+  </g>
+
+  <g transform="rotate(-7 1048 163)">
+    <rect x="1032" y="132" width="92" height="92" rx="18" fill="#FEF3C7" stroke="#F59E0B" stroke-width="4"/>
+    <text x="1062" y="194" fill="#B45309" font-family="Arial, sans-serif" font-size="50" font-weight="900">H</text>
+  </g>
+
+  <g transform="rotate(9 1094 260)">
+    <rect x="1054" y="220" width="92" height="92" rx="18" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="4"/>
+    <text x="1086" y="282" fill="#6D28D9" font-family="Arial, sans-serif" font-size="50" font-weight="900">?</text>
+  </g>
+</svg>

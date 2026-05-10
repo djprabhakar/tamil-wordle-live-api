@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Facebook only reads these server-delivered tags; the per-game JS below is for the landing page after click. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Can You Beat Me At Five Hints?</title>
+    <meta
+      name="description"
+      content="A friend just finished a Five Hints challenge. Open the same game, beat the run, and share your score back."
+    />
+    <link rel="canonical" href="https://fivehints.enasollu.xyz/share.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Five Hints" />
+    <meta property="og:url" content="https://fivehints.enasollu.xyz/share.html" />
+    <meta property="og:title" content="Can You Beat Me At Five Hints?" />
+    <meta
+      property="og:description"
+      content="A friend just finished a Five Hints challenge. Open the same game, beat the run, and share your score back."
+    />
+    <meta property="og:image" content="https://fivehints.enasollu.xyz/share-preview.png" />
+    <meta property="og:image:secure_url" content="https://fivehints.enasollu.xyz/share-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Five Hints challenge card inviting friends to beat the shared score." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Can You Beat Me At Five Hints?" />
+    <meta
+      name="twitter:description"
+      content="A friend just finished a Five Hints challenge. Open the same game, beat the run, and share your score back."
+    />
+    <meta name="twitter:image" content="https://fivehints.enasollu.xyz/share-preview.png" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3faf6;
+        --panel: rgba(255, 255, 255, 0.88);
+        --border: rgba(16, 185, 129, 0.16);
+        --ink: #0f172a;
+        --muted: #475569;
+        --accent: #059669;
+        --accent-strong: #047857;
+        --accent-soft: #d1fae5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(16, 185, 129, 0.18), transparent 28%),
+          radial-gradient(circle at right center, rgba(124, 58, 237, 0.16), transparent 24%),
+          linear-gradient(160deg, #effcf5 0%, #f8fafc 48%, #fdfdf8 100%);
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      main {
+        width: min(760px, 100%);
+        border: 1px solid var(--border);
+        background: var(--panel);
+        backdrop-filter: blur(16px);
+        border-radius: 28px;
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.14);
+        overflow: hidden;
+      }
+
+      .hero {
+        padding: 28px 28px 22px;
+        position: relative;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        font: 700 0.8rem/1.2 system-ui, sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 0.95;
+      }
+
+      .lede {
+        margin: 16px 0 0;
+        max-width: 42rem;
+        font-size: 1.08rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .game-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 22px;
+        padding: 12px 16px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        border-radius: 999px;
+        font: 700 0.95rem/1.2 system-ui, sans-serif;
+      }
+
+      .game-chip strong {
+        color: var(--accent-strong);
+      }
+
+      .pitch {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 0;
+        border-top: 1px solid rgba(15, 23, 42, 0.06);
+      }
+
+      .copy,
+      .scorecard {
+        padding: 28px;
+      }
+
+      .copy h2,
+      .scorecard h2 {
+        margin: 0 0 14px;
+        font-size: 1.1rem;
+        font-family: system-ui, sans-serif;
+        letter-spacing: 0.03em;
+      }
+
+      .copy p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .bullets {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .bullets li {
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid rgba(15, 23, 42, 0.06);
+        border-radius: 14px;
+        font: 600 0.95rem/1.5 system-ui, sans-serif;
+      }
+
+      .scorecard {
+        background: linear-gradient(180deg, rgba(209, 250, 229, 0.62), rgba(255, 255, 255, 0.96));
+        border-left: 1px solid rgba(15, 23, 42, 0.06);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 54px;
+        margin-top: 18px;
+        border-radius: 16px;
+        text-decoration: none;
+        font: 800 1rem/1.1 system-ui, sans-serif;
+        background: linear-gradient(135deg, #10b981, #047857);
+        color: #fff;
+        box-shadow: 0 14px 28px rgba(5, 150, 105, 0.26);
+      }
+
+      .secondary {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        font: 600 0.92rem/1.4 system-ui, sans-serif;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .footer {
+        padding: 18px 28px 28px;
+        color: #64748b;
+        font: 600 0.84rem/1.5 system-ui, sans-serif;
+      }
+
+      @media (max-width: 720px) {
+        .pitch {
+          grid-template-columns: 1fr;
+        }
+
+        .scorecard {
+          border-left: 0;
+          border-top: 1px solid rgba(15, 23, 42, 0.06);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Five Hints</p>
+        <h1>Beat your friend before they beat everyone else.</h1>
+        <p class="lede">
+          Someone just dropped a Five Hints result in your feed. Open the same challenge, solve faster, and post your own score back.
+        </p>
+        <div class="game-chip">
+          <span>Now playing:</span>
+          <strong id="gameName">Featured Challenge</strong>
+          <span id="categoryName">General</span>
+        </div>
+      </section>
+
+      <section class="pitch">
+        <div class="copy">
+          <h2>Why people keep forwarding this</h2>
+          <p>
+            You get five clues, one answer, and just enough time to think you are ahead. The trick is that every share is also a dare.
+          </p>
+          <ul class="bullets">
+            <li>Same challenge your friend just played.</li>
+            <li>Fast rounds, score pressure, instant rematch energy.</li>
+            <li>Shareable results built to pull the next person in.</li>
+          </ul>
+        </div>
+        <div class="scorecard">
+          <h2>The challenge</h2>
+          <p id="challengeCopy" class="lede" style="margin-top:0">
+          Open this game and see if you can post a cleaner finish.
+        </p>
+          <a id="playLink" class="cta" href="/">Play this challenge</a>
+          <a class="secondary" href="/">Browse more Five Hints games</a>
+        </div>
+      </section>
+
+      <div class="footer">
+        Five clues. One answer. Enough score pressure to make people send it to their friends.
+      </div>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.search)
+      const game = (params.get('game') || 'Featured Challenge').trim()
+      const category = (params.get('category') || 'General').trim()
+      const playPath = `/#/play/${encodeURIComponent(category)}/${encodeURIComponent(game)}`
+
+      document.title = `${game} | Five Hints`
+      document.getElementById('gameName').textContent = game
+      document.getElementById('categoryName').textContent = category
+      document.getElementById('playLink').href = playPath
+      document.getElementById('challengeCopy').textContent =
+        `Jump into "${game}" in ${category} and see if you can post the better finish.`
+    </script>
+  </body>
+</html>
