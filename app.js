@@ -377,6 +377,19 @@ function createApp(options = {}) {
     res.json({ status: 'ok' })
   })
 
+  app.get('/robots.txt', (_req, res) => {
+    res.type('text/plain').send(
+`User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: *
+Allow: /
+`)
+  })
+
   addDocs(app)
   app.use(createShareRouter())
   app.use('/api/words', createWordsRouter(wordsService))
