@@ -28,8 +28,11 @@ function sanitizeScore(value) {
   return Math.min(parsed, 9999)
 }
 
-function buildPlayPath(category, game) {
-  return `/#/play/${encodeURIComponent(category)}/${encodeURIComponent(game)}`
+function buildPlayUrl(category, game) {
+  const frontendBase = String(process.env.FRONTEND_BASE_URL || 'https://fivehints.enasollu.xyz')
+    .trim()
+    .replace(/\/+$/, '')
+  return `${frontendBase}/#/play/${encodeURIComponent(category)}/${encodeURIComponent(game)}`
 }
 
 function buildAbsoluteUrl(req, pathname, query) {
@@ -160,7 +163,7 @@ function createShareController() {
       const ogDescription = buildShareDescription({ game, category, score })
       const ogImageUrl = buildAbsoluteUrl(req, '/og-image', { game, category, score })
       const canonicalUrl = buildAbsoluteUrl(req, '/share', { game, category, score })
-      const playPath = buildPlayPath(category, game)
+      const playPath = buildPlayUrl(category, game)
 
       res.setHeader('Content-Type', 'text/html; charset=utf-8')
       res.send(`<!doctype html>
