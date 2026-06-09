@@ -1,0 +1,34 @@
+[
+  {
+    "sessionId": "D0Gnt-W67YZn",
+    "code": "4374",
+    "category": "Test",
+    "game": "Game",
+    "gameCreatedBy": "System",
+    "hostName": "Host",
+    "playerCount": 2,
+    "totalEntries": 1,
+    "status": "Lobby",
+    "active": true,
+    "createdAt": "2026-06-09T18:28:57.237Z",
+    "startedAt": null,
+    "finishedAt": null,
+    "deactivatedAt": null
+  },
+  {
+    "sessionId": "iMs59nMeLiQx",
+    "code": "3945",
+    "category": "Test",
+    "game": "Game",
+    "gameCreatedBy": "System",
+    "hostName": "Host",
+    "playerCount": 2,
+    "totalEntries": 1,
+    "status": "InProgress",
+    "active": true,
+    "createdAt": "2026-06-09T18:29:43.975Z",
+    "startedAt": "2026-06-09T18:29:43.996Z",
+    "finishedAt": null,
+    "deactivatedAt": null
+  }
+]

@@ -26,7 +26,7 @@ function createSessionsController(sessionsService) {
 
     get(req, res, next) {
       try {
-        res.json(sessionsService.get(req.params.id))
+        res.json(sessionsService.get(req.params.id, req.query || {}))
       } catch (error) {
         next(error)
       }
@@ -43,6 +43,14 @@ function createSessionsController(sessionsService) {
     submit(req, res, next) {
       try {
         res.json(sessionsService.submit(req.params.id, req.body || {}))
+      } catch (error) {
+        next(error)
+      }
+    },
+
+    progress(req, res, next) {
+      try {
+        res.json(sessionsService.progress(req.params.id, req.body || {}))
       } catch (error) {
         next(error)
       }

@@ -6,6 +6,7 @@ const { HttpError } = require('./words.service')
 const { normalizeWord } = require('../utils/normalize')
 
 const SESSION_TTL_MS = 2 * 60 * 60 * 1000
+const PLAYER_PRESENCE_TTL_MS = 60 * 1000
 const MAX_PLAYERS = 8
 const VALID_ENTRY_COUNTS = new Set([0, 10, 20, 30, 50])
 const VALID_LIST_STATUSES = new Set(['lobby', 'playing', 'finished', 'all'])
@@ -76,15 +77,31 @@ function validateCode(value) {
   return code
 }
 
+function normalizePlayerToken(value) {
+  return String(value || '').trim()
+}
+
+function createOpaqueToken(bytes = 18) {
+  return crypto.randomBytes(bytes).toString('base64url')
+}
+
 function createPlayer(name, isHost = false) {
+  const now = new Date().toISOString()
   return {
+    playerId: createOpaqueToken(9),
+    playerToken: createOpaqueToken(18),
     name,
     isHost,
+    connected: true,
+    lastSeenAt: now,
     submitted: false,
     score: 0,
     entryPoints: 0,
     correct: false,
     answer: '',
+    currentAttempt: 0,
+    hintsUsed: 0,
+    guesses: [],
   }
 }
 
@@ -125,6 +142,7 @@ class SessionsService {
     this.sessionsById = new Map()
     this.sessionIdsByCode = new Map()
     this.ttlMs = options.ttlMs || SESSION_TTL_MS
+    this.playerPresenceTtlMs = options.playerPresenceTtlMs || PLAYER_PRESENCE_TTL_MS
   }
 
   cleanupExpiredSessions() {
@@ -226,6 +244,21 @@ class SessionsService {
     session.expiresAt = Date.now() + this.ttlMs
   }
 
+  refreshPlayerPresence(session) {
+    const cutoff = Date.now() - this.playerPresenceTtlMs
+    session.players.forEach((player) => {
+      const lastSeenAt = Date.parse(player.lastSeenAt || 0)
+      player.connected = Number.isFinite(lastSeenAt) && lastSeenAt >= cutoff
+    })
+  }
+
+  markPlayerPresence(session, player) {
+    this.touchSession(session)
+    player.connected = true
+    player.lastSeenAt = new Date().toISOString()
+    this.refreshPlayerPresence(session)
+  }
+
   getEntryAnswer(session) {
     const entry = session.entries[session.currentEntry]
     return entry && typeof entry.answer === 'string' ? entry.answer : ''
@@ -315,12 +348,46 @@ class SessionsService {
     return session.players.some((player) => player.name.toLowerCase() === normalized)
   }
 
-  toPublicSession(session) {
+  sanitizeProgressGuesses(guesses, currentAttempt) {
+    const maxLength = Math.min(Math.max(currentAttempt, 0) + 1, 5)
+    if (!Array.isArray(guesses) || maxLength <= 0) return []
+    return guesses.slice(0, maxLength).map((guess) => String(guess || '').trim())
+  }
+
+  findPlayerByToken(session, playerToken) {
+    const normalizedToken = normalizePlayerToken(playerToken)
+    if (!normalizedToken) return null
+    return session.players.find((player) => player.playerToken === normalizedToken) || null
+  }
+
+  resolvePlayer(session, options = {}, config = {}) {
+    const { required = true, allowNicknameFallback = true, markPresence = true } = config
+    const playerToken = normalizePlayerToken(options.playerToken ?? options.participantToken)
+    let player = playerToken ? this.findPlayerByToken(session, playerToken) : null
+
+    if (!player && allowNicknameFallback && normalizeNickname(options.nickname)) {
+      player = this.findPlayer(session, options.nickname)
+    }
+
+    if (!player) {
+      if (!required) return null
+      throw new HttpError(404, 'Player not found.')
+    }
+
+    if (markPresence) {
+      this.markPlayerPresence(session, player)
+    }
+
+    return player
+  }
+
+  toPublicSession(session, viewerPlayer = null) {
+    this.refreshPlayerPresence(session)
     const revealReady = Boolean(session.revealReady)
     const hostPlayer = session.players.find((player) => player.isHost)
     const activeEntry = this.getCurrentEntry(session, { includeAnswer: session.status === 'playing', revealAnswer: revealReady || session.status === 'finished' })
 
-    return {
+    const payload = {
       sessionId: session.sessionId,
       code: session.code,
       status: toPublicStatus(session.status),
@@ -335,8 +402,11 @@ class SessionsService {
       startedAt: session.startedAt || null,
       hostName: hostPlayer ? hostPlayer.name : '',
       players: session.players.map((player) => ({
+        playerId: player.playerId,
         name: player.name,
         isHost: player.isHost,
+        connected: player.connected !== false,
+        lastSeenAt: player.lastSeenAt || null,
         submitted: player.submitted,
         score: player.score,
         entryPoints: player.entryPoints,
@@ -348,6 +418,28 @@ class SessionsService {
       finalizedAt: session.finalizedAt || null,
       resultFileName: session.resultFileName || '',
     }
+
+    if (viewerPlayer) {
+      payload.playerToken = viewerPlayer.playerToken
+      payload.me = {
+        playerId: viewerPlayer.playerId,
+        playerToken: viewerPlayer.playerToken,
+        name: viewerPlayer.name,
+        isHost: viewerPlayer.isHost,
+        connected: viewerPlayer.connected !== false,
+        lastSeenAt: viewerPlayer.lastSeenAt || null,
+        submitted: viewerPlayer.submitted,
+        score: viewerPlayer.score,
+        entryPoints: viewerPlayer.entryPoints,
+        correct: viewerPlayer.correct,
+        answer: viewerPlayer.answer,
+        currentAttempt: viewerPlayer.currentAttempt ?? 0,
+        hintsUsed: viewerPlayer.hintsUsed ?? 0,
+        guesses: Array.isArray(viewerPlayer.guesses) ? viewerPlayer.guesses : [],
+      }
+    }
+
+    return payload
   }
 
   buildFinalSummary(session) {
@@ -467,7 +559,7 @@ class SessionsService {
     this.sessionIdsByCode.set(session.code, session.sessionId)
     this.updateActiveGameRecord(session)
 
-    return this.toPublicSession(session)
+    return this.toPublicSession(session, session.players[0])
   }
 
   list(options = {}) {
@@ -514,8 +606,7 @@ class SessionsService {
   start(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
     this.touchSession(session)
-    const nickname = validateNickname(options.nickname)
-    const player = this.findPlayer(session, nickname)
+    const player = this.resolvePlayer(session, options)
 
     if (!player || !player.isHost) {
       throw new HttpError(403, 'Only the host can start this session.')
@@ -545,23 +636,27 @@ class SessionsService {
     session.resultFileName = this.getResultFileName(session)
     session.resultFilePath = this.getResultFilePath(session)
     session.players.forEach((sessionPlayer) => {
+      this.markPlayerPresence(session, sessionPlayer)
       sessionPlayer.submitted = false
       sessionPlayer.entryPoints = 0
       sessionPlayer.correct = false
       sessionPlayer.answer = ''
+      sessionPlayer.currentAttempt = 0
+      sessionPlayer.hintsUsed = 0
+      sessionPlayer.guesses = []
     })
 
     this.persistScoreFile(session)
     this.updateActiveGameRecord(session)
 
-    return this.toPublicSession(session)
+    return this.toPublicSession(session, player)
   }
 
   join(options = {}) {
     this.cleanupExpiredSessions()
 
     const code = validateCode(options.code)
-    const nickname = validateNickname(options.nickname)
+    const playerToken = normalizePlayerToken(options.playerToken ?? options.participantToken)
     const sessionId = this.sessionIdsByCode.get(code)
 
     if (!sessionId) {
@@ -569,9 +664,16 @@ class SessionsService {
     }
 
     const session = this.getSessionOrThrow(sessionId)
+    const existingPlayer = playerToken ? this.findPlayerByToken(session, playerToken) : null
+    if (existingPlayer) {
+      this.markPlayerPresence(session, existingPlayer)
+      return this.toPublicSession(session, existingPlayer)
+    }
+
+    const nickname = validateNickname(options.nickname)
     this.touchSession(session)
     if (session.status !== 'lobby') {
-      throw new HttpError(404, 'Session code not found or session is not in lobby status.')
+      throw new HttpError(404, 'Session code not found or session is not joinable.')
     }
 
     if (this.isNicknameTaken(session, nickname)) {
@@ -582,15 +684,17 @@ class SessionsService {
       throw new HttpError(400, 'Session full.')
     }
 
-    session.players.push(createPlayer(nickname, false))
+    const newPlayer = createPlayer(nickname, false)
+    session.players.push(newPlayer)
     this.updateActiveGameRecord(session)
-    return this.toPublicSession(session)
+    return this.toPublicSession(session, newPlayer)
   }
 
-  get(sessionId) {
+  get(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
+    const viewerPlayer = this.resolvePlayer(session, options, { required: false, allowNicknameFallback: true, markPresence: true })
     this.touchSession(session)
-    return this.toPublicSession(session)
+    return this.toPublicSession(session, viewerPlayer)
   }
 
   findPlayer(session, nickname) {
@@ -615,14 +719,10 @@ class SessionsService {
       throw new HttpError(400, 'Session is not in playing status.')
     }
 
-    const nickname = validateNickname(options.nickname)
-    const player = this.findPlayer(session, nickname)
-    if (!player) {
-      throw new HttpError(400, 'Player not in session.')
-    }
+    const player = this.resolvePlayer(session, options)
 
     if (player.submitted) {
-      return this.toPublicSession(session)
+      return this.toPublicSession(session, player)
     }
 
     const hintsUsed = Number(options.hintsUsed)
@@ -639,18 +739,47 @@ class SessionsService {
     player.correct = isCorrect
     player.entryPoints = entryPoints
     player.score += entryPoints
+    player.currentAttempt = hintsUsed
+    player.hintsUsed = hintsUsed
+    player.guesses = this.sanitizeProgressGuesses(options.guesses, hintsUsed)
+    if (!player.guesses[hintsUsed]) {
+      player.guesses[hintsUsed] = answer
+    }
     this.upsertScoreLog(session, player, session.currentEntry)
     this.persistScoreFile(session)
 
     this.refreshRevealReady(session)
-    return this.toPublicSession(session)
+    return this.toPublicSession(session, player)
+  }
+
+  progress(sessionId, options = {}) {
+    const session = this.getSessionOrThrow(sessionId)
+    this.touchSession(session)
+
+    if (session.status !== 'playing') {
+      throw new HttpError(400, 'Session is not in playing status.')
+    }
+
+    const player = this.resolvePlayer(session, options)
+    if (player.submitted) {
+      return this.toPublicSession(session, player)
+    }
+
+    const currentAttempt = Number(options.currentAttempt)
+    if (!Number.isInteger(currentAttempt) || currentAttempt < 0 || currentAttempt > 4) {
+      throw new HttpError(400, 'currentAttempt must be an integer from 0 to 4.')
+    }
+
+    player.currentAttempt = currentAttempt
+    player.hintsUsed = currentAttempt
+    player.guesses = this.sanitizeProgressGuesses(options.guesses, currentAttempt)
+    return this.toPublicSession(session, player)
   }
 
   next(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
     this.touchSession(session)
-    const nickname = validateNickname(options.nickname)
-    const player = this.findPlayer(session, nickname)
+    const player = this.resolvePlayer(session, options)
 
     if (!player || !player.isHost) {
       throw new HttpError(403, 'Caller is not the host.')
@@ -676,16 +805,19 @@ class SessionsService {
       sessionPlayer.entryPoints = 0
       sessionPlayer.correct = false
       sessionPlayer.answer = ''
+      sessionPlayer.currentAttempt = 0
+      sessionPlayer.hintsUsed = 0
+      sessionPlayer.guesses = []
     })
     session.revealReady = false
 
-    return this.toPublicSession(session)
+    return this.toPublicSession(session, player)
   }
 
   finalize(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
     this.touchSession(session)
-    validateNickname(options.nickname)
+    this.resolvePlayer(session, options)
 
     if (session.status !== 'finished') {
       throw new HttpError(409, 'Session is not finished yet.')
@@ -720,10 +852,9 @@ class SessionsService {
   deactivate(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
     this.touchSession(session)
-    const nickname = validateNickname(options.nickname)
-    const hostPlayer = session.players.find((player) => player.isHost)
+    const hostPlayer = this.resolvePlayer(session, options)
 
-    if (!hostPlayer || hostPlayer.name.toLowerCase() !== nickname.toLowerCase()) {
+    if (!hostPlayer || !hostPlayer.isHost) {
       throw new HttpError(403, 'Only the host can deactivate this session.')
     }
 
@@ -746,8 +877,8 @@ class SessionsService {
   leave(sessionId, options = {}) {
     const session = this.getSessionOrThrow(sessionId)
     this.touchSession(session)
-    const nickname = validateNickname(options.nickname)
-    const playerIndex = session.players.findIndex((player) => player.name.toLowerCase() === nickname.toLowerCase())
+    const player = this.resolvePlayer(session, options, { required: true, allowNicknameFallback: true, markPresence: false })
+    const playerIndex = session.players.findIndex((sessionPlayer) => sessionPlayer.playerToken === player.playerToken)
 
     if (playerIndex === -1) {
       throw new HttpError(404, 'Player not found.')

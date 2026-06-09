@@ -11,6 +11,7 @@ function createSessionsRouter(sessionsService) {
   router.post('/join', controller.join)
   router.get('/:id', controller.get)
   router.post('/:id/start', controller.start)
+  router.post('/:id/progress', controller.progress)
   router.post('/:id/submit', controller.submit)
   router.post('/:id/next', controller.next)
   router.post('/:id/finalize', controller.finalize)
