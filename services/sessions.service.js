@@ -189,6 +189,7 @@ class SessionsService {
       gameCreatedBy: session.gameCreatedBy || '',
       hostName: hostPlayer?.name || '',
       playerCount: session.players.length,
+      participantNames: session.players.map((player) => player.name),
       totalEntries: session.totalEntries,
       status: toPublicStatus(session.status),
       active: session.status !== 'finished',
@@ -566,20 +567,52 @@ class SessionsService {
     this.cleanupExpiredSessions()
 
     const requestedStatus = String(options.status || '').trim().toLowerCase() || 'active'
+    const participantFilter = String(options.nickname || '').trim().toLowerCase()
 
     if (requestedStatus !== 'active' && !VALID_LIST_STATUSES.has(requestedStatus)) {
       throw new HttpError(400, 'status must be one of lobby, playing, finished, all, or active.')
     }
 
-    const sessions = this.readActiveGames()
-    const hostFilter = String(options.nickname || options.hostName || '').trim().toLowerCase()
+    const persistedSessions = this.readActiveGames()
+    const hostFilter = String(options.hostName || '').trim().toLowerCase()
+    const liveSessionsById = new Map(
+      Array.from(this.sessionsById.values()).map((session) => [session.sessionId, this.buildActiveGameRecord(session)])
+    )
+    const sessions = persistedSessions.map((session) => ({
+      ...session,
+      ...(liveSessionsById.get(session.sessionId) || {}),
+    }))
+
+    for (const [sessionId, liveSession] of liveSessionsById.entries()) {
+      if (!sessions.some((session) => session.sessionId === sessionId)) {
+        sessions.push(liveSession)
+      }
+    }
 
     return sessions
       .filter((session) => {
         if (hostFilter && `${session.hostName || ''}`.trim().toLowerCase() !== hostFilter) return false
         if (requestedStatus === 'all') return true
-        if (requestedStatus === 'active') return session.active !== false
-        return `${session.status || ''}`.trim().toLowerCase() === toPublicStatus(requestedStatus).toLowerCase()
+
+        const normalizedStatus = `${session.status || ''}`.trim().toLowerCase()
+        const isLobby = normalizedStatus === toPublicStatus('lobby').toLowerCase()
+        const isPlaying = normalizedStatus === toPublicStatus('playing').toLowerCase()
+        const participantNames = Array.isArray(session.participantNames) ? session.participantNames : []
+        const isParticipant = participantFilter
+          ? participantNames.some((name) => `${name || ''}`.trim().toLowerCase() === participantFilter)
+          : false
+
+        if (requestedStatus === 'active') {
+          if (session.active === false) return false
+          if (isLobby) return true
+          if (isPlaying) return isParticipant
+          return false
+        }
+
+        const matchesRequestedStatus = normalizedStatus === toPublicStatus(requestedStatus).toLowerCase()
+        if (!matchesRequestedStatus) return false
+        if (isPlaying) return isParticipant
+        return true
       })
       .sort((left, right) => Date.parse(right.createdAt || 0) - Date.parse(left.createdAt || 0))
       .map((session) => ({

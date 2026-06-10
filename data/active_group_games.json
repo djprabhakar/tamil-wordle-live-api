@@ -30,5 +30,45 @@
     "startedAt": "2026-06-09T18:29:43.996Z",
     "finishedAt": null,
     "deactivatedAt": null
+  },
+  {
+    "sessionId": "CbL1xBG9oWb7",
+    "code": "8300",
+    "category": "Test",
+    "game": "Game",
+    "gameCreatedBy": "System",
+    "hostName": "Host",
+    "playerCount": 2,
+    "participantNames": [
+      "Host",
+      "Guest"
+    ],
+    "totalEntries": 1,
+    "status": "InProgress",
+    "active": true,
+    "createdAt": "2026-06-10T18:22:49.354Z",
+    "startedAt": "2026-06-10T18:22:49.360Z",
+    "finishedAt": null,
+    "deactivatedAt": null
+  },
+  {
+    "sessionId": "3IywUe-jeK0i",
+    "code": "6885",
+    "category": "Test",
+    "game": "Game",
+    "gameCreatedBy": "System",
+    "hostName": "Host",
+    "playerCount": 2,
+    "participantNames": [
+      "Host",
+      "Guest"
+    ],
+    "totalEntries": 1,
+    "status": "InProgress",
+    "active": true,
+    "createdAt": "2026-06-10T18:24:19.245Z",
+    "startedAt": "2026-06-10T18:24:19.251Z",
+    "finishedAt": null,
+    "deactivatedAt": null
   }
 ]

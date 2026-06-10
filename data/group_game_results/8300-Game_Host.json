@@ -1,0 +1,14 @@
+{
+  "sessionId": "CbL1xBG9oWb7",
+  "code": "8300",
+  "category": "Test",
+  "game": "Game",
+  "hostName": "Host",
+  "status": "InProgress",
+  "totalEntries": 1,
+  "startedAt": "2026-06-10T18:22:49.360Z",
+  "finishedAt": null,
+  "updatedAt": "2026-06-10T18:22:49.361Z",
+  "resultFileName": "8300-Game_Host.json",
+  "entries": []
+}
