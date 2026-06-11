@@ -213,6 +213,41 @@ class SessionsService {
     return nextRecord
   }
 
+  pruneStaleActiveGames(records) {
+    const liveSessionIds = new Set(this.sessionsById.keys())
+    let changed = false
+
+    const nextRecords = records.flatMap((record) => {
+      if (!record || typeof record !== 'object') return []
+      const sessionId = `${record.sessionId || ''}`.trim()
+      if (!sessionId) {
+        changed = true
+        return []
+      }
+
+      const isLive = liveSessionIds.has(sessionId)
+      const isActive = record.active !== false
+
+      if (isLive || !isActive) {
+        return [record]
+      }
+
+      changed = true
+      return [{
+        ...record,
+        active: false,
+        status: record.status === 'Lobby' ? 'Unavailable' : record.status,
+        deactivatedAt: record.deactivatedAt || new Date().toISOString(),
+      }]
+    })
+
+    if (changed) {
+      this.writeActiveGames(nextRecords)
+    }
+
+    return nextRecords
+  }
+
   createSessionId() {
     return crypto.randomBytes(9).toString('base64url')
   }
@@ -573,7 +608,7 @@ class SessionsService {
       throw new HttpError(400, 'status must be one of lobby, playing, finished, all, or active.')
     }
 
-    const persistedSessions = this.readActiveGames()
+    const persistedSessions = this.pruneStaleActiveGames(this.readActiveGames())
     const hostFilter = String(options.hostName || '').trim().toLowerCase()
     const liveSessionsById = new Map(
       Array.from(this.sessionsById.values()).map((session) => [session.sessionId, this.buildActiveGameRecord(session)])

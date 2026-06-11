@@ -8,12 +8,12 @@
     "hostName": "Host",
     "playerCount": 2,
     "totalEntries": 1,
-    "status": "Lobby",
-    "active": true,
+    "status": "Unavailable",
+    "active": false,
     "createdAt": "2026-06-09T18:28:57.237Z",
     "startedAt": null,
     "finishedAt": null,
-    "deactivatedAt": null
+    "deactivatedAt": "2026-06-11T05:50:21.199Z"
   },
   {
     "sessionId": "iMs59nMeLiQx",
@@ -25,11 +25,11 @@
     "playerCount": 2,
     "totalEntries": 1,
     "status": "InProgress",
-    "active": true,
+    "active": false,
     "createdAt": "2026-06-09T18:29:43.975Z",
     "startedAt": "2026-06-09T18:29:43.996Z",
     "finishedAt": null,
-    "deactivatedAt": null
+    "deactivatedAt": "2026-06-11T05:50:21.205Z"
   },
   {
     "sessionId": "CbL1xBG9oWb7",
@@ -45,11 +45,11 @@
     ],
     "totalEntries": 1,
     "status": "InProgress",
-    "active": true,
+    "active": false,
     "createdAt": "2026-06-10T18:22:49.354Z",
     "startedAt": "2026-06-10T18:22:49.360Z",
     "finishedAt": null,
-    "deactivatedAt": null
+    "deactivatedAt": "2026-06-11T05:50:21.205Z"
   },
   {
     "sessionId": "3IywUe-jeK0i",
@@ -65,10 +65,10 @@
     ],
     "totalEntries": 1,
     "status": "InProgress",
-    "active": true,
+    "active": false,
     "createdAt": "2026-06-10T18:24:19.245Z",
     "startedAt": "2026-06-10T18:24:19.251Z",
     "finishedAt": null,
-    "deactivatedAt": null
+    "deactivatedAt": "2026-06-11T05:50:21.205Z"
   }
 ]
