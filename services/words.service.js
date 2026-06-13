@@ -121,6 +121,7 @@ class WordsService {
         answer: validated.answer.trim(),
         title: validated.title.trim(),
         clues: validated.clues.map((clue) => clue.trim()),
+        'dummy-clues': validated.dummyClues.map((dummyClue) => dummyClue.trim()),
         normalizedWord,
         normalizedCategory,
       }
@@ -160,6 +161,9 @@ class WordsService {
         ? item.category
         : ''
     const clues = item.clues
+    const dummyClues = item['dummy-clues'] === undefined
+      ? item.dummy_clues
+      : item['dummy-clues']
 
     if (!answer.trim()) {
       throw new Error(`Invalid entry at index ${index}: "answer" must be a non-empty string.`)
@@ -181,7 +185,21 @@ class WordsService {
       }
     })
 
-    return { answer, title, clues }
+    if (dummyClues !== undefined) {
+      if (!Array.isArray(dummyClues)) {
+        throw new Error(`Invalid entry at index ${index}: "dummy-clues" must be an array when provided.`)
+      }
+
+      dummyClues.forEach((dummyClue, dummyClueIndex) => {
+        if (typeof dummyClue !== 'string' || !dummyClue.trim()) {
+          throw new Error(
+            `Invalid entry at index ${index}: dummy-clues[${dummyClueIndex}] must be a non-empty string.`
+          )
+        }
+      })
+    }
+
+    return { answer, title, clues, dummyClues: Array.isArray(dummyClues) ? dummyClues : [] }
   }
 
   ensureLoaded() {
@@ -195,6 +213,7 @@ class WordsService {
       answer: record.answer,
       title: record.title,
       clues: record.clues,
+      'dummy-clues': Array.isArray(record['dummy-clues']) ? record['dummy-clues'] : [],
     }
   }
 
@@ -696,7 +715,7 @@ class WordsService {
     return {
       category,
       version: 2,
-      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, and clues. The generated entry category value must be "{{EntryCategory}}". The generated entry game_name value must be "{{GameName}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 clue nodes. Each clue node must contain text with the clue text and is_confirmed with the value "No". {{CategorySpecificRules}} {{AudioInstruction}} {{DuplicateAvoidanceInstruction}} Existing answers to avoid: {{ExistingAnswersInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
+      promptTemplate: 'Generate {{NoOfWords}} distinct entries for the category "{{CategoryName}}". The server will request them one at a time until {{NoOfWords}} entries are created. Return a single JSON object only for each request. Always include answer, category, game_name, title, clues, and dummy-clues. The generated entry category value must be "{{EntryCategory}}". The generated entry game_name value must be "{{GameName}}". {{MetaInstruction}} Use this overall game guidance when shaping the entry: {{GamePrompt}} Use this as a direct instruction for generating the title: {{TitlePrompt}} Use this as rules and guidelines for generating the 5 clues: {{CluesPrompt}} The title must not reveal the answer directly. The clues array must contain exactly 5 clue nodes. Each clue node must contain text with the clue text and is_confirmed with the value "No". The dummy-clues array must contain plausible wrong answers that could realistically be confused with the correct answer in autocomplete. {{CategorySpecificRules}} {{AudioInstruction}} {{DuplicateAvoidanceInstruction}} Existing answers to avoid: {{ExistingAnswersInstruction}} Generated entry id must be omitted. The server will assign ids. Set created_by to "{{NickName}}" will be handled by the server. Do not include explanation text outside the JSON object.',
     }
   }
 
@@ -993,10 +1012,30 @@ class WordsService {
       return clue.trim()
     })
 
+    const rawDummyClues = entry['dummy-clues'] === undefined
+      ? entry.dummy_clues
+      : entry['dummy-clues']
+    const dummyClues = rawDummyClues === undefined
+      ? []
+      : (() => {
+        if (!Array.isArray(rawDummyClues)) {
+          throw new HttpError(400, 'WordEntry "dummy-clues" must be an array when provided.')
+        }
+
+        return rawDummyClues.map((dummyClue, index) => {
+          if (typeof dummyClue !== 'string' || !dummyClue.trim()) {
+            throw new HttpError(400, `WordEntry dummy-clues[${index}] must be a non-empty string.`)
+          }
+
+          return dummyClue.trim()
+        })
+      })()
+
     const normalizedEntry = { ...entry }
     delete normalizedEntry.word
     delete normalizedEntry.titleHint
     delete normalizedEntry.audio
+    delete normalizedEntry.dummy_clues
 
     const title = typeof entry.title === 'string'
       ? entry.title.trim()
@@ -1058,11 +1097,12 @@ class WordsService {
       ...(meta ? { meta } : {}),
       ...(title ? { title } : {}),
       clues,
+      ...(dummyClues.length > 0 ? { 'dummy-clues': dummyClues } : {}),
       ...(media ? { media } : {}),
     }
 
     for (const [key, value] of Object.entries(normalizedEntry)) {
-      if (['id', 'category', 'game_name', 'answer', 'meta', 'title', 'clues', 'media'].includes(key)) {
+      if (['id', 'category', 'game_name', 'answer', 'meta', 'title', 'clues', 'dummy-clues', 'media'].includes(key)) {
         continue
       }
       orderedEntry[key] = value
@@ -1115,6 +1155,9 @@ class WordsService {
 
         return String(clue || '').trim()
       }),
+      'dummy-clues': Array.isArray(entry['dummy-clues'])
+        ? entry['dummy-clues'].map((dummyClue) => String(dummyClue || '').trim()).filter(Boolean)
+        : [],
     }
   }
 
@@ -1318,6 +1361,11 @@ class WordsService {
         category: { type: 'string' },
         game_name: { type: 'string' },
         title: { type: 'string' },
+        'dummy-clues': {
+          type: 'array',
+          items: { type: 'string' },
+          minItems: 1,
+        },
         clues: {
           type: 'array',
           items: {
@@ -1333,7 +1381,7 @@ class WordsService {
           maxItems: 5,
         },
       },
-      required: ['answer', 'category', 'game_name', 'title', 'clues'],
+      required: ['answer', 'category', 'game_name', 'title', 'dummy-clues', 'clues'],
     }
 
     const schema = audioEnabled
@@ -1877,8 +1925,12 @@ class WordsService {
     const words = parsed
       .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
       .map((entry) => this.sanitizeCategoryWordEntry(entry, safeCategory))
-      .map((entry) => entry.answer)
-      .filter((answer) => normalizeWord(answer).includes(normalizedPrefix))
+      .flatMap((entry) => [
+        entry.answer,
+        ...(Array.isArray(entry['dummy-clues']) ? entry['dummy-clues'] : []),
+      ])
+      .filter((candidate) => normalizeWord(candidate).includes(normalizedPrefix))
+      .filter((candidate, index, candidates) => candidates.findIndex((value) => normalizeWord(value) === normalizeWord(candidate)) === index)
       .sort((left, right) => left.localeCompare(right))
 
     return {

@@ -132,6 +132,7 @@ function sanitizeSessionEntry(entry, options = {}) {
     category: typeof entry.category === 'string' ? entry.category : '',
     game_name: typeof entry.game_name === 'string' ? entry.game_name : '',
     clues: Array.isArray(entry.clues) ? entry.clues : [],
+    'dummy-clues': Array.isArray(entry['dummy-clues']) ? entry['dummy-clues'] : [],
     answer: includeAnswer && typeof entry.answer === 'string' ? entry.answer : '',
   }
 }

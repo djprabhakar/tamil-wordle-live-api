@@ -37,6 +37,11 @@ const openapi = {
         properties: {
           answer: { type: 'string', example: 'car' },
           title: { type: 'string', example: 'thing' },
+          'dummy-clues': {
+            type: 'array',
+            items: { type: 'string' },
+            example: ['van', 'truck', 'cart'],
+          },
           clues: {
             type: 'array',
             items: { type: 'string' },
@@ -105,6 +110,11 @@ const openapi = {
                 minItems: 5,
                 maxItems: 5,
               },
+              'dummy-clues': {
+                type: 'array',
+                items: { type: 'string' },
+                example: ['Highway to Hell', 'Thunderstruck'],
+              },
               id: { type: 'integer', example: 1 },
             },
             required: ['clues'],
@@ -137,6 +147,11 @@ const openapi = {
               game_name: { type: 'string', example: 'World Class Athletes' },
               answer: { type: 'string', example: 'Usain Bolt' },
               title: { type: 'string', example: 'Jamaican sprint star who set all-time marks in the 100m and 200m' },
+              'dummy-clues': {
+                type: 'array',
+                items: { type: 'string' },
+                example: ['Yohan Blake', 'Tyson Gay'],
+              },
               clues: {
                 type: 'array',
                 items: {
@@ -232,6 +247,11 @@ const openapi = {
                 title: {
                   type: 'string',
                   example: "A protest-themed rock track by Pink Floyd featuring a children's chorus",
+                },
+                'dummy-clues': {
+                  type: 'array',
+                  items: { type: 'string' },
+                  example: ['Comfortably Numb', 'Wish You Were Here'],
                 },
                 clues: {
                   type: 'array',
@@ -412,7 +432,7 @@ const openapi = {
           words: {
             type: 'array',
             items: { type: 'string' },
-            example: ['Back In Black - AC/DC', 'Bad Medicine - Bon Jovi'],
+            example: ['Back In Black', 'Black Dog', 'Bad Medicine'],
           },
         },
         required: ['category', 'game', 'createdBy', 'fileName', 'startsWith', 'count', 'words'],
@@ -436,6 +456,11 @@ const openapi = {
                   example: 'A legendary comeback hard-rock anthem by AC/DC released in 1980',
                 },
                 band: { type: 'string', example: 'AC/DC' },
+                'dummy-clues': {
+                  type: 'array',
+                  items: { type: 'string' },
+                  example: ['Highway to Hell', 'Thunderstruck'],
+                },
                 clues: {
                   type: 'array',
                   items: { type: 'string' },
