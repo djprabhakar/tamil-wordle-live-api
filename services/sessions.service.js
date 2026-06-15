@@ -10,6 +10,8 @@ const PLAYER_PRESENCE_TTL_MS = 60 * 1000
 const MAX_PLAYERS = 8
 const VALID_ENTRY_COUNTS = new Set([0, 10, 20, 30, 50])
 const VALID_LIST_STATUSES = new Set(['lobby', 'playing', 'finished', 'all'])
+const DEFAULT_TIME_LIMIT_SECONDS = null
+const MAX_TIME_LIMIT_SECONDS = 3600
 const SESSION_RESULTS_DIR = path.join(__dirname, '..', 'data', 'group_game_results')
 const ACTIVE_GROUP_GAMES_FILE = path.join(__dirname, '..', 'data', 'active_group_games.json')
 
@@ -67,6 +69,20 @@ function validateEntryCount(value) {
   return entryCount
 }
 
+function validateTimeLimitSeconds(value) {
+  if (value === undefined || value === null || `${value}`.trim() === '') {
+    return DEFAULT_TIME_LIMIT_SECONDS
+  }
+
+  const timeLimitSeconds = Number(value)
+
+  if (!Number.isInteger(timeLimitSeconds) || timeLimitSeconds <= 0 || timeLimitSeconds > MAX_TIME_LIMIT_SECONDS) {
+    throw new HttpError(400, `timeLimitSeconds must be an integer from 1 to ${MAX_TIME_LIMIT_SECONDS}.`)
+  }
+
+  return timeLimitSeconds
+}
+
 function validateCode(value) {
   const code = String(value || '').trim()
 
@@ -102,6 +118,7 @@ function createPlayer(name, isHost = false) {
     currentAttempt: 0,
     hintsUsed: 0,
     guesses: [],
+    timedOut: false,
   }
 }
 
@@ -192,10 +209,13 @@ class SessionsService {
       playerCount: session.players.length,
       participantNames: session.players.map((player) => player.name),
       totalEntries: session.totalEntries,
+      timeLimitSeconds: session.timeLimitSeconds ?? null,
       status: toPublicStatus(session.status),
       active: session.status !== 'finished',
       createdAt: session.createdAt || null,
       startedAt: session.startedAt || null,
+      entryStartedAt: session.entryStartedAt || null,
+      entryDeadlineAt: session.entryDeadlineAt || null,
       finishedAt: session.finishedAt || null,
       deactivatedAt: session.deactivatedAt || null,
     }
@@ -324,7 +344,10 @@ class SessionsService {
       hostName: session.players.find((player) => player.isHost)?.name || '',
       status: toPublicStatus(session.status),
       totalEntries: session.totalEntries,
+      timeLimitSeconds: session.timeLimitSeconds ?? null,
       startedAt: session.startedAt || null,
+      entryStartedAt: session.entryStartedAt || null,
+      entryDeadlineAt: session.entryDeadlineAt || null,
       finishedAt: session.finishedAt || null,
       updatedAt: new Date().toISOString(),
       resultFileName: session.resultFileName || this.getResultFileName(session),
@@ -363,6 +386,7 @@ class SessionsService {
       correct: Boolean(player.correct),
       entryPoints: player.entryPoints ?? 0,
       totalScore: player.score ?? 0,
+      timedOut: Boolean(player.timedOut),
       submittedAt: new Date().toISOString(),
     }
 
@@ -397,6 +421,61 @@ class SessionsService {
     return session.players.find((player) => player.playerToken === normalizedToken) || null
   }
 
+  getEntryDeadlineMs(session) {
+    const deadlineMs = Date.parse(session.entryDeadlineAt || 0)
+    return Number.isFinite(deadlineMs) ? deadlineMs : null
+  }
+
+  startEntryTimer(session, startedAt = new Date()) {
+    const startedAtIso = startedAt.toISOString()
+    session.entryStartedAt = startedAtIso
+
+    if (session.timeLimitSeconds) {
+      session.entryDeadlineAt = new Date(startedAt.getTime() + (session.timeLimitSeconds * 1000)).toISOString()
+      return
+    }
+
+    session.entryDeadlineAt = null
+  }
+
+  closeEntryTimer(session) {
+    session.entryStartedAt = null
+    session.entryDeadlineAt = null
+  }
+
+  autoSubmitTimedOutPlayers(session) {
+    if (session.status !== 'playing' || session.revealReady || !session.timeLimitSeconds) {
+      return false
+    }
+
+    const deadlineMs = this.getEntryDeadlineMs(session)
+    if (!deadlineMs || Date.now() < deadlineMs) {
+      return false
+    }
+
+    let changed = false
+    session.players.forEach((player) => {
+      if (player.submitted) return
+      player.submitted = true
+      player.answer = ''
+      player.correct = false
+      player.entryPoints = 0
+      player.currentAttempt = 4
+      player.hintsUsed = 4
+      player.guesses = this.sanitizeProgressGuesses(player.guesses, 4)
+      player.timedOut = true
+      this.upsertScoreLog(session, player, session.currentEntry)
+      changed = true
+    })
+
+    if (!changed) return false
+
+    this.refreshRevealReady(session)
+    this.persistScoreFile(session)
+    this.updateActiveGameRecord(session)
+    return true
+  }
+
   resolvePlayer(session, options = {}, config = {}) {
     const { required = true, allowNicknameFallback = true, markPresence = true } = config
     const playerToken = normalizePlayerToken(options.playerToken ?? options.participantToken)
@@ -419,6 +498,7 @@ class SessionsService {
   }
 
   toPublicSession(session, viewerPlayer = null) {
+    this.autoSubmitTimedOutPlayers(session)
     this.refreshPlayerPresence(session)
     const revealReady = Boolean(session.revealReady)
     const hostPlayer = session.players.find((player) => player.isHost)
@@ -436,7 +516,10 @@ class SessionsService {
       currentEntryIndex: session.currentEntry,
       currentEntry: activeEntry,
       totalEntries: session.totalEntries,
+      timeLimitSeconds: session.timeLimitSeconds ?? null,
       startedAt: session.startedAt || null,
+      entryStartedAt: session.entryStartedAt || null,
+      entryDeadlineAt: session.entryDeadlineAt || null,
       hostName: hostPlayer ? hostPlayer.name : '',
       players: session.players.map((player) => ({
         playerId: player.playerId,
@@ -449,6 +532,7 @@ class SessionsService {
         entryPoints: player.entryPoints,
         correct: player.correct,
         answer: player.answer,
+        timedOut: Boolean(player.timedOut),
       })),
       revealReady,
       correctAnswer: revealReady ? this.getEntryAnswer(session) : '',
@@ -473,6 +557,7 @@ class SessionsService {
         currentAttempt: viewerPlayer.currentAttempt ?? 0,
         hintsUsed: viewerPlayer.hintsUsed ?? 0,
         guesses: Array.isArray(viewerPlayer.guesses) ? viewerPlayer.guesses : [],
+        timedOut: Boolean(viewerPlayer.timedOut),
       }
     }
 
@@ -500,7 +585,10 @@ class SessionsService {
       hostName: hostPlayer?.name || '',
       status: toPublicStatus(session.status),
       totalEntries: session.totalEntries,
+      timeLimitSeconds: session.timeLimitSeconds ?? null,
       startedAt: session.startedAt || null,
+      entryStartedAt: session.entryStartedAt || null,
+      entryDeadlineAt: session.entryDeadlineAt || null,
       finishedAt: session.finishedAt || null,
       finalizedAt: session.finalizedAt || null,
       resultFileName: fileName,
@@ -517,6 +605,7 @@ class SessionsService {
         correct: player.correct,
         entryPoints: player.entryPoints ?? 0,
         answer: player.answer || '',
+        timedOut: Boolean(player.timedOut),
       })),
     }
   }
@@ -572,6 +661,7 @@ class SessionsService {
     const game = validateRequiredString(options.game, 'game')
     const gameCreatedBy = validateRequiredString(options.gameCreatedBy ?? options.createdBy, 'gameCreatedBy')
     const entryCount = validateEntryCount(options.entryCount)
+    const timeLimitSeconds = validateTimeLimitSeconds(options.timeLimitSeconds)
     const entries = this.loadEntries(game, entryCount)
 
     const session = {
@@ -584,7 +674,10 @@ class SessionsService {
       status: 'lobby',
       currentEntry: 0,
       totalEntries: entries.length,
+      timeLimitSeconds,
       startedAt: null,
+      entryStartedAt: null,
+      entryDeadlineAt: null,
       players: [createPlayer(nickname, true)],
       revealReady: false,
       entries,
@@ -611,6 +704,9 @@ class SessionsService {
 
     const persistedSessions = this.pruneStaleActiveGames(this.readActiveGames())
     const hostFilter = String(options.hostName || '').trim().toLowerCase()
+    Array.from(this.sessionsById.values()).forEach((session) => {
+      this.autoSubmitTimedOutPlayers(session)
+    })
     const liveSessionsById = new Map(
       Array.from(this.sessionsById.values()).map((session) => [session.sessionId, this.buildActiveGameRecord(session)])
     )
@@ -663,7 +759,10 @@ class SessionsService {
         currentEntryIndex: 0,
         currentEntry: 0,
         totalEntries: session.totalEntries,
+        timeLimitSeconds: session.timeLimitSeconds ?? null,
         startedAt: session.startedAt || null,
+        entryStartedAt: session.entryStartedAt || null,
+        entryDeadlineAt: session.entryDeadlineAt || null,
         playerCount: session.playerCount ?? 0,
         hostName: session.hostName || '',
         revealReady: false,
@@ -713,7 +812,9 @@ class SessionsService {
       sessionPlayer.currentAttempt = 0
       sessionPlayer.hintsUsed = 0
       sessionPlayer.guesses = []
+      sessionPlayer.timedOut = false
     })
+    this.startEntryTimer(session)
 
     this.persistScoreFile(session)
     this.updateActiveGameRecord(session)
@@ -789,6 +890,7 @@ class SessionsService {
     }
 
     const player = this.resolvePlayer(session, options)
+    this.autoSubmitTimedOutPlayers(session)
 
     if (player.submitted) {
       return this.toPublicSession(session, player)
@@ -811,6 +913,7 @@ class SessionsService {
     player.currentAttempt = hintsUsed
     player.hintsUsed = hintsUsed
     player.guesses = this.sanitizeProgressGuesses(options.guesses, hintsUsed)
+    player.timedOut = false
     if (!player.guesses[hintsUsed]) {
       player.guesses[hintsUsed] = answer
     }
@@ -830,6 +933,7 @@ class SessionsService {
     }
 
     const player = this.resolvePlayer(session, options)
+    this.autoSubmitTimedOutPlayers(session)
     if (player.submitted) {
       return this.toPublicSession(session, player)
     }
@@ -842,6 +946,7 @@ class SessionsService {
     player.currentAttempt = currentAttempt
     player.hintsUsed = currentAttempt
     player.guesses = this.sanitizeProgressGuesses(options.guesses, currentAttempt)
+    player.timedOut = false
     return this.toPublicSession(session, player)
   }
 
@@ -849,6 +954,7 @@ class SessionsService {
     const session = this.getSessionOrThrow(sessionId)
     this.touchSession(session)
     const player = this.resolvePlayer(session, options)
+    this.autoSubmitTimedOutPlayers(session)
 
     if (!player || !player.isHost) {
       throw new HttpError(403, 'Caller is not the host.')
@@ -865,6 +971,7 @@ class SessionsService {
       session.status = 'finished'
       session.currentEntry = session.totalEntries
       session.finishedAt = new Date().toISOString()
+      this.closeEntryTimer(session)
       this.persistScoreFile(session)
       this.updateActiveGameRecord(session, { active: false })
     }
@@ -877,8 +984,14 @@ class SessionsService {
       sessionPlayer.currentAttempt = 0
       sessionPlayer.hintsUsed = 0
       sessionPlayer.guesses = []
+      sessionPlayer.timedOut = false
     })
     session.revealReady = false
+
+    if (session.status === 'playing') {
+      this.startEntryTimer(session)
+      this.updateActiveGameRecord(session)
+    }
 
     return this.toPublicSession(session, player)
   }

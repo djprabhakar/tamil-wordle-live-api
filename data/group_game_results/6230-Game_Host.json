@@ -1,0 +1,48 @@
+{
+  "sessionId": "eQnAZ-MNnXl1",
+  "code": "6230",
+  "category": "Test",
+  "game": "Game",
+  "hostName": "Host",
+  "status": "InProgress",
+  "totalEntries": 1,
+  "timeLimitSeconds": 1,
+  "startedAt": "2026-06-15T10:58:33.159Z",
+  "entryStartedAt": "2026-06-15T10:58:33.159Z",
+  "entryDeadlineAt": "2026-06-15T10:58:32.162Z",
+  "finishedAt": null,
+  "updatedAt": "2026-06-15T10:58:33.169Z",
+  "resultFileName": "6230-Game_Host.json",
+  "entries": [
+    {
+      "entryIndex": 0,
+      "entryNumber": 1,
+      "entryId": 1,
+      "entryTitle": "Alpha",
+      "entryCategory": "Test",
+      "playerName": "Guest",
+      "isHost": false,
+      "submittedAnswer": "",
+      "correct": false,
+      "entryPoints": 0,
+      "totalScore": 0,
+      "timedOut": true,
+      "submittedAt": "2026-06-15T10:58:33.162Z"
+    },
+    {
+      "entryIndex": 0,
+      "entryNumber": 1,
+      "entryId": 1,
+      "entryTitle": "Alpha",
+      "entryCategory": "Test",
+      "playerName": "Host",
+      "isHost": true,
+      "submittedAnswer": "",
+      "correct": false,
+      "entryPoints": 0,
+      "totalScore": 0,
+      "timedOut": true,
+      "submittedAt": "2026-06-15T10:58:33.162Z"
+    }
+  ]
+}

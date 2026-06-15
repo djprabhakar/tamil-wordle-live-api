@@ -70,5 +70,28 @@
     "startedAt": "2026-06-10T18:24:19.251Z",
     "finishedAt": null,
     "deactivatedAt": "2026-06-11T05:50:21.205Z"
+  },
+  {
+    "sessionId": "eQnAZ-MNnXl1",
+    "code": "6230",
+    "category": "Test",
+    "game": "Game",
+    "gameCreatedBy": "System",
+    "hostName": "Host",
+    "playerCount": 2,
+    "participantNames": [
+      "Host",
+      "Guest"
+    ],
+    "totalEntries": 1,
+    "timeLimitSeconds": 1,
+    "status": "InProgress",
+    "active": true,
+    "createdAt": "2026-06-15T10:58:33.146Z",
+    "startedAt": "2026-06-15T10:58:33.159Z",
+    "entryStartedAt": "2026-06-15T10:58:33.159Z",
+    "entryDeadlineAt": "2026-06-15T10:58:32.162Z",
+    "finishedAt": null,
+    "deactivatedAt": null
   }
 ]
